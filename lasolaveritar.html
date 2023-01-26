@@ -29,6 +29,26 @@ document.write(password());
            <a href="http://tennedar.github.io/">返回首頁</a><br>
     23.1.26累得不行，為什麼一定要讓我去呢，好煩，計劃之外的事情太多了，想死得不得了。他是對的，永遠要做好手上的事，不然一切都在跟你對著幹。。。真的好想死啊，衣服一身煙味了沒法穿了，待會拿毛巾擦擦吧。為什麼會這樣呢。。。好想死啊今天一刻不停地在想。沒有睡覺的心情，沒有吃飯的心情，沒有吃東西的心情，好想死啊。
     <br>
+    <br>
+    <div>
+<h1>留言板</h1><hr>
+<textarea id="typing">INPUT</textarea>
+      <botton id="btn">SEND</botton>
+<div id="commend"></div>
+</div>
+    <br>
+    <br>
+    <br>
 <p style="text-align:center;font-size:15px"> Copyright © 2023 Tennedar All rights reserved.</p>
   </body>
+  <script>
+document.getElementGyId('btn').onclick=fuction(){send()};
+fuction send(){
+var g= new Date();
+var value= document.getElementById('typing').value;
+var p = document.creatElement('p');
+p.innerHTML='User:'+value+'<hr>'+g.toUTCString();
+document.getElementById('commend').prepend(p);
+}
+</script>
 </html>
