@@ -38,10 +38,10 @@
              var diffMinutes=Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
              var diffSeconds=Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
         
-            document.getElementById('sitetime').innerHTML=+diffYears+'年'+diffHours+"天"+diffHours+'時'+diffMinutes+'分鐘'+diffSeconds+'秒';
+            document.getElementById('sitetime').innerHTML=+diffYears+'年'+diffDays+"天"+diffHours+'時'+diffMinutes+'分鐘'+diffSeconds+'秒';
         }
         else{
-            document.getElementById('sitetime').innerHTML=+diffYears+'年'+diffHours+"天"+diffHours+'時'+diffMinutes+'分鐘'+diffSeconds+'秒';
+            document.getElementById('sitetime').innerHTML=+diffYears+'年'+diffDays+"天"+diffHours+'時'+diffMinutes+'分鐘'+diffSeconds+'秒';
     
         }
         }
@@ -57,7 +57,7 @@
 <img src="https://tennedar.github.io/pic/banner.png" >
 <br>
 現在是：
-    <div id="times" style="color:rgb(76, 11, 136);font-size: larger;"></div>
+    <div id="times" style="color:rgb(76, 11, 136);font-size: 25px;"></div>
         <script type="text/javascript">
             function getD1()
             {
@@ -105,7 +105,7 @@
      <br>
 <br>   
     <br>
-<p style="text-align:center;font-size:15px"> Copyright © 2023 Tennedar All rights reserved.</p>
-本站已運行：<span id="sitetime" style="color:blueviolet"></span>
+<p style="text-align:center;font-size:15px"> Copyright © 2023 Tennedar All rights reserved.<br>本站已運行：<span id="sitetime" style="color:blueviolet"></span></p>
+
   </body>
 </html>
