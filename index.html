@@ -5,48 +5,7 @@
    
   </head>
   
- <script language="javascript">
-    function siteTime()
-    {
-        window.setTimeout('siteTime()',1000);
-        var seconds = 1000;
-        var minutes = seconds * 60;
-        var hours= minutes*60;
-        var days=hours*24;
-        var years = days*365;
-        var today = new Date();
-        var todayYear=today.getFullYear();
-        var todayMonth=today.getMonth();
-        var todayDate=today.getDate();
-        var todayHour=today.getHours();
-        var todayMinute=today.getMinutes();
-        var todaySecond=today.getSeconds();
-
-        var t1=Date.UTC(2023,01,20,01,00,00);
-        var t2=Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
-        var diff = t2-t1;
-        var diffYears=Math.floor(diff/years);
-        var diffDays=Math.floor(diff/days)-diffYears*365;
-        var diffHours=Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
-        var diffMinutes=Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
-        var diffSeconds=Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
-        if (diffYears == -1)
-        {
-            diffYears=0
-             var diffDays=Math.floor(diff/days)-diffYears*365;
-             var diffHours=Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
-             var diffMinutes=Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
-             var diffSeconds=Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
-        
-            document.getElementById('sitetime').innerHTML=+diffYears+'年'+diffDays+"天"+diffHours+'時'+diffMinutes+'分鐘'+diffSeconds+'秒';
-        }
-        else{
-            document.getElementById('sitetime').innerHTML=+diffYears+'年'+diffDays+"天"+diffHours+'時'+diffMinutes+'分鐘'+diffSeconds+'秒';
-    
-        }
-        }
-    siteTime();
-</script>
+ 
   <body>
     <br>    
 <h1> DIVINA-TENNEDA-碎片之海的一隅</h1>
@@ -85,7 +44,7 @@
 <i>隨時歡迎</i>留言和提問。<br>
     <p style="color:3300CC">TWITTER @divina_tennedar</p>
  <p style="color:3300CC">EMAIL tennedar0@protonmail.com</p>
- <a href="https://tennedar.github.io/comment.html">留言板</a>   
+  
 <br>
 
     <hr>
@@ -95,7 +54,7 @@
 最近在看|<a href="https://tennedar.github.io/recommend.html"> RECOMMEND</a><br>
 * 是wordpress博客不具有的頁面，也許，未來準備在這里整合我認為可以推薦給訪客的書|ACGN|歌|ry<br><br>
 沙盒|<a href="https://tennedar.github.io/sandbox.html"> SANDBOX</a><br>
-* html自學中，拿主頁測試怕做壞了沒法恢復？隨便怎麼玩都可以炸了重來的沙盒你值得擁有，v博主50包郵送到家<br>
+    * 自用<del>html自學中，拿主頁測試怕做壞了沒法恢復？隨便怎麼玩都可以炸了重來的沙盒你值得擁有，v博主50包郵送到家</del><br>
         <hr>
      
 <h3 style="font-size:25px">广告位</h3>
@@ -105,7 +64,7 @@
      <br>
 <br>   
     <br>
-<p style="text-align:center;font-size:15px"> Copyright © 2023 Tennedar All rights reserved.<br>本站已運行：<span id="sitetime" style="color:blueviolet"></span></p>
+<p style="text-align:center;font-size:15px"> Copyright © 2023 Tennedar All rights reserved.</p>
 
   </body>
 </html>
