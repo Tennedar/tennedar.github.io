@@ -7,16 +7,15 @@
         margin: 0;
         padding: 0;
     }
-    html,body
-    {
+    html,body    {
         height: 100%;
     }
-    .p
-    {
+    .p    {
         width: 100%;
         height: 100%;
         background: white;
     }
+
     .test1{   
             position: absolute;   
             top: 50%;   
@@ -27,6 +26,39 @@
             -o-transform: translate(-50%, -50%);   
             transform: translate(-50%, -50%);   
         }   
+
+        .search{
+            width: 80%;            
+            margin: auto;
+            display: flex;
+            /*border: 1px solid red;*/
+        }
+        .search input{
+            float: left; 
+            flex: 10;
+            height: 50px;
+            outline: none;
+            border: 1px solid ;
+            color: rgb(137, 23, 243);
+            box-sizing: border-box;
+            padding-left: 20px;
+        }
+        .search button{
+            float: right;
+            flex: 1;
+            height: 50px;
+            background-color: rgb(196, 255, 234);
+            color: rgb(137, 23, 243);
+            border: 1px solid ;
+            outline: none;
+        }
+        .search button i{
+            font-style: normal;
+        }
+        .search button:hover{
+            font-size: auto;
+        }
+
 </style>
 </head>
 <script>
@@ -69,7 +101,8 @@
 <body>
  <div class="p">
     <div id="title" class="test1" >
-        <h1 style="text-align:center">DIVINA<span style="color:rgb(137, 23, 243);">-</span>TENNEDA<span style="color:rgb(137, 23, 243);">-</span>碎片之<span style="color:rgb(182, 169, 135);">海</span>的一隅</h1>
+       
+        <h1 style="text-align:center">DIVINA<span style="color:rgb(137, 23, 243);">-</span>TENNEDA<span style="color:rgb(0, 224, 146)">-</span>碎片之<span style="color:rgb(182, 169, 135);">海</span>的一隅</h1>
         <br>
         <p style="text-align:center">繭房<span style="color:rgb(137, 23, 243);">-</span>航<span style="color:rgb(182, 169, 135);">海</span>中<span style="color:rgb(137, 23, 243);">...</span></p>  
         <br><br>
@@ -99,25 +132,33 @@
     <hr>
     <br>
     <br>
-        <h3 style="text-align:center;font-size:25px">注意<span style="color:rgb(182, 169, 135);">事</span>項</h3><br>
-        <p style="text-align:center"><b>這里</b>是<span style="color:rgb(137, 23, 243);background-color: rgb(196, 255, 234);">Tennedar</span><b><i>的</i><span style="color:rgb(255, 0, 0)">個人</span>主頁</b><span style="color:rgb(137, 23, 243);">；</span><br><br><b><i>所有</i></b>內容都為tennedar<b>原創 & 親自製作</b>（除非註明出處）<span style="color:rgb(137, 23, 243);">；</span><br><br><b><u><span style="color:rgb(255, 0, 0)">請勿</span>隨意<span style="color:rgb(255, 0, 0)">轉載</span></u></b><span style="color:rgb(137, 23, 243);">；</span><br><br>本主頁<b><i>仍在開發中</i></b>；<br><br>有任何相關<b><i>問題</i></b>都可以隨時聯繫tennedar<span style="color:rgb(137, 23, 243);">。</span> </p><br>
+        <h3 style="text-align:center;font-size:25px"><span style='text-shadow: 2px 2px 4px rgb(82, 82, 82)';>注意</span><span style="color:rgb(182, 169, 135);">事</span><span style='text-shadow: 2px 2px 4px rgb(82, 82, 82)';>項</span></h3><br>
+        <p style="text-align:center"><b>這里</b>是<span style="color:rgb(137, 23, 243);background-color: rgb(196, 255, 234);text-shadow:2px 2px 3px rgb(191, 157, 255)">Tennedar</span><b><i>的</i><span style="color:rgb(255, 0, 0)">個人</span>主頁</b><span style="color:rgb(137, 23, 243);">；</span><br><br><b><i>所有</i></b>內容都為tennedar<b>原創 & 親自製作</b>（除非註明出處）<span style="color:rgb(137, 23, 243);">；</span><br><br><b><u><span style="color:rgb(255, 0, 0)">請勿</span>隨意<span style="color:rgb(255, 0, 0)">轉載</span></u></b><span style="color:rgb(137, 23, 243);">；</span><br><br>本主頁<b><i>仍在開發中</i></b>；<br><br>有任何相關<b><i>問題</i></b>都可以隨時聯繫tennedar<span style="color:rgb(137, 23, 243);">。</span> </p><br>
         <br>
         <br>
         <hr>
         <br><br>
-        <h3 style="text-align:center;font-size:25px">導<span style="color:rgb(182, 169, 135);">航</span>欄</h3><br>
+        <h3 style="text-align:center;font-size:25px"><span style='text-shadow: 2px 2px 4px rgb(82, 82, 82)';>導</span><span style="color:rgb(182, 169, 135);">航</span><span style='text-shadow: 2px 2px 4px rgb(82, 82, 82)';>欄</span></h3><br>
         <p style="text-align:center">
             關於我<span style="color:rgb(137, 23, 243);">|</span><a href="https://tennedar.github.io/aboutme.html" style="color: blue" > AB<span style="color:rgb(137, 23, 243);background-color: rgb(196, 255, 234);">O</span>UT ME</a><br><br><br>
             博客<span style="color:rgb(137, 23, 243);">|</span><a href="https://tennedar.github.io/blog.html" style="color: blue"> BL<span style="color:rgb(137, 23, 243);background-color: rgb(196, 255, 234);">O</span>G</a><br><br><br>
             推薦<span style="color:rgb(137, 23, 243);">|</span><a href="https://tennedar.github.io/recommend.html" style="color: blue"> REC<span style="color:rgb(137, 23, 243);background-color: rgb(196, 255, 234);">O</span>MMEND</a><br><br>
             <span style="color:rgb(137, 23, 243);">*</span> 在這里整合r認為值得<b><i>推薦</i></b>的各種作品<br><br><br>
             沙盒<span style="color:rgb(137, 23, 243);">|</span><a href="https://tennedar.github.io/sandbox.html" style="color: blue"> SANDB<span style="color:rgb(137, 23, 243);background-color: rgb(196, 255, 234);">O</span>X</a><br><br>
-            <span style="color:rgb(137, 23, 243);">*</span> <b><i>ADMIN</i></b>-TENNEDAR自用<br>測試用沙盒<br><br>
+            <span style="color:rgb(137, 23, 243);">*</span> <b><i>ADMIN</i></b>-TENNEDAR自用<br>測試用沙盒<br>
+            
         </p>  
         <br><br>
-        <hr>    
+        <hr>
         <br><br>
-        <h3 style="text-align:center;font-size:25px">更新<span style="color:rgb(182, 169, 135);">履</span>歷</h3><br>
+        <h3 style="text-align:center;font-size:25px"><span style='text-shadow: 2px 2px 4px rgb(82, 82, 82)';>搜</span><span style="color:rgb(182, 169, 135);">索</span></h3><br>
+        <div class="search">
+            <input type="text" placeholder="建設中，還不能用..." name="" id="" value="" />
+            <button><i>搜索</i></button>
+        </div>   <br><br><br>
+        <hr> 
+        <br><br>
+        <h3 style="text-align:center;font-size:25px"><span style='text-shadow: 2px 2px 4px rgb(82, 82, 82)';>更新</span><span style="color:rgb(182, 169, 135);">履</span><span style='text-shadow: 2px 2px 4px rgb(82, 82, 82)';>歷</span></h3><br>
         <p style="text-align:center">
             <b><u>23.1.26</b></u><span style="color:rgb(137, 23, 243);">--</span>更新博客、設置其他页面icon、更改banner。「沙盒」内「文件下载」相关代码电脑可用，手机不行，而且手机阅览txt无法正常显示英文数字以外的东西<span style="color:rgb(0, 224, 146);">。</span><br><br>
             <b><u>23.2.4</b></u><span style="color:rgb(137, 23, 243);">--</span>更新博客，修改主頁佈局。將2022年博客單獨改為一個頁面，方便與2023年博客區分<span style="color:rgb(0, 224, 146);">。</span><br><br>
@@ -127,23 +168,24 @@
         <br><br>
     
    
-        <h3 style="text-align:center;font-size:25px">關<span style="color:rgb(182, 169, 135);">於</span><span style="color:rgb(137, 23, 243);background-color: rgb(196, 255, 234);">我</span></h3><br>
-      <p style="text-align:center">
-        <b><i>名字</i></b>：<span style="color:rgb(137, 23, 243);background-color: rgb(196, 255, 234);">転枝りん（てんえだ　りん），也叫Tennedar，rinn，r</span>，程度由正式到隨意<span style="color:rgb(137, 23, 243);">；</span><br><br>
-        <b><i>年齡</i></b>：<del>I’m three</del> <a href="https://www.bilibili.com/video/BV1264y1B7qp/" target="_blank" style="color: blue">原梗</a> <span style="color:rgb(137, 23, 243);">；</span><br><br>
-        <b><i>DIVINA</i></b>-TENNEDA意為“神聖tennedar”，致敬了神曲divina commedia<span style="color:rgb(137, 23, 243);">；</span><br><br>
-        <b><i>SNS</i></b>：大部分不喜歡用，活躍於Mastodon，最近在專心搭個站，信息繭房狂熱愛好者<span style="color:rgb(137, 23, 243);">；</span><br><br>
-        <b><i>會</i></b>：寫文、畫畫、做遊戲、音樂，html自學中，本站的所有內容都是親自製作的<span style="color:rgb(137, 23, 243);">；</span><br><br>
-        <b><i>喜歡</i></b>：小眾freegame，冷門動漫/漫畫；kpop路人<span style="color:rgb(137, 23, 243);">；</span><br><br>
-        任何事情比起看現成的更喜歡自己做或者自學做<span style="color:rgb(137, 23, 243);">；</span><br><br>
-        請多指教<span style="color:rgb(137, 23, 243);">；</span><br><br>
+        <h3 style="text-align:center;font-size:25px"><span style='text-shadow: 2px 2px 4px rgb(82, 82, 82)';>關</span><span style="color:rgb(182, 169, 135);">於</span><span style="color:rgb(137, 23, 243);">我</span></h3><br>
+        
+      <p style="text-align:center;">
+        <b><i>名字</i></b>：<span style="color:rgb(137, 23, 243);background-color: rgb(196, 255, 234);">転枝りん（てんえだ　りん），也叫Tennedar，rinn，r</span>，<span style='text-shadow: 2px 2px 4px rgb(82, 82, 82)';>程度由正式到隨意</span><span style="color:rgb(137, 23, 243);">；</span><br><br>
+        <b><i>年齡</i></b>：<del>I’m three</del>   <a href="https://www.bilibili.com/video/BV1264y1B7qp/" target="_blank" style="color: blue">原梗來自</a> <span style="color:rgb(137, 23, 243);">；</span><br><br>
+        <b><i>DIVINA</i></b>-TENNEDA<span style='text-shadow: 2px 2px 4px rgb(82, 82, 82)';>意為“神聖tennedar”</span>，致敬了神曲divina commedia<span style="color:rgb(137, 23, 243);">；</span><br><br>
+        <b><i>SNS</i></b>：大部分（指微博等）不喜歡用，<span style='text-shadow: 2px 2px 5px rgb(82, 82, 82)';>活躍於Mastodon，信息繭房狂熱愛好者</span><span style="color:rgb(137, 23, 243);">；</span><br><br>
+        <b><i>會</i></b>：<span style='text-shadow: 2px 2px 5px rgb(82, 82, 82)';>寫文、畫畫、做遊戲、音樂</span>，html自學中，本站的所有內容都是親自製作的<span style="color:rgb(137, 23, 243);">；</span><br><br>
+        <b><i>喜歡</i></b>：小眾<span style='text-shadow: 2px 2px 5px rgb(82, 82, 82)';>freegame</span>，（比較）冷（的）動漫/漫畫 <span style='text-shadow: 2px 2px 5px rgb(82, 82, 82)';>|鳴泣之時系列|細胞神曲|</span><span style="color:rgb(137, 23, 243);">；</span><br>kpop路人 最近在<span style='text-shadow: 2px 2px 5px rgb(82, 82, 82)';>|爻|迷|</span><span style="color:rgb(137, 23, 243);">；</span><br><br>
+        任何事情比起看現成的更喜歡<span style='text-shadow: 2px 2px 5px rgb(82, 82, 82)';>自己做</span>或者自學做<span style="color:rgb(137, 23, 243);">；</span><br><br>
+        <span style='text-shadow: 2px 2px 5px rgb(82, 82, 82)';>請多指教</span><span style="color:rgb(137, 23, 243);">；</span><br><br>
     </p>
     <br><br>
     <hr>
     <br><br>
 
 
-    <h3 style="text-align:center;font-size:25px">聯繫<span style="color:rgb(182, 169, 135);">方</span>式</h3><br>
+    <h3 style="text-align:center;font-size:25px"><span style='text-shadow: 2px 2px 4px rgb(82, 82, 82)';>聯繫</span><span style="color:rgb(182, 169, 135);">方</span><span style='text-shadow: 2px 2px 4px rgb(82, 82, 82)';>式</span></h3><br>
     <p style="text-align:center">
         隨時<span style="color:rgb(137, 23, 243);">歡迎</span>留言和提問<span style="color:rgb(0, 224, 146);">。</span><br><br>
         <p style="text-align:center;color:rgb(137, 23, 243)"><a href="https://twitter.com/divina_tennedar" target='_blank' style="color: blue">TWITTER </a> @divina_tennedar</p><br>
@@ -158,7 +200,7 @@
     <br><br>
 
 
-    <h3 style="text-align:center;font-size:25px">友情<span style="color:rgb(182, 169, 135);">鏈</span>接</h3><br>
+    <h3 style="text-align:center;font-size:25px"><span style='text-shadow: 2px 2px 4px rgb(82, 82, 82)';>友情</span><span style="color:rgb(182, 169, 135);">鏈</span><span style='text-shadow: 2px 2px 4px rgb(82, 82, 82)';>接</span></h3><br>
         <!--  <iframe src="https://www.seacatcry.com/">うみねこのなく頃に論壇-黃金魔女的番茄園</iframe><br> -->
         <!--   <a href="https://www.seacatcry.com/" target="_blank">うみねこのなく頃に論壇-黃金魔女的番茄園</a><br> -->
         <p style="text-align:center"><a href="http://www.seacatcry.com/" target="_blank" style="color: blue">海猫鸣泣之时论坛-黄金魔女的番茄园</a></p><br>
