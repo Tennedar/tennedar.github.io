@@ -59,6 +59,23 @@
             font-size: auto;
         }
 
+        body {
+            height: 100vh;
+            background-color: white;
+        }
+
+        .text {
+            position: absolute;
+            z-index: 9999999;
+            font-weight: bold;
+            user-select: none;
+        }
+
+        @keyframes remove {
+            100% {
+                opacity: 0;
+            }
+        }
 </style>
 </head>
 <script>
@@ -98,6 +115,60 @@
 
    siteTime();
   </script>
+
+<script>
+    window.addEventListener('load', function () {
+        let body = document.body;
+        let content = ["❤"   ,'❤歡迎訪問❤','❤Tennedar❤','❤R❤','❤感謝訪問❤'     ] //自定义内容的数组
+        body.addEventListener('click', function (e) {
+            let x = e.pageX;
+            let y = e.pageY; //当前坐标
+            let randContent = Math.ceil(Math.random() * content.length);
+            let text = new Text(x, y, randContent);
+            let span = document.createElement('span')
+            span.style.color = text.getRandom();
+            text.create(span);
+            setTimeout(function () {
+                text.out(span)
+            }, 1900)
+        })
+
+        function Text(x, y, rand) {
+            this.x = x;
+            this.y = y;
+            this.rand = rand;
+        }
+        Text.prototype.create = function (_this) {
+            let body = document.body;
+            _this.innerHTML = content[this.rand - 1];
+            _this.className = 'text'
+            _this.style.top = this.y - 20 + 'px'
+            _this.style.left = this.x - 50 + 'px'
+            _this.style.animation = 'remove 5s'
+            body.appendChild(_this);
+            let i = 0
+            setInterval(() => {
+                _this.style.top = this.y - 20 - i + 'px'
+                i++
+            }, 10);
+        }
+        Text.prototype.out = function (_this) {
+            _this.remove()
+        }
+        //设置随机颜色
+        Text.prototype.getRandom = function () {
+            let allType = '0,1,2,3,4,5,6,7,8,9,a,b,c,d,e,f'; //16进制颜色
+            let allTypeArr = allType.split(','); //通过','分割为数组
+            let color = '#';
+            for (var i = 0; i < 6; i++) {
+                //随机生成一个0-16的数
+                var random = parseInt(Math.random() * allTypeArr.length);
+                color += allTypeArr[random];
+            }
+            return color; //返回随机生成的颜色
+        }
+    })
+</script>
 <body>
  <div class="p">
     <div id="title" class="test1" >
@@ -172,7 +243,7 @@
         
       <p style="text-align:center;">
         <b><i>名字</i></b>：<span style="color:rgb(137, 23, 243);background-color: rgb(196, 255, 234);">転枝りん（てんえだ　りん），也叫Tennedar，rinn，r</span>，<span style='text-shadow: 2px 2px 4px rgb(82, 82, 82)';>程度由正式到隨意</span><span style="color:rgb(137, 23, 243);">；</span><br><br>
-        <b><i>年齡</i></b>：<del>I’m three</del>   <a href="https://www.bilibili.com/video/BV1264y1B7qp/" target="_blank" style="color: blue">原梗來自這裡</a> <span style="color:rgb(137, 23, 243);">；</span><br><br>
+        <b><i>年齡</i></b>：<del>I’m three</del>   <a href="https://www.bilibili.com/video/BV1264y1B7qp/" target="_blank" style="color: blue">原梗來自</a> <span style="color:rgb(137, 23, 243);">；</span><br><br>
         <b><i>DIVINA</i></b>-TENNEDA<span style='text-shadow: 2px 2px 4px rgb(82, 82, 82)';>意為“神聖tennedar”</span>，致敬了神曲divina commedia<span style="color:rgb(137, 23, 243);">；</span><br><br>
         <b><i>SNS</i></b>：大部分（指微博等）不喜歡用，<span style='text-shadow: 2px 2px 5px rgb(82, 82, 82)';>活躍於Mastodon，信息繭房狂熱愛好者</span><span style="color:rgb(137, 23, 243);">；</span><br><br>
         <b><i>會</i></b>：<span style='text-shadow: 2px 2px 5px rgb(82, 82, 82)';>寫文、畫畫、做遊戲、音樂</span>，html自學中，本站的所有內容都是親自製作的<span style="color:rgb(137, 23, 243);">；</span><br><br>
