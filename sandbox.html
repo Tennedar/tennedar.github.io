@@ -5,22 +5,44 @@
 <body>
 SANDBOX<br>
     <br>
-     <br>
-    
-    <a href="https://tennedar.github.io/test1.txt" download="test1.txt">點擊下載txt</a><br>
-     <a href="https://tennedar.github.io/test1.mp3" download="test1.mp3">點擊下載mp3</a><br>
-    
-    <a href="https://tennedar.github.io/lasolaveritar.html" >測試頁</a>
-    
-<details>    
-<summary>二〇二三</summary>
-測試測試1111111111<br>
-    <details>
-<summary>點我打開</summary>
-    測試2222
-        </details>
-</details>
     <br>
+    <br>
+<textarea>
+    toggle
+    <details>    
+    <summary>我是標題1</summary>
+        我是內容1<br>
+        <details>
+        <summary>我是標題2</summary>
+            我是內容2
+        </details>
+    </details>
+</textarea>
+<textarea>
+    password
+    <script type="text/javascript">   
+        function password() {   
+        var testV = 1;   
+        var pass1 = prompt('PASSWORD','');   
+        while (testV < 3) {   
+        if (!pass1)   
+        history.go(-1);   
+        if (pass1 == "07151129") {//初始密码07151129
+        alert('認證通過');   
+        break;   
+        }   
+        testV+=1;   
+        var pass1 =   
+        prompt('密码错误，请重新输入:');   
+        }   
+        if (pass1!="password" & testV ==3)   
+        history.go(-1);   
+        return " ";   
+        }   
+        document.write(password());   
+        </script>  
+</textarea>
+
      <br>
 <p style="text-align:center;font-size:15px"> Copyright © 2023 Tennedar All rights reserved.</p>
 </body>
