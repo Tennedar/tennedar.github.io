@@ -1,15 +1,92 @@
 <html>
   <head>
      <link rel="icon" type="image/png" sizes="144x144" href="https://tennedar.github.io/pic/icon144x.png"/>
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    html,body    {
+        height: 100%;
+    }
+    .p    {
+        width: 100%;
+        height: 100%;
+        background: white;
+    }
+
+    .test1{   
+            position: absolute;   
+            top: 50%;   
+            left: 50%;   
+            -webkit-transform: translate(-50%, -50%);   
+            -moz-transform: translate(-50%, -50%);   
+            -ms-transform: translate(-50%, -50%);   
+            -o-transform: translate(-50%, -50%);   
+            transform: translate(-50%, -50%);   
+        }   
+
+        .search{
+            width: 80%;            
+            margin: auto;
+            display: flex;
+            /*border: 1px solid red;*/
+        }
+        .search input{
+            float: left; 
+            flex: 10;
+            height: 50px;
+            outline: none;
+            border: 1px solid ;
+            color: rgb(137, 23, 243);
+            box-sizing: border-box;
+            padding-left: 20px;
+        }
+        .search button{
+            float: right;
+            flex: 1;
+            height: 50px;
+            background-color: rgb(196, 255, 234);
+            color: rgb(137, 23, 243);
+            border: 1px solid ;
+            outline: none;
+        }
+        .search button i{
+            font-style: normal;
+        }
+        .search button:hover{
+            font-size: auto;
+        }
+
+        body {
+            height: 100vh;
+            background-color: white;
+        }
+
+        .text {
+            position: absolute;
+            z-index: 9999999;
+            font-weight: bold;
+            user-select: none;
+        }
+
+        @keyframes remove {
+            100% {
+                opacity: 0;
+            }
+        }
+    
+    </style>
+    
      <script type="text/javascript">   
 function password() {   
 var testV = 1;   
-var pass1 = prompt('神秘8位暗号','');   
-while (testV < 3) {   
+var pass1 = prompt('神秘8位鑰匙','');   
+while (testV < 999) {   
 if (!pass1)   
 history.go(-1);   
 if (pass1 == "07151129") {//初始密码07151129
-alert('認證通過');   
+alert('歡迎來到黃金鄉！');   
 break;   
 }   
 testV+=1;   
@@ -22,24 +99,92 @@ return " ";
 }   
 document.write(password());   
 </script>  
+     <script>
+    window.addEventListener('load', function () {
+        let body = document.body;
+        let content = ["❤"   ,'❤歡迎訪問❤','❤Tennedar❤','❤R❤','❤感謝訪問❤'     ] //自定义内容的数组
+        body.addEventListener('click', function (e) {
+            let x = e.pageX;
+            let y = e.pageY; //当前坐标
+            let randContent = Math.ceil(Math.random() * content.length);
+            let text = new Text(x, y, randContent);
+            let span = document.createElement('span')
+            span.style.color = text.getRandom();
+            text.create(span);
+            setTimeout(function () {
+                text.out(span)
+            }, 1900)
+        })
+
+        function Text(x, y, rand) {
+            this.x = x;
+            this.y = y;
+            this.rand = rand;
+        }
+        Text.prototype.create = function (_this) {
+            let body = document.body;
+            _this.innerHTML = content[this.rand - 1];
+            _this.className = 'text'
+            _this.style.top = this.y - 20 + 'px'
+            _this.style.left = this.x - 50 + 'px'
+            _this.style.animation = 'remove 2s'
+            body.appendChild(_this);
+            let i = 0
+            setInterval(() => {
+                _this.style.top = this.y - 20 - i + 'px'
+                i++
+            }, 10);
+        }
+        Text.prototype.out = function (_this) {
+            _this.remove()
+        }
+        //设置随机颜色
+        Text.prototype.getRandom = function () {
+            let allType = '0,1,2,3,4,5,6,7,8,9,a,b,c,d,e,f'; //16进制颜色
+            let allTypeArr = allType.split(','); //通过','分割为数组
+            let color = '#';
+            for (var i = 0; i < 6; i++) {
+                //随机生成一个0-16的数
+                var random = parseInt(Math.random() * allTypeArr.length);
+                color += allTypeArr[random];
+            }
+            return color; //返回随机生成的颜色
+        }
+    })
+</script>
   </head>
   <title>海猫版杀</title>
   <body>
-     <br>
-     <a href="http://tennedar.github.io/acgn.html">返回上一頁</a><br>
-      <a href="http://tennedar.github.io/">返回首頁</a><br>
+     <div class="p">
+    <div id="title" class="test1" >
+       
+        <h1 style="text-align:center">海貓版殺<span style="color:red">-</span>在某個<span style="color:red;">鳴</span>泣之時再見...</h1>
+        <br>
+      <p style='text-align:center'><a href="http://tennedar.github.io/acgn.html">返回上一頁</a></p><br><br>
+      <p style='text-align:center'><a href="http://tennedar.github.io/">返回首頁</a></p><br>
+        </div>
+    </div>
     <br>
     <br>
-     <details>
-<summary>版杀XXIX总结（观众）</summary>
-       <a href="http://www.seacatcry.com/read-413.html" target="blank">传送门</a><br>
-    规则上不太平衡吧。<br>
+    <hr>
+    <br>
+    <br>
+<details style="text-align: center;">
+<summary>版杀<span style='color:red'>XXIX</span>总结（观众）</summary><br>
+   <a href="http://www.seacatcry.com/read-413.html" target="blank">传送门</a><br><br>
+规则上不太平衡吧。<br>
 姑且还是在观剧楼努力卖萌了，虽然感觉没有玩家因此轻松一点……<br>
 不管怎么样大家都辛苦了<br>
-        </details>
-    <details>
-<summary>版杀XXVIII总结（观众）</summary>
-      <a href="http://www.seacatcry.com/read-395.html" target="blank">传送门</a><br>
+    </details>
+     <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+    <details style="text-align: center;">
+     
+      <summary>版杀<span style='color:red'>XXVIII</span>总结（观众）</summary><br>
+      <a href="http://www.seacatcry.com/read-395.html" target="blank">传送门</a><br><br>
     保护费虽迟但到………………！<br>
 这里是围观群众rinn，上届下锅然后这届观剧后感觉发言思路和对规则的理解都更深了，对各位选手和局势比起点评更多的是需要学习所以就不多讲啦！期待能与各位在下一次版杀鸣泣之时相见<br><del>下次我估计还是没空 下下次吧。</del>其实本来都想咕掉了，但是以下二位的发言留在大脑中挥之不去，感叹了好久太可爱啦终于忍不住画了……<br>
     <img src="https://tennedar.github.io/pic/werewolf/版杀XXVIII_11.jpg" width="550"><br>   
@@ -47,9 +192,15 @@ document.write(password());
         <img src="https://tennedar.github.io/pic/werewolf/版杀XXVIII_12.jpg" width="400"><br>   
           <img src="https://tennedar.github.io/pic/werewolf/版杀XXVIII_14.jpg"><br>   
         </details>
-    <details>
-<summary>版杀XXVII总结（侦探）</summary>
-       <a href="http://www.seacatcry.com/read-380.html" target="blank">传送门</a><br>
+        <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+    <details style="text-align: center;">
+  
+      <summary>版杀<span style='color:red'>XXVII</span>总结（侦探）</summary><br>
+       <a href="http://www.seacatcry.com/read-380.html" target="blank">传送门</a><br><br>
       大家好我是夏妃的扮演者転枝rinn<br>
 首先，超级感谢一直及时为我们送上鼓励的工作超认真的法官大人们！感谢侦探队的各位不嫌弃我拖后腿一直带着我走TT，真的给好人带队观剧和猫猫添了好多麻烦，一起参加游戏的各位，大家都辛苦啦！<br>
 
@@ -83,10 +234,14 @@ Day4果不其然，因为发言太迷惑被点上pk台然后一边倒怀疑，�
        <img src="https://tennedar.github.io/pic/werewolf/版杀XXVII_11.png" width="240"><br><br>
         </details>
     
-    
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
     <br><br>
-    <p style="font-size:25px;color:purple">版杀XXX总结（观众）</p>
-    <a href="http://seacatcry.com/read-440.html" target="blank">传送门</a><br>
+    <h2 style="text-align:center">版杀<span style='color:red'>XXX</span>总结（观众）</h2><br>
+    <p style="text-align:center"><a href="http://seacatcry.com/read-440.html" target="blank">传送门</a></p><br><br>
     完结撒花！各位饭馆、各位选手、各位观众都辛苦了！感谢你们带来的精彩的棋盘！<br>
     本届我是观众，但是因为比较空，参与度？比起28届高了不少，感谢大家包容我在观剧楼废话……没有参加真是遗憾啊，每次结束都会这麽想，下次一定会来的！<br>
     <br>
