@@ -1,0 +1,69 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+html,body    {
+    height: 100%;
+}
+
+.p    {
+    width: 100%;
+    height: 100%;
+    background: white;
+}
+
+.test1{   
+        position: absolute;   
+        top: 50%;   
+        left: 50%;   
+        -webkit-transform: translate(-50%, -50%);   
+        -moz-transform: translate(-50%, -50%);   
+        -ms-transform: translate(-50%, -50%);   
+        -o-transform: translate(-50%, -50%);   
+        transform: translate(-50%, -50%);   
+}   
+
+body {
+        height: 100vh;
+        background-color: white;
+}
+
+.text {
+        position: absolute;
+        z-index: 9999999;
+        font-weight: bold;
+        user-select: none;
+}
+
+@keyframes remove {
+        100% {
+            opacity: 0;
+        }
+}
+
+
+a:link{
+        color:blue;
+        text-decoration: underline;
+}
+a:visited{
+        color:rgb(137, 23, 243);
+        text-decoration:   rgb(182, 169, 135) underline;
+        text-decoration: overline;
+}
+a:hover{
+        color: rgb(0, 224, 146) !important;
+       
+        
+        text-decoration: underline !important;
+}
+a:active{
+        color:blue;
+        background-color:  rgb(196, 255, 234) ;
+        text-decoration: underline;
+}
+.span1:hover{
+    color:rgb(0,224,146) !important;
+}
