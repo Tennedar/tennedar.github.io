@@ -1,23 +1,85 @@
 <html>
 <head>
-   <link rel="icon" type="image/png" sizes="144x144" href="https://tennedar.github.io/pic/icon144x.png"/>
-   <link rel="stylesheet" type="text/css" href="https://tennedar.github.io/css/tennedar-style.css">
-<title>博客</title>
-   <style>
+    <link rel="icon" type="image/png" sizes="144x144" href="https://tennedar.github.io/pic/icon144x.png"/>
+    <link rel="stylesheet" type="text/css" href="https://tennedar.github.io/css/tennedar-style.css">
+    <title> DIVINA-TENNEDAR</title>
+<style>
+        .search{
+            width: 80%;            
+            margin: auto;
+            display: flex;
+            /*border: 1px solid red;*/
+        }
+        .search input{
+            float: left; 
+            flex: 10;
+            height: 50px;
+            outline: none;
+            border: 1px solid ;
+            color: rgb(137, 23, 243);
+            box-sizing: border-box;
+            padding-left: 20px;
+        }
+        .search button{
+            float: right;
+            flex: 1;
+            height: 50px;
+            background-color: rgb(196, 255, 234);
+            color: rgb(137, 23, 243);
+            border: 1px solid ;
+            outline: none;
+        }
+        .search button i{
+            font-style: normal;
+        }
+        .search button:hover{
+            font-size: auto;
+        }
 
-	.content{
-		border-left: 20px dashed;
-		border-right: 20px dashed;
-	}
- 
-   </style>
+</style>
 </head>
-   
-   
-   <script>
+<script>
+    function siteTime()
+   {
+      window.setTimeout("siteTime()", 1000);
+      var seconds = 1000;
+      var minutes = seconds * 60;
+      var hours = minutes * 60;
+      var days = hours * 24;
+      var years = days * 365;
+      var today = new Date();
+      var todayYear = today.getFullYear();
+      var todayMonth = today.getMonth()+1;
+      var todayDate = today.getDate();
+      var todayHour = today.getHours();
+      var todayMinute = today.getMinutes();
+      var todaySecond = today.getSeconds();
+      /* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+      year - 作为date对象的年份，为4位年份值
+      month - 0-11之间的整数，做为date对象的月份
+      day - 1-31之间的整数，做为date对象的天数
+      hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+      minutes - 0-59之间的整数，做为date对象的分钟数
+      seconds - 0-59之间的整数，做为date对象的秒数
+      microseconds - 0-999之间的整数，做为date对象的毫秒数 */
+      var t1 = Date.UTC(2023,1,20,0,0,0); //北京时间2016-12-1 00:00:00
+      var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
+      var diff = t2-t1;
+      var diffYears = Math.floor(diff/years);
+      var diffDays = Math.floor((diff/days)-diffYears*365);
+      var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
+      var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
+      var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
+      document.getElementById("sitetime").innerHTML=" 站點已運行： "+diffYears+" 年 "+diffDays+" 天 "+diffHours+" 小时 "+diffMinutes+" 分钟 "+diffSeconds+" 秒";
+    }
+
+   siteTime();
+  </script>
+
+<script>
     window.addEventListener('load', function () {
         let body = document.body;
-        let content = ['☆Tennedar☆','☆R☆','☆Tennedar☆','☆R☆','☆感謝訪問☆' ,'☆tennedar的個人網站☆','☆Tennedar☆','☆R☆','☆感謝訪問☆'     ,'(๑•́ ₃ •̀๑)ｴｰ','(๑ơ ₃ ơ)♥','(◡‿◡✿)','( つ•̀ω•́)つ','( ó × ò)','꒰ ๑͒ ･౪･๑͒꒱','(* Ŏ∀Ŏ)'        ,'(✿╹◡╹)','(｡╹ω╹｡)','(●☌◡☌●)','(..＞◡＜..)', 'ヽ(＊>∇<)ﾉ','(´ω｀*)','(#ﾟﾛﾟ#)'       ,'(̷ ̷₌̷ ̷ㅇ̷ ̷ᆽ̷ ̷ㅇ̷ ̷₌̷ ̷)♡','(ﾐㅇ ༝ ㅇﾐ)','(=🝦 ༝ 🝦=)' ,'◟[˳_˳]ʌ˽ʌ','/ᐠ｡ꞈ｡ᐟ❁ \∫','/ᐠ. ᴗ.ᐟ\ ','/ᐠܻ ⑅ܻ᳙ ᐟ\ﾉ'        ,'⋆ටᆼට⋆','ि०॰͡०ी','=ටᆼට=','ฅ( ̳͒ᵕ ˑ̫ ᵕ ̳͒)ฅ','~(=^･･^)ﾍ >ﾟ)))彡','~(=^･ω･^)y＝ ‥… *→;ﾟoﾟ)'        ,'₍ᐢ ̥ ̞ ̥ᐢ₎ ♥','ʚ₍⑅ᐢ‸ ̫ ‸ᐢ₎ɞ' ,'₍⑅ᐢ ›̥̥̥ ‸ ‹̥̥̥ ᐢ₎','ᕱ⑅ᕱ','（ ÒㅅÓ)','￣(〃ﾟｏ ﾟ〃)￣','⌒(≧ x ≦)⌒'        ,'ミ◕ฺｖ◕ฺ彡','(ﾉ≧∀≦)ﾉ ‥…━━━★','(ﾉ>ω<)ﾉ :｡･::･ﾟ’★,｡･::･ﾟ’☆','(ノ°∀°)ノ⌒･:.｡. .｡.:･゜ﾟ･*☆'        ,'(⊃｡•́‿•̀｡)⊃━✿✿✿✿✿✿','(/￣ー￣)/~~☆’.･.･:★’.･.･:☆' ] //自定义内容的数组
+        let content = ['☆tennedar的個人網站☆','☆Tennedar☆','☆R☆','☆感謝訪問☆','☆Tennedar☆','☆R☆' ,'(๑•́ ₃ •̀๑)ｴｰ','(๑ơ ₃ ơ)♥','(◡‿◡✿)','( つ•̀ω•́)つ','( ó × ò)','꒰ ๑͒ ･౪･๑͒꒱','(* Ŏ∀Ŏ)'        ,'(✿╹◡╹)','(｡╹ω╹｡)','(●☌◡☌●)','(..＞◡＜..)', 'ヽ(＊>∇<)ﾉ','(´ω｀*)','(#ﾟﾛﾟ#)'       ,'(̷ ̷₌̷ ̷ㅇ̷ ̷ᆽ̷ ̷ㅇ̷ ̷₌̷ ̷)♡','(ﾐㅇ ༝ ㅇﾐ)','(=🝦 ༝ 🝦=)' ,'◟[˳_˳]ʌ˽ʌ','/ᐠ｡ꞈ｡ᐟ❁ \∫','/ᐠ. ᴗ.ᐟ\ ','/ᐠܻ ⑅ܻ᳙ ᐟ\ﾉ'        ,'⋆ටᆼට⋆','ि०॰͡०ी','=ටᆼට=','ฅ( ̳͒ᵕ ˑ̫ ᵕ ̳͒)ฅ','~(=^･･^)ﾍ >ﾟ)))彡','~(=^･ω･^)y＝ ‥… *→;ﾟoﾟ)'        ,'₍ᐢ ̥ ̞ ̥ᐢ₎ ♥','ʚ₍⑅ᐢ‸ ̫ ‸ᐢ₎ɞ' ,'₍⑅ᐢ ›̥̥̥ ‸ ‹̥̥̥ ᐢ₎','ᕱ⑅ᕱ','（ ÒㅅÓ)','￣(〃ﾟｏ ﾟ〃)￣','⌒(≧ x ≦)⌒'        ,'ミ◕ฺｖ◕ฺ彡','(ﾉ≧∀≦)ﾉ ‥…━━━★','(ﾉ>ω<)ﾉ :｡･::･ﾟ’★,｡･::･ﾟ’☆','(ノ°∀°)ノ⌒･:.｡. .｡.:･゜ﾟ･*☆'        ,'(⊃｡•́‿•̀｡)⊃━✿✿✿✿✿✿','(/￣ー￣)/~~☆’.･.･:★’.･.･:☆' ] //自定义内容的数组
         
         body.addEventListener('click', function (e) {
             let x = e.pageX;
@@ -43,7 +105,7 @@
             _this.className = 'text'
             _this.style.top = this.y - 20 + 'px'
             _this.style.left = this.x - 50 + 'px'
-            _this.style.animation = 'remove 2s'
+            _this.style.animation = 'remove 5s'
             body.appendChild(_this);
             let i = 0
             setInterval(() => {
@@ -68,93 +130,121 @@
         }
     })
 </script>
-   
-   
-   
-<body  id="top">
-  	<br>
-	<div class='p'>
-		<div class='test1'>
-		<h1 style="text-align:center">博客-BL<span style="color:rgb(182, 169, 135);">O</span>G</h1>
-			<br>
-			<p style="text-align:center"><a href="http://tennedar.github.io/" style="color: blue">返回上一頁</a></p><br>
-			<br>
-			<p style="text-align:center"><span style="color: blue">二次元專區（暫時停用）</span></p><br><br>
-			<!--<p style="text-align:center"><a href="http://tennedar.github.io/acgn.html" style="color: blue">二次元專區</a></p><br><br>-->
-			<p style="text-align:center"><a href="https://tennedar.github.io/blog-2022-1.html" style="color: blue">2022 8~10月博客</a></p>
-			<p style="text-align:center"><a href="https://tennedar.github.io/blog-2022-2.html" style="color: blue">2022 11~12月博客</a></p><br><br>
-			<p style="text-align:center" ><a href="https://tennedar.github.io/blog-2022-2.html" style="color: blue">↓ 2023年 博客 ↓</a></p><br>
-			<p style="text-align:center"><a href="#2.18">2.18</a> || <a href="#2.12">2.12</a>  || <a href="#2.11">2.11</a> || <a href="#2.5">2.5</a> || <a href="#2.4">2.4</a><br><a href="#1.28">1.28</a> || <a href="#1.27">1.27</a> || <a href="#1.26">1.26</a> || <a href="#1.24">1.24</a> || <a href="#1.22">1.22</a> || <a href="#1.21">1.21</a> || <a href="#1.20">1.20</a> || <a href="#1.19">1.19</a> || <a href="#1.18">1.18</a></p>
-		</div>
-   	</div>
-   
-  	<br>
-	<div class="content">
-  		<hr>
-   		<br>   <br><br><br>
-   		<br>
-   		<p style='background-color: black;color:rgb(196, 255, 234);font-size: larger;' id="2.18"><b>2023.2.18</b> || <a href='#top' style="color:rgb(196, 255, 234)">回到頂端</a></p>
-			<span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">腿痛……</span>--大卸學校八百塊，大擺特擺，<span style="color:rgb(137, 23, 243)">此後若是沒有人我就是骨頭最軟的海帶</span>。尼瑪的我一直都很具有感恩之心，但是思來想去什麼音體美老師zz老師對我的成長真的沒起到一星半點的作用只是讓r髒話庫豐富了一倍而已，********<br><br>
-			言歸正傳<span style="color:rgb(137, 23, 243)">首先</span>打廣告，恭喜彬尼從三星使用者變成三星代言人啦<del>雖然還是希望彬用蘋果</del>不愧是在全隊iphone中堅持三星的主見座kkk<a href='https://www.bilibili.com/video/BV1UM411E7bq/' target='_blank'>【Stray Kids 徐彰彬】三星S23广告-主见篇</a><br><br>
-			<span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">23.2.14情人節</span>--收到了<span style="color:rgb(137, 23, 243)">z的</span>賀卡和白色戀人<img src="https://tennedar.github.io/pic/emoji/shy.png" width="45px">ㅠㅠㅠ怎麼那麼好……非常感謝地載入史冊。<br><br>
-			<span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">個站事宜</span>--個站是1月20日正式搭建的，再兩天就<span style="color:rgb(137, 23, 243)"><b>滿月</b></span>了，感覺做一些事來慶祝會比較好，暫時也想不到什麼…總之要大幅提升一下博客的閱讀舒適度，然後想寫幾篇文章比如毛象入門指南ry個站搭建方法ry，這樣<span style="color:rgb(137, 23, 243)">比較有幫助的內容</span>！雖然感覺r不用寫教程網上也全部都是，但是r來寫還是有不一樣的視角的所以想寫。<br>
-			<span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">個站事宜2</span>--雖然博客的子頁面中有【二次元專區】這一塊……但是아이고 r最近已經脫離<span style="color:rgb(137, 23, 243)">二次元</span>很久了，那邊也完全是空白狀態，懷疑真的還有存在的必要嗎……準備那個本來是<span style="color:rgb(137, 23, 243)">防劇透用的</span>，其實二次元和博客合併也沒什麼關係吧總之那個<span style="color:rgb(137, 23, 243)">暫時先停用了</span>。<br><br>
-			<span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large">關於stray kids~</span>--才想到三辣醬的rap名，那个，CB97不会是灿-方-1997吧…哥這個，未免有点朴素…沒關係非常好<br>聽了<span style="color:rgb(137, 23, 243)">日專主打The Sound</span><a href='https://www.bilibili.com/video/BV1WM411Y7tr/' target='_blank'>Straykids日文新曲The Sound MV公开</a>，剛開始持續了很久覺得前幾句（felix之前）和整首歌有點不搭，現在聽順了r來吹了~開口定調，<span style="color:rgb(137, 23, 243)">氣勢很足</span>嘛<img src="https://tennedar.github.io/pic/emoji/love.png" width="45px"><br>沒有完整看過<span style="color:rgb(137, 23, 243)">編舞</span>不過看了開頭，之後也看了這個超棒的解析視頻…<span style="color:rgb(137, 23, 243)">我一直以為開頭是時鐘，原來是指南針</span>，晃啊晃啊的（？）很有意思，很有意思。<img src="https://tennedar.github.io/pic/emoji/cry.png" width="45px"><br><img src="https://tennedar.github.io/pic/blog/the sound_1.png" width="550px"><img src="https://tennedar.github.io/pic/blog/the sound_2.png" width="550px"><br>ㅋㅋㅋ沒見過指南針！不認識。這個MV看上去中二，其實中二而且科學…ㅋㅋㅋㅋㅋㅋ一定要聽聽<span style="color:rgb(137, 23, 243)">伊恩尼的副歌，音色絕了</span>~<br><a href="https://www.bilibili.com/video/BV1V24y1s7VU/" target="_blank">雷暴+龙卷风！迷国为何极端天气频发？| 日专曲《The Sound》MV解析（UP：帮李察吃茄子）</a><br>接著上一次的話題再說點，r是<span style="color:rgb(137, 23, 243)">聽歌</span>很快的人，聽兩三遍找到調就可以自己腦補了（雖然不會韓語但是大致尾音還是知道的），<span style="color:rgb(137, 23, 243)">然後就去聽伴奏</span>（不是聽純伴奏，是聽歌曲人聲下面能用耳朵分辨出的伴奏的部分看它怎麼和音），所以一般般的歌聽個十次左右就要被移除出ipod了，然後之前也說過？了……迷的歌r<span style="color:rgb(137, 23, 243)">好像聽了幾百遍，按理來說早就能腦補了，但是就……想聽聲音嘛</span>就一直在聽，現在終於把r的入坑曲雷震子聽膩了（沒有）開始聽伴奏了，真有意思ㅋㅋㅋ，<span style="color:rgb(137, 23, 243)">收穫之後再說</span>。<br><br><br>
-			<span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large">語文</span>--看了十多篇堪比生活在树上的东西心情有点無語；老师：说白了 现在文风真差！老师：有什么办法呢我们一起差<br>ㅋㅋㅋㅋㅋㅋ<br>“雖然我不能像xxx一樣xxx，也不能像xxx一樣xxx，但是我可以做個普通人發光發熱”，有這種文段嘛，r承認反向舉例是很新穎可以學，<span style="color:rgb(137, 23, 243)">但是是抱著怎樣的心態寫“我不能…”的啊</span>，未免太沒自信了吧，為什麼就不行呢r就是可以和前面舉例的人一樣厲害啊<img src="https://tennedar.github.io/pic/emoji/pretend.png" width="45px">，要有這種感覺吧，所以這種內容r是不想硬著頭皮往上寫 아씨 。<br><br>
-			<span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large">雜七雜八！</span>--疯狂吃零食的一週；<span style="color:rgb(137, 23, 243)">要有主见地做喜欢的东西</span>（復讀）；今天喝了一點點的波霸<span style="color:rgb(137, 23, 243)">銀耳</span>奶昔，銀耳也能加進去啊…感覺軟軟的很和諧，創意真有意思。希望各位奶茶點方學習一下，卷起來卷起來。<br>想不到別的東西了，感覺和z傳小紙條都寫了幾萬字了但是現在<span style="color:rgb(137, 23, 243)">一個都想不起來了</span>那就不說了，繼續解決技術問題……<img src="https://tennedar.github.io/pic/emoji/cry.png" width="45px"><br><br>
-			<br>
-   		<p style='background-color: black;color:rgb(196, 255, 234);font-size: larger;' id="2.12"><b>2023.2.12</b> || <a href='#top' style="color:rgb(196, 255, 234)">回到頂端</a></p>
-			繼續裝修~<br>
-			<span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">關於繭房</span>--雖然本來r就不怎麼用sns，但是<span style="color:rgb(137, 23, 243)">qq空間</span>真的是用了很久的。個站也是一直想搭，這兩個基本並行，但是個站原本只打算放作品。<br>後來r也忘了發生了什麼……總之<span style="color:rgb(137, 23, 243)">qzone生態變得無聊極了</span>，芝麻大的事也能熱轉你們真的是很無聊。加上好友有感覺不瞭解亞文化同學，發東西不自在。最後下定決心<span style="color:rgb(137, 23, 243)">清空註銷了空間</span>。<br>但是，在離開空間和建起個站（wordpress）之前是有一段時間的，那段時間雖然在毛象但是也比較拘謹說話很少……那段時間r都是在幹什麼啊！完全想不起來。期間也是<span style="color:rgb(137, 23, 243)">一直在改說話習慣</span>，現在說話一個括號都沒有了。<br>所以，在終於搭起個站的時候r已經不需要qq空間的替代品了。可以<span style="color:rgb(137, 23, 243)">自由自在地說話</span>而不是寫和任何一個當代女網友一模一樣的文字。<br>
-			<br><span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">關於學校...</span>--開學第一天，被廣播操美術課體育課弄得想<span style="color:rgb(137, 23, 243)">哐哐撞大牆</span>，好恨你學校，好恨你學校，牢坐死了。<br>感覺……努力好像有了一些成果。雖然還是很不滿意啊感覺可以更努力的 まァがんばります<br><br>
-			<span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">關於stray kids</span>--主見論已經深深地影響了r…迷真的很有意思，讓人看著心情很好。<br>雖然說了很多次了不過還沒系統？地說過呢，來評價一下目前r聽過的歌吧：<br>
-			<u>Hellevater：</u>很熱血很勵志，給人傳達了一種力量。出道戦孩子們選完track，燦尼說彰彬和韓把歌詞寫一下彬城就去利索地寫歌詞…三辣醬到底是以怎樣的功率運轉的！rap也很好副歌也很好，選和菲的part，因為出道戦的時候被批評過，後來的表現真的太好了
-			<br><br><u>Thunderous：</u><br>r的入坑曲，第一句rap非常吸引人…每個方面都能吹就不說了。美中不足的可能是舞太難了孩子們跳不齊，不過舞很好看。<br>很喜歡的幾個視頻！舞臺很有生命力。<br>
-			<a href='https://www.bilibili.com/video/BV11h411H7H1/' target='_blank'>彬尼在“善歌者”打歌舞台李糯part&开头的各种adlib</a><br>
-			<a href="https://www.bilibili.com/video/BV1mU4y1P7o2/" target='_blank'>一位全开麦安可一个人唱三个人的part 210908冠军秀一位</a><br>
-			<a href="https://www.bilibili.com/video/BV1GS4y1h734/" target='_blank'>NMIXX cover STRAY KIDS - Thunderous特别Kcon舞台</a><br>
-			<br><u>Maniac：</u><br>糾結了很久和雷震子更喜歡哪一個的對象…現在決定不爭了。在所有迷曲中r覺得在another level，其他迷曲可以按喜好排序，但是梅尼耶一定要單拎出來誇。特別喜歡韓尼這個造型和姿勢，感覺真瘋了（褒義），選的這件衣服？也好看，感覺真的瘋了（褒義）。<br>
-			<a href="https://www.bilibili.com/video/BV1eZ4y1177E/" target='_blank'>李糯老师今天来教你们MANIAC里骨盆怎么动</a><br>
-			<img src="https://tennedar.github.io/pic/blog/skz1.gif" ><br>
-			<br><u>神menu：</u><br><del>感覺迷……迷你們是韓國團體吧每天用漢字不會讓人困擾嗎kkkkk</del> 音樂→菜/實驗的比喻很新奇有意思，副歌歌詞，字面意思的話，略顯弱智（）沒有說安排不好的意思但是為什麼彬尼開頭結尾一模一樣兩段，他們寫歌的時候應該不是這樣設想的…吧？學到了沒用的知識：米其林最高三星（然而韓尼寫的歌詞是五星米其林kkk）<br>很喜歡那句“如果你問我們有什麼祕方，沒有那種東西”<br>
-			<a href="https://www.bilibili.com/video/BV1Ci4y1G7C7/" target='_blank'>【李旻浩】主舞大人挑战1.5和0.5倍速"神Menu"|丝毫不影响精确度</a><br>
-			<br><u>back door：</u><br>閒人勿進~概念很有意思。在看解說視頻之前沒有注意到最後的場景是越來越多人進入後門的狂歡，真好，非常的盛大。想看skzoo版的……過門……<br>
-			<br>未完待續~之後要說的（防止忘了）：the sound；chamer；slient cry；oh；lonely st.；freeze；case143；chill；the view；ex；強迫；<br>
-			<br>
-			<br>
-   		<p style='background-color: black;color:rgb(196, 255, 234);font-size: larger;'id="2.11"><b>2023.2.11</b> || <a href='#top' style="color:rgb(196, 255, 234)">回到頂端</a></p><del>大幅</del>修改了一下！現在可以四處點了 很美麗吧。採納了z的意見試圖把顏文字大全導進來。博客的樣式也想改，一樣一樣學。
-   			<br>
-   		<p style='background-color: black;color:rgb(196, 255, 234);font-size: larger;'id="2.5"><b>2023.2.5</b> || <a href='#top' style="color:rgb(196, 255, 234)">回到頂端</a></p>大幅修改了一下網頁樣式……好看多了吧？？辛苦折騰的結果。<br>
- 			<br>
- 		  <p style='background-color: black;color:rgb(196, 255, 234);font-size: larger;'id="2.4"><b>2023.2.4</b> || <a href='#top' style="color:rgb(196, 255, 234)">回到頂端</a></p>時隔六天終於又來寫博客了，正兒八經地想著“要寫博客”就寫不出什麼字來……<br><span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">今天吃了</span>關東煮<img src="https://tennedar.github.io/pic/emoji/love.png" width="45px">上一次吃還是11月呢想死我了，終於吃到了，風琴串軟軟的，非常完美。<br>博客離不滿意的地方還有很多，總之各種設計和技術都想嘗試一下　がんばれ。<br><br><span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">繭房</span>最近在…搞一些很煩心的作文！總之我的話，不管說幾遍都要重複強調這裡是繭房，r是繭房製造者，這裡是繭房的其中一部分。有了個站r可太快樂了<img src="https://tennedar.github.io/pic/emoji/shy.png" width="45px">感覺可以徹底拋棄SNS了……不過暫時還是給這邊定了很多規則比如不要鍵政，啊啊啊啊其實我很想說的但是自己的東西自己還是會慫的…保持淨土比較好。<br><span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">stray kids</span>最近一直在一直在聽迷的歌，總之想要瞭解更多好聽的非主打<img src="https://tennedar.github.io/pic/emoji/love.png" width="45px">我是抓旋律很快的人所以歌多聽幾遍就會膩，然後就會去聽後面的伴奏。但是迷的歌太上頭了雖然我早就能哼了但是還是想聽他們唱……伴奏怎麼樣都好啦閉著眼睛誇就好了。最近新更了skzcode ep29，內容是健身房，就，感覺還挺好玩的……如果萬一也許會想嘗試一下的（因為太累了還是選擇運動腦子好了）<br><span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">雜七雜八</span>本週毛象也沒什麼發言，說起來也在準備寫一篇文章教大家入門毛象，之後再說。反正我也不是專業的買一買所學而已。<br><span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">韓語</span>韓國人看多了就想學韓語啊……韓語…………好難……會加油的。<br><span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">個站事宜</span>首頁改了一下佈局，不知道大家喜不喜歡……設計這個我完全沒有概念……反正我覺得有字能看就行，但是姑且善良地照顧一下找不到字的訪客，把它們儘量排得一眼就能收盡，想要這樣做。<br>
- 			<br>
- 		<p style='background-color: black;color:rgb(196, 255, 234);font-size: larger;'id="1.28"><b>2023.1.28</b> || <a href='#top' style="color:rgb(196, 255, 234)">回到頂端</a></p>冷…（吸气）（呼气）（吸气）（呼气）<br><span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">個站事宜</span>给页面底部加上了“本站已运行的总时长”以及首页加上了一个动态时间，JavaScript真好用啊（不是），这两个代码都是网上抄的现成的，抄的过程中好像有一点点明白了js的语法，以下说错了不管：赋值var /｛｝相当于python的冒号以下引出的内容/if语句相等表示为==/未赋值数值变量默认为-1/函数真是多啊……是内置的吗，好强大<br>新增留言板，不知道能不能在线存储，还没试过。源码也不长有空去研究一下好了。<br><span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">stray kids 粉圈</span>迷圈最近乌烟瘴气的…真是不理解啊世界上怎么有人那么有钱……我觉得小卡也是纸片，纸片人也是纸片，好像后者更划算得多…嘛尊重祝福（x）可能是小卡会有未公开照片吧，一张照片而已诶你担已公开美图比那个多得多了差这一张吗。<br>像我这种几乎不使用社交媒体的人，图太多没处用…而且我对固定的自设头像很长情的。<br><br><span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">stray kids2</span>因为r是很随性偏见很重又没钱的路人，顶多是路人粉，可能不合适说这个；也不了解其他男团。但是问为什么，至少最近，很喜欢스틀레이 키즈的话(<small>stray kids</small>)，r的答案是“为什么不喜欢？”<br>…因为，你看，有什么缺点呢。stay经常说迷人(<small>straykids=迷路的孩子=迷；迷人=straykids的成員</small>)疯，这是好事啊，连r都能看团综爆笑的团一定能给更多人带来…力量不一定，笑容是一定有的。<br>评论区也有很多姐妹说原来只搞二次元但是垂直入坑，感觉上是这样很吸引人，但是一时半会r说不出详细的理由，首先是脸很好吧r虽然不看别家但是第一眼并不能get到档1(<small>某個瓜，之後再說</small>)，然后歌曲和MV包括成员自身都有点中二的…好，和r的共同点增加了，而且迷在日本很火嘛，搞二次元的应该也有相似的品味。<br>严格来说r一直都没有在二次元窝着，小学是同学推荐的kpop很喜欢歌就一直在听，初中虽然没有关注但是当时blackpink真的太太太火了就，根本不可能不知道，所以也有稍微关注过…有百度过这样。高中就一直在看。<br><span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">韓語</span>日韩都是从小听歌为什么到现在韩语一句都不会，说明韩语太难…了…本来辛辛苦苦背了四十音以为可以读了，然后发现还有首字读成送气音啦什么的规则，收音什么的也是完全觉得好难啊……好吧会加油学的。r觉得发音规则韩语真是最难的了，还要带动气息什么的做不到，相比之下日语的促音小意思啦，不过以r少少的认知还是觉得小舌音大舌音ry最难。<br><span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">stray kids3</span>。</u></i>最开始是看了NMIXX的雷震子cover舞台觉得歌很好听就去找原版，r慕强（抬头挺胸走来走去）所以创作型团一下子就吸引r了，雷震子嘛，彰彬尼(<small>straykids成員（之一）的名字or別稱</small>)的rap也一下子就吸引r了，怎么能把韩语念得那么清晰…很喜欢所以就去找MV合集看，r对抒情歌毫无兴趣所以直接找主打看，看了很有名？的梅尼耶等等认了人，彬城(<small>straykids成員（之二）的名字or別稱</small>)的rap啊…ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ怎么这样的啊ㅋㅋㅋㅋㅋ歌词也很好，这个团最让r喜欢的一点就是没有矫揉造作的无营养情歌。感受到了超强的实力。三辣酱(<small>3RACHA，straykids成員方燦、徐彰彬、韓知城組成的創作團體</small>)是最先给r留下印象的，不会夸了…就是很万能，然后其他人慢慢了解之后觉得性格很有意思实力也很强所以为什么不喜欢呢。出道战舞台r一个自己就没有表现力的外行人也看不出他们进步了没有，但是唱功是很明显地看出有提升；团综让r get到了李糯(<small>straykids成員（之一）的名字or別稱</small>)，在性格有意思的迷人中r要专门把他拿出来说有意思，运气也很好头脑也很好会玩游戏，还会做饭，r的意思是，如果没有他（和灿尼），他们的做饭综艺就会从喜剧变成悲剧不忍直视，或者说根本没有有意思的综艺可以看。<br>夸人好难…摆在那边有眼睛的人都看得出来好，而批人就很简单也很有必要一提。总之非常好，已经放进推荐页。<br><span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">個站事宜</span>那个页面的话其实不太确定该怎么做，比如二次元作品该放在二次元专区还是推荐页…总之r的标准是“不了解二次元也能享受”的放在推荐页，比如水仙(<small>ADV遊戲Narcissu</small>)，那个完全可以当小说看。<br>题外话，r说“好冷啊”是有双关甚至三层意思在的，玩一下很有趣。<br>题外话2，刚了解迷的时候，看着彰彬(<small>straykids成員（之一）的名字or別稱</small>)知道那个是彬，但是看着彬尼(<small>straykids成員（之一）的名字or別稱</small>)就想念作杉（神奇的大脑）<br><span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">蘇打餅乾</span>和z聊天就去查了一下为什么苏打饼干上面有洞洞，说是放气防止饼干变形。和z说想象了一下迷成员服兵役之后r每天怀念时代の眼泪的感觉，感觉和r现在盼望着已完结作品出新衍生作的样子没什么区别…二次元已经概括了一切。z问周边选尼莫还是学妹(<small>fgo角色尼莫和瑪修</small>)，r说不忘初心啊当然选学妹，实话说r也不是很想念学妹…r被防沉迷伤害了，不想谈这段瞎了眼了的国服回忆。只能怪r日语还不够好才会面对日服犹豫，所以要好好学习啊大家。<br><span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">stray kids4</span>母语羞耻是个大家都懂的词，指听不懂的词感觉很帅但是换成母语就尬得扣地板。r觉得不一定要是母语，现在听韩团唱日文歌r都难受，好弱智的词……跟英语混着更弱智了。（迷歌词有营养有深度所以不存在这种问题）。<br>可以看出r话真的多，这些都是脑内反复组织语言的结果，已经删掉了很多废话了，说话真开心啊。<br>加了註釋，看起來怎麼樣……？因為博客想要把話說清楚所以儘量不會用黑話？？的。<br>
- 			<br>
-  		<p style='background-color: black;color:rgb(196, 255, 234);font-size: larger;'id="1.27"><b>2023.1.27</b> || <a href='#top' style="color:rgb(196, 255, 234)">回到頂端</a></p><span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">新banner</span>太美麗了，滿意。然後想做雙語版本…研究一下先。<br><span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">迷</span>最近有瓜可以吃有打架可以看，看多了對素質不好，但是淺看一眼那麼有趣。很喜歡……說正經的，迷人都很有個人魅力，看著他們感覺r的紙片人創作心得都得到了積累呢。<br>
-  		<p style='background-color: black;color:rgb(196, 255, 234);font-size: larger;'id="1.26"><b>2023.1.26</b> || <a href='#top' style="color:rgb(196, 255, 234)">回到頂端</a> </p>画了新banner。<br>
-  			<br>
-  		<p style='background-color: black;color:rgb(196, 255, 234);font-size: larger;'id="1.24"><b>2023.1.24</b> || <a href='#top' style="color:rgb(196, 255, 234)">回到頂端</a></p> <span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">表情</span>給博客畫了專屬表情，之後寫博客的時候就可以用這個了，最後一張是icon，還得研究一下怎麼做上去<br><img src="https://tennedar.github.io/pic/blog/emoji.png"><br>從上到下、從左到右依次是「（數據刪除）」，「裂開+腦子」，「哭」，「喜歡」，「死人」，「明媚（陰陽怪氣版）」，「（/O//A//O/)」<br><span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">雜七雜八</span>今天的風特別大，玻璃在震哦…<img src="https://tennedar.github.io/pic/emoji/love.png" width=“30”><br>調整了一下表情的尺寸<br><img src="https://tennedar.github.io/pic/blog/emojitest.png"><br>
-   			<br><br>
-   		<p style='background-color: black;color:rgb(196, 255, 234);font-size: larger;'id="1.22"><b>2023.1.22</b> || <a href='#top' style="color:rgb(196, 255, 234)">回到頂端</a> </p><span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">wordpress博客（一般内容）全部搬运完毕</span>，二次元那边的另说了。<br><span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">幻想数学大战</span>真好看（幼稚地笑）。<br>notion那边也有一些陈年博客，qq空间被我删光了不过内容有存档，也想放过来。<br>
-    		<br><br>
-    	<p style='background-color: black;color:rgb(196, 255, 234);font-size: larger;'><b>2023.1.22</b> || <a href='#top' style="color:rgb(196, 255, 234)">回到頂端</a> </p><span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">搬運wordpress博客</span>的時候才發現我真是話多…暫且先搬運了一點，想把二次元單獨摘出去所以要花一點時間。現在有個問題就是感覺太多了不方便維護？比起用一個摺疊功能來放22年的博客內容，不如單開一個子頁面？反正效果一樣，也有這樣的想法，都之後再說啦！把代碼寫對然後直接按區塊ctrl+C/V就好了，非常的快捷。<br>發現我默背鍵盤還是菜得一批，甚至忘了1上面是！什麼的，いやそれ。。（）<br>做好了版殺頁面截圖給z看，z：“您”；r：“您快來版殺，r在后廚等”；抄了那個密碼訪問代碼之後在ios上密碼輸入框的顯示效果超級無敵帥氣，特別喜歡。<br>
-			<br><br>
-  		<p style='background-color: black;color:rgb(196, 255, 234);font-size: larger;'id="1.21"><b>2023.1.21</b> || <a href='#top' style="color:rgb(196, 255, 234)">回到頂端</a> </p><span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">版殺</span>把版杀总结和同人图都搬运过来了，真的是…写了好多……<br>版杀真的给了我很多快乐。整理了去年这个时候的聊天记录和前几届的总结，虽然是牢牢地记着的东西但是再看一遍还是很亲切，太好了。<br><span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">個站事宜</span>然后想做的是设计…？总之给本站弄一个logo，然后把wordpress那边的内容搬过来就好了。美化我越看越觉得没有做的必要…我的特点应该是文字才对，想坚持这一点。不过banner看起来没个banner样的也得改。<br><span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">說話習慣</span>问Z觉得我说话有什么特点吗。Z：比我正常。  确实是这样嘛，看去年的记录就很有感受我去年说话括号一大堆…版杀被说欲言又止其实很多时候不是故意的欲言又止，是我不管说什么话都欲言又止。过去的一年里也改掉了很多说话的习惯（然后又增加了很多新的习惯！！）现在基本就是好好讲话少玩梗，做到每个人都能看懂就好了。<br>其实我个人感觉说话有日语机翻感的，“xxx是这样的话就好了”、“xxxx，就是这种感觉”そういう感じなんです，如果感受到了，不要怀疑，因为是我故意的。<br><span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">素質</span>不喜欢鞭炮…痛恨！！！不是鞭炮的问题，而是觉得放鞭炮的人压根不关心别人。<br><span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">誇博客</span>写博客连换行都不用，一个br就解决了…哪有这种好事hhh<br>昨天把href拼成了herf导致超链接怎么写都写不好，结果今天梅开二度。太难受了，至少踩过的坑不想跳第二次啊！<br>梯子卡卡的，渾身不爽。<br>
-  			<br><br>
-  		<p style='background-color: black;color:rgb(196, 255, 234);font-size: larger;'id="1.20"><b>2023.1.20</b> || <a href='#top' style="color:rgb(196, 255, 234)">回到頂端</a></p><span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">個站事宜</span>今天想要嘗試一下用表單做密碼功能（<u><s>不然還能怎樣</s><b>追記：表單太麻煩了我決定抄網上的js代碼</b></u>），還有就是各種…小的裝飾，很多<del>技術宅</del>的個人網站不都花裏胡哨的嘛，更改鼠標形狀、增加界面特效？應該是比較好做的，至於用l2d或者別的技術加一個會動的萌妹…還是算了…………畫不動…太復雜…而且我也不喜歡會動的（不過可以給大家看看tennedaball）然後還有顯示訪客數、實時顯示時間。暫時沒有歸檔功能因為東西很少。至於tag的話我覺得用超鏈接做成錨點就行了吧，因為還沒傳過比較正式的作品呢所以也先不做。<br>
-			<span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">關於tennedaball</span>：是博主（tenneda）的自設的擬球化（沒有這個詞）形象。比較軟，彈不起來，被人掐？了就會破掉然後裏面的餡會流出來，會自動愈合，但這是魔法，我不負責解釋。參考了雪媚娘，外皮是咖啡色透明的，外面套了藍紫色有綠色蝴蝶結的那個是圍脖，餡是虹色的但是從外面看不出來，印象色就是咖啡（拿鐵），紫（淺），綠（熒光）。<br>
-			<span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">誇博客</span>做這樣一個個站，和wordpress最大的區別就是人人都能訪問…所以什麽內容能給大家看，這一點要想好，雖然我是很想想啥說啥…初步設想是按博客（其他內容）、二次元（含且不止含貓胞而且含貓胞劇透）這樣分開就行了吧，後者會設密碼的。<br>然後感覺還有一個好處是寫博客更快了，因為用可視化編輯器費勁吧啦的…現在所有東西都可以用代碼解決的話就算是用手機也可以提前寫好，然後直接編輯到html就行了。<br>
-			<span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">kpop</span>其實之前看過爻的雷震子舞臺，但是jiwoo人聲和墊音錯位了然後聽舞臺不方便了解歌，反正看了一點點就關了。然後最近找了原唱迷的mv看…rap好強啊…rapper好強啊（？）聽原唱把歌理順了再去看爻的就欣賞得來了，cover得很好。淺看一點迷…創作型團就很好感，歌雖然吵但是我聽一遍一點都記不住，rap太快了雖然changbin咬字清楚但是太快了我又不懂韓語，最後一個字都沒進腦子裏。所以花了點時間，但是rap很好（強調）。<br>迷的出道戰視頻裏竟然有莉莉kkkkkkkkkkkk<br>
-			<br>  <br>
-		<p style='background-color: black;color:rgb(196, 255, 234);font-size: larger;'id="1.19"><b>2023.1.19</b> || <a href='#top' style="color:rgb(196, 255, 234)">回到頂端</a></p><span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">裝修博客</span>博主學會改字體大小和顏色了，雖然感覺有點弱智……只能整段改顏色，默認段尾換行。超鏈接可以用
-			。<del>還是不會傳圖片</del>。發現能傳圖片，不過有點卡，不過無傷大雅。方式是傳到github然後用url。  <br>
-	  		<br><br>
-  		<p style='background-color: black;color:rgb(196, 255, 234);font-size: larger;'id="1.18"><b>2023.1.18</b> || <a href='#top' style="color:rgb(196, 255, 234)">回到頂端</a></p><span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">HELLO GITHUB PAGE!</span><br>
-		  <br><br>
-		<hr>
-	</div>
+<body>
+ <div class="p">
+    <div id="title" class="test1" >
+       
+        <h1 style="text-align:center">DIVINA<span style="color:rgb(137, 23, 243);">-</span>TENNEDA<span style="color:rgb(0, 224, 146)">-</span>碎片之<span style="color:rgb(182, 169, 135);">海</span>的一隅</h1>
+        <br>
+        <p style="text-align:center">繭房<span style="color:rgb(137, 23, 243);">-</span>航<span style="color:rgb(182, 169, 135);">海</span>中<span style="color:rgb(137, 23, 243);">...</span></p>  
+        <br><br>
+        
+        <!--<p style="font-size:12px;color:330066">BANNER：ILLUSTRATED BY TENNEDAR</p>-->
+        <!--<img src="https://tennedar.github.io/pic/QQ图片20221001112715.png" width="100"> -->
+        <img src="https://tennedar.github.io/pic/banner.png" >
+        <br><br>
+       
+            <div id="times" style="color:rgb(137, 23, 243);text-align: center;"></div>
+                <script type="text/javascript">
+                    function getD1()
+                    {
+                        var date = new Date();
+                        var d1=date.toLocaleString();
+                        var div1=document.getElementById('times');
+                        div1.innerHTML = d1;
+                    }
+                    setInterval('getD1();',1000);
+                </script>    
+        
+        <p style="text-align:center;">TIPS<span style="color:rgb(137, 23, 243);">：1.</span><span style='color:blue;' class="span1"><u>藍色</u></span>的字是超鏈接，是<span style="color:rgb(137, 23, 243);background-color: rgb(196, 255, 234);">可以點</span>的&nbsp;&nbsp;&nbsp;<span style="color:rgb(137, 23, 243);">2.</span>如果移動端<span style="color:rgb(137, 23, 243);background-color: rgb(196, 255, 234);">字體</span>大小不合適，請將瀏覽器<span style="color:rgb(137, 23, 243);background-color: rgb(196, 255, 234);">橫屏</span></p>
+        </div>
+    </div>
     <br>
     <br>
-	<p style="text-align:center;font-size:15px"> Copyright © 2023 Tennedar All rights reserved.</p>
+    <br>
+    <hr>
+    <br>
+    <br>
+        <h2 style="text-align:center;"><span style='text-shadow: 2px 2px 4px rgb(82, 82, 82)';>注意</span><span style="color:rgb(182, 169, 135);">事</span><span style='text-shadow: 2px 2px 4px rgb(82, 82, 82)';>項</span></h2><br>
+        <p style="text-align:center"><b>這里</b>是<span style="color:rgb(137, 23, 243);background-color: rgb(196, 255, 234);text-shadow:2px 2px 3px rgb(191, 157, 255)">Tennedar</span><b><i>的</i><span style="color:rgb(255, 0, 0)">個人</span>主頁</b><span style="color:rgb(137, 23, 243);">；</span><br><br><b><i>所有</i></b>內容都為tennedar<b>原創 & 親自製作</b>（除非註明出處）<span style="color:rgb(137, 23, 243);">；</span><br><br><b><u><span style="color:rgb(255, 0, 0)">請勿</span>隨意<span style="color:rgb(255, 0, 0)">轉載</span></u></b><span style="color:rgb(137, 23, 243);">；</span><br><br>本主頁<b><i>仍在開發中</i></b>；<br><br>有任何相關<b><i>問題</i></b>都可以隨時聯繫tennedar<span style="color:rgb(137, 23, 243);">。</span> </p><br>
+        <br>
+        <br>
+        <hr>
+        <br><br>
+        <h2 style="text-align:center;"><span style='text-shadow: 2px 2px 4px rgb(82, 82, 82)';>導</span><span style="color:rgb(182, 169, 135);">航</span><span style='text-shadow: 2px 2px 4px rgb(82, 82, 82)';>欄</span></h2><br>
+        <p style="text-align:center">
+            <!--關於我<span style="color:rgb(137, 23, 243);">|</span><a href="https://tennedar.github.io/aboutme.html" style="color: blue" > AB<span style="color:rgb(137, 23, 243);background-color: rgb(196, 255, 234);">O</span>UT ME</a><br><br><br>-->
+            博客<span style="color:rgb(137, 23, 243);">|</span><a href="https://tennedar.github.io/blog.html" style="color: blue"> BL<span style="color:rgb(137, 23, 243);background-color: rgb(196, 255, 234);">O</span>G</a><br><br><br>
+            推薦<span style="color:rgb(137, 23, 243);">|</span><a href="https://tennedar.github.io/recommend.html" style="color: blue"> REC<span style="color:rgb(137, 23, 243);background-color: rgb(196, 255, 234);">O</span>MMEND</a><br><br>
+            <span style="color:rgb(137, 23, 243);">*</span> 在這里整合r認為值得<b><i>推薦</i></b>的各種作品<br><br><br>
+            沙盒<span style="color:rgb(137, 23, 243);">|</span><a href="https://tennedar.github.io/sandbox.html" style="color: blue"> SANDB<span style="color:rgb(137, 23, 243);background-color: rgb(196, 255, 234);">O</span>X</a><br><br>
+            <span style="color:rgb(137, 23, 243);">*</span> <b><i>ADMIN</i></b>-TENNEDAR自用<br>測試用沙盒<br>
+            
+        </p>  
+        <br><br>
+        <hr>
+        <br><br>
+        <h2 style="text-align:center;"><span style='text-shadow: 2px 2px 4px rgb(82, 82, 82)';>搜</span><span style="color:rgb(182, 169, 135);">索</span></h2><br>
+        <div class="search">
+            <input type="text" placeholder="建設中，還不能用..." name="" id="" value="" />
+            <button><i>搜索</i></button>
+        </div>   <br><br><br>
+        <hr> 
+        <br><br>
+        <h2 style="text-align:center;"><span style='text-shadow: 2px 2px 4px rgb(82, 82, 82)';>更新</span><span style="color:rgb(182, 169, 135);">履</span><span style='text-shadow: 2px 2px 4px rgb(82, 82, 82)';>歷</span></h2><br>
+        <p style="text-align:center">
+            <b><u><span class='span1'>【本公告持續一週】</span></u></b><span style="color:rgb(137, 23, 243);">--</span><b>2.17</b>是<span style="color:rgb(137, 23, 243);background-color: rgb(196, 255, 234);">榎本のあ</span>的生日，祝她生日快樂！<br><br>
+            <b><u>23.2.11</u></b><span style="color:rgb(137, 23, 243);">--</span>新增「點擊顯示隨機顏色隨機文字」功能。更新博客，修正部分排版<span style="color:rgb(0, 224, 146);">。</span><br><br>
+            <b><u>23.2.18</b></u><span style="color:rgb(137, 23, 243);">--</span>更新博客，更新首頁<span style="color:rgb(0, 224, 146);">。</span><br><br>
+        </p>  
+        <br>  <br>
+        <hr>
+        <br><br>
+    
+   
+        <h2 style="text-align:center;"><span style='text-shadow: 2px 2px 4px rgb(82, 82, 82)';>關</span><span style="color:rgb(182, 169, 135);">於</span><span style="color:rgb(137, 23, 243);">我</span></h2><br>
+        
+      <p style="text-align:center;">
+        <b><i>名字</i></b>：<span style="color:rgb(137, 23, 243);background-color: rgb(196, 255, 234);">転枝りん（てんえだ　りん），也叫Tennedar，rinn，r</span>，<span style='text-shadow: 2px 2px 4px rgb(82, 82, 82)';>程度由正式到隨意</span><span style="color:rgb(137, 23, 243);">；</span><br><br>
+        <b><i>年齡</i></b>：<del>I’m three</del>   <a href="https://www.bilibili.com/video/BV1264y1B7qp/" target="_blank" style="color: blue">原梗來自這裡</a> <span style="color:rgb(137, 23, 243);">；</span><br><br>
+        <b><i>DIVINA</i></b>-TENNEDA<span style='text-shadow: 2px 2px 4px rgb(82, 82, 82)';>意為“神聖tennedar”</span>，致敬了神曲divina commedia<span style="color:rgb(137, 23, 243);">；</span><br><br>
+        <b><i>SNS</i></b>：大部分（指微博等）不喜歡用，<span style='text-shadow: 2px 2px 5px rgb(82, 82, 82)';>活躍於Mastodon，信息繭房狂熱愛好者</span><span style="color:rgb(137, 23, 243);">；</span><br><br>
+        <b><i>會</i></b>：<span style='text-shadow: 2px 2px 5px rgb(82, 82, 82)';>寫文、畫畫、做遊戲、音樂</span>，html自學中，本站的所有內容都是親自製作的<span style="color:rgb(137, 23, 243);">；</span><br><br>
+        <b><i>喜歡</i></b>：小眾<span style='text-shadow: 2px 2px 5px rgb(82, 82, 82)';>freegame</span>，（比較）冷（的）動漫/漫畫 <span style='text-shadow: 2px 2px 5px rgb(82, 82, 82)';>|鳴泣之時系列|細胞神曲|</span><span style="color:rgb(137, 23, 243);">；</span><br>kpop路人 最近在<span style='text-shadow: 2px 2px 5px rgb(82, 82, 82)';>|爻|迷|</span><span style="color:rgb(137, 23, 243);">；</span><br><br>
+        任何事情比起看現成的更喜歡<span style='text-shadow: 2px 2px 5px rgb(82, 82, 82)';>自己做</span>或者自學做<span style="color:rgb(137, 23, 243);">；</span><br><br>
+        <span style='text-shadow: 2px 2px 5px rgb(82, 82, 82)';>請多指教</span><span style="color:rgb(137, 23, 243);">；</span><br><br>
+    </p>
+    <br><br>
+    <hr>
+    <br><br>
+
+
+    <h2 style="text-align:center;"><span style='text-shadow: 2px 2px 4px rgb(82, 82, 82)';>聯繫</span><span style="color:rgb(182, 169, 135);">方</span><span style='text-shadow: 2px 2px 4px rgb(82, 82, 82)';>式</span></h2><br>
+    <p style="text-align:center">
+        隨時<span style="color:rgb(137, 23, 243);">歡迎</span>留言和提問<span style="color:rgb(0, 224, 146);">。</span><br><br>
+        <p style="text-align:center;color:rgb(137, 23, 243)"><a href="https://twitter.com/divina_tennedar" target='_blank' style="color: blue">TWITTER </a> @divina_tennedar</p><br>
+        <p style="text-align:center;color:rgb(137, 23, 243)">EMAIL tennedar0@protonmail.com</p><br>
+        <!--<a href="" target="_blank"><u>提問箱（マシュマロ）</u></a>-->
+        <p style="text-align:center;"><a href="https://t.co/bq34DZ82sS" target="_blank" style="color: blue">MARSHMALLOW提問箱</a></p><br>
+    </p>    
+
+
+    <br><br>
+    <hr> 
+    <br><br>
+
+
+    <h2 style="text-align:center;"><span style='text-shadow: 2px 2px 4px rgb(82, 82, 82)';>友情</span><span style="color:rgb(182, 169, 135);">鏈</span><span style='text-shadow: 2px 2px 4px rgb(82, 82, 82)';>接</span></h2><br>
+        <!--  <iframe src="https://www.seacatcry.com/">うみねこのなく頃に論壇-黃金魔女的番茄園</iframe><br> -->
+        <!--   <a href="https://www.seacatcry.com/" target="_blank">うみねこのなく頃に論壇-黃金魔女的番茄園</a><br> -->
+        <p style="text-align:center"><a href="http://www.seacatcry.com/" target="_blank" style="color: blue">海猫鸣泣之时论坛-黄金魔女的番茄园</a></p><br>
+    <br>
+    <br>
+    <hr><br><br>
+  
+    <br>   
+    <br>
+    <p style="text-align:center;font-size:15px"> Copyright © 2023 Tennedar All rights reserved.<br><span id="sitetime" style="color:rgb(137, 23, 243)"></span></p>
+
 </body>
 </html>
