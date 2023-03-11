@@ -80,60 +80,9 @@
    siteTime();
   </script>
 
-<script>
-    window.addEventListener('load', function () {
-        let body = document.body;
-        let content = ['☆tennedar的個人網站☆','☆Tennedar☆','☆R☆','☆感謝訪問☆','☆Tennedar☆','☆R☆' ,'(๑•́ ₃ •̀๑)ｴｰ','(๑ơ ₃ ơ)♥','(◡‿◡✿)','( つ•̀ω•́)つ','( ó × ò)','꒰ ๑͒ ･౪･๑͒꒱','(* Ŏ∀Ŏ)'        ,'(✿╹◡╹)','(｡╹ω╹｡)','(●☌◡☌●)','(..＞◡＜..)', 'ヽ(＊>∇<)ﾉ','(´ω｀*)','(#ﾟﾛﾟ#)'       ,'(̷ ̷₌̷ ̷ㅇ̷ ̷ᆽ̷ ̷ㅇ̷ ̷₌̷ ̷)♡','(ﾐㅇ ༝ ㅇﾐ)','(=🝦 ༝ 🝦=)' ,'◟[˳_˳]ʌ˽ʌ','/ᐠ｡ꞈ｡ᐟ❁ \∫','/ᐠ. ᴗ.ᐟ\ ','/ᐠܻ ⑅ܻ᳙ ᐟ\ﾉ'        ,'⋆ටᆼට⋆','ि०॰͡०ी','=ටᆼට=','ฅ( ̳͒ᵕ ˑ̫ ᵕ ̳͒)ฅ','~(=^･･^)ﾍ >ﾟ)))彡','~(=^･ω･^)y＝ ‥… *→;ﾟoﾟ)'        ,'₍ᐢ ̥ ̞ ̥ᐢ₎ ♥','ʚ₍⑅ᐢ‸ ̫ ‸ᐢ₎ɞ' ,'₍⑅ᐢ ›̥̥̥ ‸ ‹̥̥̥ ᐢ₎','ᕱ⑅ᕱ','（ ÒㅅÓ)','￣(〃ﾟｏ ﾟ〃)￣','⌒(≧ x ≦)⌒'        ,'ミ◕ฺｖ◕ฺ彡','(ﾉ≧∀≦)ﾉ ‥…━━━★','(ﾉ>ω<)ﾉ :｡･::･ﾟ’★,｡･::･ﾟ’☆','(ノ°∀°)ノ⌒･:.｡. .｡.:･゜ﾟ･*☆'        ,'(⊃｡•́‿•̀｡)⊃━✿✿✿✿✿✿','(/￣ー￣)/~~☆’.･.･:★’.･.･:☆' ] //自定义内容的数组
-        
-        body.addEventListener('click', function (e) {
-            let x = e.pageX;
-            let y = e.pageY; //当前坐标
-            let randContent = Math.ceil(Math.random() * content.length);
-            let text = new Text(x, y, randContent);
-            let span = document.createElement('span')
-            span.style.color = text.getRandom();
-            text.create(span);
-            setTimeout(function () {
-                text.out(span)
-            }, 1900)
-        })
+ <script src="https://tennedar.github.io/js/clickemoji.js"></script>
+   <script src="https://tennedar.github.io/js/mousestar.js"></script>
 
-        function Text(x, y, rand) {
-            this.x = x;
-            this.y = y;
-            this.rand = rand;
-        }
-        Text.prototype.create = function (_this) {
-            let body = document.body;
-            _this.innerHTML = content[this.rand - 1];
-            _this.className = 'text'
-            _this.style.top = this.y - 20 + 'px'
-            _this.style.left = this.x - 50 + 'px'
-            _this.style.animation = 'remove 5s'
-            body.appendChild(_this);
-            let i = 0
-            setInterval(() => {
-                _this.style.top = this.y - 20 - i + 'px'
-                i++
-            }, 10);
-        }
-        Text.prototype.out = function (_this) {
-            _this.remove()
-        }
-        //设置随机颜色
-        Text.prototype.getRandom = function () {
-            let allType = '0,1,2,3,4,5,6,7,8,9,a,b,c,d,e,f'; //16进制颜色
-            let allTypeArr = allType.split(','); //通过','分割为数组
-            let color = '#';
-            for (var i = 0; i < 6; i++) {
-                //随机生成一个0-16的数
-                var random = parseInt(Math.random() * allTypeArr.length);
-                color += allTypeArr[random];
-            }
-            return color; //返回随机生成的颜色
-        }
-    })
-</script>
 <body >
  <div class="p">
     <div id="title" class="test1" >
@@ -211,7 +160,7 @@
             <!--<b><u><span class='span1'>【本公告持續一週】</span></u></b><span style="color:rgb(137, 23, 243);">--</span><b>2.17</b>是<span style="color:rgb(137, 23, 243);background-color: rgb(196, 255, 234);">榎本のあ</span>的生日，祝她生日快樂！<br><br>-->
             <b><u><span class='span1'>【公告】</span></u></b><span style="color:rgb(137, 23, 243);">--</span><b>3.25</b>是<span style="color:rgb(137, 23, 243);background-color: rgb(196, 255, 234);">Stray Kids</span>的出道日，STRAY KIDS EVERYWHERE ALL AROUND THE WORLD & 8 FOREVER<br><br>
             <b><u>23.3.4</u></b><span style="color:rgb(137, 23, 243);">--</span>更新博客，新增bgm，修正「tomb」頁面<span style="color:rgb(0, 224, 146);">。</span><br><br>
-            <b><u>23.2.26</b></u><span style="color:rgb(137, 23, 243);">--</span>新增「tomb」頁面，更改多處樣式，添加圖片alt文字，更新博客，更新recommend頁<span style="color:rgb(0, 224, 146);">。</span><br><br>
+            <b><u>23.3.11</b></u><span style="color:rgb(137, 23, 243);">--</span>更新博客，增加特殊效果美化<span style="color:rgb(0, 224, 146);">。</span><br><br>
         </p>  
         <br>  <br>
         <hr>
