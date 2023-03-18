@@ -39,20 +39,47 @@
         .search button:hover{
             font-size: auto;
         }
-.audio{
-    width:70%;
-     }
-     .gototop{
-    position:fixed;
-    left:87%;
-    top:90%;
-    background-color: rgb(196, 255, 234);
-    color:rgb(137, 23, 243);
-    font-weight: bolder;
-    border-radius: 10px;
-    border: 1px dashed;
-    box-shadow: 2px 2px 2px blue;
-  }
+        .audio{
+            width:70%;
+        }
+        .gototop{
+            position:fixed;
+            left:87%;
+            top:90%;
+            background-color: rgb(196, 255, 234);
+            color:rgb(137, 23, 243);
+            font-weight: bolder;
+            border-radius: 10px;
+            border: 1px dashed;
+            box-shadow: 2px 2px 2px blue;
+        }
+        .cover{   
+            position: absolute;   
+            top: 50%;   
+            left: 50%;   
+            -webkit-transform: translate(-50%, -50%);   
+            -moz-transform: translate(-50%, -50%);   
+            -ms-transform: translate(-50%, -50%);   
+            -o-transform: translate(-50%, -50%);   
+            transform: translate(-50%, -50%);   
+        } 
+        .title1{
+            text-shadow: 5px 5px 0px rgb(212, 209, 255);
+            font-size: 250%;
+        }
+        .title2{
+            text-decoration: underline rgb(212, 209, 255);
+        }
+        /*.pic1.img{
+            max-width: auto;
+            height: auto;
+            -webkit-transition :all 5s;
+            transition: all 5s;
+        }*/
+        .copy{
+            text-decoration: underline rgb(212, 209, 255);
+            text-shadow: 2px 2px 0px rgb(212, 209, 255);
+        }
 </style>
 </head>
 <script>
@@ -91,23 +118,20 @@
     }
 
    siteTime();
-  </script>
+</script>
 
- <script src="https://tennedar.github.io/js/clickemoji.js"></script>
-   <script src="https://tennedar.github.io/js/mousestar.js"></script>
-
+<script src="https://tennedar.github.io/js/clickemoji.js"></script>
+ 
 <body >
- <div class="p">
-    <div id="title" class="test1" >
+<div class="p">
+    <div id="title" class="cover" >
        
-        <h1 style="text-align:center">DIVINA<span style="color:rgb(137, 23, 243);">-</span>TENNEDA<span style="color:rgb(0, 224, 146)">-</span>碎片之<span style="color:rgb(182, 169, 135);">海</span>的一隅</h1>
+        <h1 style="text-align:center" class="title1">DIVINA<span style="color:rgb(137, 23, 243);">-</span>TENNEDA<br><span style="color:rgb(0, 224, 146)">-</span><br>碎片之<span style="color:rgb(182, 169, 135);">海</span>的一隅</h1>
         <br>
-        <p style="text-align:center">繭房<span style="color:rgb(137, 23, 243);">-</span>航<span style="color:rgb(182, 169, 135);">海</span>中<span style="color:rgb(137, 23, 243);">...</span></p>  
+        <p style="text-align:center" class="title2">繭房<span style="color:rgb(137, 23, 243);">-</span>航<span style="color:rgb(182, 169, 135);">海</span>中<span style="color:rgb(137, 23, 243);">...</span><span style="font-size:larger;color:blue;text-decoration:underline"><a href="https://tennedar.github.io/html/home.html">【前进】</a></p>  
         <br><br>
-        
-        <!--<p style="font-size:12px;color:330066">BANNER：ILLUSTRATED BY TENNEDAR</p>-->
-        <!--<img src="https://tennedar.github.io/pic/QQ图片20221001112715.png" width="100"> -->
-        <img src="https://tennedar.github.io/pic/banner.png" alt="DIVINA-TENNEDA--https://tennedar.github.io/">
+              
+        <div class='pic1'><img src="https://tennedar.github.io/pic/banner.png" alt="DIVINA-TENNEDA--https://tennedar.github.io/" ></div>
         <br><br>
        
             <div id="times" style="color:rgb(137, 23, 243);text-align: center;"></div>
@@ -122,113 +146,24 @@
                     setInterval('getD1();',1000);
                 </script>    
         <p style="text-align:center" >
-  <audio controls loop class="audio">
-  <source src="00_1.wav" type="audio/wav">
+            <audio controls loop class="audio">
+                <source src="00_1.wav" type="audio/wav">
+                您的浏览器不支持 audio 元素。
+            </audio>
+        </p>
+        <br>
+        <p style="text-align:center;" >TIPS<span style="color:rgb(137, 23, 243);">：1.</span><span style='color:blue;' class="span1"><u>藍色</u></span>的字是超鏈接，是<span style="color:rgb(137, 23, 243);background-color: rgb(196, 255, 234);">可以點</span>的&nbsp;&nbsp;&nbsp;<span style="color:rgb(137, 23, 243);">2.</span>如果移動端<span style="color:rgb(137, 23, 243);background-color: rgb(196, 255, 234);">字體</span>大小不合適，請將瀏覽器<span style="color:rgb(137, 23, 243);background-color: rgb(196, 255, 234);">橫屏</span></p>
+        <br>
 
-您的浏览器不支持 audio 元素。
-</audio></p><br>
-        <p style="text-align:center;">TIPS<span style="color:rgb(137, 23, 243);">：1.</span><span style='color:blue;' class="span1"><u>藍色</u></span>的字是超鏈接，是<span style="color:rgb(137, 23, 243);background-color: rgb(196, 255, 234);">可以點</span>的&nbsp;&nbsp;&nbsp;<span style="color:rgb(137, 23, 243);">2.</span>如果移動端<span style="color:rgb(137, 23, 243);background-color: rgb(196, 255, 234);">字體</span>大小不合適，請將瀏覽器<span style="color:rgb(137, 23, 243);background-color: rgb(196, 255, 234);">橫屏</span></p>
-        <!--<p style="text-align:center;"><a href="#goto">前进</a></p>-->
-        </div>
+
+  
+      <footer>
+            <br>   
+            <br>
+            <p style="text-align:center;" class="copy"> Copyright &copy; 2023 Tennedar All rights reserved.<br><span id="sitetime" style="color:rgb(137, 23, 243)"></span></p>
+        </footer>
     </div>
-    
-    <div class="normal" id="goto">
-    <br>
-    <br>
-    <br>
-    <hr>
-    <br>
-    <br>
-    <div class="gototop" id="gototop"><a href='#top'>&#x21ea; G O &#x21ea;<br>&#x21ea;T O P&#x21ea;</a></div>
-  	
-        <h2 style="text-align:center;" ><span style='text-shadow: 2px 2px 4px rgb(82, 82, 82)';>注意</span><span style="color:rgb(182, 169, 135);">事</span><span style='text-shadow: 2px 2px 4px rgb(82, 82, 82)';>項</span></h2><br>
-        <p style="text-align:center"><b>這里</b>是<span style="color:rgb(137, 23, 243);background-color: rgb(196, 255, 234);text-shadow:2px 2px 3px rgb(191, 157, 255)">Tennedar</span><b><i>的</i><span style="background-color:rgb(196, 255, 234);font-size: larger;">個人</span>主頁</b><span style="color:rgb(137, 23, 243);">；</span><br><br><b><i>所有</i></b>內容都為tennedar<b>原創 & 親自製作</b>（除非註明出處）<span style="color:rgb(137, 23, 243);">；</span><br><br><b><u><span style="background-color:rgb(196, 255, 234);font-size: larger;">請勿</span>隨意<span style="background-color:rgb(196, 255, 234);font-size: larger;">轉載</span></u></b><span style="color:rgb(137, 23, 243);">；</span><br><br>本主頁<b><i>仍在開發中</i></b>；<br><br>有任何相關<b><i>問題</i></b>都可以隨時聯繫tennedar<span style="color:rgb(137, 23, 243);">。</span> </p><br>
-        <br>
-        <br>
-        <hr>
-        <br><br>
-        <h2 style="text-align:center;"><span style='text-shadow: 2px 2px 4px rgb(82, 82, 82)';>導</span><span style="color:rgb(182, 169, 135);">航</span><span style='text-shadow: 2px 2px 4px rgb(82, 82, 82)';>欄</span></h2><br>
-        <p style="text-align:center">
-            <!--關於我<span style="color:rgb(137, 23, 243);">|</span><a href="https://tennedar.github.io/aboutme.html" style="color: blue" > AB<span style="color:rgb(137, 23, 243);background-color: rgb(196, 255, 234);">O</span>UT ME</a><br><br><br>-->
-            博客<span style="color:rgb(137, 23, 243);">|</span><a href="https://tennedar.github.io/blog.html" style="color: blue"> BL<span style="color:rgb(137, 23, 243);background-color: rgb(196, 255, 234);">O</span>G</a><br><br>
-            <span style="color:rgb(137, 23, 243);">*</span> <b><i>記錄</i></b>生活，<b><i>記錄</i></b>每一個觀察，<b><i>記錄</i></b>所看的，<b><i>記錄</i></b>快樂<br><br><br>
-            推薦<span style="color:rgb(137, 23, 243);">|</span><a href="https://tennedar.github.io/html/recommend.html" style="color: blue"> REC<span style="color:rgb(137, 23, 243);background-color: rgb(196, 255, 234);">O</span>MMEND</a><br><br>
-            <span style="color:rgb(137, 23, 243);">*</span> 在這里整合r認為值得<b><i>推薦</i></b>的各種作品<br><br><br>
-            海貓版殺<span style="color:rgb(137, 23, 243);">|</span><a href="https://tennedar.github.io/html/umnkwerewolf.html" style="color: blue"> UMNK-WEREW<span style="color:rgb(137, 23, 243);background-color: rgb(196, 255, 234);">O</span>LF</a><br><br>
-            <span style="color:rgb(137, 23, 243);">*</span> 黃金魔女的番茄園的<b><i>回憶</i></b><br><br><br>
-            祝妳安眠<span style="color:rgb(137, 23, 243);">|</span><a href="https://tennedar.github.io/html/tomb.html" style="color: blue"> T<span style="color:rgb(137, 23, 243);background-color: rgb(196, 255, 234);">O</span>MB</a><br><br>
-            <span style="color:rgb(137, 23, 243);">*</span> <b><i>紀念</i></b>愛過的作品<br><br><br>
-            沙盒<span style="color:rgb(137, 23, 243);">|</span><a href="https://tennedar.github.io/html/sandbox.html" style="color: blue"> SANDB<span style="color:rgb(137, 23, 243);background-color: rgb(196, 255, 234);">O</span>X</a><br><br>
-            <span style="color:rgb(137, 23, 243);">*</span> <b><i>ADMIN</i></b>-TENNEDAR自用<br>測試用沙盒<br>
-           
-        </p>  
-        <br><br>
-        <hr>
-        <br><br>
-        <h2 style="text-align:center;"><span style='text-shadow: 2px 2px 4px rgb(82, 82, 82)';>搜</span><span style="color:rgb(182, 169, 135);">索</span></h2><br>
-        <div class="search">
-            <input type="text" placeholder="建設中，還不能用..." name="" id="" value="" />
-            <button><i>搜索</i></button>
-        </div>   <br><br><br>
-        <hr> 
-        <br><br>
-        <h2 style="text-align:center;"><span style='text-shadow: 2px 2px 4px rgb(82, 82, 82)';>更新</span><span style="color:rgb(182, 169, 135);">履</span><span style='text-shadow: 2px 2px 4px rgb(82, 82, 82)';>歷</span></h2><br>
-        <p style="text-align:center">
-            <!--<b><u><span class='span1'>【本公告持續一週】</span></u></b><span style="color:rgb(137, 23, 243);">--</span><b>2.17</b>是<span style="color:rgb(137, 23, 243);background-color: rgb(196, 255, 234);">榎本のあ</span>的生日，祝她生日快樂！<br><br>-->
-            <b><u><span class='span1'>【公告】</span></u></b><span style="color:rgb(137, 23, 243);">--</span><b>3.25</b>是<span style="color:rgb(137, 23, 243);background-color: rgb(196, 255, 234);">Stray Kids</span>的出道日，STRAY KIDS EVERYWHERE ALL AROUND THE WORLD & 8 FOREVER<br><br>
-            <b><u><span class='span1'>【公告】</span></u></b><span style="color:rgb(137, 23, 243);">--</span><b>星星跟随鼠标功能</b>刚上线，尚处于开发阶段，<span style="color:rgb(137, 23, 243);background-color: rgb(196, 255, 234);">如果因为此功能导致点击链接灵敏度下降，多点几次即可</span>。<br><br>
-            <b><u>23.3.4</u></b><span style="color:rgb(137, 23, 243);">--</span>更新博客，新增bgm，修正「tomb」頁面<span style="color:rgb(0, 224, 146);">。</span><br><br>
-            <b><u>23.3.11</b></u><span style="color:rgb(137, 23, 243);">--</span>更新博客，增加特殊效果美化<span style="color:rgb(0, 224, 146);">。</span><br><br>
-        </p>  
-        <br>  <br>
-        <hr>
-        <br><br>
-    
-   
-        <h2 style="text-align:center;"><span style='text-shadow: 2px 2px 4px rgb(82, 82, 82)';>關</span><span style="color:rgb(182, 169, 135);">於</span><span style="color:rgb(137, 23, 243);">我</span></h2><br>
-        
-      <p style="text-align:center;">
-        <b><i>名字</i></b>：<span style="color:rgb(137, 23, 243);background-color: rgb(196, 255, 234);">転枝りん（てんえだ　りん），也叫Tennedar，rinn，r</span>，<span style='text-shadow: 2px 2px 4px rgb(82, 82, 82)';>程度由正式到隨意</span><span style="color:rgb(137, 23, 243);">；</span><br><br>
-        <b><i>年齡</i></b>：<del>I’m three</del>   <a href="https://www.bilibili.com/video/BV1264y1B7qp/" target="_blank" style="color: blue">原梗來自這裡</a> <span style="color:rgb(137, 23, 243);">；</span><br><br>
-        <b><i>DIVINA</i></b>-TENNEDA<span style='text-shadow: 2px 2px 4px rgb(82, 82, 82)';>意為“神聖tennedar”</span>，致敬了神曲divina commedia<span style="color:rgb(137, 23, 243);">；</span><br><br>
-        <b><i>SNS</i></b>：大部分（指微博等）不喜歡用，<span style='text-shadow: 2px 2px 5px rgb(82, 82, 82)';>活躍於Mastodon，信息繭房狂熱愛好者</span><span style="color:rgb(137, 23, 243);">；</span><br><br>
-        <b><i>會</i></b>：<span style='text-shadow: 2px 2px 5px rgb(82, 82, 82)';>寫文、畫畫、做遊戲、音樂</span>，html自學中，本站的所有內容都是親自製作的<span style="color:rgb(137, 23, 243);">；</span><br><br>
-        <b><i>喜歡</i></b>：小眾<span style='text-shadow: 2px 2px 5px rgb(82, 82, 82)';>freegame</span>，（比較）冷（的）動漫/漫畫 <span style='text-shadow: 2px 2px 5px rgb(82, 82, 82)';>|鳴泣之時系列|細胞神曲|</span><span style="color:rgb(137, 23, 243);">；</span><br>kpop路人 最近在<span style='text-shadow: 2px 2px 5px rgb(82, 82, 82)';>|爻|迷|</span><span style="color:rgb(137, 23, 243);">；</span><br><br>
-        任何事情比起看現成的更喜歡<span style='text-shadow: 2px 2px 5px rgb(82, 82, 82)';>自己做</span>或者自學做<span style="color:rgb(137, 23, 243);">；</span><br><br>
-        <span style='text-shadow: 2px 2px 5px rgb(82, 82, 82)';>請多指教</span><span style="color:rgb(137, 23, 243);">；</span><br><br>
-    </p>
-    <br><br>
-    <hr>
-    <br><br>
-
-
-    <h2 style="text-align:center;"><span style='text-shadow: 2px 2px 4px rgb(82, 82, 82)';>聯繫</span><span style="color:rgb(182, 169, 135);">方</span><span style='text-shadow: 2px 2px 4px rgb(82, 82, 82)';>式</span></h2><br>
-    <p style="text-align:center">
-        隨時<span style="color:rgb(137, 23, 243);">歡迎</span>留言和提問<span style="color:rgb(0, 224, 146);">。</span><br><br>
-        <p style="text-align:center;color:rgb(137, 23, 243)"><a href="https://twitter.com/divina_tennedar" target='_blank' style="color: blue">TWITTER </a> @divina_tennedar</p><br>
-        <p style="text-align:center;color:rgb(137, 23, 243)">EMAIL tennedar0@protonmail.com</p><br>
-        <!--<a href="" target="_blank"><u>提問箱（マシュマロ）</u></a>-->
-        <p style="text-align:center;"><a href="https://t.co/bq34DZ82sS" target="_blank" style="color: blue">MARSHMALLOW提問箱</a></p><br>
-    </p>    
-
-
-    <br><br>
-    <hr> 
-    <br><br>
-
-
-    <h2 style="text-align:center;"><span style='text-shadow: 2px 2px 4px rgb(82, 82, 82)';>友情</span><span style="color:rgb(182, 169, 135);">鏈</span><span style='text-shadow: 2px 2px 4px rgb(82, 82, 82)';>接</span></h2><br>
-        <!--  <iframe src="https://www.seacatcry.com/">うみねこのなく頃に論壇-黃金魔女的番茄園</iframe><br> -->
-        <!--   <a href="https://www.seacatcry.com/" target="_blank">うみねこのなく頃に論壇-黃金魔女的番茄園</a><br> -->
-        <p style="text-align:center"><a href="http://www.seacatcry.com/" target="_blank" style="color: blue">海猫鸣泣之时论坛-黄金魔女的番茄园</a></p><br>
-    <br>
-    <br>
-    <hr><br><br>
-  </div>
-
-    <br>   
-    <br>
-    <p style="text-align:center;font-size:15px"> Copyright &copy; 2023 Tennedar All rights reserved.<br><span id="sitetime" style="color:rgb(137, 23, 243)"></span></p>
-
+    </div>
+</div>
 </body>
 </html>
