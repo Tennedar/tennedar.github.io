@@ -1,0 +1,153 @@
+<html>
+<head>
+    <link rel="icon" type="image/png" sizes="144x144" href="https://tennedar.github.io/pic/icon144x.png"/>
+    <link rel="stylesheet" type="text/css" href="https://tennedar.github.io/css/tennedar-style.css">
+    <link rel="stylesheet" type="text/css" href="https://tennedar.github.io/css/cursor.css">
+    
+    <title> DIVINA-TENNEDAR</title>
+   
+
+<style>
+        .search{
+            width: 80%;            
+            margin: auto;
+            display: flex;
+            /*border: 1px solid red;*/
+        }
+        .search input{
+            float: left; 
+            flex: 10;
+            height: 50px;
+            outline: none;
+            border: 1px solid ;
+            color: rgb(137, 23, 243);
+            box-sizing: border-box;
+            padding-left: 20px;
+        }
+        .search button{
+            float: right;
+            flex: 1;
+            height: 50px;
+            background-color: rgb(196, 255, 234);
+            color: rgb(137, 23, 243);
+            border: 1px solid ;
+            outline: none;
+        }
+        .search button i{
+            font-style: normal;
+        }
+        .search button:hover{
+            font-size: auto;
+        }
+        .audio{
+            width:70%;
+        }
+        .gototop{
+            position:fixed;
+            left:87%;
+            top:90%;
+            background-color: rgb(196, 255, 234);
+            color:rgb(137, 23, 243);
+            font-weight: bolder;
+            border-radius: 10px;
+            border: 1px dashed;
+            box-shadow: 2px 2px 2px blue;
+        }
+        .cover{   
+            position: absolute;   
+            top: 50%;   
+            left: 50%;   
+            -webkit-transform: translate(-50%, -50%);   
+            -moz-transform: translate(-50%, -50%);   
+            -ms-transform: translate(-50%, -50%);   
+            -o-transform: translate(-50%, -50%);   
+            transform: translate(-50%, -50%);   
+        } 
+</style>
+</head>
+<script>
+    function siteTime()
+   {
+      window.setTimeout("siteTime()", 1000);
+      var seconds = 1000;
+      var minutes = seconds * 60;
+      var hours = minutes * 60;
+      var days = hours * 24;
+      var years = days * 365;
+      var today = new Date();
+      var todayYear = today.getFullYear();
+      var todayMonth = today.getMonth()+1;
+      var todayDate = today.getDate();
+      var todayHour = today.getHours();
+      var todayMinute = today.getMinutes();
+      var todaySecond = today.getSeconds();
+      /* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+      year - 作为date对象的年份，为4位年份值
+      month - 0-11之间的整数，做为date对象的月份
+      day - 1-31之间的整数，做为date对象的天数
+      hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+      minutes - 0-59之间的整数，做为date对象的分钟数
+      seconds - 0-59之间的整数，做为date对象的秒数
+      microseconds - 0-999之间的整数，做为date对象的毫秒数 */
+      var t1 = Date.UTC(2023,1,20,0,0,0); //北京时间2016-12-1 00:00:00
+      var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
+      var diff = t2-t1;
+      var diffYears = Math.floor(diff/years);
+      var diffDays = Math.floor((diff/days)-diffYears*365);
+      var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
+      var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
+      var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
+      document.getElementById("sitetime").innerHTML=" 站點已運行： "+diffYears+" 年 "+diffDays+" 天 "+diffHours+" 小时 "+diffMinutes+" 分钟 "+diffSeconds+" 秒";
+    }
+
+   siteTime();
+</script>
+
+<script src="https://tennedar.github.io/js/clickemoji.js"></script>
+ 
+<body >
+<div class="p">
+    <div id="title" class="cover" >
+       
+        <h1 style="text-align:center">DIVINA<span style="color:rgb(137, 23, 243);">-</span>TENNEDA<span style="color:rgb(0, 224, 146)">-</span>碎片之<span style="color:rgb(182, 169, 135);">海</span>的一隅</h1>
+        <br>
+        <p style="text-align:center">繭房<span style="color:rgb(137, 23, 243);">-</span>航<span style="color:rgb(182, 169, 135);">海</span>中<span style="color:rgb(137, 23, 243);">...</span></p>  
+        <br><br>
+              
+        <img src="https://tennedar.github.io/pic/banner.png" alt="DIVINA-TENNEDA--https://tennedar.github.io/">
+        <br><br>
+       
+            <div id="times" style="color:rgb(137, 23, 243);text-align: center;"></div>
+                <script type="text/javascript">
+                    function getD1()
+                    {
+                        var date = new Date();
+                        var d1=date.toLocaleString();
+                        var div1=document.getElementById('times');
+                        div1.innerHTML = d1;
+                    }
+                    setInterval('getD1();',1000);
+                </script>    
+        <p style="text-align:center" >
+            <audio controls loop class="audio">
+                <source src="00_1.wav" type="audio/wav">
+                您的浏览器不支持 audio 元素。
+            </audio>
+        </p>
+        <br>
+        <p style="text-align:center;">TIPS<span style="color:rgb(137, 23, 243);">：1.</span><span style='color:blue;' class="span1"><u>藍色</u></span>的字是超鏈接，是<span style="color:rgb(137, 23, 243);background-color: rgb(196, 255, 234);">可以點</span>的&nbsp;&nbsp;&nbsp;<span style="color:rgb(137, 23, 243);">2.</span>如果移動端<span style="color:rgb(137, 23, 243);background-color: rgb(196, 255, 234);">字體</span>大小不合適，請將瀏覽器<span style="color:rgb(137, 23, 243);background-color: rgb(196, 255, 234);">橫屏</span></p>
+        <!--<p style="text-align:center;"><a href="#goto">前进</a></p>-->
+        
+    
+
+  
+      <footer>
+            <br>   
+            <br>
+            <p style="text-align:center;font-size:15px"> Copyright &copy; 2023 Tennedar All rights reserved.<br><span id="sitetime" style="color:rgb(137, 23, 243)"></span></p>
+        </footer>
+    </div>
+    </div>
+</div>
+</body>
+</html>

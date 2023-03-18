@@ -16,6 +16,7 @@ html,body    {
 .normal{
         font-size: 16px !important;
 }
+  
 .test1{   
         position: absolute;   
         top: 50%;   
@@ -26,7 +27,6 @@ html,body    {
         -o-transform: translate(-50%, -50%);   
         transform: translate(-50%, -50%);   
 }   
-
 body {
         height: 100vh;
         background-color: white;
