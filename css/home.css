@@ -4,3 +4,20 @@ h1{
 p:hover{
     text-shadow: 3px 3px 6px rgb(176, 162, 255);
 }
+
+.guide{
+    position:fixed;
+    width: 20%;
+    left :79%;
+    height: 100%;
+    top:0%;
+    padding-left: 1%;
+    padding-right: 1%;
+    border-left :solid 2px rgb(0, 224, 146);
+    padding-top: 10%;
+    /*border-radius: 12px;*/
+    background-color: white;
+}
+.no-guide{
+    width: 80%;
+}
