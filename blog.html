@@ -116,6 +116,37 @@
 	.no-guide{
     	width: 80%;
 	}
+
+	textarea{
+		font-family:'Courier New', Courier, monospace;
+		border:solid 1px rgb(137, 23, 243);
+		border-radius: 5px ;
+		background-color: white;
+		color:rgb(0, 224, 146);
+		width:100%;
+		height: auto;
+		
+	}
+	textarea:hover{
+		border: solid 1px rgb(0, 224, 146);
+		border-radius: 5px ;
+		color:rgb(137, 23, 243);
+	}
+	input{
+		font-family:'Courier New', Courier, monospace;
+		border: solid 1px rgb(0, 224, 146);
+		border-radius: 5px ;
+		background-color: white;
+		color:rgb(137, 23, 243);
+		float:left;
+		clear: both;
+		
+	}
+	input:hover{
+		border:solid 1px rgb(137, 23, 243);
+		color:rgb(0, 224, 146);
+		border-radius: 5px ;
+	}
   </style>
 </head>
    
@@ -153,11 +184,14 @@
 	  <div class="guide2">
         
         <br><br>
-        <h1 style="text-align:center;"><span >公</span><span style="color:rgb(182, 169, 135);">告</span><span h1>版</span></h1><br><br><br>
+        <h1 style="text-align:center;"><span >公</span><span style="color:rgb(182, 169, 135);">告</span><span h1>版</span></h1><br>
         <span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);">最近更新</span>：<a href="#3.25">3.25</a><br>
-		<span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);">通过邮件传送感想</span>：tr0.abkto@8alias.com<br>
-		
-		<br><hr><br>
+		<span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);">通过邮件传送感想</span>：
+		<textarea id="copy">tr0.abkto@8alias.com</textarea><br><input type="button" onclick="copy();" value="点击复制"></input><br>
+		<span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);">分享网址</span>：
+		<textarea id="copy">https://tennedar.github.io</textarea><br><input type="button" onclick="copy();" value="点击复制"></input>
+		<br>
+		<br><hr>
 		<details>
 			<summary>
 				<span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);">用语集</span>【更新中】
@@ -185,8 +219,8 @@
 			</details>
 			
 		</details>
-		<br><hr><br>
-		<span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);">TAG</span><br><br>
+		<br><hr>
+		<span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);">TAG</span><br>
 		<span style="font-size: smaller;"><i>（仅截取大段内容，如果不想漏掉只言片语还请看完每一期博客！）</i></span><br>
 		<details>
 			<summary><b>个站相关</b></summary>
@@ -224,6 +258,7 @@
 		<p style='background-color: black;color:rgb(196, 255, 234);font-size: larger;' id="3.25"><b>2023.3.25</b> || <a href='#top' style="color:rgb(196, 255, 234)">回到頂端</a></p>
 		<span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">重要的日子们</span><br>
 		<span style="color:rgb(137, 23, 243)">今天！2023年3月25日！是skz日！五周年快乐！！！！帕苏！！！！！！为了庆祝请z喝了奶茶</span>，呀~z在奶茶要求旁边画了礼炮的话就当送r的了<br>
+		<img src="https://tennedar.github.io/pic/blog/skz5anniversary_from_twitter@stray_kids.jpg" width="700px"><br>
 		然后经过提醒…今天似乎也是<span style="color:rgb(137, 23, 243)">分班两周年</span>快乐日！！！！啊！！！！！！！快乐！！！！！！！！！！！！！！！<span style="color:rgb(137, 23, 243)">感觉两个很重要的日子重叠在一起了，不管是r还是八迷都不能说重获新生至少也从坑里爬起来了的快乐日，帕苏！！！！</span><br>
 		<span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">NMIXX 3.20回归请多多支持~</span><br>先放视频！！放不止一个是因为音源真的没有live好听，修音把<span style="color:rgb(137, 23, 243)">人声层次</span>弄得有点不够明显，<del>韩语自由</del>的r也努力学习歌词中!<br>
 		主打<span style="color:rgb(137, 23, 243)">Love me like this</span>相关：<a href="https://www.bilibili.com/video/BV1ST411677Y/" target="_blank">【NMIXX】"Love Me Like This" M/V</a><br><a href="https://www.bilibili.com/video/BV1Sc411j7W9/" target="_blank">【NMIXX】 "Love Me Like This" Stage Practice</a><br><a href="https://www.bilibili.com/video/BV1GL411R7zp/" target="_blank">NMIXX最新回归曲Love Me Like This+Young Dumb Stupid 230325打歌舞台</a><br><br>
@@ -234,6 +269,13 @@
 		为了在个站放这个邮箱地址，查了一下邮件中转服务。用的是这个<a href="https://simplelogin.io" target="_blank">simplelogin.io</a>&nbsp;非常<span style="color:rgb(137, 23, 243)">方便</span>而且<span style="color:rgb(137, 23, 243)">安全</span><br>关于付费/免费权限区别：When you signed up,you have a free 7-day Premium trial.After that your account will automatically be downgraded to the Free plan. During the trial,the only limit is you can't create more than 10 aliases.不付费<span style="color:rgb(137, 23, 243)">完全够用</span>，付费的话30刀/年或者4刀/月 感觉有点贵，感觉<br>
 		可能有访客不知道邮件中转服务是做什么的，<span style="color:rgb(137, 23, 243)">简单来说，在你使用各种服务的时候</span>，如果提供邮箱地址（接收验证码等），很容易公开暴露邮箱地址然后收到垃圾邮件等等，而邮件中转服务提供了一个“别名”aliase，<span style="color:rgb(137, 23, 243)">用别名来收邮件，发往这个别名的邮件会被自动中转到你真正的邮箱地址。别名随用随换就不会受到垃圾邮件的困扰</span>，上网冲浪更安全！总之推荐大家来用，因为配置非常非常方便。动动手指获得安全。<br>
 		<img src="https://tennedar.github.io/pic/blog/simplelogin.png" width="600px">
+		<span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">个站整修</span><br>
+		css不断精进中，总之本站用到的所有css都是r写的（除了那个用不了的搜索框），<span style="color:rgb(137, 23, 243)">只要不是r自己做的东西都做不对</span>类型，kkkkk。真的完全大改了一通，<span style="color:rgb(137, 23, 243)">给<a href='https://tennedar.github.io/home.html' style="color: blue;">HOME页</a>和<a href='' style="color: blue;">BLOG页（本页）</a></span>加了<span style="color:rgb(137, 23, 243)">侧边栏</span>。之前一直在为难来着，如果把写在侧边栏的内容做个超链接跳转的话真的<span style="color:rgb(137, 23, 243)">害怕眼瞎的访客看不到</span>，那怎么办直接…fixed显示在旁边就不信你看不到，就是这样想着来做的。如果能带来方便就再好不过了。<br><br>
+		<span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">听歌看视频</span><br>
+		看了
+		<br>
+		<span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">学校</span><br>
+		自从某<del>整改</del>校园环境优化开始之后学校就新种了很多花，虽然原来也很多。但是，这种得实在是太多了不习惯啊，太突兀了！不喜欢！<br>有一段鹅卵石路边堆满了饱和度很高的茶树花瓣，好看（r只关心为什么那里不派人扫）。玉兰花开太早了，天气还很冷没有觉得是春天的时候迅速开了掉光了，不应景，不喜欢！路边的鸢尾非常非常好看，然而一开始r不知道那个是鸢尾，是看了插地上的牌子才知道的，虽然那个牌子真的很low哎但是还挺有用的，认可了。<br>门口盆栽好像多了一种黄色的不认识是什么，饱和度很高但是很好看。那个像白菜一样的盆栽真的是太丑了太像白菜了，一点都不喜欢！完全很突兀！<br><br>喷泉从池塘里小小一个非常low，到一大一小还挺好看的，到大得离谱溅到路边感觉疯了，这很难评，但是现在的好丑啊，不喜欢！<br>池塘里放了一大堆鱼，不觉得比之前多得多了太突兀了吗，感觉反映了人满为患的社会！不喜欢！
 		<br><br>
 		<p style='background-color: black;color:rgb(196, 255, 234);font-size: larger;' id="3.18"><b>2023.3.18</b> || <a href='#top' style="color:rgb(196, 255, 234)">回到頂端</a></p>
 		<span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">杂七杂八的近况报告</span><br>
