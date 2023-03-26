@@ -80,6 +80,54 @@
             text-decoration: underline rgb(212, 209, 255);
             text-shadow: 2px 2px 0px rgb(212, 209, 255);
         }
+
+        .t1{
+            display: none;
+            position: absolute;
+            top:38%;
+            left: 29%;
+            font-size: x-large;
+            /*font-family:;*/
+            color:rgb(137, 23, 243);
+            background-color: rgb(196, 255, 234);
+            border-radius: 2px;
+            padding: 1px;
+            
+        }
+        .img2{
+            display: none;
+            width: 100%;
+            height:38%;
+            border:solid 3px;
+            color:rgba(0, 224, 146, 0.521);
+            border-radius: 3px;
+            position: absolute;
+            top:30%;
+            left: 0%;
+            
+        }
+        .pic1:hover .t1{
+            display: block;
+            animation: fadeInAnimation ease 1s; 
+            animation-iteration-count: 1; /*设置动画播放次数*/
+            animation-fill-mode: forwards; /*设置样式以在动画不播放时应用元素。forward是设置动画结束后，使用元素的结束属性值*/
+        
+        }
+        .pic1:hover .img2{
+            display:block;
+        }
+        /*.pic1:hover{
+            border:solid;
+        }*/
+        
+        @keyframes fadeInAnimation { 
+            0% { 
+                opacity: 0; /*设置不透明度*/
+            } 
+            100% { 
+                opacity: 1; 
+            } 
+        } 
 </style>
 </head>
 <script>
@@ -131,7 +179,18 @@
         <p style="text-align:center" class="title2">繭房<span style="color:rgb(137, 23, 243);">-</span>航<span style="color:rgb(182, 169, 135);">海</span>中<span style="color:rgb(137, 23, 243);">...</span><span style="font-size:larger;color:blue;text-decoration:underline"><a href="https://tennedar.github.io/home.html">【前进】</a></p>  
         <br><br>
               
-        <div class='pic1'><img src="https://tennedar.github.io/pic/banner.png" alt="DIVINA-TENNEDA--https://tennedar.github.io/" ></div>
+        <div class='pic1'>
+            <div class='t1'>
+                <p><a href='https://tennedar.github.io/home.html' style="color:rgb(137, 23, 243)">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;STA<span style='color:rgb(182, 169, 135);background-color: white;text-shadow: 3px 3px 0px rgb(212, 209, 255);'>R</span>T</a></p>
+            </div>
+            <div class="img2">
+                
+            </div>
+            <div class='img'>
+                <img src="banner.png" alt="DIVINA-TENNEDA--https://tennedar.github.io/" >
+            </div>
+            
+        </div>
         <br><br>
        
             <div id="times" style="color:rgb(137, 23, 243);text-align: center;"></div>
