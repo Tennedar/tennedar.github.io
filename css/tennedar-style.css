@@ -86,3 +86,6 @@ a:active{
         font-family: Chalk-S-JP;
         src: url('https://tennedar.github.io/font/Chalk-S_3_JP/Chalk-S-JP.otf');
 }
+.titlefont{
+        font-family: chogokubosogothic;
+}
