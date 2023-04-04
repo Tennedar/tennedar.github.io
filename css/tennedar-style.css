@@ -72,23 +72,27 @@ a:active{
 @font-face {
         /* font-test*/
         font-family: 'lxgw';
-        src:url('https://tennedar.github.io/font/LXGWWenKaiMonoTC-Regular.tff'),url('https://tennedar.github.io/font/LXGWWenKaiGBScreen.ttf');
+        src:url('https://tennedar.github.io/font/LXGWWenKaiMonoTC-Regular.tff'),url('https://tennedar.github.io/font/LXGWWenKaiGBScreen.ttf'),url('font\LXGWWenKaiGBScreen.ttf'),url('font\LXGWWenKaiMonoTC-Regular.ttf');
 } 
 @font-face {
         font-family: 'TanukiMagic';
-        src: url('https://tennedar.github.io/font/TanukiMagic_1_22/TanukiMagic.ttf');
+        src: url('https://tennedar.github.io/font/TanukiMagic_1_22/TanukiMagic.ttf'),url('font\TanukiMagic_1_22\TanukiMagic.ttf');
 }
 @font-face {
         font-family: 'chogokubosogothic';
-        src: url('https://tennedar.github.io/font/chogokubosogothic/chogokubosogothic_5.ttf');
+        src: url('https://tennedar.github.io/font/chogokubosogothic/chogokubosogothic_5.ttf'),url('font\chogokubosogothic\chogokubosogothic_5.ttf');
 }
 @font-face {
         font-family: 'Chalk-S-JP';
-        src: url('https://tennedar.github.io/font/Chalk-S_3_JP/Chalk-S-JP.otf');
+        src: url('https://tennedar.github.io/font/Chalk-S_3_JP/Chalk-S-JP.otf'),url('font\Chalk-S_3_JP\Chalk-S-JP.otf');
 }
 .titlefont{
-        font-family: 'chogokubosogothic' ,default;
+        font-family: 'chogokubosogothic' ,default !important;
 }
 .inst{
-        font-family: 'TanukiMagic',default;
+        font-family: 'TanukiMagic',default !important;
+}
+   
+html{
+        font-family: 'lxgw',default;
 }
