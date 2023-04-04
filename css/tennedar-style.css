@@ -71,19 +71,19 @@ a:active{
 }
 @font-face {
         /* font-test*/
-        font-family: lxgw;
+        font-family: 'lxgw';
         src:url('https://tennedar.github.io/font/LXGWWenKaiMonoTC-Regular.tff'),url('https://tennedar.github.io/font/LXGWWenKaiGBScreen.ttf');
 } 
 @font-face {
-        font-family: TanukiMagic;
+        font-family: 'TanukiMagic';
         src: url('https://tennedar.github.io/font/TanukiMagic_1_22/TanukiMagic.ttf');
 }
 @font-face {
-        font-family: chogokubosogothic;
+        font-family: 'chogokubosogothic';
         src: url('https://tennedar.github.io/font/chogokubosogothic/chogokubosogothic_5.ttf');
 }
 @font-face {
-        font-family: Chalk-S-JP;
+        font-family: 'Chalk-S-JP';
         src: url('https://tennedar.github.io/font/Chalk-S_3_JP/Chalk-S-JP.otf');
 }
 .titlefont{
