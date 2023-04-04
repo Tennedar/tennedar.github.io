@@ -87,5 +87,8 @@ a:active{
         src: url('https://tennedar.github.io/font/Chalk-S_3_JP/Chalk-S-JP.otf');
 }
 .titlefont{
-        font-family: chogokubosogothic;
+        font-family: 'chogokubosogothic' ,default;
+}
+.inst{
+        font-family: 'TanukiMagic',default;
 }
