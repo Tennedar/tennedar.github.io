@@ -2,7 +2,7 @@ h1{
     text-shadow: 4px 4px 0px rgb(212, 209, 255);
 }
 p:hover{
-    text-shadow: 3px 3px 6px rgb(176, 162, 255);
+    text-shadow: 3px 3px 12px rgb(176, 162, 255);
 }
 
 .guide{

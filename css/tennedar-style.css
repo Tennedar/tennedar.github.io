@@ -72,7 +72,7 @@ a:active{
 @font-face {
         /* font-test*/
         font-family: 'lxgw';
-        src:url('https://tennedar.github.io/font/LXGWWenKaiMonoTC-Regular.tff'),url('https://tennedar.github.io/font/LXGWWenKaiGBScreen.ttf'),url('font\LXGWWenKaiGBScreen.ttf'),url('font\LXGWWenKaiMonoTC-Regular.ttf');
+        src:url('https://tennedar.github.io/font/LXGWWenKaiLite-Light.tff'),url('https://tennedar.github.io/font/LXGWWenKaiGBScreen.ttf'),url('font\LXGWWenKaiGBScreen.ttf'),url('font\LXGWWenKaiLite-Light.ttf');
 } 
 @font-face {
         font-family: 'TanukiMagic';
