@@ -76,7 +76,7 @@ a:active{
 }
 @font-face {
         font-family: 'chogokubosogothic';
-        src: url('https://tennedar.github.io/font/chogokubosogothic/chogokubosogothic_5.ttf'),url('font\chogokubosogothic\chogokubosogothic_5.ttf');
+        src: url('https://tennedar.github.io/font/chogokubosogothic/chogokubosogothic_5.subset.ttf'),url('font\chogokubosogothic\chogokubosogothic_5.subset.ttf');
 }
 @font-face {
         font-family: 'Chalk-S-JP';
