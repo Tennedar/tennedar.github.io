@@ -2,11 +2,12 @@
 <head>
     <link rel="icon" type="image/png" sizes="144x144" href="https://tennedar.github.io/pic/icon144x.png"/>
     <link rel="stylesheet" type="text/css" href="https://tennedar.github.io/css/tennedar-style.css">
-    <link rel="stylesheet" type="text/css" href="https://tennedar.github.io/css/cursor.css">
-    
+    <link rel="stylesheet" type="text/css" href="https://tennedar.github.io/css/cursor.css">    
     <title> DIVINA-TENNEDAR</title>
-   
-
+    <link rel="stylesheet" href="https://cdn.staticfile.org/lxgw-wenkai-webfont/1.6.0/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-lite-webfont@1.1.0/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-tc-webfont@1.0.0/style.css" />
+    <link rel="stylesheet" href="https://cdn.staticfile.org/lxgw-wenkai-screen-webfont/1.6.0/style.css" />
 <style>
         .search{
             width: 80%;            
@@ -69,7 +70,6 @@
         .title2{
             text-decoration: underline rgb(212, 209, 255);
         }
-
         .copy{
             text-decoration: underline rgb(212, 209, 255);
             text-shadow: 2px 2px 0px rgb(212, 209, 255);
@@ -127,7 +127,10 @@
           font-family: 'TanukiMagic',default !important;
         }   
         html{
-            font-family: 'lxgw',default;
+            font-family: "LXGW WenKai", sans-serif;
+            font-family: "LXGW WenKai Lite", sans-serif;
+            font-family: "LXGW WenKai TC", sans-serif;
+            font-family: "LXGW WenKai Screen", sans-serif;
         }
 </style>
 </head>
@@ -167,27 +170,16 @@
                 <button type="submit" value="download">
                     <span style="color:rgb(137, 23, 243);text-decoration: underline blue;">&nbsp;&middot;&nbsp;</span><span style="color:rgb(137, 23, 243);text-decoration: underline blue;">D</span><span style='color:rgb(182, 169, 135);background-color: white;text-shadow: 3px 3px 0px rgb(212, 209, 255);'>O</span><span style="color:rgb(137, 23, 243);text-decoration: underline blue;">WNL</span><span style='color:rgb(182, 169, 135);background-color: white;text-shadow: 3px 3px 0px rgb(212, 209, 255);'>O</span><span style="color:rgb(137, 23, 243);text-decoration: underline blue;">AD</span>
                 </button>
-            </form>
-            
+            </form>            
             <br>
             <br>
         </p> 
         <div class='pic1'>
-            <!--<div class='t1'>
-                <p><a href='1.html' style="color:rgb(137, 23, 243)">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;STA<span style='color:rgb(182, 169, 135);background-color: white;text-shadow: 3px 3px 0px rgb(212, 209, 255);'>R</span>T</a></p>
-            </div>
-            <div class="img2">
-                
-            </div>-->
-            
             <div class='img'>
                 <img src="https://tennedar.github.io/pic/banner.png" alt="DIVINA-TENNEDA--https://tennedar.github.io/" >
             </div>
-            
         </div>
-        
         <br><br>
-       
             <div id="times" style="color:rgb(137, 23, 243);text-align: center;"></div>
                 <script type="text/javascript">
                     function getD1()
@@ -212,7 +204,6 @@
         <br>
         <p style="text-align:center;"><b class="inst">TIPS</b><span style="color:rgb(137, 23, 243);">：</span><br><span style='text-decoration: underline rgb(0, 224, 146);'><i><span style='color:rgb(0, 224, 146);'>*</span>上方仅展示部分页面，更多内容请于首页查看</i></span><span style='color:rgb(0, 224, 146);'>；</span><br><i><span style='color:rgb(0, 224, 146);'>*</span><span style='text-decoration: underline rgb(0, 224, 146);'>移动端尚未完全适配，使用电脑访问体验更佳</span></i><span style='color:rgb(0, 224, 146);'>；</span><br><span style='text-decoration: underline rgb(0, 224, 146);'><i><span style='color:rgb(0, 224, 146);'>*</span>进入首页时有可能卡顿（尚未优化），请等待其加载完毕</i></span>
             <br>
-
             <script>
                 function siteTime()
                {
@@ -247,7 +238,6 @@
                   var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
                   document.getElementById("sitetime").innerHTML=" 站點已運行： "+diffYears+" 年 "+diffDays+" 天 "+diffHours+" 小时 "+diffMinutes+" 分钟 "+diffSeconds+" 秒";
                 }
-            
                siteTime();
             </script>            
             <script src="https://tennedar.github.io/js/clickemoji.js"></script>
@@ -256,7 +246,6 @@
             <br>
             <p style="text-align:center;" class="copy"> Copyright &copy; 2023 Tennedar All rights reserved.<br><span id="sitetime" style="color:rgb(137, 23, 243)"></span></p>
         </footer>
-    
 </div>
 </body>
 </html>

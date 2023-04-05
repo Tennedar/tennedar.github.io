@@ -69,11 +69,7 @@ a:active{
 .span1:hover{
     color:rgb(0,224,146) !important;
 }
-@font-face {
-        /* font-test*/
-        font-family: 'lxgw';
-        src:url('https://tennedar.github.io/font/LXGWWenKaiLite-Light.tff'),url('https://tennedar.github.io/font/LXGWWenKaiGBScreen.ttf'),url('font\LXGWWenKaiGBScreen.ttf'),url('font\LXGWWenKaiLite-Light.ttf');
-} 
+
 @font-face {
         font-family: 'TanukiMagic';
         src: url('https://tennedar.github.io/font/TanukiMagic_1_22/TanukiMagic.ttf'),url('font\TanukiMagic_1_22\TanukiMagic.ttf');
@@ -92,7 +88,9 @@ a:active{
 .inst{
         font-family: 'TanukiMagic',default !important;
 }
-   
 html{
-        font-family: 'lxgw',default;
+        font-family: "LXGW WenKai", sans-serif;
+        font-family: "LXGW WenKai Lite", sans-serif;
+        font-family: "LXGW WenKai TC", sans-serif;
+        font-family: "LXGW WenKai Screen", sans-serif;
 }
