@@ -1,0 +1,129 @@
+.change-drop2{
+    display: none;
+}
+.change4{
+    display: none;
+}
+.change-drop:hover .change-drop2{
+    display: block;
+}
+.change-drop:hover .change3{
+    display: none;
+}
+.change-drop:hover .change4{
+    display: inline-block;
+}
+.change-drop{
+    background-color: rgb(212, 209, 255);
+}
+.change-drop:hover{
+    background-color: rgb(196, 255, 234);
+}
+.dictionary-drop{
+    background-color: rgb(196, 255, 234);
+}
+.dictionary-drop:hover{
+    background-color: rgb(212, 209, 255);
+}
+.dict2{
+    display: none;
+}
+.dict4{
+    display:none;
+}
+.dictionary-drop:hover .dict2{
+    display: block;
+}
+.dictionary-drop:hover .dict3{
+    display: none;
+}
+.dictionary-drop:hover .dict4{
+    display: inline-block;
+}
+.skzname{
+    background-color: rgb(196, 255, 234);
+}
+.skzn4{
+    display: none;
+}
+.skzn2{
+    display: none;
+}
+.skzname:hover .skzn2{
+    display: block;
+}
+.skzname:hover .skzn4{
+    display: inline-block;
+}
+.skzname:hover .skzn3{
+    display: none;
+}
+.tag{
+    background-color: rgb(212, 209, 255);
+}
+.tag2{
+    display: block;
+}
+.tag4{
+    display: none;
+}
+.tag:hover .tag3{
+    display: none;
+}
+.tag:hover .tag4{
+    display: inline-block;
+}
+.tag-1:hover{
+    background-color: rgb(196, 255, 234);
+}
+.tag1-2{
+    display: none;
+}
+.tag1-4{
+    display: none;
+}
+.tag-1:hover .tag1-2{
+    display: block;
+}
+.tag-1:hover .tag1-3{
+    display: none;
+}
+.tag-1:hover .tag1-4{
+    display: inline-block;
+}
+.tag-2:hover{
+    background-color: rgb(196, 255, 234);
+}
+.tag2-4{
+    display: none;
+}
+.tag2-2{
+    display: none;
+}
+.tag-2:hover .tag2-2{
+    display: block;
+}
+.tag-2:hover .tag2-4{
+    display: inline-block;
+}
+.tag-2:hover .tag2-3{
+    display: none;
+}
+.tag-3:hover{
+    background-color: rgb(196, 255, 234);
+}
+.tag3-4{
+    display: none;
+}
+.tag3-2{
+    display: none;
+}
+.tag-3:hover .tag3-2{
+    display: block;
+}
+.tag-3:hover .tag3-4{
+    display: inline-block;
+}
+.tag-3:hover .tag3-3{
+    display: none;
+}
