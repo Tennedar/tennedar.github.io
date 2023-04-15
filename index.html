@@ -127,6 +127,64 @@
         .eng{
             font-family: 'Merienda', cursive;
         }
+
+        .header {
+            position:relative;
+            text-align:center;
+            background: linear-gradient(60deg, rgba(132, 0, 255, 0.63) 0%,rgba(0, 255, 166, 0.753) 100%);
+        }
+        .waves {
+            position:relative;
+            width: 100%;
+            height:15vh;
+            margin-bottom:-7px; /*Fix for safari gap*/
+            min-height:100px;
+            max-height:150px;
+        }
+        .parallax > use {
+            animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
+        }
+        .parallax > use:nth-child(1) {
+            animation-delay: -2s;
+            animation-duration: 7s;
+        }
+        .parallax > use:nth-child(2) {
+            animation-delay: -3s;
+            animation-duration: 10s;
+        }
+        .parallax > use:nth-child(3) {
+            animation-delay: -4s;
+            animation-duration: 13s;
+        }
+        .parallax > use:nth-child(4) {
+            animation-delay: -5s;
+            animation-duration: 20s;
+        }
+        @keyframes move-forever {
+            0% {
+                transform: translate3d(-90px,0,0);
+            }
+            100% { 
+                transform: translate3d(85px,0,0);
+            }
+        }
+        @media (max-width: 768px) {
+        .waves {
+            height:40px;
+            min-height:40px;
+        }
+        .content {
+            height:30vh;
+        }
+        }
+        .copy1{
+            background-color: rgba(255, 255, 255, 0.226);
+            width: fit-content;
+            position: relative;
+            left: 30%;
+            border-radius: 3px;
+            padding: 10px;
+        }
 </style>
 </head>
 <body >
@@ -170,7 +228,7 @@
         </p>
         <br>
         <p style="text-align:center;"><span class="eng"><b>TIPS</b></span><span style="color:rgb(137, 23, 243);">：</span><br><span style='text-decoration: underline rgb(0, 224, 146);'><i><span style='color:rgb(0, 224, 146);'>*</span>上方僅展示部分頁面，更多內容請於首頁查看</i></span><span style='color:rgb(0, 224, 146);'>；</span><br><i><span style='color:rgb(0, 224, 146);'>*</span><span style='text-decoration: underline rgb(0, 224, 146);'>移動端尚未完全適配，使用電腦訪問體驗更佳</span></i><span style='color:rgb(0, 224, 146);'>；</span><br><span style='text-decoration: underline rgb(0, 224, 146);'><i><span style='color:rgb(0, 224, 146);'>*</span>進入首頁時有可能卡頓（尚未優化），請等待其加載完畢</i></span>
-            <br>
+            <br><br>
             <script>
                 function siteTime()
                {
@@ -209,9 +267,22 @@
             </script>            
             <script src="https://tennedar.github.io/js/clickemoji.js"></script>
       <footer>
-            <br><br>
-            <span class="eng"><p style="text-align:center;" class="copy"> Copyright &copy; 2023 Tennedar All rights reserved.<br></span><span id="sitetime" style="color:rgb(137, 23, 243)"></span></p>
-            <br><br>
+            <div class="header">
+                <br><br>
+                <div class='copy1'><span class="eng"><p class="copy"> Copyright &copy; 2023 Tennedar All rights reserved.<br></span><span id="sitetime" style="color:rgb(137, 23, 243)"></span></p></div>
+                <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                    <defs>
+                        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                    </defs>
+                    <g class="parallax">
+                        <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+                        <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+                        <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+                        <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+                    </g>
+                </svg>
+            </div>
         </footer>
 </div>
 </body>
