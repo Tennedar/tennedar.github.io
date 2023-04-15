@@ -1,3 +1,9 @@
 .pic{
-    
 }
+.pic:hover{
+    position: relative;
+    left:2%;
+    box-shadow: 10px 10px 0px rgb(182, 169, 135);
+}
+
+  
