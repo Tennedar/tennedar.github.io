@@ -190,6 +190,31 @@
             border-radius: 3px;
             padding: 10px;
         }
+        .typing-demo {
+            width: 72ch;
+            animation: typing 5s steps(76), blink .5s step-end infinite alternate;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 3px solid;
+            position: absolute;
+            -webkit-transform: translate(-50%, -50%);   
+            -moz-transform: translate(-50%, -50%);   
+            -ms-transform: translate(-50%, -50%);   
+            -o-transform: translate(-50%, -50%);   
+            left: 50%;   
+            transform: translate(-50%, -50%);  
+            font-family: 'Merienda', cursive;
+        }
+        @keyframes typing {
+            from {
+                width: 0
+            }
+        }
+        @keyframes blink {
+            50% {
+                border-color: transparent
+            }
+        }
 </style>
 </head>
 <body >
@@ -222,6 +247,9 @@
                     setInterval('getD1();',1000);
                 </script> 
                 <br>
+            <div class="typing-demo">
+                Tennedar&nbsp;input&nbsp;and&nbsp;output&nbsp;;&nbsp;Tennedare&nbsp;encoding&nbsp;and&nbsp;decoding&nbsp;;&nbsp;Tennedar&nbsp;define&nbsp;everything.
+            </div><br>
             <p style="text-align:center;text-decoration: overline rgb(0, 224, 146);color:blue">&dArr;下滑查看&dArr;</p>
         </div>
     </div>   
