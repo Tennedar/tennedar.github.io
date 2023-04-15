@@ -75,6 +75,32 @@
 	.eng{
             font-family: 'Merienda', cursive;
         }
+    .gui0{
+        position: fixed;
+        left:67%;
+        top:10%;
+        color:rgb(137, 23, 243);
+        border: 1px dashed;
+        box-shadow: 2px 2px 2px blue;
+        border-radius: 8px;
+        background-color:rgb(196, 255, 234);
+        padding: 5px;
+    }
+    .gui1{
+        display: none;
+    }
+    .gui-4{
+        display: none;
+    }
+    .gui0:hover .gui1{
+        display: block;
+    }
+    .gui0:hover .gui-3{
+        display: none;
+    }
+    .gui0:hover .gui-4{
+        display: inline-block;
+    }
 </style>
 </head>
 <body >
@@ -86,7 +112,7 @@
     <br>
     <br>
     <span class="eng"><div class="gototop" id="gototop"><a href='#top'>&#x21ea; G O &#x21ea;<br>&#x21ea;T O P&#x21ea;</a></div></span>
-  	<div class="guide">
+    <div class="guide">
         
         <br><br>
         <h1 style="text-align:center;" class="titlefont"><span >更新</span><span style="color:rgb(182, 169, 135);">履</span><span>厲</span></h1><br><br><br>
@@ -101,14 +127,27 @@
             <b><u>23.4.8</b></u><span style="color:rgb(137, 23, 243);">--</span><br>修改<span class="eng"><a href="https://tennedar.github.io/html/recommend.html" style="color: blue"> REC<span style="color:rgb(137, 23, 243);background-color: rgb(196, 255, 234);">O</span>MMEND</a></span>頁<span style="color:rgb(0, 224, 146);">。</span><br><br>
         </p> 
     </div>
+    <div class="gui0">
+        <span>傳送門</span><span class="gui-3">&#x25BC;</span><span class="gui-4">&#x25B2;</span>
+        <div class="gui1">
+            <br><hr>
+            <a href="#home-1">注意事項</a><br>
+            <a href="#home-2">導航欄</a><br>
+            <a href="#home-3">搜索</a><br>
+            <a href="#home-4">關於我</a><br>
+            <a href="#home-5">聯系方式</a><br>
+            <a href="#home-6">特別鳴謝</a><br>
+            <a href="#home-7">友情鏈接</a><br>
+        </div>
+    </div>
     <div class="no-guide">
-        <h1 style="text-align:center;" class="titlefont"><span >注意</span><span style="color:rgb(182, 169, 135);">事</span><span>項</span></h1><br>
+        <h1 style="text-align:center;" class="titlefont" id="home-1"><span >注意</span><span style="color:rgb(182, 169, 135);">事</span><span>項</span></h1><br>
         <p style="text-align:center" ><b>這里</b>是<span style="color:rgb(137, 23, 243);background-color: rgb(196, 255, 234);text-shadow:2px 2px 3px rgb(191, 157, 255)" class="eng">Tennedar</span><span style='font-size: smaller;'>--<a href='#abouttr'><span class='eng'>ABOUT ME</span></a></span><b><i>的</i><span style="background-color:rgb(196, 255, 234);font-size: larger;">個人</span>主頁</b><span style="color:rgb(137, 23, 243);">；</span><br><br><b><i>所有</i></b>內容都為<span class="eng">Tennedar</span><b>原創 & 親自製作</b>（註明出處的除外）<span style="color:rgb(137, 23, 243);">；</span><br><br><b><u><span style="background-color:rgb(196, 255, 234);font-size: larger;">請勿</span>隨意<span style="background-color:rgb(196, 255, 234);font-size: larger;">轉載</span></u></b><img src="https://img.shields.io/badge/!-WARNING-00E092"><span style="color:rgb(137, 23, 243);">；</span><br><br>本主頁<b><i>仍在開發中</i></b>；<br><br>有任何相關<b><i>問題</i></b>都可以隨時聯繫<span class="eng">Tennedar</span><span style="color:rgb(137, 23, 243);">。</span> </p><br>
         <br>
         <br>
         <hr> 
         <br><br>
-        <h1 style="text-align:center;" class="titlefont"><span >導</span><span style="color:rgb(182, 169, 135);">航</span><span>欄</span></h1><br>
+        <h1 style="text-align:center;" class="titlefont" id="home-2"><span >導</span><span style="color:rgb(182, 169, 135);">航</span><span>欄</span></h1><br>
         <p style="text-align:center">
             標題頁<span style="color:rgb(137, 23, 243);">|</span><a href="https://tennedar.github.io/" style="color: blue"> <span style="color:rgb(137, 23, 243);background-color: rgb(196, 255, 234);" class="eng">INDEX</span></a><img src="https://img.shields.io/badge/GO-BACK-00E092"><br><br>
             <span style="color:rgb(137, 23, 243);">*</span><span class="eng">Title</span><br><br><br>
@@ -129,14 +168,14 @@
         <br><br>
         <hr>
         <br><br>
-        <h1 style="text-align:center;" class="titlefont"><span >搜</span><span style="color:rgb(182, 169, 135);">索</span></h1><br>
+        <h1 style="text-align:center;" class="titlefont" id="home-3"><span >搜</span><span style="color:rgb(182, 169, 135);">索</span></h1><br>
         <div class="search">
             <input type="text" placeholder="建設中，還不能用..." name="" id="" value="" />
             <button><i>搜索</i></button>
         </div>   <br id='abouttr'><br><br>
         <hr>
         <br><br>
-        <h1 style="text-align:center;" class="titlefont"><span >關</span><span style="color:rgb(182, 169, 135);">於</span><span style="color:rgb(137, 23, 243);">我</span></h1><br>
+        <h1 style="text-align:center;" class="titlefont" id="home-4"><span >關</span><span style="color:rgb(182, 169, 135);">於</span><span style="color:rgb(137, 23, 243);">我</span></h1><br>
       <p style="text-align:center;">
         <img src="https://tennedar.github.io/pic/icontrans.webp" width="100px" class="icon1"><br><br>
         <a href='https://github.com/Tennedar' target="_blank"><img src="https://tennedar.github.io/pic/githubmark/github-mark.svg" width="40px"></a>&nbsp;&nbsp;<a href="https://ramen-fsm.eu.org/web/@Divina_Tenneda" target="_blank"><img src='https://tennedar.github.io/pic/githubmark/mstdlogo-purple.svg' width="40px"></a>&nbsp;&nbsp;<a href="https://twitter.com/divina_tennedar" target="_blank"><img src='https://tennedar.github.io/pic/githubmark/Twitter social icons - circle - blue.svg' width='40px'></a>
@@ -156,7 +195,7 @@
     <br><br>
     <hr>
     <br><br>
-    <h1 style="text-align:center;" class="titlefont"><span >聯系</span><span style="color:rgb(182, 169, 135);">方</span><span>式</span></h1><br>
+    <h1 style="text-align:center;" class="titlefont" id="home-5"><span >聯系</span><span style="color:rgb(182, 169, 135);">方</span><span>式</span></h1><br>
     <p style="text-align:center">
         <p style="text-align:center;">
         請<b>通過這些途徑</b>向我發送消息；<br>留言和提問都隨時歡迎<span style="color:rgb(0, 224, 146);">。</span><br><br>
@@ -168,7 +207,7 @@
     <br><br>
     <hr> 
     <br><br>
-    <h1 style="text-align:center;" class="titlefont"><span >特別</span><span style="color:rgb(182, 169, 135);">鳴</span><span>謝</span></h1><br>
+    <h1 style="text-align:center;" class="titlefont" id="home-6"><span >特別</span><span style="color:rgb(182, 169, 135);">鳴</span><span>謝</span></h1><br>
     <p style="text-align:center">
         <span style="color:rgb(137, 23, 243);background-color: rgb(196, 255, 234);" class="eng"><b>Z</b></span>，提供了<span style="color:rgb(137, 23, 243);">點擊鼠標出現隨機顏文字</span>的創意；<br>为<b>博客字體</b>的調整提供了建議；<br><br>
         <img src="https://img.shields.io/badge/這樣的-標籤-00E092">來自<a href="https://shields.io/" target="_blank" class="eng">https://shields.io/</a><br><br>
@@ -178,7 +217,8 @@
     <br><br>
     <hr> 
     <br><br>
-    <h1 style="text-align:center;" class="titlefont"><span >友情</span><span style="color:rgb(182, 169, 135);">鏈</span><span>接</span></h1><br>
+    <h1 style="text-align:center;" class="titlefont" id="home-7"><span >友情</span><span style="color:rgb(182, 169, 135);">鏈</span><span>接</span></h1><br>
+        <p style="text-align:center">交換友鏈請發郵件（包括：網站名稱；圖標；鏈接）；</p><br>
         <p style="text-align:center"><a href="http://www.seacatcry.com/" target="_blank" style="color: blue">海貓鳴泣之時論壇-黃金魔女的番茄園</a></p><br>
     <br>
     <br>
