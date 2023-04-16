@@ -1,17 +1,28 @@
 <html>
 <head>
-<title>沙盒</title>
+<title>SYSTEM-TR-SANDBOX</title>
 <style>
     .copy{
             text-decoration: underline rgb(212, 209, 255);
             text-shadow: 2px 2px 0px rgb(212, 209, 255);
         }
+    .textarea1{
+        width: 350px;
+        height: 200px;
+    }
+    .textarea2{
+        width:350px;
+        height: 400px;
+    }
+    .textarea3{
+        width: 350px;
+        height: 200px;
+    }
 </style>
 </head>
 <body>
-    <p style="text-align:center"><a href="http://tennedar.github.io/home.html" style="color: blue">返回上一頁</a><br><br>
-      
-<code>
+    <p style="text-align:center"><a href="http://tennedar.github.io/home.html" style="color: blue">返回主頁</a><br><br>
+<textarea class="textarea3">
     purple<br>
     rgb(137, 23, 243)<br>
     shallow rgb(212, 209, 255)<br>
@@ -22,9 +33,9 @@
     rgb(196, 255, 234)<br>
     coffee<br>
     rgb(182, 169, 135)<br>
-</code><br>
+</textarea><br>
     <br>
-<textarea>
+<textarea class="textarea1">
     toggle
     <details>    
     <summary>我是標題1</summary>
@@ -35,7 +46,7 @@
         </details>
     </details>
 </textarea>
-<textarea>
+<textarea class="textarea2">
     password
     <script type="text/javascript">   
         function password() {   
@@ -59,7 +70,6 @@
         document.write(password());   
         </script>  
 </textarea>
-
      <br>
 <p style="text-align:center;" class="copy"> Copyright &copy; 2023 Tennedar All rights reserved.</p>
 </body>
