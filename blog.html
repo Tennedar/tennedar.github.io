@@ -12,148 +12,317 @@
    <link href="https://fonts.font.im/css?family=Merienda" rel="stylesheet">
    <title>博客</title>
    <style>
-  *{
-		margin: 0;
-  		padding: 0;        
-	}
-
-	html,body    {
- 		height: 100%;
-	}
-
-	.p    {
-   		width: 100%;
-   		height: 100%;
-		background: white;
-	}
-	.normal{
-        font-size: 16px !important;
-	}
-	.test1{   
-        font-size: 16px !important;
-        position: absolute;   
-        top: 50%;   
-        left: 40%;   
-        -webkit-transform: translate(-50%, -50%);   
-        -moz-transform: translate(-50%, -50%);   
-        -ms-transform: translate(-50%, -50%);   
-        -o-transform: translate(-50%, -50%);   
-        transform: translate(-50%, -50%);   
-	}   
-
-	body {
-        height: 100vh;
-        background-color: white;
-	}
-
-	.text {
-        position: absolute;
-        z-index: 9999999;
-        font-weight: bold;
-        user-select: none;
-	}
-
-	@keyframes remove {
-       	100% {
-	        opacity: 0;
-       	}
-	}
-
-	.content{
-		border-left: 20px dashed;
-		border-right: 20px dashed;
-		font-size: 16px !important;
-	}
-	test1.audio{
-		width:80%;
-	}
-
-  	.gototop{
-	    position:fixed;
-	    left:67%;
-	    top:90%;
-	    background-color: rgb(196, 255, 234);
-	    color:rgb(137, 23, 243);
-	    font-weight: bolder;
-	    border-radius: 10px;
-	    border: 1px dashed;
-	    box-shadow: 2px 2px 2px blue;
-  	}
-  	.copy{
+        *{
+            margin: 0;
+            padding: 0;        
+        }
+        html,body    {
+            height: 100%;
+        }
+        .p    {
+            width: 100%;
+            height: 100%;
+            background: white;
+        }
+        .normal{
+            font-size: 16px !important;
+        }
+        .test1{   
+            font-size: 16px !important;
+            position: absolute;   
+            top: 50%;   
+            left: 50%;   
+            -webkit-transform: translate(-50%, -50%);   
+            -moz-transform: translate(-50%, -50%);   
+            -ms-transform: translate(-50%, -50%);   
+            -o-transform: translate(-50%, -50%);   
+            transform: translate(-50%, -50%);   
+        }   
+        body {
+            height: 100vh;
+            background-color: white;
+        }
+        .text {
+            position: absolute;
+            z-index: 9999999;
+            font-weight: bold;
+            user-select: none;
+        }
+        @keyframes remove {
+            100% {
+                opacity: 0;
+            }
+        }
+        .content{
+            border-left: 20px dashed;
+            border-right: 20px dashed;
+            font-size: 16px !important;
+        }
+        .test1.audio{
+            width:80%;
+        }
+        .gototop{
+            position:fixed;
+            left:80%;
+            top:90%;
+            background-color: rgb(196, 255, 234);
+            color:rgb(137, 23, 243);
+            font-weight: bolder;
+            border-radius: 10px;
+            border: 1px dashed;
+            box-shadow: 2px 2px 2px blue;
+        }
+        .copy{
             text-decoration: underline rgb(212, 209, 255);
             text-shadow: 2px 2px 0px rgb(212, 209, 255);
-			position: relative;
-			right:13%;
-    }
-
-	.guide2{
-	    position:fixed;
-	    width: 20%;
-	    left :79%;
-	    height: 100%;
-	    top:0%;
-	    padding-left: 1%;
-	    padding-right: 1%;
-	    border-left :solid 2px rgb(0, 224, 146);
-	    /*padding-top: 2%;*/
-	    /*border-radius: 12px;*/
-	    background-color: white;
-	}
-	.no-guide{
-    	width: 80%;
-	}
-
-	textarea{
-		font-family: 'Merienda', cursive;
-		border:solid 1px rgb(137, 23, 243);
-		border-radius: 5px ;
-		background-color: white;
-		color:rgb(0, 224, 146);
-		width:100%;
-		height: auto;
-		
-	}
-	textarea:hover{
-		border: solid 1px rgb(0, 224, 146);
-		border-radius: 5px ;
-		color:rgb(137, 23, 243);
-	}
-	input{
-		font-family:'Courier New', Courier, monospace;
-		border: solid 1px rgb(0, 224, 146);
-		border-radius: 5px ;
-		background-color: white;
-		color:rgb(137, 23, 243);
-		float:left;
-		clear: both;
-		
-	}
-	input:hover{
-		border:solid 1px rgb(137, 23, 243);
-		color:rgb(0, 224, 146);
-		border-radius: 5px ;
-	}
-	.eng{
+            position: absolute;
+            -webkit-transform: translate(-50%, -50%);   
+            -moz-transform: translate(-50%, -50%);   
+            -ms-transform: translate(-50%, -50%);   
+            -o-transform: translate(-50%, -50%);   
+            left: 50%;   
+            transform: translate(-50%, -50%);   
+            border-radius: 3px;
+            padding: 10px;
             font-family: 'Merienda', cursive;
         }
-	.titlefont{
-        font-family: 'chogokubosogothic';
-    }
-    .b-230415{
-        width: fit-content;
-        border: 1px solid black;
-        border-radius: 3px;
-        margin: 5px;
-    }
-  </style>
-</head>
-   
-   
+        .guide2{
+            position:fixed;
+            width: 20%;
+            left :79%;
+            height: 100%;
+            top:0%;
+            padding-left: 1%;
+            padding-right: 1%;
+            border-left :solid 2px rgb(0, 224, 146);
+            /*padding-top: 2%;*/
+            /*border-radius: 12px;*/
+            background-color: white;
+        }
 
-   
-   
+        textarea{
+            font-family: 'Merienda', cursive;
+            border:solid 1px rgb(137, 23, 243);
+            border-radius: 5px ;
+            background-color: white;
+            color:rgb(0, 224, 146);
+            width:100%;
+            height: auto;
+            
+        }
+        textarea:hover{
+            border: solid 1px rgb(0, 224, 146);
+            border-radius: 5px ;
+            color:rgb(137, 23, 243);
+        }
+        input{
+            font-family:'Courier New', Courier, monospace;
+            border: solid 1px rgb(0, 224, 146);
+            border-radius: 5px ;
+            background-color: white;
+            color:rgb(137, 23, 243);
+            float:left;
+            clear: both;
+            
+        }
+        input:hover{
+            border:solid 1px rgb(137, 23, 243);
+            color:rgb(0, 224, 146);
+            border-radius: 5px ;
+        }
+        .eng{
+                font-family: 'Merienda', cursive;
+            }
+        .titlefont{
+            font-family: 'chogokubosogothic';
+        }
+        .b-230415{
+            width: fit-content;
+            border: 1px solid black;
+            border-radius: 3px;
+            margin: 5px;
+        }
+        .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+            border-right: 3px solid rgb(0, 224, 146);
+            background-color: white;
+        }
+        .sidebar .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+            transition: 0.3s;
+            text-decoration: none;
+            color: rgb(137, 23, 243);
+        }
+        .openbtn {
+            border: 1px dashed rgb(137, 23, 243);
+            font-size: 20px;
+            padding: 10px 15px;
+            position: fixed;
+            border-radius: 8px;
+            background-color:rgb(196, 255, 234);
+            box-shadow: 2px 2px 2px blue;
+            color:rgb(137, 23, 243);
+            font-family: "LXGW WenKai", sans-serif;
+            font-family: "LXGW WenKai Lite", sans-serif;
+            font-family: "LXGW WenKai TC", sans-serif;
+            font-family: "LXGW WenKai Screen", sans-serif;
+        }
+        .openbtn:hover {
+            background-color: rgb(137, 23, 243);
+            color:rgb(196, 255, 234);
+            border: 1px dashed rgb(196, 255, 234);
+        }
+        #main {
+            transition: margin-left .5s;
+            padding: 16px;
+        }
+        @media screen and (max-height: 450px) {
+            .sidebar {padding-top: 15px;}
+            .sidebar a {font-size: 18px;}
+        }
+        details {
+            border: 1px solid #aaa;
+            border-radius: 4px;
+            padding: 0.5em 0.5em 0;
+        }
+
+        summary {
+            font-weight: bold;
+            margin: -0.5em -0.5em 0;
+            padding: 0.5em;
+        }
+
+        details[open] {
+            padding: 0.5em;
+        }
+
+        details[open] summary {
+            border-bottom: 1px solid #aaa;
+            margin-bottom: 0.5em;
+        }
+    </style>
+</head>
+<script>
+    function openNav() {
+      document.getElementById("mySidebar").style.width = "500px";
+      document.getElementById("main").style.marginRight = "250px";
+    }
+    
+    function closeNav() {
+      document.getElementById("mySidebar").style.width = "0";
+      document.getElementById("main").style.marginLeft= "0";
+    }
+</script>   
 <body  id="top">
   	<br>
+    <div id="main">
+        <button class="openbtn" onclick="openNav()">&#926 公告版</button>  
+    </div>
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <br><br>
+        <span><h1 style="text-align:center;"><span >公</span><span style="color:rgb(182, 169, 135);">告</span><span>版</span></h1></span><br>
+        <span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);">最近更新</span>：<a href="#4.22">4.22</a><br>
+		<span class='eng'>skz</span>五周年快樂！<br>4.1初鳥創生日快樂！<br>
+        <details>
+            <summary>
+                <span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);">更改:</span>
+            </summary>
+            <a href='#2.12'>2.12</a>中的梅尼耶<span class='eng'>gif</span>改為韓知城照片（來自官網）;<br>
+            更改字體；
+        </details>
+        <span style="color:rgb(137, 23, 243);">感想请通过邮件发送！</span>
+        <details>
+            <summary>
+                <span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);">用語集：</span>
+            </summary>
+            <span><i>雖然r的原則是好好說話，但難免會因為方便/搞笑用黑話，為了方便訪客閱讀，特此推出用語集</i></span><br>
+            <details>
+                <summary>常用：</summary>
+                <b>r/R：</b>博主自称<br>
+                <b>z/Z：</b>友情出场<br>
+                <b>skz/迷：</b><a href='https://search.bilibili.com/all?keyword=stray%20kids&from_source=webtop_search&spm_id_from=333.1007&search_source=5' target='_blank'>stray kids</a><br>
+            </details>
+            <details>
+                <summary>
+                    <span class="eng">KPOP</span>相关：
+                </summary>
+                <b>迷人/8迷/八个神：</b>skz成员（泛指）<br>
+                <b>stay：</b>skz粉丝的名字<br>
+                <b>爻：</b><a href='https://search.bilibili.com/all?keyword=nmixx&from_source=webtop_search&spm_id_from=333.1007&search_source=5' target='_blank'>NMIXX</a><br>
+                <b>迷1-8/爻1-7：</b>按年龄降序排序，数字对应成员<br>
+                <details>
+                    <summary>
+                        <span class='eng'>skz</span>成员别称：
+                    </summary>
+                    <i>（仅为本博客<b>方便访客阅读</b>用，不代表全部）</i>
+                    <b>方灿/迷1：</b>灿/灿尼<br>
+                    <b>李旻浩/迷2：</b>糯/李糯<br>
+                    <b>徐彰彬/迷3：</b>彬/彬尼<br>
+                    <b>黄铉辰/迷4：</b>选/黄选/铉尼<br>
+                    <b>韩知城/迷5：</b>阔卡/韩尼<br>
+                    <b>李龙馥/felix/迷6：</b>菲（菲菲）<br>
+                    <b>金昇玟/迷7：</b>ksm/小狗/狗狗/康阿几<br>
+                    <b>梁精寅/迷8：</b>IN/伊恩尼/小羊/宝宝面包<br>
+                </details>
+            </details>
+        </details>
+        <details>
+            <summary>
+                <span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);"><span class="eng">TAG</span>：</span>
+            </summary>
+            <i>（仅截取大段内容，如果不想漏掉只言片语还请看完每一期博客！）</i>
+            <details>
+                <summary>
+                    个站相关：
+                </summary>
+                <a href="#4.5">4.5</a><span>字體</span><br>
+                <a href="#4.2">4.2</a><span>美化</span><br>
+                <a href="#3.11">3.11</a><span>css</span><br>
+                <a href="#3.4">3.4</a><span>自作bgm</span><br>
+                <a href="#2.19">2.19</a><span>装修</span><br>
+                <a href="#2.18">2.18</a><span>装修</span><br>
+                <a href="#2.12">2.12</a><span>茧房概念</span><br>
+                <a href="#1.28">1.28</a><span>javascript</span><br>
+                <a href="#1.24">1.24</a><span>表情包</span><br>
+                <a href="#1.22">1.22</a><span>wordpress内容转移完毕</span><br>
+                <a href="#1.20">1.20</a><span>摸索中</span><br>
+            </details>
+            <details>
+                <summary>
+                    <span class='eng'>SKZ</span>相关：
+                </summary>
+                <a href="#3.25">3.25</a><span>出道五周年</span><br>
+                <a href="#3.12">3.12</a><span>听歌+近况</span><br>
+                <a href="#3.4">3.4</a><span>视频感想+推荐</span><br>
+                <a href="#2.25">2.25</a>&nbsp;<a href="#2.19">2.19</a><span>评价歌</span><br>
+                <a href="#2.18">2.18</a><span>The Sound re</span><br>
+                <a href="#2.12">2.12</a><span>回顾入坑+视频推荐</span><br>
+                <a href="#1.28">1.28</a><span>入坑感想</span><br>
+            </details>
+            <details>
+                <summary>
+                    学校纪事：
+                </summary>
+                <a href="#4.19">4.19</a><span>吐嘈</span><br>
+                <a href="#4.1">4.1</a><span>吃的</span><br>
+                <a href="#3.25">3.25</a><span>分班日快乐</span><br>
+                <a href="#3.11">3.11</a><span>忙</span><br>
+            </details>
+        </details>
+    </div>
 	<div class='p'>
 		<div class='test1'>
 		<h1 style="text-align:center"><span>博客</span><span class='eng'>-BL<span style="color:rgb(182, 169, 135);">O</span>G</span></h1>
@@ -175,91 +344,6 @@
    	</div>
    <span class='eng'><div class="gototop" ><a href='#top'>&#x21ea; G O &#x21ea;<br>&#x21ea;T O P&#x21ea;</a></div></span>
   	<br>
-	  <div class="guide2">
-        
-        <br><br>
-        <span><h1 style="text-align:center;"><span >公</span><span style="color:rgb(182, 169, 135);">告</span><span>版</span></h1></span><br>
-        <span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);">最近更新</span>：<a href="#4.22">4.22</a><br>
-		<span ><span class='eng'>skz</span>五周年快樂！<br>4.1初鳥創生日快樂！<br>
-        <div class="change-drop">
-            <span class='change-text'>更改:</span><span class="change3">&#x25BC;</span><span class="change4">&#x25B2;</span>
-            <div class="change-drop2">
-                <a href='#2.12'>2.12</a>中的梅尼耶<span class='eng'>gif</span>改為韓知城照片（來自官網）;<br>
-    			更改字體；
-            </div>
-        </div>
-        <span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);">感想请通过邮件发送！</span>
-		<br>
-        <div class="dictionary-drop">
-            <span class="dic-text">用語集</span><span class="dict3">&#x25BC;</span><span class="dict4">&#x25B2;</span>
-            <div class="dict2">
-                <span><i>雖然r的原則是好好說話，但難免會因為方便/搞笑用黑話，為了方便訪客閱讀，特此推出用語集</i></span><br>
-                <b>r/R：</b>博主自称<br>
-                <b>skz/迷：</b><a href='https://search.bilibili.com/all?keyword=stray%20kids&from_source=webtop_search&spm_id_from=333.1007&search_source=5' target='_blank'>stray kids</a><br>
-                <b>迷人/8迷/八个神：</b>skz成员（泛指）<br>
-                <b>stay：</b>skz粉丝的名字<br>
-                <b>爻：</b><a href='https://search.bilibili.com/all?keyword=nmixx&from_source=webtop_search&spm_id_from=333.1007&search_source=5' target='_blank'>NMIXX</a><br>
-                <b>迷1-8/爻1-7：</b>按年龄降序排序，数字对应成员<br>
-                <div class="skzname">
-                    <span class="name-text"><b>skz成员别称：</b></span><span class="skzn3">&#x25BC;</span><span class="skzn4">&#x25B2;</span>
-                    <div class="skzn2">
-                        <i>（仅为本博客<b>方便访客阅读</b>用，不代表全部）</i>
-                        <b>方灿/迷1：</b>灿/灿尼<br>
-                        <b>李旻浩/迷2：</b>糯/李糯<br>
-                        <b>徐彰彬/迷3：</b>彬/彬尼<br>
-                        <b>黄铉辰/迷4：</b>选/黄选/铉尼<br>
-                        <b>韩知城/迷5：</b>阔卡/韩尼<br>
-                        <b>李龙馥/felix/迷6：</b>菲（菲菲）<br>
-                        <b>金昇玟/迷7：</b>ksm/小狗/狗狗/康阿几<br>
-                        <b>梁精寅/迷8：</b>IN/伊恩尼/小羊/宝宝面包<br>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="tag">
-            <span class="tag1">TAG</span><span class="tag3">&#x25BC;</span><span class="tag4">&#x25B2;</span>
-            <div class="tag2">
-                <i>（仅截取大段内容，如果不想漏掉只言片语还请看完每一期博客！）</i>
-                <div class="tag-1">
-                    <span class="tag1-1"><b>个站相关</b></span><span class="tag1-3">&#x25BC;</span><span class="tag1-4">&#x25B2;</span>
-                    <div class="tag1-2">
-                        <a href="#4.5">4.5</a><span>字體</span><br>
-                        <a href="#4.2">4.2</a><span>美化</span><br>
-                        <a href="#3.11">3.11</a><span>css</span><br>
-                        <a href="#3.4">3.4</a><span>自作bgm</span><br>
-                        <a href="#2.19">2.19</a><span>装修</span><br>
-                        <a href="#2.18">2.18</a><span>装修</span><br>
-                        <a href="#2.12">2.12</a><span>茧房概念</span><br>
-                        <a href="#1.28">1.28</a><span>javascript</span><br>
-                        <a href="#1.24">1.24</a><span>表情包</span><br>
-                        <a href="#1.22">1.22</a><span>wordpress内容转移完毕</span><br>
-                        <a href="#1.20">1.20</a><span>摸索中</span><br>
-                    </div>
-                </div>
-                <div class="tag-2">
-                    <b><span class='eng'>SKZ</span></b><span class="tag2-3">&#x25BC;</span><span class="tag2-4">&#x25B2;</span>
-                    <div class="tag2-2">
-                        <a href="#3.25">3.25</a><span>出道五周年</span><br>
-                        <a href="#3.12">3.12</a><span>听歌+近况</span><br>
-                        <a href="#3.4">3.4</a><span>视频感想+推荐</span><br>
-                        <a href="#2.25">2.25</a>&nbsp;<a href="#2.19">2.19</a><span>评价歌</span><br>
-                        <a href="#2.18">2.18</a><span>The Sound re</span><br>
-                        <a href="#2.12">2.12</a><span>回顾入坑+视频推荐</span><br>
-                        <a href="#1.28">1.28</a><span>入坑感想</span><br>
-                    </div>
-                </div>
-                <div class="tag-3">
-                    <b>学校纪事</b><span class="tag3-3">&#x25BC;</span><span class="tag3-4">&#x25B2;</span>
-                    <div class="tag3-2">
-                        <a href="#4.19">4.19</a><span>吐嘈</span><br>
-                        <a href="#4.1">4.1</a><span>吃的</span><br>
-                        <a href="#3.25">3.25</a><span>分班日快乐</span><br>
-                        <a href="#3.11">3.11</a><span>忙</span><br>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 	<div class="no-guide">
 	<div class="content">
   		<hr>
@@ -526,5 +610,7 @@
     <br>
     <br>
 	<p style="text-align:center;" class="copy"> Copyright &copy; 2023 Tennedar All rights reserved.</p>
+    <br>
+    <br>
 </body>
 </html>
