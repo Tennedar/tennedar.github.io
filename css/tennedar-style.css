@@ -49,7 +49,6 @@ body {
 a:link{
         color:blue;
         text-decoration: underline;
-        background-color: rgba(176, 255, 227, 0.281);
 }
 a:visited{
         color:rgb(137, 23, 243);
