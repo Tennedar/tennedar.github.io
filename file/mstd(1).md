@@ -19,8 +19,28 @@
 
 ***
 <font face='LXGW WenKai Mono'>
+<span id='top'>
+
+## 0.目錄
+</span>
+
+- <a href='#1'>1.什麼是Mastodon？</a>
+- <a href='#2'>2.為什麼要使用Mastodon？</a>
+- <a href='#3'>3.如何使用Mastodon ———— 一個示例</a>
+  - <a href='#3-1'>尋找站點</a>
+  - <a href='#3-2'>註冊</a>
+  - <a href='#3-3'>完善個人信息</a>
+  - <a href='#3-4'>發佈第一條嘟文</a>
+  - <a href='#3-5'>查看其他用戶的嘟文</a>
+  - <a href='#3-6'>對嘟文的操作</a>
+- <a href='#4'>4.使用Mastodon時，你需要注意</a>
+- <a href='#5'>5.拓展</a>
+
+<span id='1'>
 
 ## 1.什麼是Mastodon？
+<a href='#top'>回到目錄</a>
+</span>
 
 <big>
 
@@ -58,8 +78,12 @@
 
 ***
 <font face='LXGW WenKai Mono'>
+<span id='2'>
 
 ## 2.為什麼要使用Mastodon？
+<a href='#top'>回到目錄</a>
+
+</span>
 
 <big>
 
@@ -79,15 +103,31 @@
 | 隱私 | <span style="color:rgb(137, 23, 243);background-color: rgb(196, 255, 234);text-shadow:2px 2px 3px rgb(191, 157, 255)">安全（前提是有一個負責、安全的站長）</span> | 隱私容易暴露 |
 
 ***
+<span id='3'>
 
 ## 3.如何使用Mastodon ———— 一個示例
+<a href='#top'>回到目錄</a>
+
+</span>
 
 <big>
 
 >使用長毛象真的很簡單。</big>
-<big>
 
-### 尋找站點</big>
+- <a href='#3-1'>尋找站點</a>
+- <a href='#3-2'>註冊</a>
+- <a href='#3-3'>完善個人信息</a>
+- <a href='#3-4'>發佈第一條嘟文</a>
+- <a href='#3-5'>查看其他用戶的嘟文</a>
+- <a href='#3-6'>對嘟文的操作</a>
+<big>
+<span id='3-1'>
+
+### 尋找站點
+
+</span>
+</big>
+<a href='#3'>回到本章開頭</a>
 
 - 首先，找一個***適合你***的站點：
 [joinmastodon.org](joinmastodon.org)給出了相當多的站點，這些站點是能被所有人看見，因此不免存在用戶質量參差不齊、隱私不一定特別安全的問題，不同站點也有不同的限制，例如有些站點不能發表違反US法律的言論，但有的可以。需要<span style="color:rgb(137, 23, 243);background-color: rgb(196, 255, 234);text-shadow:2px 2px 3px rgb(191, 157, 255)">有主見地判斷適合你的站點</span>。
@@ -101,8 +141,12 @@
 ![Snipaste_2023-04-30_18-39-28.png](https://img1.imgtp.com/2023/04/30/15dwZEZM.png)
 ![Snipaste_2023-04-30_18-39-34.png](https://img1.imgtp.com/2023/04/30/AYQbX45Y.png)
 <big>
+<span id='3-2'>
 
-### 註冊</big>
+### 註冊
+</span>
+</big>
+<a href='#3'>回到本章開頭</a>
 
 - 註冊按鈕在上方圖一的**右上角**
 - 點擊註冊之後會出現這樣的頁面
@@ -112,8 +156,12 @@
   - <span style="color:rgb(137, 23, 243);background-color: rgb(196, 255, 234);text-shadow:2px 2px 3px rgb(191, 157, 255)">郵箱最好不要用qq郵箱，網絡安全知識相關文章之後推出</span>！請關注tennedar！
   - ID註冊完就沒法改了，ID和用戶名不是同一個東西。
 <big>
+<span id='3-3'>
 
-### 完善個人信息</big>
+### 完善個人信息
+</span>
+</big>
+<a href='#3'>回到本章開頭</a>
 
 - <span style="color:rgb(137, 23, 243);background-color: rgb(196, 255, 234);text-shadow:2px 2px 3px rgb(191, 157, 255)">註冊2天？左右之後，會收到通過的通知郵件</span>，然後就可以開始使用長毛象了。
 - 首先完善一下個人信息
@@ -147,8 +195,12 @@
   - 剛註冊完長毛象之後可以看到，長毛象會列出一部分用戶供你關注，如果不勾選這個設置，你的帳號就有可能出現在那個列表上面。
   - 推薦勾選，因為這樣更加安全。
 <big>
+<span id='3-4'>
 
-### 發佈第一條嘟文</big>
+### 發佈第一條嘟文
+</span>
+</big>
+<a href='#3'>回到本章開頭</a>
 
 ![Snipaste_2023-04-30_19-14-31.png](https://img1.imgtp.com/2023/04/30/l7E5Xq0D.png)
 ![Snipaste_2023-04-30_19-16-58.png](https://img1.imgtp.com/2023/04/30/k89ikKeE.png)
@@ -157,8 +209,12 @@
 ![Snipaste_2023-04-30_19-22-16.png](https://img1.imgtp.com/2023/04/30/UtCzd8Nu.png)
 ![Snipaste_2023-04-30_19-16-32.png](https://img1.imgtp.com/2023/04/30/EOIJ0O1g.png)
 <big>
+<span id='3-5'>
 
-### 查看其他用戶的嘟文</big>
+### 查看其他用戶的嘟文
+</span>
+</big>
+<a href='#3'>回到本章開頭</a>
 
 ![Snipaste_2023-04-30_19-57-10.png](https://img1.imgtp.com/2023/04/30/wfRvy9Mb.png)
 ![Snipaste_2023-04-30_19-58-33.png](https://img1.imgtp.com/2023/04/30/7dxCpd5G.png)
@@ -168,14 +224,22 @@
 <span style="color:rgb(137, 23, 243);background-color: rgb(196, 255, 234);text-shadow:2px 2px 3px rgb(191, 157, 255)">不同語言的翻譯不太相同，如果感到困惑不妨去看英文原版。</span>
 
 <big>
+<span id='3-6'>
 
-### 對嘟文的操作</big>
+### 對嘟文的操作
+</span>
+</big>
+<a href='#3'>回到本章開頭</a>
 
 （建設中）<del>查看[《長毛象入門指南（2）》](https://tennedar.github.io/article.html/mstd1.md)</del>
 
 ***
+<span id='4'>
 
 ## 4.使用Mastodon時，你需要注意
+<a href='#top'>回到目錄</a>
+
+</span>
 
 >長毛象是一個溫馨的環境，請務必<span style="color:rgb(137, 23, 243);background-color: rgb(196, 255, 234);text-shadow:2px 2px 3px rgb(191, 157, 255)">遵守互聯網禮儀</span>。這會讓你的使用更加順利，也會讓其他用戶保持良好體驗。當然，在長毛象以外的地方也是一樣。
 
@@ -188,8 +252,12 @@
 - （儘量）不要刷屏，本內容將在下期詳細說明。
 
 ***
+<span id='5'>
 
 ## 5.拓展
+<a href='#top'>回到目錄</a>
+
+</span>
 
 其他介紹長毛象的博客文章：
 
@@ -221,6 +289,8 @@
 <span style="color:rgb(137, 23, 243);background-color: rgb(196, 255, 234);text-shadow:2px 2px 3px rgb(191, 157, 255)">感謝您的閱讀！</span></big>
 
 （建設中）<del>查看[《長毛象入門指南（2）》](https://tennedar.github.io/article.html/mstd1.md)</del>
+
+<a href='#top'>回到頂部</a>
 <big>
 
 >本站所有文章遵循[CC BY-NC-SA 4.0](https://tennedar.github.io/file/CC-BY-SA%204.0.md)&nbsp;&middot;&nbsp;[CC BY-NC-SA 4.0 中文版](https://tennedar.github.io/file/CC-BY-SA%204.0[ZH-CN].md)協議.</font></big>
