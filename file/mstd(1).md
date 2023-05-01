@@ -1,5 +1,5 @@
 <!DOCTYPE markdown>
-<meta charset='utf-8'>
+<meta>
 <link rel="stylesheet" href="https://cdn.staticfile.org/lxgw-wenkai-webfont/1.6.0/style.css" />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-lite-webfont@1.1.0/style.css" />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-tc-webfont@1.0.0/style.css" />
