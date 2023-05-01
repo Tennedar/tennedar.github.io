@@ -1,0 +1,271 @@
+<html>
+<head>
+   <link rel="icon" type="image/png" sizes="144x144" href="https://tennedar.github.io/pic/icon144x.png"/>
+   <link rel="stylesheet" type="text/css" href="https://tennedar.github.io/css/drop.css">
+   <link rel="stylesheet" type="text/css" href="https://tennedar.github.io/css/cursor.css">
+   <link rel="stylesheet" type="text/css" href="https://tennedar.github.io/css/tennedar-style.css">
+   <link rel="stylesheet" type="text/css" href="https://tennedar.github.io/css/pic.css">
+   <link rel="stylesheet" href="https://cdn.staticfile.org/lxgw-wenkai-webfont/1.6.0/style.css" />
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-lite-webfont@1.1.0/style.css" />
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-tc-webfont@1.0.0/style.css" />
+   <link rel="stylesheet" href="https://cdn.staticfile.org/lxgw-wenkai-screen-webfont/1.6.0/style.css" />
+   <link href="https://fonts.font.im/css?family=Merienda" rel="stylesheet">
+   <title>博客</title>
+   <style>
+        *{
+            margin: 0;
+            padding: 0;        
+        }
+        html,body    {
+            height: 100%;
+        }
+        .p    {
+            width: 100%;
+            height: 100%;
+            background: white;
+        }
+        .normal{
+            font-size: 16px !important;
+        }
+        .test1{   
+            font-size: 16px !important;
+            position: absolute;   
+            top: 50%;   
+            left: 50%;   
+            -webkit-transform: translate(-50%, -50%);   
+            -moz-transform: translate(-50%, -50%);   
+            -ms-transform: translate(-50%, -50%);   
+            -o-transform: translate(-50%, -50%);   
+            transform: translate(-50%, -50%);   
+        }   
+        body {
+            height: 100vh;
+            background-color: white;
+        }
+        .text {
+            position: absolute;
+            z-index: 9999999;
+            font-weight: bold;
+            user-select: none;
+        }
+        @keyframes remove {
+            100% {
+                opacity: 0;
+            }
+        }
+        .content{
+            border-left: 20px dashed;
+            border-right: 20px dashed;
+            font-size: 16px !important;
+        }
+        .test1.audio{
+            width:80%;
+        }
+        .gototop{
+            position:fixed;
+            left:80%;
+            top:90%;
+            background-color: rgb(196, 255, 234);
+            color:rgb(137, 23, 243);
+            font-weight: bolder;
+            border-radius: 10px;
+            border: 1px dashed;
+            box-shadow: 2px 2px 2px blue;
+        }
+        .copy{
+            text-decoration: underline rgb(212, 209, 255);
+            text-shadow: 2px 2px 0px rgb(212, 209, 255);
+            position: absolute;
+            -webkit-transform: translate(-50%, -50%);   
+            -moz-transform: translate(-50%, -50%);   
+            -ms-transform: translate(-50%, -50%);   
+            -o-transform: translate(-50%, -50%);   
+            left: 50%;   
+            transform: translate(-50%, -50%);   
+            border-radius: 3px;
+            padding: 10px;
+            font-family: 'Merienda', cursive;
+        }
+        .guide2{
+            position:fixed;
+            width: 20%;
+            left :79%;
+            height: 100%;
+            top:0%;
+            padding-left: 1%;
+            padding-right: 1%;
+            border-left :solid 2px rgb(0, 224, 146);
+            /*padding-top: 2%;*/
+            /*border-radius: 12px;*/
+            background-color: white;
+        }
+
+        textarea{
+            font-family: 'Merienda', cursive;
+            border:solid 1px rgb(137, 23, 243);
+            border-radius: 5px ;
+            background-color: white;
+            color:rgb(0, 224, 146);
+            width:100%;
+            height: auto;
+            
+        }
+        textarea:hover{
+            border: solid 1px rgb(0, 224, 146);
+            border-radius: 5px ;
+            color:rgb(137, 23, 243);
+        }
+        input{
+            font-family:'Courier New', Courier, monospace;
+            border: solid 1px rgb(0, 224, 146);
+            border-radius: 5px ;
+            background-color: white;
+            color:rgb(137, 23, 243);
+            float:left;
+            clear: both;
+            
+        }
+        input:hover{
+            border:solid 1px rgb(137, 23, 243);
+            color:rgb(0, 224, 146);
+            border-radius: 5px ;
+        }
+        .eng{
+                font-family: 'Merienda', cursive;
+            }
+        .titlefont{
+            font-family: 'chogokubosogothic';
+        }
+        .b-230415{
+            width: fit-content;
+            border: 1px solid black;
+            border-radius: 3px;
+            margin: 5px;
+        }
+        .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+            border-right: 3px solid rgb(0, 224, 146);
+            background-color: white;
+        }
+        .sidebar .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+            transition: 0.3s;
+            text-decoration: none;
+            color: rgb(137, 23, 243);
+        }
+        .openbtn {
+            border: 1px dashed rgb(137, 23, 243);
+            font-size: 20px;
+            padding: 10px 15px;
+            position: fixed;
+            border-radius: 8px;
+            background-color:rgb(196, 255, 234);
+            box-shadow: 2px 2px 2px blue;
+            color:rgb(137, 23, 243);
+            font-family: "LXGW WenKai", sans-serif;
+            font-family: "LXGW WenKai Lite", sans-serif;
+            font-family: "LXGW WenKai TC", sans-serif;
+            font-family: "LXGW WenKai Screen", sans-serif;
+        }
+        .openbtn:hover {
+            background-color: rgb(137, 23, 243);
+            color:rgb(196, 255, 234);
+            border: 1px dashed rgb(196, 255, 234);
+        }
+        #main {
+            transition: margin-left .5s;
+            padding: 16px;
+        }
+        @media screen and (max-height: 450px) {
+            .sidebar {padding-top: 15px;}
+            .sidebar a {font-size: 18px;}
+        }
+        details {
+            border: 1px solid #aaa;
+            border-radius: 4px;
+            padding: 0.5em 0.5em 0;
+        }
+
+        summary {
+            font-weight: bold;
+            margin: -0.5em -0.5em 0;
+            padding: 0.5em;
+        }
+
+        details[open] {
+            padding: 0.5em;
+        }
+
+        details[open] summary {
+            border-bottom: 1px solid #aaa;
+            margin-bottom: 0.5em;
+        }
+    </style>
+</head>
+<script>
+    function openNav() {
+      document.getElementById("mySidebar").style.width = "500px";
+      document.getElementById("main").style.marginRight = "250px";
+    }
+    
+    function closeNav() {
+      document.getElementById("mySidebar").style.width = "0";
+      document.getElementById("main").style.marginLeft= "0";
+    }
+</script>   
+<body  id="top">
+  	<br>
+    <div id="main">
+        <button class="openbtn" onclick="openNav()">&#926 公告版</button>  
+    </div>
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <br><br>
+        <span><h1 style="text-align:center;"><span >公</span><span style="color:rgb(182, 169, 135);">告</span><span>版</span></h1></span><br>
+
+        <span style="color:rgb(137, 23, 243);">感想请通过邮件发送！</span>
+
+    </div>
+	<div class='p'>
+		<div class='test1'>
+		<h1 style="text-align:center"><span>文章</span><span class='eng'>-A<span style="color:rgb(182, 169, 135);">R</span>TICLE</span></h1>
+			<br>
+			<p style="text-align:center"><a href="http://tennedar.github.io/home.html" style="color: blue">返回上一頁</a></p><br>
+			<br>
+			<p style="text-align:center" ><span style="color: blue" class="inst">↓ 訪問 ↓</span></p><br>
+
+		</div>
+   	</div>
+   <span class='eng'><div class="gototop" ><a href='#top'>&#x21ea; G O &#x21ea;<br>&#x21ea;T O P&#x21ea;</a></div></span>
+  	<br>
+	<div class="no-guide">
+	<div class="content">
+  		<hr>
+   		<br><br>
+		<p style='background-color: black;color:rgb(196, 255, 234);font-size: larger;'><b>2023.5.1</b> || <a href='#top' style="color:rgb(196, 255, 234)">回到頂端</a></p>
+        <span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">長毛象<span class="eng">Mastodon</span>使用指南（1）</span><br>
+        <p>&middot;&middot;&middot;實例可以看作國家，長毛象可以看作星球。實例之間互通，長毛象和其他平臺之間互通。搭建站點的是“站長”，這個很容易理解。除了站長之外，在該實例內的就是“用戶”了。&middot;&middot;&middot;<br>&middot;&middot;&middot;下面以Tennedar推薦的實例飛麵站為例，所有站點的操作都相同&middot;&middot;&middot;&nbsp;&nbsp;<a href='https://tennedar.github.io/file/mstd(1).md' target="_blank">繼續閱讀</a></p>
+   		<br><br>
+	</div>
+</div>
+<script src="https://tennedar.github.io/js/clickemoji.js"></script>
+
+    <br>
+    <br>
+	<p style="text-align:center;" class="copy"> Copyright &copy; 2023 Tennedar All rights reserved.</p>
+    <br>
+    <br>
+</body>
+</html>
