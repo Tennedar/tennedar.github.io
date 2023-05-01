@@ -1,8 +1,4 @@
 *{
-    cursor:url(https://tennedar.github.io/pic/cursor/default.cur),auto;
-    cursor:url(https://tennedar.github.io/pic/cursor/default.cur),default;
-    
-    cursor:url(https://tennedar.github.io/pic/cursor/default.cur),pointer;
-    cursor:url(https://tennedar.github.io/pic/cursor/pointer.cur),pointer;
-    /*cursor:url(https://tennedar.github.io/pic/cursor/text.cur),text;*/
+    cursor: url(tennedar.github.io/pic/cursor/default1.cur), auto,default,pointer;
+    cursor: url(tennedar.github.io/pic/cursor/text1.cur), text;
 }
