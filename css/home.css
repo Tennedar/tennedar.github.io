@@ -4,7 +4,6 @@ h1{
 p:hover{
     text-shadow: 3px 3px 12px rgba(176, 162, 255, 0.507);
 }
-
 .guide{
     position:fixed;
     width: 20%;
@@ -17,4 +16,87 @@ p:hover{
     padding-top: 10%;
     /*border-radius: 12px;*/
     background-color: white;
+}
+
+.zysx{
+    z-index: 50;
+    position: absolute;
+    width: 49.5%;
+    top:10%;
+    background-color: white;
+    border-right: 0.5px dashed black;
+    padding-right: 0.5px;
+}
+.dhl{
+    z-index: 50;
+    position: absolute;
+    width: 49.5%;
+    background-color: white;
+    top:58%;
+    border-right: 0.5px dashed black;
+    padding-right: 0.5px;
+}
+.ss{
+    z-index: 50;
+    position: absolute;
+    width: 50%;
+    top:58%;
+    background-color: white;
+    display: none;
+}
+.gyw{
+    z-index: 50;
+    position: absolute;
+    left: 50%;
+    top:10%;
+    background-color: white;
+    width: 50%;
+}
+.lxfs{
+    z-index: 50;
+    position: absolute;
+    width: 50%;
+    left: 50%;
+    background-color: white;
+    top:125.4%;
+}
+.tbmx{
+    z-index: 50;
+    position: absolute;
+    width: 49.5%;
+    background-color: white;
+    top:178.5%;
+    border-right: 0.5px dashed black;
+    padding-right: 0.5px;
+}
+.yqlj{
+    z-index: 50;
+    position: absolute;
+    width: 50%;
+    background-color: white;
+    left:50%;
+    top:168%;
+}
+.openbtn{
+    z-index: 200;
+}
+.sidebar{
+    z-index: 150;
+}
+.gui0{
+    z-index: 100;
+}
+.normal{
+    z-index: 100;
+}
+.zhuye{
+    display: flex;
+}
+.copy{
+    position: absolute;
+    background-color: white;
+    top:220%;
+}
+.gototop{
+    z-index: 100;
 }
