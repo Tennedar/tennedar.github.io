@@ -20,11 +20,42 @@
         height: 200px;
     }
     .black{
-        background-color: black;
+        background-color: rgb(137, 23, 243);
+        color:rgb(137, 23, 243);
     }
-    .black:active{
-        background-color: white;
+    .black:active , .black:hover{
+        color: rgb(0, 224, 146);
     }
+    code{
+        background-color:rgb(221, 221, 221);
+    }
+    .display{
+        color:rgb(137, 23, 243);
+        color:rgb(212, 209, 255);
+        color:rgb(0, 224, 146);
+        color:rgb(196, 255, 234);
+        color:rgb(182, 169, 135);
+    }
+    details {
+            border: 1px solid #aaa;
+            border-radius: 4px;
+            padding: 0.5em 0.5em 0;
+        }
+
+        summary {
+            font-weight: bold;
+            margin: -0.5em -0.5em 0;
+            padding: 0.5em;
+        }
+
+        details[open] {
+            padding: 0.5em;
+        }
+
+        details[open] summary {
+            border-bottom: 1px solid #aaa;
+            margin-bottom: 0.5em;
+        }
 </style>
 </head>
 
@@ -34,26 +65,40 @@
 <br><br><br>
 <br><br><br>
 <br><br><br>
-<script src="https://giscus.app/client.js"
-        data-repo="Tennedar/Comment_divinatennedar"
-        data-repo-id="R_kgDOJUZ13w"
-        data-category="Announcements"
-        data-category-id="DIC_kwDOJUZ1384CWLMQ"
-        data-mapping="title"
-        data-strict="0"
-        data-reactions-enabled="1"
-        data-emit-metadata="0"
-        data-input-position="top"
-        data-theme="light"
-        data-lang="zh-TW"
-        crossorigin="anonymous"
-        async>
-</script>
-<div>
-<p style="text-align:center"><a href="http://tennedar.github.io/home.html" style="color: blue">返回主頁</a><br><br>
-這是一個劇透<span class="black" title="你知道的太多了">這是劇透的內容</span><br><br><br>
 
-<textarea class="textarea3">
+<div>
+<p style="text-align:center"><a href="http://tennedar.github.io/home.html" style="color: blue">返回主頁</a><br><br></p>
+<details>
+    <summary>這是一個劇透<span class="black" title="你知道的太多了">這是劇透的內容</span><br>展開代碼</summary>
+    <code>
+    CSS:<br><br>
+    .black{<br>
+        background-color: rgb(137, 23, 243);<br>
+        color:rgb(137, 23, 243);<br>
+    }<br>
+    .black:active , .black:hover{<br>
+        color: rgb(0, 224, 146);<br>
+    }<br>
+</code><br>
+<code>
+    HTML:<br><br>
+    這是一個劇透&lt;span class="heimu" title="你知道的太多了"&gt;這是劇透的內容&lt;/span&gt;
+</code>
+</details>
+<details>
+    <summary>demo 2.0</summary>
+:戏友可，勿戏<span class="black" title="咋了姐妹1.0">本心</span>也。友信无碍，一笑便过。盼君<span class="black" title="咋了姐妹3.0">语毕拭涕，勿落泪于屏</span>。君之语，如信可慰之，信则无不可。君之言，
+勿自以为真。友便信君，纵欺无碍，一笑过矣。非友使君伤，拭泪且问心。非汝之友，何人信汝此言<span class="black" title="咋了姐妹2.0">？</span>
+</details>
+
+
+
+<br><br><br>
+
+
+<details>
+    <summary>color code</summary>
+    <textarea class="textarea3">
     purple<br>
     rgb(137, 23, 243)<br>
     shallow rgb(212, 209, 255)<br>
@@ -64,19 +109,10 @@
     rgb(196, 255, 234)<br>
     coffee<br>
     rgb(182, 169, 135)<br>
-</textarea><br>
-    <br>
-<textarea class="textarea1">
-    toggle
-    <details>    
-    <summary>我是標題1</summary>
-        我是內容1<br>
-        <details>
-        <summary>我是標題2</summary>
-            我是內容2
-        </details>
-    </details>
 </textarea>
+</details>
+<details>
+    <summary>password code</summary>
 <textarea class="textarea2">
     password
     <script type="text/javascript">   
@@ -101,7 +137,28 @@
         document.write(password());   
         </script>  
 </textarea>
-     <br>
+</details>
+<details>
+    <summary>comment code</summary>
+        <code>
+        &lt;script src="https://giscus.app/client.js"<br>
+        data-repo="Tennedar/Comment_divinatennedar"<br>
+        data-repo-id="R_kgDOJUZ13w"<br>
+        data-category="Announcements"<br>
+        data-category-id="DIC_kwDOJUZ1384CWLMQ"<br>
+        data-mapping="title"<br>
+        data-strict="0"<br>
+        data-reactions-enabled="1"<br>
+        data-emit-metadata="0"<br>
+        data-input-position="top"<br>
+        data-theme="light"<br>
+        data-lang="zh-TW"<br>
+        crossorigin="anonymous"<br>
+        async><br>
+        </code>
+</script>
+</details>
+<br><br>
 <p style="text-align:center;" class="copy"> Copyright &copy; 2023 Tennedar All rights reserved.</p>
 </div>
 
