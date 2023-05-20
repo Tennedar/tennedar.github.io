@@ -49,44 +49,55 @@
         color:rgb(182, 169, 135);
     }
     details {
-            border: 1px solid #aaa;
-            border-radius: 4px;
-            padding: 0.5em 0.5em 0;
-        }
-
-        summary {
-            font-weight: bold;
-            margin: -0.5em -0.5em 0;
-            padding: 0.5em;
-        }
-
-        details[open] {
-            padding: 0.5em;
-        }
-
-        details[open] summary {
-            border-bottom: 1px solid #aaa;
-            margin-bottom: 0.5em;
-        }
-        .fakelink{
-            text-decoration: underline blue;
-            color:blue;
-            cursor: pointer;
-        }
-        .fakelink:hover{
-            text-decoration: underline rgb(0, 224, 146);
-            color:rgb(0, 224, 146);
-        }
-        .disabledlink{
-            cursor: pointer;
-            color:blue;
-            text-decoration: underline blue;
-        }
-        .disabledlink:hover{
-            color:#aaa;
-            text-decoration: underline #aaa;
-        }
-
+        border: 1px solid #aaa;
+        border-radius: 4px;
+        padding: 0.5em 0.5em 0;
+    }
+    summary {
+        font-weight: bold;
+        margin: -0.5em -0.5em 0;
+        padding: 0.5em;
+    }
+    details[open] {
+        padding: 0.5em;
+    }
+    details[open] summary {
+        border-bottom: 1px solid #aaa;
+        margin-bottom: 0.5em;
+    }
+    .fakelink{
+        text-decoration: underline blue;
+        color:blue;
+        cursor: pointer;
+    }
+    .fakelink:hover{
+        text-decoration: underline rgb(0, 224, 146);
+        color:rgb(0, 224, 146);
+    }
+    .disabledlink{
+        cursor: pointer;
+        color:blue;
+        text-decoration: underline blue;
+    }
+    .disabledlink:hover{
+        color:#aaa;
+        text-decoration: underline #aaa;
+    }
+    .transparent{
+        color: transparent;
+        text-transform: uppercase;
+        text-shadow: 0px 0px 8px black;
+        letter-spacing: 1px;
+    }
+    .transparent:hover{
+        color:black;
+        text-shadow: none;
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        -ms-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+    }
 </style>
 </head>
 
@@ -158,6 +169,28 @@
         }<br>
     </code>
 </details>
+<br><span class="transparent">透明文字</span>對照
+<details>
+    <summary>code</summary>
+    <code>
+        .transparent{<br>
+            color: transparent;<br>
+            text-transform: uppercase;<br>
+            text-shadow: 0px 0px 8px black;<br>
+            letter-spacing: 1px;<br>
+        }<br>
+        .transparent:hover{<br>
+            color:black;<br>
+            text-shadow: none;<br>
+            -webkit-transition: all 0.3s ease-in-out;<br>
+            -moz-transition: all 0.3s ease-in-out;<br>
+            -o-transition: all 0.3s ease-in-out;<br>
+            -ms-transition: all 0.3s ease-in-out;<br>
+            transition: all 0.3s ease-in-out;<br>
+        }<br>
+    </code>
+</details>
+
 <br><br><br>
 
 
