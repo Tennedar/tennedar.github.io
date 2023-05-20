@@ -83,13 +83,13 @@
         color:#aaa;
         text-decoration: underline #aaa;
     }
-    .transparent{
+    .blur{
         color: transparent;
         text-transform: uppercase;
         text-shadow: 0px 0px 8px black;
         letter-spacing: 1px;
     }
-    .transparent:hover{
+    .blur:hover{
         color:black;
         text-shadow: none;
         -webkit-transition: all 0.3s ease-in-out;
@@ -169,17 +169,18 @@
         }<br>
     </code>
 </details>
-<br><span class="transparent">透明文字</span>對照
+<br><span class="blur">模糊文字</span>對照
 <details>
     <summary>code</summary>
     <code>
-        .transparent{<br>
+        .blur{<br>
             color: transparent;<br>
             text-transform: uppercase;<br>
             text-shadow: 0px 0px 8px black;<br>
+            /*第三个数值改大会更模糊，改小会更清晰*/<br>
             letter-spacing: 1px;<br>
         }<br>
-        .transparent:hover{<br>
+        .blur:hover{<br>
             color:black;<br>
             text-shadow: none;<br>
             -webkit-transition: all 0.3s ease-in-out;<br>
