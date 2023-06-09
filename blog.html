@@ -265,6 +265,7 @@
         }
     </style>
 </head>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
 <script>
     function openNav() {
       document.getElementById("mySidebar").style.width = "500px";
@@ -374,20 +375,34 @@
             </details>
         </details>
         <br><br><hr><br>
-        <script src="https://giscus.app/client.js"
-            data-repo="Tennedar/Comment_divinatennedar"
-            data-repo-id="R_kgDOJUZ13w"
-            data-category="Announcements"
-            data-category-id="DIC_kwDOJUZ1384CWLMQ"
-            data-mapping="title"
-            data-strict="0"
-            data-reactions-enabled="1"
-            data-emit-metadata="0"
-            data-input-position="top"
-            data-theme="light"
-            data-lang="zh-TW"
-            crossorigin="anonymous"
-            async>
+        <details>
+            <summary>giscus评论区（建设中）（停用）</summary>
+            <script src="https://giscus.app/client.js"
+                data-repo="Tennedar/Comment_divinatennedar"
+                data-repo-id="R_kgDOJUZ13w"
+                data-category="Announcements"
+                data-category-id="DIC_kwDOJUZ1384CWLMQ"
+                data-mapping="title"
+                data-strict="0"
+                data-reactions-enabled="1"
+                data-emit-metadata="0"
+                data-input-position="top"
+                data-theme="light"
+                data-lang="zh-TW"
+                crossorigin="anonymous"
+                async>
+            </script>
+        </details>
+        valine评论区（建设中）（先用这个）<br>
+        <div id="vcomments"></div>
+        <script>
+            new Valine({
+                el: '#vcomments',
+                appId: 'fUrm05OR5feyqQNLJdTzggZL-MdYXbMMI',
+                appKey: 'omCiK2v7q9WLRgDihjC7kNqZ',
+                placeholder: 'Say something...',
+                lang: 'zh-TW'
+            })
         </script>
         <br><br><br><br><br><br><br><br>
     </div>
