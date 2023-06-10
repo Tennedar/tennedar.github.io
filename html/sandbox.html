@@ -109,6 +109,20 @@
 
 <div>
 <p style="text-align:center"><a href="http://tennedar.github.io/home.html" style="color: blue">返回主頁</a><br><br></p>
+<br><br>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<div id="vcomments"></div>
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: 'fUrm05OR5feyqQNLJdTzggZL-MdYXbMMI',
+        appKey: 'omCiK2v7q9WLRgDihjC7kNqZ',
+        placeholder: 'Say something...',
+        lang: 'zh-TW',
+        requiredFields:['nick']
+    })
+</script>
+<br>
 這是一個黑幕效果展示<span class="black" title="你知道的太多了">這是劇透的內容</span><br>
 <details>
     <summary>展開代碼</summary>
