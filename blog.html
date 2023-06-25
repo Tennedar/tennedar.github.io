@@ -568,23 +568,20 @@
   		<hr>
    		<br><br>
 		<p style='background-color: black;color:rgb(196, 255, 234);font-size: larger;' id="6.25"><b>2023.6.25</b> || <a href='#top' style="color:rgb(196, 255, 234)">回到頂端</a></p>
-        <div class='blogtext'>
-            <button type="button" class="625">切换语言</button>
-        </div>
-        <div class="bolgtext" id="625">
-            <script>
-                var lang_flag = 0;   //lang_flag 作为语言类型的标识，0代表中文，1代表英语
-                var t625 = document.getElementsByClassName("625")[0];
-                t625.onclick  = function(){
-                    (lang_flag == 0) ? (lang_flag = 1) : (lang_flag = 0)  //三元运算符
-                    t625Lan();
-                }
-                function t625Lan() {
-                    console.log(b625[lang_flag]);
-                    document.getElementById("625").innerHTML = b625[lang_flag]
-                }
-            </script>
-        </div>
+        <div class='blogtext' id="625">展示一下双语切换效果，现在是默认的中文。
+        </div>&nbsp;&nbsp;&nbsp;<button type="button" class="625">切换语言</button>
+		<script>
+			var lang_flag = 0;   //lang_flag 作为语言类型的标识，0代表中文，1代表英语
+			var t625 = document.getElementsByClassName("625")[0];
+			t625.onclick  = function(){
+				(lang_flag == 0) ? (lang_flag = 1) : (lang_flag = 0)  //三元运算符
+				t625Lan();
+			}
+			function t625Lan() {
+				console.log(b625[lang_flag]);
+				document.getElementById("625").innerHTML = b625[lang_flag]
+			}
+		</script>
         <br><br>
         <p style='background-color: black;color:rgb(196, 255, 234);font-size: larger;' id="6.15"><b>2023.6.15</b> || <a href='#top' style="color:rgb(196, 255, 234)">回到頂端</a></p>
         <div class='blogtext'><span class="eng">r</span>就想来说一句……尝试用<span class="eng">hugo</span>搭建……创业未半而中道崩殂！<img src="https://tennedar.github.io/pic/emoji/cry.webp" width="45px"><img src="https://tennedar.github.io/pic/emoji/cry.webp" width="45px"><img src="https://tennedar.github.io/pic/emoji/cry.webp" width="45px">所以還是在原來的基礎上修修補補。
