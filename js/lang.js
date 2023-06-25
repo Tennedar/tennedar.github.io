@@ -1,1 +1,1 @@
-var b625 = ['展示一下双语切换效果，现在是默认的中文。','<span class=\'eng\'>display the function of changing language ! now it is changed to English ^^</span>']
+var b625 = ['展示一下双语切换效果，现在是默认的中文。<br>感覺效果不錯，之後會儘量把以前的內容都翻譯一下的。','<span class=\'eng\'>display the function of changing language ! now it is changed to English ^^<br>it seems great , so r will try to translate previous contents</span>']
