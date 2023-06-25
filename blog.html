@@ -267,6 +267,7 @@
     </style>
 </head>
 <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<script type="text/javascript" src="https://tennedar.github.io/js/lang.js"></script>
 <script>
     function openNav() {
       document.getElementById("mySidebar").style.width = "500px";
@@ -340,7 +341,8 @@
                 <summary>
                     个站相关：
                 </summary>
-                <a href="#5.28">5.28</a><span>问题及分析</span><br>
+                <a href="#6.25">6.25</a><span>双语</span><br>
+                <a href="#5.28">5.28</a><span>问题及分析（已更新）</span><br>
                 <a href="#5.1">5.1</a><span><span class="eng">Markdown</span>輔助</span><br>
                 <a href="#4.5">4.5</a><span>字體</span><br>
                 <a href="#4.2">4.2</a><span>美化</span><br>
@@ -406,7 +408,7 @@
 			<!--<p style="text-align:center"><a href="http://tennedar.github.io/acgn.html" style="color: blue">二次元專區</a></p><br><br>-->
 			<p style="text-align:center"><a href="https://tennedar.github.io/html/blog-2022-1.html" style="color: blue">2022 8~10月博客</a> || <a href="https://tennedar.github.io/html/blog-2022-2.html" style="color: blue">2022 11~12月博客</a></p><br>
 			<p style="text-align:center" ><span style="color: blue" class="inst">↓ 2023年 博客 ↓</span></p>
-			<p style="text-align:center"><a href="#6.15">6.15</a><br><a href="#5.28">5.28</a> || <a href="#5.20">5.20</a> || <a href="#5.13">5.13</a> || <a href="#5.1">5.1</a><br><a href="#4.30">4.30</a> || <a href="#4.22">4.22</a> || <a href="#4.19">4.19</a> || <a href="#4.15">4.15</a> || <a href="#4.8">4.8</a> || <a href="#4.5">4.5</a> || <a href="#4.4">4.4</a> || <a href="#4.2">4.2</a> || <a href="#4.1">4.1</a><br><a href="#3.25">3.25</a> || <a href="#3.18">3.18</a> || <a href="#3.12">3.12</a> || <a href="#3.11">3.11</a> || <a href="#3.4">3.4</a> <br><a href="#2.25">2.25</a> || <a href="#2.19">2.19</a> || <a href="#2.18">2.18</a> || <a href="#2.12">2.12</a>  || <a href="#2.11">2.11</a> || <a href="#2.5">2.5</a> || <a href="#2.4">2.4</a><br><a href="#1.28">1.28</a> || <a href="#1.27">1.27</a> || <a href="#1.26">1.26</a> || <a href="#1.24">1.24</a> || <a href="#1.22">1.22</a> || <a href="#1.21">1.21</a> || <a href="#1.20">1.20</a> || <a href="#1.19">1.19</a> || <a href="#1.18">1.18</a></p><br><br>
+			<p style="text-align:center"><a href="#6.25">6.25</a> || <a href="#6.15">6.15</a><br><a href="#5.28">5.28</a> || <a href="#5.20">5.20</a> || <a href="#5.13">5.13</a> || <a href="#5.1">5.1</a><br><a href="#4.30">4.30</a> || <a href="#4.22">4.22</a> || <a href="#4.19">4.19</a> || <a href="#4.15">4.15</a> || <a href="#4.8">4.8</a> || <a href="#4.5">4.5</a> || <a href="#4.4">4.4</a> || <a href="#4.2">4.2</a> || <a href="#4.1">4.1</a><br><a href="#3.25">3.25</a> || <a href="#3.18">3.18</a> || <a href="#3.12">3.12</a> || <a href="#3.11">3.11</a> || <a href="#3.4">3.4</a> <br><a href="#2.25">2.25</a> || <a href="#2.19">2.19</a> || <a href="#2.18">2.18</a> || <a href="#2.12">2.12</a>  || <a href="#2.11">2.11</a> || <a href="#2.5">2.5</a> || <a href="#2.4">2.4</a><br><a href="#1.28">1.28</a> || <a href="#1.27">1.27</a> || <a href="#1.26">1.26</a> || <a href="#1.24">1.24</a> || <a href="#1.22">1.22</a> || <a href="#1.21">1.21</a> || <a href="#1.20">1.20</a> || <a href="#1.19">1.19</a> || <a href="#1.18">1.18</a></p><br><br>
 			<br><p style="text-align:center" >
 				<audio controls loop >
 				<source src="https://tennedar.github.io/00_1.wav" type="audio/wav">
@@ -565,12 +567,29 @@
 	<div class="content">
   		<hr>
    		<br><br>
-		<p style='background-color: black;color:rgb(196, 255, 234);font-size: larger;' id="6.15"><b>2023.6.15</b> || <a href='#top' style="color:rgb(196, 255, 234)">回到頂端</a></p>
+		<p style='background-color: black;color:rgb(196, 255, 234);font-size: larger;' id="6.25"><b>2023.6.25</b> || <a href='#top' style="color:rgb(196, 255, 234)">回到頂端</a></p>
+        <div class='blogtext' id="625">
+            <button type="button" class="625">切换语言</button>
+            <script>
+                var lang_flag = 0;   //lang_flag 作为语言类型的标识，0代表中文，1代表英语
+                var t625 = document.getElementsByClassName("625")[0];
+                t625.onclick  = function(){
+                    (lang_flag == 0) ? (lang_flag = 1) : (lang_flag = 0)  //三元运算符
+                    t625Lan();
+                }
+                function t625Lan() {
+                    console.log(b625[lang_flag]);
+                    document.getElementById("625").innerHTML = b625[lang_flag]
+                }
+            </script>
+        </div>
+        <br><br>
+        <p style='background-color: black;color:rgb(196, 255, 234);font-size: larger;' id="6.15"><b>2023.6.15</b> || <a href='#top' style="color:rgb(196, 255, 234)">回到頂端</a></p>
         <div class='blogtext'><span class="eng">r</span>就想来说一句……尝试用<span class="eng">hugo</span>搭建……创业未半而中道崩殂！<img src="https://tennedar.github.io/pic/emoji/cry.webp" width="45px"><img src="https://tennedar.github.io/pic/emoji/cry.webp" width="45px"><img src="https://tennedar.github.io/pic/emoji/cry.webp" width="45px">所以還是在原來的基礎上修修補補。
         </div><br>
         <p style='background-color: black;color:rgb(196, 255, 234);font-size: larger;' id="5.28"><b>2023.5.28</b> || <a href='#top' style="color:rgb(196, 255, 234)">回到頂端</a></p>
         <div class='blogtext'>還沒修好。
-        <b><br>追记：发现一个问题，这里用的图片（被<span class="eng">r</span>隐藏了）使用了<span class="eng">postimg</span>的图床服务，但是这个图床服务是不能直连的，以至于图片不直连也没法加载出来，会出现图片非常模糊的问题（就是没法加载高清图片）。<br>所以<span class="eng">r</span>会换个图床来用的……<br>另外一个问题，用<span class="eng">IOS16</span>的<span class="eng">safari</span>看个站的话，英文字体显示和<span class="eng">PC</span>端不同。<br>暂时没解决，反正本来就要给移动端重写<span class="eng">CSS</span>的。</b>
+        <b><br>追记：发现一个问题，这里用的图片（被<span class="eng">r</span>隐藏了）使用了<span class="eng">postimg</span>的图床服务，但是这个图床服务是不能直连的，以至于图片不直连也没法加载出来，会出现图片非常模糊的问题（就是没法加载高清图片）。<br>所以<span class="eng">r</span>会换个图床来用的……<br>另外一个问题，用<span class="eng">IOS16</span>的<span class="eng">safari</span>看个站的话，英文字体显示和<span class="eng">PC</span>端不同。<br>暂时没解决，反正本来就要给移动端重写<span class="eng">CSS</span>的。</b><br><br><hr><br><span style="background-color: #e5ff007e;">再追记：英文字体显示不同估计是因为，用的<span class='eng'>google font</span>的<span class='eng'>merienda,cursive</span>，或许是因为谷歌字体直连较慢，就算连上了第一个显示的是<span class='eng'>merienda,default</span>，所以才会出现“不一样”的误解。其实是一样的就是加载比较慢<span class='eng'>r</span>没看到。
         <!--<span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">图片展示</span>
             <span class='eng'>r</span>的文件夾裡有大量？的圖片，挑一些有趣的展示。<br>&middot;&nbsp;表情包<br><img src="https://i.postimg.cc/MGX1j1SZ/008t-VJZYgy1hec80nayu9j30sg0qidiv.jpg" width="450px"><br><br>&middot;&nbsp;有趣的評論<br><img src="https://i.postimg.cc/d0HP5Ppm/1.png" width="500px"><br><br>&middot;&nbsp;很喜歡的一段話<br><img src="https://i.postimg.cc/HntttHPT/2.png" width="500px"><br><br>補充說明：因為不是什麼私人的圖片，所以就直接用<span style="color:rgb(137, 23, 243)">公共圖床</span>了，所以說呢！就現場<span style="color:rgb(137, 23, 243)">找了個比較好用的圖床</span>分享給訪客：（<span style="color:rgb(137, 23, 243)">點擊圖片即可跳轉</span>）<br><a href="https://postimages.org/" target="_blank"><img src='https://i.postimg.cc/CL3K4DkL/logo.png' width='200px'></a><br><br>-->
             <!--<span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">戲法</span><br>

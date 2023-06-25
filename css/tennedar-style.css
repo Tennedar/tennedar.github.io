@@ -168,3 +168,18 @@ details[open] summary {
         .sidebar {padding-top: 15px;}
         .sidebar a {font-size: 18px;}
 }
+button{
+        color:rgb(137, 23, 243);
+        background-color: rgb(196, 255, 234);
+        border: none;
+        border-radius: 2px;
+        padding: 3px;
+        -webkit-transition-duration: 0.4s; /* Safari */
+        transition-duration: 0.4s;
+        border: 1px black solid;
+}
+button:hover{
+        background-color: rgb(182, 169, 135);
+        color:white;
+        box-shadow: 0 2px 2px 0 rgba(0,0,0,0.24), 0 2px 2px 0 rgba(0,0,0,0.19);
+}

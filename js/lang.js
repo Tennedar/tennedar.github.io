@@ -1,0 +1,1 @@
+var b625 = ['展示一下双语切换效果，现在是默认的中文','<span class=\'eng\'>display the function of changing language ! now it is changed to English ^^</span>']
