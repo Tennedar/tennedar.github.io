@@ -131,6 +131,244 @@
 <p style="text-align:center"><a href="http://tennedar.github.io/home.html" style="color: blue">返回主頁</a><br><br></p>
 <p style="text-align:center"><a href="http://tennedar.github.io/html/sandbox2.html" style="color: blue">沙盒2</a><br><br></p>
 <br><br>
+<details>
+    <summary>
+        github calendar
+    </summary>
+    <code>
+        &lt;style&gt;<br>
+            :root {<br>
+              --color-calendar-graph-day-bg: rgb(235,237,240)!important;<br>
+              --color-calendar-graph-day-L1-bg: rgb(155,233,168) !important;<br>
+              --color-calendar-graph-day-L2-bg: rgb(64,196,99) !important;<br>
+              --color-calendar-graph-day-L3-bg: rgb(48,161,78) !important;<br>
+              --color-calendar-graph-day-L4-bg: rgb(33,110,57) !important;<br>
+            }<br>
+            rect.ContributionCalendar-day[data-level='0'] {<br>
+              fill: var(--color-calendar-graph-day-bg);<br>
+            }<br><br>
+          
+            rect.ContributionCalendar-day[data-level='1'] {<br>
+              fill: var(--color-calendar-graph-day-L1-bg);<br>
+            }<br><br>
+          
+            rect.ContributionCalendar-day[data-level='2'] {<br>
+              fill: var(--color-calendar-graph-day-L2-bg);<br>
+            }<br><br>
+          
+            rect.ContributionCalendar-day[data-level='3'] {<br>
+              fill: var(--color-calendar-graph-day-L3-bg);<br>
+            }<br><br>
+          
+            rect.ContributionCalendar-day[data-level='4'] {<br>
+              fill: var(--color-calendar-graph-day-L4-bg);<br>
+            }<br><br>
+          
+            .calendar .width-full &gt; .float-left {<br>
+              display: none;<br>
+            }<br><br>
+          
+            .calendar {<br>
+              font-family: "LXGW WenKai", sans-serif;<br>
+              font-family: "LXGW WenKai Lite", sans-serif;<br>
+              font-family: "LXGW WenKai TC", sans-serif;<br>
+              font-family: "LXGW WenKai Screen", sans-serif;<br>
+              /*border: 1px solid #DDDDDD;*/<br>
+              border-radius: 3px;<br>
+              min-height: 243px;<br>
+              text-align: center;<br>
+              margin: 0 auto;<br>
+            }<br><br>
+          
+            .calendar-graph text.wday,<br>
+            .calendar-graph text.month {<br>
+              font-size: 10px;<br>
+              fill: #aaa;<br>
+            }<br><br>
+          
+            .contrib-legend {<br>
+              text-align: right;<br>
+              padding: 0 14px 10px 0;<br>
+              display: inline-block;<br>
+              float: right;<br>
+            }<br><br>
+          
+            .contrib-legend .legend {<br>
+              display: inline-block;<br>
+              list-style: none;<br>
+              margin: 0 5px;<br>
+              position: relative;<br>
+              bottom: -1px;<br>
+              padding: 0;<br>
+            }<br><br>
+          
+            .contrib-legend .legend li {<br>
+              display: inline-block;<br>
+              width: 10px;<br>
+              height: 10px;<br>
+            }<br><br>
+          
+            .text-small {<br>
+              font-size: 12px;<br>
+              color: #000000;<br>
+            }<br><br>
+          
+            .calendar-graph {<br>
+              padding: 5px 0 0;<br>
+              text-align: center;<br>
+            }<br><br>
+          
+            .contrib-column {<br>
+              padding: 15px 0;<br>
+              text-align: center;<br>
+              border-left: 1px solid #ddd;<br>
+              border-top: 1px solid #ddd;<br>
+              font-size: 11px;<br>
+            }<br><br>
+          
+            .contrib-column-first {<br>
+              border-left: 0;<br>
+            }<br><br>
+          
+            .table-column {<br>
+              display: table-cell;<br>
+              width: 1%;<br>
+              padding-right: 10px;<br>
+              padding-left: 10px;<br>
+              vertical-align: top;<br>
+            }<br><br>
+          
+            .contrib-number {<br>
+              font-weight: 300;<br>
+              line-height: 1.3em;<br>
+              font-size: 24px;<br>
+              display: block;<br>
+              color: #000000;<br>
+            }<br><br>
+          
+            .calendar img.spinner {<br>
+                width: 70px;<br>
+                margin-top: 50px;<br>
+                min-height: 70px;<br>
+            }<br>
+          
+            .monospace {<br>
+                text-align: center;<br>
+                color: #000;<br>
+                font-family: monospace;<br>
+            }<br><br>
+          
+            .monospace a {<br>
+                color: #1D75AB;<br>
+                text-decoration: none;<br>
+            }<br><br>
+          
+            .contrib-footer {<br>
+                font-size: 11px;<br>
+                padding: 0 10px 12px;<br>
+                text-align: left;<br>
+                width: 100%;<br>
+                box-sizing: border-box;<br>
+                height: 26px;<br>
+            }<br><br>
+          
+            .left.text-muted {<br>
+                float: left;<br>
+                margin-left: 9px;<br>
+                color: #000000;<br>
+            }<br>
+            .left.text-muted a {<br>
+                color: #4078c0;<br>
+                text-decoration: none;<br>
+            }<br><br>
+            .left.text-muted a:hover,<br>
+            .monospace a:hover {<br>
+                text-decoration: underline;<br>
+            }<br><br>
+          
+            h2.f4.text-normal.mb-3 {<br>
+                display: none;<br>
+            }<br><br>
+          
+            .float-left.text-gray {<br>
+                float: left;<br>
+            }<br>
+            #user-activity-overview{<br>
+                display:none;<br>
+            }<br><br>
+          
+            .day-tooltip {<br>
+                white-space: nowrap;<br>
+                position: absolute;<br>
+                z-index: 99999;<br>
+                padding: 10px;<br>
+                font-size: 12px;<br>
+                color: #000000;<br>
+                text-align: center;<br>
+                background: rgba(0,0,0,.85);<br>
+                border-radius: 3px;<br>
+                display: none;<br>
+                pointer-events: none;<br>
+            }<br>
+            .day-tooltip strong {<br>
+                color: #dfe2e5;<br>
+            }<br>
+            .day-tooltip.is-visible {<br>
+                display: block;<br>
+            }<br>
+            .day-tooltip:after {<br>
+                position: absolute;<br>
+                bottom: -10px;<br>
+                left: 50%;<br>
+                width: 5px;<br>
+                height: 5px;<br>
+                box-sizing: border-box;<br>
+                margin: 0 0 0 -5px;<br>
+                content: " ";<br>
+                border: 5px solid transparent;<br>
+                border-top-color: rgba(0,0,0,.85)<br>
+            }<br><br>
+          
+            text.ContributionCalendar-label {<br>
+                fill: #000000;<br>
+                font-size: 11px;<br>
+            }<br>
+            .calendar{<br>
+              padding: 5%;<br>
+            }<br>
+          &lt;/style&gt;<br>
+          &lt;!-- Include the library. --&gt;<br>
+          &lt;script<br>
+            src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"&gt;<br>
+          &lt;/script&gt;<br>
+          <br>
+          &lt;!-- Optionally, include the theme (if you don't want to struggle to write the CSS) --&gt;<br>
+          &lt;!--&lt;link<br>
+            rel="stylesheet"<br>
+            href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css"<br>
+          /&gt;--&gt;<br><br>
+          
+          &lt;!-- Prepare a container for your calendar. --&gt;<br>
+          &lt;div class="calendar"&gt;<br>
+              &lt;!-- Loading stuff --&gt;<br>
+              Loading the data just for you.<br>
+          &lt;/div&gt;<br>
+          <br>
+          &lt;script&gt;<br>
+              GitHubCalendar(".calendar", "Tennedar");<br>
+              <br>
+              // or enable responsive functionality:<br>
+              GitHubCalendar(".calendar", "Tennedar", { responsive: true });<br>
+              <br>
+              // Use a proxy<br>
+              GitHubCalendar(".calendar", "Tennedar", {<br>
+                 proxy (username) {<br>
+                   return fetch(`https://your-proxy.com/github?user=${username}`)<br>
+                 }<br>
+              }).then(r =&gt; r.text())<br>
+          &lt;/script&gt;<br>
+    </code>
+</details><br><br>
 <script src="https://code.tidio.co/1bt6vs91fdyfd5zfzeca5xr74jswqv9r.js" async></script>
 
 <div id="tcomment"></div>
