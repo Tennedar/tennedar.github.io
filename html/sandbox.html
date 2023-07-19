@@ -118,18 +118,71 @@
         margin-left: 10%;
         margin-right: 10%;
     }
+    .muyu-layout {
+        background: rgb(17, 39, 163);
+        display: flex;
+        width: 100%;
+        position: relative;
+        justify-content: center;
+        height: 70vh;
+        align-items: center;
+    }
+    #muyu-box img {
+        width: 280px;
+    }
+    #jishu-box{
+        top: 15px;
+        position: absolute;
+     }
+    #muyu-box p {
+        color: white;
+        opacity: 0;
+        font-size: 20px;
+    }
+    #jishu-box p {
+        color: white;
+        font-size: 30px;
+    }
 </style>
 </head>
-
 <body>
-
-
 <br><br><br>
-
-
 <div>
 <p style="text-align:center"><a href="http://tennedar.github.io/home.html" style="color: blue">返回主頁</a><br><br></p>
 <p style="text-align:center"><a href="http://tennedar.github.io/html/sandbox2.html" style="color: blue">沙盒2</a><br><br></p>
+<div class="muyu-layout">
+    <div id="jishu-box">
+        <p id="jishu" style="color:yellow">漲潮：0</p>
+    </div>
+    <div id="muyu-box">
+        <p id="gongde" style="color:yellow">祈翠+100</p>
+        <img id="muyu" class="no-lightbox entered loaded"
+            src="https://s2.loli.net/2023/07/19/9Zh5EQYklnoOUpG.webp">
+    </div>
+</div>
+<script>
+    var gongde = document.getElementById("gongde");
+    var muyu = document.getElementById("muyu");
+    var jishu = document.getElementById("jishu-box");
+    var mp3Url = "/music/muyu.mp3";
+    var player = new Audio(mp3Url);
+    var num = 0;
+    muyu.addEventListener("click", function () {
+        num+=100;
+        player.load();
+        player.play();
+        muyu.animate([{ transform: 'scale(0.85)' }, { transform: 'scale(1.03)' }, { transform: 'scale(1)' }], 500);
+        gongde.animate([{ opacity: 0, transform: 'translateY(35px)' },{ opacity: 0.3, transform: 'translateY(25)' },{ opacity: 0.8, transform: 'translateY(15px)' }, { opacity: 1, transform: 'translateY(5px)' }, { opacity: 0.8, transform: 'translateY(-5px)' }, { opacity: 0, transform: 'translateY(-15px)' }], 600);
+        jishu.innerHTML = "<p id='jishu' style='color:yellow'>漲潮："+num+"</p>";
+    });
+</script>
+<p style="background-color: rgb(17, 39, 163);color:yellow;padding: 8px;font-size: small;">
+作者: 『轻笑Chuckle』<br>
+链接: <a href='https://www.qcqx.cn/article/904a2780.html' target="_blank">https://www.qcqx.cn/article/904a2780.html</a><br>
+来源: 轻笑Chuckle<br>
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。<br>
+<b><u>由Tennedar在此基礎上改編。</u></b>
+</p>
 <br><br>
 <details>
     <summary>
@@ -369,19 +422,6 @@
           &lt;/script&gt;<br>
     </code>
 </details><br><br>
-<script src="https://code.tidio.co/1bt6vs91fdyfd5zfzeca5xr74jswqv9r.js" async></script>
-
-<div id="tcomment"></div>
-<script src="https://cdn.jsdelivr.net/npm/twikoo@1.6.16/dist/twikoo.all.min.js"></script>
-<script>
-twikoo.init({
-  envId: 'https://twikoo-trblog.vercel.app/', // 腾讯云环境填 envId；Vercel 环境填地址（https://xxx.vercel.app）
-  el: '#tcomment', // 容器元素
-  // region: 'ap-guangzhou', // 环境地域，默认为 ap-shanghai，腾讯云环境填 ap-shanghai 或 ap-guangzhou；Vercel 环境不填
-  // path: location.pathname, // 用于区分不同文章的自定义 js 路径，如果您的文章路径不是 location.pathname，需传此参数
-  // lang: 'zh-CN', // 用于手动设定评论区语言，支持的语言列表 https://github.com/imaegoo/twikoo/blob/main/src/client/utils/i18n/index.js
-})
-</script>
 <button>hello world</button>&nbsp;按钮样式<br>
 <details>
     <summary>code</summary>
@@ -487,10 +527,7 @@ twikoo.init({
         }<br>
     </code>
 </details>
-
-<br><br><br>
-
-
+<br><br>
 <details>
     <summary>color code</summary>
     <textarea class="textarea3">
