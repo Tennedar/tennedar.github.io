@@ -283,7 +283,7 @@
         <br><br>
         <span><h1 style="text-align:center;"><span >公</span><span style="color:rgb(182, 169, 135);">告</span><span>版</span></h1></span><br>
         <span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);">最近更新</span>：
-        <a href="#7.17">7.17</a><br>
+        <a href="#7.20">7.20</a><br>
         <span style="color:rgb(137, 23, 243);">感想请通过邮件发送！</span>
         <p>&nbsp;&middot;&nbsp;用语解说：<br><span class='eng'>R/r</span>：博主自称；<br><span class='eng'>Z/z</span>:友情<span class='eng'>feat</span>；</p>
         <details>
@@ -303,6 +303,12 @@
                 </summary>
                 <a href="#7.8">7.8</a><span>招生营回忆</span><br>
             </details>
+            <details>
+                <summary>
+                    代码笔记：
+                </summary>
+                <a href="#7.20">7.20</a><span><span class='eng'>java</span>学习笔记1</span><br>
+            </details>
         </details>
         <br><br><hr><br>
         <br><br><br><br><br><br><br><br>
@@ -316,7 +322,7 @@
 			<!--<p style="text-align:center"><a href="http://tennedar.github.io/acgn.html" style="color: blue">二次元專區</a></p><br><br>-->
 			<p style="text-align:center"><a href="https://tennedar.github.io/html/blog-2023-1.html" style="color: blue">2023 1~6月博客</a> || <a href="https://tennedar.github.io/html/blog-2022-1.html" style="color: blue">2022 8~10月博客</a> || <a href="https://tennedar.github.io/html/blog-2022-2.html" style="color: blue">2022 11~12月博客</a></p><br>
 			<p style="text-align:center" ><span style="color: blue" class="inst">↓ 2023年 博客 ↓</span></p>
-			<p style="text-align:center"><a href="#7.17">7.17</a>&nbsp;||&nbsp;<a href="#7.16">7.16</a>&nbsp;||&nbsp;<a href="#7.13">7.13</a>&nbsp;||&nbsp;<a href="#7.11">7.11</a>&nbsp;||&nbsp;<a href="#7.8">7.8</a></p><br><br>
+			<p style="text-align:center"><a href="#7.20">7.20</a>&nbsp;||&nbsp;<a href="#7.17">7.17</a>&nbsp;||&nbsp;<a href="#7.16">7.16</a>&nbsp;||&nbsp;<a href="#7.13">7.13</a>&nbsp;||&nbsp;<a href="#7.11">7.11</a>&nbsp;||&nbsp;<a href="#7.8">7.8</a></p><br><br>
 			<br><p style="text-align:center" >
 				<audio controls loop >
 				<source src="https://tennedar.github.io/00_1.wav" type="audio/wav">
@@ -332,6 +338,22 @@
 	<div class="content">
   		<hr>
         <br><br>
+		<p style='background-color: black;color:rgb(196, 255, 234);font-size: larger;' id="7.20"><b>2023.7.20</b> || <a href='#top' style="color:rgb(196, 255, 234)">回到頂端</a></p>
+        <div class="blogtext">
+            <span class='eng'>java</span>学习笔记1<br><br>
+            #<span class='eng'>hello world!</span><br>
+            <code>public class hello{<br>&nbsp;&nbsp;&nbsp;&nbsp;public static void main(String[] args) {<br>&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("hello world");<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>}<br></code>
+            #运行方式：<br>
+            <code>$javac &lt;FILENAME&gt;<br>$java &lt;FILENAME&gt;</code>
+            <br>#<span class='eng'>class & object & method</span><br>
+            <code>public class Dog{<br>&nbsp;&nbsp;&nbsp;&nbsp;String breed;//品種 字符串<br>&nbsp;&nbsp;&nbsp;&nbsp;int size;//尺寸 整？數<br>&nbsp;&nbsp;&nbsp;&nbsp;String colour;<br>&nbsp;&nbsp;&nbsp;&nbsp;int age;<br>&nbsp;&nbsp;&nbsp;&nbsp;void eat(){ //void：方法。一個class可以擁有多個方法<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;void run(){<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;void sleep(){<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;void name(){<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>}<br></code>
+            #<span class='eng'>class & object &</span>&nbsp;变量<br>
+            <br><hr><code>//教程<br>public class Puppy{ //創建類Puppy<br>&nbsp;&nbsp;&nbsp;&nbsp;public Puppy(String name){<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//這個構造器有且僅有一個參數：name<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("小狗的名字是：" + name );<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;public static void main(String[] args){<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Puppy myPuppy = new Puppy("Puppy1");<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>}<br></code>
+            <br><hr><code>//魔改1<br>public class Puppy{<br>&nbsp;&nbsp;&nbsp;&nbsp;public Puppy(String name,int age){<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("name:" + name);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.print("age"+age);<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;public static void main(String[] args){<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Puppy myPuppy = new Puppy("Puppy1",5);<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>}<br></code>
+            <br><hr><code>//魔改2<br>public class Puppy{<br>&nbsp;&nbsp;&nbsp;&nbsp;public Puppy(String name,int age){<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("name:"+name);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("age:"+age);<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;public static void main(String[] args){<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Puppy aaa = new Puppy("puppy2",5);//結論1：myPuppy可以替換成aaa<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Puppy bbb = new Puppy("puppy3",7);<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>}<br>//結論？？2:這是把方法執行了兩遍……？<br></code>
+            <br><br><hr><code>//實例化對象<br>Object referenceVariable = new Constructor();<br>//訪問類中的變量<br>referenceVariable.variavleName;<br>//訪問類中的方法<br>referenceVariable.methodName();<br></code>
+            <br><br><hr><code>public class Puppy{<br>&nbsp;&nbsp;&nbsp;&nbsp;int puppyAge;<br>&nbsp;&nbsp;&nbsp;&nbsp;public Puppy(String name){<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("小狗的名字是："+ name);<br>&nbsp;&nbsp;&nbsp;&nbsp;}//構造<br>&nbsp;&nbsp;&nbsp;&nbsp;public void setAge(int age){<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;puppyAge = age;<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;public int getAge(){<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("小狗的年龄是：" + puppyAge + "岁");<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return puppyAge;<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;public static void main(String[] args){<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//創建對象<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Puppy myPuppy = new Puppy("tommy");<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//通過方法設定age<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;myPuppy.setAge(2);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//setage是一個設定年齡的方法，myPuppy是Puppy類的一個對象，2即age<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;myPuppy.getAge();<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//另一种获取age的方法，但我猜没有setage就没法用getage<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//也可以这样访问成员变量<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("变量值："+ myPuppy.puppyAge);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//myPuppy是对象，puppyAge类似于对象的一个状态<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>}<br></code>
+        </div><br><br>
 		<p style='background-color: black;color:rgb(196, 255, 234);font-size: larger;' id="7.17"><b>2023.7.17</b> || <a href='#top' style="color:rgb(196, 255, 234)">回到頂端</a></p>
         <div class="blogtext">
         <span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">悲报</span><br>在本站順利設置<span class='eng'>github contribution calendar</span>後的不知道幾天該代碼宕機了，原因未知，反正宕機了，所以撤下！<br><span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">百度細胞神曲吧建設</span><br>作為較早<span style="color:rgb(137, 23, 243)">（相對於遊戲推出時間2015年不是很早，但是相對於大部分人入坑是早的）</span>入坑胞曲且現在還略在坑的人…<span class='eng'>r</span>決定建設一下百度貼吧，原因如下：<br>1.搜索引擎直搜胞曲，搜出貼吧的可能性很大。因為胞曲難以安裝，所以很多人會去搜索它。<br>2.胞曲難安裝又難打，貼吧內有可用的教程和<span class='eng'>SS</span>存檔分享。<br>3.貼吧建都建了，內容也不是沒有，頂著個默認頭像多難看。<br><br>綜上所述<span class='eng'>r</span>終於在昨天申請吧主（初步）成功了，希望能順利上位…<br><br><span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">23.7.18追记</span><br>在試圖做一個<del>電子木魚</del>電子昆明湖……加油。<br><b>230720追記：已在<span class='eng'>FANDOM</span>頁上線~</b>
