@@ -307,7 +307,7 @@
                 <summary>
                     代码笔记：
                 </summary>
-                <a href="#7.20">7.20</a><span><span class='eng'>java</span>学习笔记1</span><br>
+                <a href="#7.21">7.21</a><span><span class='eng'>java</span>学习笔记1</span><br>
             </details>
         </details>
         <br><br><hr><br>
@@ -322,7 +322,7 @@
 			<!--<p style="text-align:center"><a href="http://tennedar.github.io/acgn.html" style="color: blue">二次元專區</a></p><br><br>-->
 			<p style="text-align:center"><a href="https://tennedar.github.io/html/blog-2023-1.html" style="color: blue">2023 1~6月博客</a> || <a href="https://tennedar.github.io/html/blog-2022-1.html" style="color: blue">2022 8~10月博客</a> || <a href="https://tennedar.github.io/html/blog-2022-2.html" style="color: blue">2022 11~12月博客</a></p><br>
 			<p style="text-align:center" ><span style="color: blue" class="inst">↓ 2023年 博客 ↓</span></p>
-			<p style="text-align:center"><a href="#7.20">7.20</a>&nbsp;||&nbsp;<a href="#7.17">7.17</a>&nbsp;||&nbsp;<a href="#7.16">7.16</a>&nbsp;||&nbsp;<a href="#7.13">7.13</a>&nbsp;||&nbsp;<a href="#7.11">7.11</a>&nbsp;||&nbsp;<a href="#7.8">7.8</a></p><br><br>
+			<p style="text-align:center"><a href="#7.21">7.21</a>&nbsp;||&nbsp;<a href="#7.20">7.20</a>&nbsp;||&nbsp;<a href="#7.17">7.17</a>&nbsp;||&nbsp;<a href="#7.16">7.16</a>&nbsp;||&nbsp;<a href="#7.13">7.13</a>&nbsp;||&nbsp;<a href="#7.11">7.11</a>&nbsp;||&nbsp;<a href="#7.8">7.8</a></p><br><br>
 			<br><p style="text-align:center" >
 				<audio controls loop >
 				<source src="https://tennedar.github.io/00_1.wav" type="audio/wav">
@@ -338,6 +338,14 @@
 	<div class="content">
   		<hr>
         <br><br>
+		<p style='background-color: black;color:rgb(196, 255, 234);font-size: larger;' id="7.21"><b>2023.7.21</b> || <a href='#top' style="color:rgb(196, 255, 234)">回到頂端</a></p>
+        <div class="blogtext">
+            <span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;"><span class='eng'>java</span>学习笔记2</span><br><br>
+            <br><hr>#<span class="eng">Employee.java</span><br>
+            <code>public class Employee {<br>&nbsp;&nbsp;&nbsp;&nbsp;String name;<br>&nbsp;&nbsp;&nbsp;&nbsp;int age;<br>&nbsp;&nbsp;&nbsp;&nbsp;String designation;<br>&nbsp;&nbsp;&nbsp;&nbsp;double salary;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;public Employee(String name){<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.name = name;<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;public void empAge(int empAge){<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;age = empAge;<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;public void empDesignation(String empDesig){<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;designation = empDesig;<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;public void empSalary(double empSalary){<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;salary = empSalary;<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br><br>&nbsp;&nbsp;&nbsp;&nbsp;public void printEmployee(){<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("名字："+name);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("年齡："+age);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("職位："+designation);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("薪水"+salary);<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>}<br></code>
+            <br><hr>#<span class="eng">EmployeeTest.java</span><br>
+            <code>import java.io.*;<br><br>public class EmployeeTest {<br>&nbsp;&nbsp;&nbsp;&nbsp;public static void main(String[] args){<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Employee empOne=new Employee("tennedar1");<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Employee empTwo=new Employee("tennedar2");<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;empOne.empAge(26);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;empOne.empDesignation("無業遊民");<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;empOne.empSalary(-1000);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;empOne.printEmployee();<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;empTwo.empAge(21);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;empTwo.empDesignation("程序員");<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;empTwo.empSalary(3000);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;empTwo.printEmployee();<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>}<br></code>
+        </div><br><br>
 		<p style='background-color: black;color:rgb(196, 255, 234);font-size: larger;' id="7.20"><b>2023.7.20</b> || <a href='#top' style="color:rgb(196, 255, 234)">回到頂端</a></p>
         <div class="blogtext">
             <span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;"><span class='eng'>java</span>学习笔记1</span><br><br>
