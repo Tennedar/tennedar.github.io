@@ -351,5 +351,18 @@
 </footer>
 </div>
 <script src="https://tennedar.github.io/js/clickemoji.js"></script>
+<script>
+	function changeMode() {
+	  console.log("123");
+	  const darkMode =
+		window.document.documentElement.getAttribute("data-theme") || "light";
+	  console.log(darkMode);
+	  if (darkMode == "light") {
+		window.document.documentElement.setAttribute("data-theme", "dark");
+	  } else {
+		window.document.documentElement.setAttribute("data-theme", "light");
+	  }
+	}
+</script>
 </body>
 </html>

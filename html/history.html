@@ -34,6 +34,7 @@
         <h1>Tennedar-UPDATE-HISTORY<span class="his">持續記錄</span></h1><br><br>
         <hr><h3>ver1.4--人性化/交互设计？</h3><br>
         <ul>
+        <li><u><i>23.9.12</i></u><span class='red'>新增</span>深/浅色模式切换功能<span style="color:rgb(0, 224, 146);">。</span><br></li>
         <li><u><i>23.9.1-9.3</i></u>更新博客、更新snapshot页<span style="color:rgb(0, 224, 146);">。</span><br></li>
         <li><u><i>23.8.2-8.8</i></u>更新博客、<span class='red'>新增</span>密碼隱藏部分內容功能、<span class='red'>新增</span>SNAPSHOT頁<span style="color:rgb(0, 224, 146);">。</span><br></li>
         <li><u><i>23.7.19</i></u><span class='red'>新增</span>SANDBOX頁的<u>電子木魚改版-電子昆明湖</u><span style="color:rgb(0, 224, 146);">。</span><br></li>
@@ -70,4 +71,17 @@
     <script>
 
     </script>
+        <script>
+            function changeMode() {
+              console.log("123");
+              const darkMode =
+                window.document.documentElement.getAttribute("data-theme") || "light";
+              console.log(darkMode);
+              if (darkMode == "light") {
+                window.document.documentElement.setAttribute("data-theme", "dark");
+              } else {
+                window.document.documentElement.setAttribute("data-theme", "light");
+              }
+            }
+        </script>
 </html>
