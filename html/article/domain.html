@@ -1,0 +1,111 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://cdn.staticfile.org/lxgw-wenkai-webfont/1.6.0/style.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-lite-webfont@1.1.0/style.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-tc-webfont@1.0.0/style.css" />
+<link rel="stylesheet" href="https://cdn.staticfile.org/lxgw-wenkai-screen-webfont/1.6.0/style.css" />
+<link rel="icon" type="image/png" sizes="144x144" href="https://tennedar.github.io/pic/icon144x.png"/>
+<title>Mastodon入門指南1</title>    
+</head>
+<style>
+    html{
+        padding-left: 8%;
+        padding-right: 8%;
+    }
+</style>
+<body>
+<font face='LXGW WenKai Mono'>
+    <br><br>
+<p><a href='https://tennedar.github.io' target='_blank'>回到主站</a><br>
+<a href='https://tennedar.github.io/html/article.html' target='_blank'>回到上一頁</a><br></p>
+<hr>
+<span id='top'>
+
+    <p><span style='font-size:x-large'>域名注册并绑定github pages记录</span></p>
+    <p><span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);">作者：Tennedar<br>字数≈1145<br>阅读时间≈2.5min<br><br>轉載請複製以下信息：<br>
+    <strong>《域名注册并绑定github pages记录》<br></strong>
+    <strong>發佈網址：</strong><strong><a href="https://tennedar.github.io/article.html/domain.html" target='_blank'>https://tennedar.github.io/article.html/domain.html</a><br></strong>
+    <strong>遵循<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target='_blank'>CC BY-NC-SA 4.0</a></strong></p>
+    <br></span></p>
+    <p><em>趁还没忘记来写一下域名注册经历</em></p>
+    <p>请牢记【至少是从现在开始一年内不会改的网址】tennedar.top</p>
+    <hr>
+    <p><span style='font-size:large'>#背景</span></p>
+    <p>本个站依靠 <em><strong>github pages</strong></em>搭建，github pages提供 <em><strong>&lt;username&gt;.github.io</strong></em>免费供使用。但它也支持绑定自定义域名。</p>
+    <p>根据r的个人想法，绑定自定义域名的好处有以下几点（不确定说得对不对）：</p>
+    <ul>
+    <li><p>短，便于记忆</p>
+    <p>  虽说github很好记…但考虑到本站面向部分……记不住的人……所以多少有点担心各位记不住网址也不会用收藏夹……………………所以还是希望尽量好记一点</p>
+    <p>  实话说真正难记的是tennedar而不是github.io，不过前者是名字没办法改了！</p>
+    </li>
+    <li><p>独特</p>
+    <p>  github.io一看就是<del>白嫖免费服务的呀gitee.io同理</del>，而tennedar.top乍看之下，至少无法判断是怎么搭的（x <del>看起来很高级</del></p>
+    <p>  虽然选.top完全是因为它便宜但top也有很不错的意思，一举两得</p>
+    </li>
+    <li><p>相比于github.io，或许可以直连…</p>
+    <p>  不太确定</p>
+    </li>
+    <li><p>算不上好处的理由：便宜</p>
+    <p><em><strong>.top域名首年2&dollar;左右，续费5&dollar;左右</strong></em>；而其他域名基本都在9&dollar;以上，看着就不想用</p>
+    </li>
+    <li><p>不是坏处但很有挑战性所以很好玩</p>
+    <p>  没有相关知识全靠乱猜，<em><strong>有被r搞崩的可能性</strong></em><del>，这个时候炸掉重来就好了</del>，具体的下文会说w</p>
+    </li>
+    </ul>
+    <p>说起来…去年12月r学着申请了免费域名eu.org，结果一点消息都没有估计是申请失败了……（还是花钱好）</p>
+    <p><span style='font-size:large'>#域名、网站和服务器</span></p>
+    <p>总而言之达到现在这种效果不用服务器直接注册个域名就行了</p>
+    <p><span style='font-size:large'>#Step1-注册域名</span></p>
+    <p>考虑的因素是价格和可靠程度，首先国内的肯定不选，其次不具有r能进行的支付手段的也不选，最终选定了支持多种支付手段且价格相对亲民的 <em><strong>namesilo.com</strong></em>，它的网站长这样：</p>
+    <p><img src='https://s2.loli.net/2023/09/18/BQ1GgU3yVIuezAh.webp' width='700px'><br></p>
+    <p>注册完账号，在网站内搜索tennedar，可以搜出各种域名、它们的占用情况（是否已经被他人注册）和价格。虽然早就听说.top最便宜但没想到好像是真的（）顺带一提这种网站基本都会有第一年超低优惠，之后强制续费至少一年的割韭菜行为 <em><strong>需要注意避雷</strong></em>，而 <em><strong>.top是真的便宜</strong></em>所以最后还是选了它</p>
+    <p><img src='https://s2.loli.net/2023/09/18/dCI7OAKvm16fBab.webp' width='700px'><br></p>
+    <p>购买域名之后还会推荐各种付费保护服务，反正r都没选。这些服务也包括购买域名后直接帮你建一个WordPress站点并绑定该域名，可以说对于想要建立个人博客但技术力不足的人是个不错的选择。当然这种人在WordPress更简单的选择是使用免费域名wordpress.com。</p>
+    <p><img src='https://s2.loli.net/2023/09/18/SgGUcWyYNvHkwO3.webp' width='700px'><br></p>
+    <p>以上，域名tennedar.top（一年内）就是属于r自己的了。</p>
+    <p><span style='font-size:large'>#Step2-设置DNS?解析?</span></p>
+    <p>点击头像-my account-domain manager进入仪表盘</p>
+    <p><img src='https://s2.loli.net/2023/09/18/ZTac7ydE6RBS4PX.webp' width='700px'><br></p>
+    <p>点击蓝色地球图标</p>
+    <p><img src='https://s2.loli.net/2023/09/18/THcYtZBEf6AuywV.webp' width='700px'><br></p>
+    <p>然后填就可以了……这里的填写有两种方式。一种是页面下拉直接找到github专用的模板然后一键填写，另一种是根据github官方给出的地址手动填写</p>
+    <p><img src='https://s2.loli.net/2023/09/18/CELq6e8TMvg2fQD.webp' width='700px'><br></p>
+    <p><img src='https://s2.loli.net/2023/09/18/o2aXeKirQf8ktGv.webp' width='700px'><br></p>
+    <p><a href='https://docs.github.com/zh/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site' target='_blank'>https://docs.github.com/zh/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site</a></p>
+    <p>填写完就可以关闭了，注意不要忘了手动填写CNAME一栏~</p>
+    <p><span style='font-size:large'>#Step3-在github进行设置</span></p>
+    <p>打开github pages所在仓库，选择settings-pages，在Custom domain中填写自己的域名（ <em><strong>注意写Apex域名</strong></em>）</p>
+    <p><img src='https://s2.loli.net/2023/09/18/ZC6B5yqQuawbXvp.webp' width='700px'><br></p>
+    <p><em><strong>这个时候下面有个DNS Check似乎会报错，但没有关系不用管它！！！</strong></em></p>
+    <p>填写完之后会自动生成CNAME文件，文件内容就是填写的内容tennedar.top。这个文件似乎也可以手动写，不过settings里都是要填的。</p>
+    <p><span style='font-size:large'>#Step4-等</span></p>
+    <p>等几个小时就可以了，一定要等不要心急刚设置完打不开正常得很……</p>
+    <p>然后，通过tennedar.top和tennedar.github.io都可以访问网站，原理是tennedar.github.io会自动指向tennedar.top，同理打开tennedar.github.io/home.html也会自动指向tennedar.top/home.html，但 <em><strong>因为域名只买了一年，为了方便代码的维护，r觉得写的时候还是用github.io更好，万一明年换域名了就得全部重改了</strong></em></p>
+    <p><span style='font-size:large'>#插曲</span></p>
+    <p>插曲就是r被dns check报错吓得不轻，准备炸掉重来<del>但是要去上课了</del>，上完课回来发现能打开了x</p>
+    <hr>
+    <p><span style='font-size:large'>#参考网站</span></p>
+    <p><a href="namesilo.com/">https://www.namesilo.com/</a></p>
+    <p><a href="https://docs.github.com/zh/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site">管理 GitHub Pages 站点的自定义域</a></p>
+    <p><a href="https://www.namesilo.com/CustomDomain/Github">Link your custom domain to Github</a></p>
+    <p><a href="https://zhuanlan.zhihu.com/p/448781791">将自己的域名绑定在GitHub的个人网页库中（以namesilo为例）</a></p>
+    <p><a href="https://www.zhihu.com/question/49384859">top和xyz两个域名哪个好一点？</a></p>
+    <p><a href="https://zhuanlan.zhihu.com/p/82666679">Namesilo 域名购买保姆式教程，赠送1刀优惠码！</a></p>
+    <p><a href="https://zhuanlan.zhihu.com/p/96886767">6个最好的域名注册商推荐</a></p>
+    <p><a href="https://zhuanlan.zhihu.com/p/622045726">购买域名哪个平台最便宜？国内外各注册商简要对比</a></p>
+    <p><a href="https://zhuanlan.zhihu.com/p/640822963">域名选购注意些什么？老域名有什么好处？</a></p>
+    
+<hr>
+<big>
+
+<p><span style="color:rgb(137, 23, 243);background-color: rgb(196, 255, 234);text-shadow:2px 2px 3px rgb(191, 157, 255)">感謝您的閱讀！</span></big></p>
+<p><a href='#top'>回到頂部</a>
+<big></p>
+<script src="https://tennedar.github.io/js/clickemoji.js"></script>
+<br>
+<span class="eng"><p style="text-align:center" class="copy"> Copyright &copy; 2023 Tennedar All rights reserved.<br><span id="sitetime" style="color:rgb(137, 23, 243)"></span></p></span>
+<br>   
+<br>
+
+</body>
+</html>
