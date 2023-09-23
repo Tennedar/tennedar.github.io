@@ -10,49 +10,19 @@
     <link rel="stylesheet" href="https://cdn.staticfile.org/lxgw-wenkai-screen-webfont/1.6.0/style.css" />
     <link href="https://fonts.font.im/css?family=Merienda" rel="stylesheet">
 <style>
-    .search{
-            width: 80%;            
-            margin: auto;
-            display: flex;
-    }
-    .search input{
-            float: left; 
-            flex: 10;
-            height: 50px;
-            outline: none;
-            border: 1px solid ;
-            color: rgb(137, 23, 243);
-            box-sizing: border-box;
-            padding-left: 20px;
-    }
-    .search button{
-            float: right;
-            flex: 1;
-            height: 50px;
-            background-color: rgb(196, 255, 234);
-            color: rgb(137, 23, 243);
-            border: 1px solid ;
-            outline: none;
-    }
-    .search button i{
-            font-style: normal;
-    }
-    .search button:hover{
-            font-size: auto;
-    }
     .audio{
-            width:70%;
+      width:70%;
     }
     .gototop{
-            position:fixed;
-            left:87%;
-            top:90%;
-            background-color: rgb(196, 255, 234);
-            color:rgb(137, 23, 243);
-            font-weight: bolder;
-            border-radius: 10px;
-            border: 1px dashed;
-            box-shadow: 2px 2px 2px blue;
+      position:fixed;
+      left:87%;
+      top:90%;
+      background-color: rgb(196, 255, 234);
+      color:rgb(137, 23, 243);
+      font-weight: bolder;
+      border-radius: 10px;
+      border: 1px dashed;
+      box-shadow: 2px 2px 2px blue;
     }
     .cover{   
             position: absolute;   
@@ -75,14 +45,14 @@
             transform: translate(-50%, -50%); 
     }
     .title1{
-            text-shadow: 5px 5px 0px rgb(212, 209, 255);
+            /*text-shadow: 5px 5px 0px rgb(212, 209, 255);*/
             font-size: 250%;
     }
     .title2{
             text-decoration: underline rgb(212, 209, 255);
     }
     .copy{
-            text-decoration: underline rgb(212, 209, 255);
+            /*text-decoration: underline rgb(212, 209, 255);*/
             text-shadow: 2px 2px 0px rgb(212, 209, 255);
     }
     @keyframes fadeInAnimation { 
@@ -130,12 +100,6 @@
         display:inline-block;
         border:solid 1px rgb(0, 224, 146);
         border-radius: 5px;
-    }
-    .titlefont{
-        font-family: 'chogokubosogothic';
-    } 
-    .eng{
-        font-family: 'Merienda', cursive;
     }
     .header {
         position:relative;
@@ -294,7 +258,6 @@
 </style>
 </head>
 <script>
-  
   let c = 0;
   function toggle() {
     c % 2 == 0 ? day() : night();
@@ -503,16 +466,16 @@
   </div>
 <div class='p'>
   <div class='test1'>
-    <div class="bl"></div><!--边框有点丑 考虑调整-->
+    <!--<div class="bl"></div>边框有点丑 考虑调整
     <div class="br"></div>
     <div class="bt"></div>
-    <div class="bb"></div>
-    <h1 style="text-align:center" class="title1"><span class='eng'>DIVINA<span style="color:rgb(137, 23, 243);">-</span>TENNEDA<br><span style="color:rgb(0, 224, 146)">-</span></span><br><span class='titlefont'>碎片之<span style="color:rgb(182, 169, 135);">海</span>的一隅</span></h1>
-    <br><p style="text-align:center" class="title2"><span style="color:rgb(137, 23, 243);">R</span>inn-<span style="color:rgb(137, 23, 243);">I</span>s-<span style="color:rgb(137, 23, 243);">P</span>ermanent<span style="color:rgb(137, 23, 243);">-</span>航<span style="color:rgb(182, 169, 135);">海</span>中<span style="color:rgb(137, 23, 243);">...</span></p>  
+    <div class="bb"></div>-->
+    <h1 style="text-align:center" class="title1"><span class='eng'>DIVINA<br><span style="color:rgb(182, 169, 135);">-</span><br>TENNEDA<!--<br><span style="color:rgb(0, 224, 146)">-</span></span><br><span class='titlefont'>碎片之<span style="color:rgb(182, 169, 135);">海</span>的一隅</span>--></h1>
+    <br><p style="text-align:center" class="title2"><span style="color:rgb(137, 23, 243);">R</span>inn-<span style="color:rgb(0, 224, 146);">I</span>s-<span style="color:rgb(137, 23, 243);">P</span>ermanent<!--<span style="color:rgb(137, 23, 243);">-</span>航<span style="color:rgb(182, 169, 135);">海</span>中<span style="color:rgb(137, 23, 243);">...</span>--></p>  
     <br>
     <p style="text-align:center">
-        <span class="map">【<b><span style="color:rgb(137, 23, 243);text-decoration: underline blue;">進入</span><span style='color:rgb(182, 169, 135);background-color: white;text-shadow: 3px 3px 0px rgb(212, 209, 255);'>首</span><span style="color:rgb(137, 23, 243);text-decoration: underline blue;">頁</span></b>】</span><a href='https://tennedar.github.io/home.html'><span class='eng'>HOME</span></a><br>
-        <span class="map">【<b><span style="color:rgb(137, 23, 243);text-decoration: underline blue;">快速</span><span style='color:rgb(182, 169, 135);background-color: white;text-shadow: 3px 3px 0px rgb(212, 209, 255);'>訪</span><span style="color:rgb(137, 23, 243);text-decoration: underline blue;">問</span></b>】</span><a href='https://tennedar.github.io/blog.html'><span class="eng">BLOG</span></a>
+        <span>【<b><span style="color:rgb(137, 23, 243);text-decoration: underline blue;">進入</span><span style='color:rgb(182, 169, 135);background-color: white;text-shadow: 3px 3px 0px rgb(212, 209, 255);'>首</span><span style="color:rgb(137, 23, 243);text-decoration: underline blue;">頁</span></b>】</span><a href='https://tennedar.github.io/home.html'><span class='eng'>HOME</span></a><br>
+        <br><br><span>【<b><span style="color:rgb(137, 23, 243);text-decoration: underline blue;">快速</span><span style='color:rgb(182, 169, 135);background-color: white;text-shadow: 3px 3px 0px rgb(212, 209, 255);'>訪</span><span style="color:rgb(137, 23, 243);text-decoration: underline blue;">問</span></b>】</span><a href='https://tennedar.github.io/blog.html'><span class="eng">BLOG</span></a>
         <br><br><div id="times" style="color:rgb(137, 23, 243);text-align: center;"></div>
             <script type="text/javascript">
                 function getD1()
@@ -563,7 +526,7 @@
           var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
           var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
           var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
-          document.getElementById("sitetime").innerHTML=" 茧房存在的第 "+diffYears+" 年 "+diffDays+" 天 "+diffHours+" 小时 "+diffMinutes+" 分钟 "+diffSeconds+" 秒";
+          document.getElementById("sitetime").innerHTML=diffYears+" Years "+diffDays+" Days "+diffHours+" Hours "+diffMinutes+" Minutes "+diffSeconds+" Seconds";
         }
        siteTime();
     </script>            
