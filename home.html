@@ -197,6 +197,31 @@
 	.three {
 		height: auto;
 	}
+    .mail{
+    padding-left: 6vh;
+    padding-right: 8vh;
+  }
+  .form-mail{
+    border:1px solid rgb(0, 224, 146);
+    text-align:center;
+    background-color: rgb(196, 255, 234);
+    box-shadow: 16px 16px rgb(0, 224, 146);
+  }
+  .button{
+        color:rgb(137, 23, 243);
+        background-color: rgb(196, 255, 234);
+        border: none;
+        border-radius: 3px;
+        padding: 3px;
+        -webkit-transition-duration: 0.4s; /* Safari */
+        transition-duration: 0.4s;
+        border: 1px rgb(137, 23, 243) solid;
+    }
+    .button:hover{
+        background-color: rgb(182, 169, 135);
+        color:white;
+        box-shadow: 0 2px 2px 0 rgba(0,0,0,0.24), 0 2px 2px 0 rgba(0,0,0,0.19);
+    }
 </style>
 <script>
   
@@ -525,8 +550,30 @@
 				<!--&#10014;<span class="eng"><a href="https://twitter.com/divina_tennedar" target='_blank' style="color: blue">TWITTER</a>&nbsp;<span style='color:rgb(137, 23, 243)'>@divina_tennedar</span><br><br></span>-->
 				&#10014;<span class="eng"><span style='color:blue'>EMAIL</span>&nbsp;<span style='color:rgb(137, 23, 243)'>tr0.abkto@8alias.com</span><br><br></span>
 				<!--&#10014;<a href="https://t.co/bq34DZ82sS" target="_blank" style="color: blue"><span class="eng">MARSHMALLOW</span>提問箱</a>-->
-			</p><br>
-			</p>    
+			</p>
+			</p>
+			<br>
+			<h1 style="text-align:center;" class="titlefont" id="home-5"><span >邮件</span><span style="color:rgb(182, 169, 135);">订</span><span>阅</span>&#9749</h1><br>
+			<p style="text-align: center;">每次博客更新都会通过邮件通知（试运行）</p><br>
+			<div class="mail">
+				<form class='form-mail' action="https://tinyletter.com/Tennedar" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/Tennedar', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
+				  <p><br>💌---→📬<br><hr>
+					<label for="tlemail" style="color:rgb(137, 23, 243);">
+					  Enter your email address🏠
+					</label>
+				  </p>
+				  <p>
+					<input type="text" style="width:45%;border:1px solid rgb(137, 23, 243);border-radius: 3px;" name="email" id="tlemail" />
+				  </p><br>
+				  <input type="hidden" value="1" name="embed"/>
+				  <input type="submit" value="Submit" class="button" />
+				  <p><br>
+					<a href="https://tinyletter.com" target="_blank">
+					  powered by TinyLetter
+					</a>
+				  </p><br>
+				</form>
+			</div>
 			<br><br></div>
 		<div class='tbmx'><hr> 
 			<br><br>
