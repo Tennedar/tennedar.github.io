@@ -82,9 +82,7 @@ a:active{
         font-family: 'Chalk-S-JP';
         src: url('https://tennedar.github.io/font/Chalk-S_3_JP/Chalk-S-JP.otf'),url('font\Chalk-S_3_JP\Chalk-S-JP.otf');
 }
-.titlefont{
-        font-family: 'chogokubosogothic' ,default !important;
-}
+
 .inst{
         font-family: 'TanukiMagic',default !important;
 }
@@ -97,9 +95,7 @@ html{
 .eng{
         font-family: 'Merienda', cursive,"LXGW WenKai", sans-serif,"LXGW WenKai Lite", sans-serif;
 }
-.titlefont{
-        font-family: 'chogokubosogothic';
-}
+
 
 details {
         border: 1px solid #aaa;
