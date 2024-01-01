@@ -1,0 +1,1453 @@
+<html>
+<head>
+   <link rel="icon" type="image/png" sizes="144x144" href="https://tennedar.github.io/pic/icon144x.png"/>
+   <link rel="stylesheet" type="text/css" href="https://tennedar.github.io/css/tennedar-style.css">
+   <link rel="stylesheet" type="text/css" href="https://tennedar.github.io/css/pic.css">
+   <link rel="stylesheet" href="https://cdn.staticfile.org/lxgw-wenkai-webfont/1.6.0/style.css" />
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-lite-webfont@1.1.0/style.css" />
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-tc-webfont@1.0.0/style.css" />
+   <link rel="stylesheet" href="https://cdn.staticfile.org/lxgw-wenkai-screen-webfont/1.6.0/style.css" />
+    <link href="https://fonts.googlefonts.cn/css?family=Arima+Madurai" rel="stylesheet">
+    <link href="https://fonts.font.im/css?family=Merienda" rel="stylesheet">
+   <title>博客</title>
+   <style>
+        .cont_circle{
+            margin:0 !important;
+            padding:0 !important;
+            left:71% !important;
+            top: 65% !important;
+        }
+        *{
+            margin: 0;
+            padding: 0;        
+        }
+        html,body    {
+            height: 100%;
+        }
+        .p    {
+            width: 100%;
+            height: 100%;
+            /*background: white;*/
+        }
+        .normal{
+            font-size: 16px !important;
+        }
+        .test1{   
+            font-size: 16px !important;
+            position: absolute;   
+            top: 50%;   
+            left: 50%;   
+            -webkit-transform: translate(-50%, -50%);   
+            -moz-transform: translate(-50%, -50%);   
+            -ms-transform: translate(-50%, -50%);   
+            -o-transform: translate(-50%, -50%);   
+            transform: translate(-50%, -50%);   
+        }   
+        body {
+            height: 100vh;
+            /*background-color: white;*/
+        }
+        .text {
+            position: absolute;
+            z-index: 9999999;
+            font-weight: bold;
+            user-select: none;
+        }
+        @keyframes remove {
+            100% {
+                opacity: 0;
+            }
+        }
+        .content{
+            border-left: 20px dashed;
+            border-right: 20px dashed;
+            font-size: 16px !important;
+        }
+        .test1.audio{
+            width:80%;
+        }
+        .gototop{
+            position:fixed;
+            left:80%;
+            top:90%;
+            background-color: rgb(196, 255, 234);
+            color:rgb(137, 23, 243);
+            font-weight: bolder;
+            border-radius: 10px;
+            border: 1px dashed;
+            box-shadow: 2px 2px 2px blue;
+        }
+        .copy{
+            text-decoration: underline rgb(212, 209, 255);
+            text-shadow: 2px 2px 0px rgb(212, 209, 255);
+            position: absolute;
+            -webkit-transform: translate(-50%, -50%);   
+            -moz-transform: translate(-50%, -50%);   
+            -ms-transform: translate(-50%, -50%);   
+            -o-transform: translate(-50%, -50%);   
+            left: 50%;   
+            transform: translate(-50%, -50%);   
+            border-radius: 3px;
+            padding: 10px;
+            font-family: 'Merienda', cursive;
+        }
+        .guide2{
+            position:fixed;
+            width: 20%;
+            left :79%;
+            height: 100%;
+            top:0%;
+            padding-left: 1%;
+            padding-right: 1%;
+            border-left :solid 2px rgb(0, 224, 146);
+            /*padding-top: 2%;*/
+            /*border-radius: 12px;*/
+            background-color: white;
+        }
+        textarea{
+            font-family: 'Merienda', cursive;
+            border:solid 1px rgb(137, 23, 243);
+            border-radius: 5px ;
+            background-color: white;
+            color:rgb(0, 224, 146);
+            width:100%;
+            height: auto;
+            
+        }
+        textarea:hover{
+            border: solid 1px rgb(0, 224, 146);
+            border-radius: 5px ;
+            color:rgb(137, 23, 243);
+        }
+        input{
+            font-family:'Courier New', Courier, monospace;
+            border: solid 1px rgb(0, 224, 146);
+            border-radius: 5px ;
+            background-color: white;
+            color:rgb(137, 23, 243);
+            float:left;
+            clear: both;
+            
+        }
+        input:hover{
+            border:solid 1px rgb(137, 23, 243);
+            color:rgb(0, 224, 146);
+            border-radius: 5px ;
+        }
+        .eng{
+                font-family: 'Merienda', cursive;
+            }
+        .titlefont{
+            font-family: 'chogokubosogothic';
+        }
+        .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+            border-right: 3px solid rgb(0, 224, 146);
+            background-color: white;
+        }
+        .sidebar .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+            transition: 0.3s;
+            text-decoration: none;
+            color: rgb(137, 23, 243);
+        }
+        .openbtn {
+            z-index: 200;
+            border: 1px dashed rgb(137, 23, 243);
+            font-size: 20px;
+            padding: 10px 15px;
+            position: fixed;
+            border-radius: 8px;
+            background-color:rgb(196, 255, 234);
+            box-shadow: 2px 2px 2px blue;
+            color:rgb(137, 23, 243);
+            font-family: "LXGW WenKai", sans-serif;
+            font-family: "LXGW WenKai Lite", sans-serif;
+            font-family: "LXGW WenKai TC", sans-serif;
+            font-family: "LXGW WenKai Screen", sans-serif;
+        }
+        .openbtn:hover {
+            background-color: rgb(137, 23, 243);
+            color:rgb(196, 255, 234);
+            border: 1px dashed rgb(196, 255, 234);
+        }
+        #main {
+            transition: margin-left .5s;
+            padding: 16px;
+        }
+        @media screen and (max-height: 450px) {
+            .sidebar {padding-top: 15px;}
+            .sidebar a {font-size: 18px;}
+        }
+        details {
+            border: 1px solid #aaa;
+            border-radius: 4px;
+            padding: 0.5em 0.5em 0;
+        }
+        summary {
+            font-weight: bold;
+            margin: -0.5em -0.5em 0;
+            padding: 0.5em;
+        }
+        details[open] {
+            padding: 0.5em;
+        }
+        details[open] summary {
+            border-bottom: 1px solid #aaa;
+            margin-bottom: 0.5em;
+        }
+        .bubble111{
+            position: fixed;
+            -webkit-transform: translate(-50%, -50%);   
+            -moz-transform: translate(-50%, -50%);   
+            -ms-transform: translate(-50%, -50%);   
+            -o-transform: translate(-50%, -50%);   
+            left: 50%;
+            top:80%;
+            transform: translate(-50%, -50%); 
+            width:200%;
+        }
+        body .footer {
+          --footer-background:linear-gradient(0deg, rgb(212, 209, 255) 0%,rgb(196, 255, 234) 100%);;
+        }
+        body .footer .bubbles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1rem;
+            background: var(--footer-background);
+            filter: url("#blob");
+        }
+        body .footer .bubbles .bubble {
+            position: absolute;
+            left: var(--position, 50%);
+            background: var(--footer-background);
+            border-radius: 100%;
+            animation: bubble-size var(--time, 4s) ease-in infinite var(--delay, 0s), bubble-move var(--time, 4s) ease-in infinite var(--delay, 0s);
+            transform: translate(-50%, 100%);
+        }
+        @keyframes bubble-size {
+            0%, 75% {
+                width: var(--size, 4rem);
+                height: var(--size, 4rem);
+            }
+            100% {
+                width: 0rem;
+                height: 0rem;
+            }
+        }
+        @keyframes bubble-move {
+            0% {
+                bottom: -4rem;
+            }
+            100% {
+                bottom: var(--distance, 10rem);
+            }
+        }
+        .blogtext{
+            padding-left: 15px;
+            padding-right: 15px;
+            padding-top: 5px;
+        }
+        code{
+            color:rgb(182, 169, 135);
+            background-color: black;
+        }
+    </style>
+</head>
+<script type="text/javascript" src="https://tennedar.github.io/js/lang.js"></script>
+<script>
+    function openNav() {
+      document.getElementById("mySidebar").style.width = "80%px";
+      document.getElementById("main").style.marginRight = "250px";
+    }
+    
+    function closeNav() {
+      document.getElementById("mySidebar").style.width = "0";
+      document.getElementById("main").style.marginLeft= "0";
+    }
+</script>   
+<script>
+  
+  let c = 0;
+  function toggle() {
+    c % 2 == 0 ? day() : night();
+    c++;
+  }
+  
+  function night() {
+    document.querySelector(".cont_circle").className =
+      "cont_circle cont_circle_noche";
+  }
+  
+  function day() {
+    document.querySelector(".cont_circle").className =
+      "cont_circle cont_circle_dia";
+  }
+  
+  </script>
+<body  id="top">
+  	<br>
+<!--<div class="cont_principal" onclick="changeMode()">
+  <div class="cont_centro">
+  <div class="cont_circle" >
+    <div class="sun"></div>  
+    <div class="moon">
+    <svg
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:cc="http://creativecommons.org/ns#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:svg="http://www.w3.org/2000/svg"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     width="24"
+     height="24"
+     viewBox="0 0 24 24"
+     id="svg4185"
+     version="1.1"
+     inkscape:version="0.91 r13725"
+     sodipodi:docname="moon.svg">
+    <defs
+       id="defs4187" />
+    <sodipodi:namedview
+       id="base"
+       pagecolor="#ffffff"
+       bordercolor="#666666"
+       borderopacity="1.0"
+       inkscape:pageopacity="0.0"
+       inkscape:pageshadow="2"
+       inkscape:zoom="7.9195959"
+       inkscape:cx="33.77632"
+       inkscape:cy="21.697334"
+       inkscape:document-units="px"
+       inkscape:current-layer="layer1"
+       showgrid="false"
+       units="px"
+       inkscape:window-width="1366"
+       inkscape:window-height="709"
+       inkscape:window-x="0"
+       inkscape:window-y="27"
+       inkscape:window-maximized="1" />
+    <metadata
+       id="metadata4190">
+      <rdf:RDF>
+        <cc:Work
+           rdf:about="">
+          <dc:format>image/svg+xml</dc:format>
+          <dc:type
+             rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+          <dc:title></dc:title>
+        </cc:Work>
+      </rdf:RDF>
+    </metadata>
+    <g
+       inkscape:label="Capa 1"
+       inkscape:groupmode="layer"
+       id="layer1"
+       transform="translate(0,-1028.3622)">
+      <path
+         style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-opacity:1"
+         d="m 12.5,1051.8622 a 11.5,11.5 0 0 0 9.93359,-5.7305 11.5,11.5 0 0 1 -10.14844,-11.4121 11.5,11.5 0 0 1 1.56446,-5.7676 11.5,11.5 0 0 0 -1.34961,-0.09 11.5,11.5 0 0 0 -11.5,11.5 11.5,11.5 0 0 0 11.5,11.5 z"
+         id="circle5402"
+         inkscape:connector-curvature="0" />
+    </g>
+  </svg>
+  
+    </div>
+  
+      <div class="cont_olas_bottom" onclick="toggle()">
+   <svg
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:cc="http://creativecommons.org/ns#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:svg="http://www.w3.org/2000/svg"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     width="428"
+     height="140"
+     viewBox="0 0 428 140"
+     id="svg4185"
+     version="1.1"
+     inkscape:version="0.91 r13725"
+     sodipodi:docname="olas.svg">
+    <defs
+       id="defs4187" />
+    <sodipodi:namedview
+       id="base"
+       pagecolor="#ffffff"
+       bordercolor="#666666"
+       borderopacity="1.0"
+       inkscape:pageopacity="0.0"
+       inkscape:pageshadow="2"
+       inkscape:zoom="0.25"
+       inkscape:cx="1165.2456"
+       inkscape:cy="474.36342"
+       inkscape:document-units="px"
+       inkscape:current-layer="layer1"
+       showgrid="false"
+       units="px"
+       inkscape:window-width="1366"
+       inkscape:window-height="717"
+       inkscape:window-x="0"
+       inkscape:window-y="25"
+       inkscape:window-maximized="1" />
+    <metadata
+       id="metadata4190">
+      <rdf:rdf>
+        <cc:work
+           rdf:about="">
+          <dc:format>image/svg+xml</dc:format>
+          <dc:type
+             rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+          <dc:title />
+        </cc:work>
+      </rdf:rdf>
+      <rdf:RDF>
+        <cc:Work
+           rdf:about="">
+          <dc:format>image/svg+xml</dc:format>
+          <dc:type
+             rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        </cc:Work>
+      </rdf:RDF>
+    </metadata>
+    <g
+       inkscape:label="Capa 1"
+       inkscape:groupmode="layer"
+       id="layer1"
+       transform="translate(0,-912.36216)">
+      <g
+         transform="translate(0.05230238,-83.806076)"
+         id="g5323"
+         style="fill:#ffffff;fill-opacity:0.78604653">
+        <path
+           sodipodi:nodetypes="ccsccccc"
+           inkscape:connector-curvature="0"
+           id="rect4152-3"
+           d="m 0,1028.2403 c 23.31769,-8.6016 55.72675,-17.4895 79.04444,-18.1827 11.2904,-0.3156 26.68128,7.4409 42.09759,11.1455 15.41631,3.7046 26.81743,2.8522 40.22985,2.4916 12.95522,-0.4126 28.2055,-6.151 52.31482,-14.5357 l -0.644,30.193 -213.09500238,0.016 z"
+           style="fill:#ffffff;fill-opacity:0.78604653;stroke:none;stroke-opacity:1" />
+        <path
+           sodipodi:nodetypes="ccsccccc"
+           inkscape:connector-curvature="0"
+           id="path4159-1"
+           d="m 426.18304,1015.7276 c -26.34815,1.5 -54.33844,-0.6778 -66.03938,-1.876 -12.30054,-1.4521 -31.28361,-7.4363 -46.76147,-11.8498 -9.13204,-2.60397 -38.62494,-3.50794 -51.85031,-2.30725 -12.95522,0.97645 -28.22921,4.43235 -47.85598,9.47015 L 213.04683,1039.38 425,1039.343 Z"
+           style="fill:#ffffff;fill-opacity:0.78604653;stroke:none;stroke-opacity:1" />
+        <rect
+           y="1039.3678"
+           x="-0.052302379"
+           height="96.800781"
+           width="425.14133"
+           id="rect5314"
+           style="fill:#ffffff;fill-opacity:0.78604653;stroke:none;stroke-opacity:1" />
+      </g>
+      <g
+         transform="matrix(1.0046942,0,0,1,-427.94717,-83.806076)"
+         id="g5318"
+         style="fill:#ffffff;fill-opacity:0.78139535">
+        <path
+           style="fill:#ffffff;fill-opacity:0.78139535;stroke:none;stroke-opacity:1"
+           d="m 425.9497,1038.22 c 26.34814,1.5 45.12014,-1.2008 56.31601,-2.0203 12.17428,-1.1995 37.78171,-5.1492 53.25957,-9.5626 9.13204,-2.604 41.52933,-12.7208 54.88097,-12.7076 13.04897,0.025 62.82855,10.2944 82.45532,15.3322 l -40.41163,23.1005 -206.50024,0 z"
+           id="path4155-4"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="ccsccccc" />
+        <path
+           style="fill:#ffffff;fill-opacity:0.78139535;stroke:none;stroke-opacity:1"
+           d="m 852.0083,1015.8985 c -25.46427,-6.2025 -64.78376,0.7136 -86.08114,6.2076 -11.66922,3.4725 -20.60985,4.9409 -36.02616,8.6454 -35.32671,8.3971 -50.21019,0.1889 -57.05774,-1.4881 l -40.29957,23.0988 219.45631,0 z"
+           id="path4157-5"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="ccccccc" />
+        <rect
+           style="fill:#ffffff;fill-opacity:0.78139535;stroke:none;stroke-opacity:1"
+           id="rect5316"
+           width="426.01624"
+           height="83.800438"
+           x="425.94769"
+           y="1052.3678" />
+      </g>
+    </g>
+  </svg>
+  
+    </div>
+    
+    </div>
+   
+    </div>
+  </div>-->
+<!--    <div id="main">
+        <button class="openbtn" onclick="openNav()">&#926; 公告版</button>  
+    </div>
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <br><br>
+        <span><h1 style="text-align:center;"><span >公</span><span style="color:rgb(182, 169, 135);">告</span><span>版</span></h1></span><br>
+        <span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);">最近更新</span>：
+        <a href="#9.27">9.27</a><br>
+        <span style="color:rgb(137, 23, 243);">感想请通过邮件发送！</span>
+        <p>&nbsp;&middot;&nbsp;用语解说：<br><span class='eng'>R/r</span>：博主自称；<br><span class='eng'>Z/z</span>:友情<span class='eng'>feat</span>；</p>
+        <details>
+            <summary><span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);"><span class="eng">TAG</span>：</span>
+            </summary>
+            <i>（仅截取大段内容，如果不想漏掉只言片语还请看完每一期博客！）</i>
+            <details><summary>个站相关：</summary>
+                <a href="#8.8">8.8</a><span>输入密码查看隐藏内容</span><br>
+                <a href="#7.11">7.11</a><span>图床搭建</span><br>
+            </details>
+            <details><summary>生活纪事：</summary>
+                <a href="#9.14">9.14</a>学校相关4<br>
+                <a href="#9.4">9.4</a>学校相关3<br>
+                <a href="#9.1">9.1</a>学校相关2<br>
+                <a href="#8.6">8.6</a><span>学校相关1</span><br>
+                <a href="#7.31">7.31</a><span>大蘑菇+芭比电影+谷美+游戏</span><br>
+                <a href="#7.8">7.8</a><span>招生营回忆</span><br>
+            </details>
+            <details><summary>代码笔记：</summary>
+                <a href="#7.24">7.24</a><span><span class='eng'>java</span>学习笔记4</span><br>
+                <a href="#7.22">7.22</a><span><span class='eng'>java</span>学习笔记3</span><br>
+                <a href="#7.21">7.21</a><span><span class='eng'>java</span>学习笔记2</span><br>
+                <a href="#7.20">7.20</a><span><span class='eng'>java</span>学习笔记1</span><br>
+            </details>
+        </details>
+        <br><br><hr><br>
+        <br><br><br><br><br><br><br><br>
+    </div>-->
+	<div class='p'>
+		<div class='test1'>
+		<h1 style="text-align:center"><span>博客</span><span style="font-family: 'Arima Madurai', cursive">-<span style="color:rgb(182, 169, 135);">2023-2</span></span></h1>
+        <br>
+        <p style="text-align:center">            <a href="http://tennedar.github.io/home.html" style="color: blue">返回主頁</a><br><br><a href="http://tennedar.github.io/blog.html" style="color: blue">返回博客</a><br></p><br>
+        <!--<p style="text-align:center"><a href="http://tennedar.github.io/acgn.html" style="color: blue">二次元專區</a></p><br><br>-->
+        <p style="text-align:center"><a href="https://tennedar.github.io/html/blog-2023-1.html" style="color: blue">2023 1~6月博客</a> || <a href="https://tennedar.github.io/html/blog-2022-1.html" style="color: blue">2022 8~10月博客</a> || <a href="https://tennedar.github.io/html/blog-2022-2.html" style="color: blue">2022 11~12月博客</a></p><br>
+        <p style="text-align:center" ><span style="color: blue" class="inst">↓ 2023年 博客 ↓</span></p>
+        <p style="text-align:center"><a href="#12.28">12.28</a>&nbsp;||&nbsp;<a href="#12.23">12.23</a>&nbsp;||&nbsp;<a href="#12.22">12.22</a>&nbsp;||&nbsp;<a href="#12.14">12.14</a>&nbsp;||&nbsp;<a href="#12.13">12.13</a>&nbsp;||&nbsp;<a href="#12.10">12.10</a>&nbsp;||&nbsp;<a href="#12.7">12.7</a><br><a href="#11.27">11.27</a>&nbsp;||&nbsp;<a href="#11.20">11.20</a>&nbsp;||&nbsp;<a href="#11.3">11.3</a><br><a href="#10.30">10.30</a>&nbsp;||&nbsp;<a href="#10.23">10.23</a>&nbsp;||&nbsp;<a href="#10.15">10.15</a>&nbsp;||&nbsp;<a href="#10.13">10.13</a>&nbsp;||&nbsp;<a href="#10.7">10.7</a><br><a href="#9.29">9.29</a>&nbsp;||&nbsp;<a href="#9.27">9.27</a>&nbsp;||&nbsp;<a href="#9.20">9.20</a>&nbsp;||&nbsp;<a href="#9.16">9.16</a>&nbsp;||&nbsp;<a href="#9.14">9.14</a>&nbsp;||&nbsp;<a href="#9.4">9.4</a>&nbsp;||&nbsp;<a href="#9.1">9.1</a><br><a href="#8.8">8.8</a>&nbsp;||&nbsp;<a href="#8.6">8.6</a>&nbsp;||&nbsp;<a href="#8.5">8.5</a>&nbsp;||&nbsp;<a href="#8.2">8.2</a><br><a href="#7.31">7.31</a>&nbsp;||&nbsp;<a href="#7.28">7.28</a>&nbsp;||&nbsp;<a href="#7.25">7.25</a>&nbsp;||&nbsp;<a href="#7.24">7.24</a>&nbsp;||&nbsp;<a href="#7.22">7.22</a>&nbsp;||&nbsp;<a href="#7.21">7.21</a>&nbsp;||&nbsp;<a href="#7.20">7.20</a>&nbsp;||&nbsp;<a href="#7.17">7.17</a>&nbsp;||&nbsp;<a href="#7.16">7.16</a>&nbsp;||&nbsp;<a href="#7.13">7.13</a>&nbsp;||&nbsp;<a href="#7.11">7.11</a>&nbsp;||&nbsp;<a href="#7.8">7.8</a></p><br><br>
+        <br>
+		</div>
+		</div>
+   	</div>
+   <!--<span class='eng'><div class="gototop" ><a href='#top'>&#x21ea;T O P&#x21ea;</a></div></span>-->
+  	<br>
+	<div class="no-guide">
+	<div class="content">
+        <hr>
+        <br><br>
+        <p style='background-color: black;color:rgb(196, 255, 234);font-size: larger;' id="12.28"><b>2023.12.28</b> || <a href='#top' style="color:rgb(196, 255, 234)">回到頂端</a></p>
+        <div class='blogtext'>
+            <span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">你这服务器保…能保护好自己吗</span><br>浅浅研究了一下<i>nextcloud</i>，然后经过这样那样那样那样的步骤之后安装出错了，随便找了个教程把系统文件改了几行代码，然后系统全炸了，然后试图把yum 还是什么来着，删了重装，然后装不回去了，然后哎呀好在服务商可以直接给我重开…<br>重开重开<br>重开之后已经搭建成功的服务也炸了，对着原本的教程却出现了新bug，难以理解，太恐怖了，然后又搞了半天终于配置好了。下次还是记录一下吧<br><br>
+            <span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">再论“你不会百度吗”</span><br>题为再论但之前没写过<br>首先R太喜欢这句话了，R要跟所有人都说：“你不会百度吗。”<br>当然这句话本身也有很多妥协的成分，比如r其实更喜欢说“你不会谷歌吗”，但对吧，或者“你不会bing吗”，总之“百度”是个抽象化的概念，r的意思只是“善用搜索引擎”而已<br>理由有很多，最显著的是“某个人的求助对象——也就是r——对语言表达既没能力又没兴趣，根本不想回答——所以请自己查，这样既可以照顾r的心情，又可以获得更加高质量的教学”。再说了，r获取知识也是查的，r可以查你不可以？你吃东西要让别人帮忙嚼吗，不是吧。而且很多计算机相关知识的特点就在于“不需要理解，照抄即可”。听别人咀嚼后的难以理解的版本，为什么不直接去看表面的更容易理解的现有的好教程？<br><br>以上是前情提要。不过今天发现一种新观点：现在的搜索引擎特难用，一搜一个广告，人们自然丧失了“搜索教程”的能力<br>这还真是没想到呢（挠头），那怎么办，搜索引擎的问题不应该是解答者的责任，所以解答者——r本人——会直接无视这个问题并让你换一个搜索引擎。不会谷歌也可以bing，方法那么多——这些方法——你不会百度吗？<br><br>
+            <span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">有用的知识增加了</span><br>给z发了张梗图——Xmas Ymas Zmas（X/Y/Z轴方向的圣诞树），然后z问Christmas和Xmas什么关系<br>啊？（。<del>或许是x axis和x Christmas很像对吧</del>所以就查了一下：<a href="https://zhuanlan.zhihu.com/p/98959389" target="_blank">Merry Xmas! 圣诞节祝福为什么可以简写为Xmas？</a><br><code>其实，在古代Christmas并非一个单词，而是词组Christ’s mass。Christ来自于希腊语Christos，是“基督、救世主”的意思。包含耶稣生平事迹的圣经《新约》，最初就是用希腊语所写的。而mass则来自于拉丁语missa，是“弥撒”的意思。经过演变，人们才逐渐把Christ和mass写成一个Christmas。<br>然而，实际上Christos也只是英语中音译的词。这个希腊语单词有它自己的写法，在古希腊语中，基督Christ这个称号，开头的字母是Chi；而希腊字母Chi的写法，和英语字母表中的X相似。<br>Christmas最初被简写成Xmas，其实带有让圣诞节脱离其原本宗教意义的目的，至少在外形上与Christ毫不相干。但是这对于虔诚的教徒来说是难以容忍的。因此你会发现，在正式文档及与教会相关的文字资料，都不会出现Xmas这个词。<br>那么，时至今日，为何Xmas又复活了呢？这其实是和商业的兴起有关的。因为无论从字形上还是其长短上来看，Xmas都比Christmas更加令人印象深刻，并且简洁明了。于是在许许多多的商业广告上，你都会看到人们更倾向于使用Xmas。<br>而且，在非基督教国家看来，Xmas更加“时尚和酷炫”，而且又无关乎基督教信仰，所以自然Xmas更受人青睐。</code>
+        </div><br><br>
+        <p style='background-color: black;color:rgb(196, 255, 234);font-size: larger;' id="12.23"><b>2023.12.23</b> || <a href='#top' style="color:rgb(196, 255, 234)">回到頂端</a></p>
+        <div class='blogtext'>
+            <span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">快递柜</span><br>最上面伸手按理能够到，但昨天拿的一个放得巨深无比，难以理解，根本拿不到一点。幸好旁边有人帮r拿到了，能不能投诉啊哪有这种设计<br><br>
+            <span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);">碎碎念</span><br>现在可以通过<span style="color:blue">tennedar.top</span>正常访问了，能访问就好<br><br>啧，体育统计表和小程序日期对不上，小程序有的日期表格里没有，最后统计出的总数不对<br>不知道会不会被背刺了，随便它。<br><br>翻到了<a href="https://web.archive.org/web/20220427015028/https://mp.weixin.qq.com/s/3yQVjFJWJOnwxggSAFE7Cg" target="_blank">这篇文章</a>，虽然之前就主观认定课本写得跟一样但还是有对比更直观一点，好在用垃圾课本的时间已经过去了，抓住每一句话去学点有用的吧<br>下周考政治，终于把课本拿出来翻了，好消息是能找到对应知识点，坏消息是这他妈写的什么玩意<br><code>"段一：要A，就要B<br>段二：要A，不仅要B，而且要C（<b>然而这一段和B根本没关系，只有C</b>）<br>要A，不仅要C，而且要D（<b>然而这一段和C根本没关系，只有D</b>）"</code><br>写课本的不会以为自己很文艺吧？？？<br><br>对了上次去医院还有两个事。一是经颅多普勒相比核磁共振等等优点是仪器更小，可以直接推进ICU给病人做检查，但不能把ICU病人推到核磁那边去<br>二是上次提到的第二位病人说骑车头晕，医生判断为可能和之前他听力下降的问题有关，建议去做检查（疑似核磁？，“要700多块，有医保的话可以减一部分”<br>OMG真贵<br><br>啦啦操小组统一服装，有人提议穿红色的…天哪不会……不会有人以为……每个人都有红色衣服吧…………………………换句话说r衣柜里几乎就只有黑白了不管你提议什么色都问题大了……<br>没兴趣追究这提议是误解了其他人的穿衣品味还是觉得红色喜庆黑色太颓废，行吧红色就红色，当晚下单一件衣服刚好考试前一天能送到。然后就由于你校稀烂的物流系统和不可忽视的双十二疯狂消费时间，感觉这衣服准时送到的可能性越来越低。真烦死了！！！！！！！！果断找人去借，确认可以之后就去退货。不管怎么说非常非常非常非常感谢借r衣服的同学帮大忙了
+        </div><br><br>
+        <p style='background-color: black;color:rgb(196, 255, 234);font-size: larger;' id="12.22"><b>2023.12.22</b> || <a href='#top' style="color:rgb(196, 255, 234)">回到頂端</a></p>
+        <div class='blogtext'>
+            <span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">折腾服务器</span><br>失敗した失敗した失敗した失敗した失敗した失敗した失敗した失敗した（。唉总之如果连不上就说明r又在折腾，可以通过<span style='color:blue'>tennedar.github.io</span>，如果还不行就<span style='color:blue'>tennedar.github.io/home.html</span>。具体的之后再写了，现在要明白VPS是买来玩玩的但域名是正儿八经想用的折腾不起一点…要不再租个域名练练手，天哪，总之现在这个不能再爆破了<br><br>
+            <span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">临床早接触最后一课之门诊记录</span><br>
+            其实还有一节课pre，感觉没意思。在r心里这就是最后一节了，总的来说体验超级好吧<br>
+            先去检查室。房间一侧是经颅多普勒，和超声影像的原理差不多但部位不一样是对头部做的，因为头骨比较厚所以要从眼、颈动脉等没有或骨头比较薄的地方进行。有两个探头，粗细不一样，发射的超声波频率不一样，很显而易见频率不能太大（。然后因为超声波在不同介质之间衰减非常快，所以需要用耦合剂减小密度差。然后很显而易见如果骨头比较厚的话就要用波长长的<br>第一个病人做的图像几乎啥都没有，r还以为r有问题（。 换了个病人就能看到比较明显的了，原来如此（）<br><br>然后去看肌电图，房间墙上贴了三张打印纸“检查时请放松”，放在鬼屋里蛮合适的，这种重复+意义不明+你确定能放松？的语句…<br>对病人的检查是在脚上电击，所以冬天如果手脚冰凉地走进医院要先恢复正常温度不然做出来结果不准<br>r自己体验的是在手上，三个电极，一个红色的起屏蔽作用，似乎是要贴在头中间，做的时候就直接贴手臂上了反正电压很小；一个绿色的是记录电极，白色的疑似阴极。放电的装置有阴阳极，操作时电极和放电装置在一条直线上，阴阳极位置分别对应。<br>以正中神经(?)的检查为例，记录电极要贴在肌肉最饱满的地方，具体是把手指翘到某个角度（。然后就显而易见有个地方最厚；白色的电极贴肌腱（？上，距离记录电极2cm左右<br>用旋钮调一个电压然后对手腕正中就是有个很显而易见凹进去的地方，就是一般割腕的那个位置然后电击（装置上有个按钮可以直接对调阴阳极，有个按钮按了就能放电），然后处于同一条神经上的大拇指（的肌肉）就会<del>抽搐</del>运动。被电击导致的运动和主动运动产生的电位是相同的。可能电击更准大概<br>屏幕上会自动显示电压和时间，不会看指标问题不大看单位就行，数值和年龄有关，分为几档，显而易见电压越大越好时间越短越好，结果表明r非常正常（。以上就是运动的测量<br>用同样的方法可以测感觉，但感觉是一个连续过程所以在电击（等屏幕上显示的电位图像稳定后）要再按一次按钮中止放电，后面都差不多<br>老师给r做完之后r给下一位同学做，如果不做的话可能这篇东西就写不出来了忘得干干净净（。，<br><br>
+            然后去神经内科门诊，（（感觉护士姐姐一直在表现出一种厌工情绪（。）<br>整个房间环境非常好，很宽敞，医生和护士面对面坐着中间放电脑，病人坐在侧面，一次只接待一个人。r记忆中排队排得到处都是那肯定是不合理的吧而且很容易神经衰弱欸，总之感觉环境不错是人待的<br>简要说一下<br>第一个病人说头晕，然后发生了以下对话：<br>
+            <code>：我头晕<br>怎么头晕？<br>左侧太阳穴这里感觉一跳一跳的<br>感觉是血管在跳吗？不是（忘了，疑似抽搐还是什么）吧<br>是血管在跳<br>多久晕一次？<br>一个月1-2次<br>每次几分钟<br>不一定，有长有短<br>短的呢<br>10分钟这样然后就好了<br>长的会超过48h吗？<br>就几个小时吧然后就好了<br>头晕会有天旋地转的感觉吗<br>有<br>有闪光吗<br>有<br>什么颜色的光<br>白光<br>是什么样的<br>连成一片的<br>（这段真的好笑……）<br>一般是白天晕还是晚上晕<br>白天<br>有头痛吗<br>有<br>先头晕再头痛还是先头痛再头晕<br>（r忘了，疑似先头痛）<br>（这谁记得啊，这能记得吗？！）<br>后面大概就是问家人有没有同样情况</code><br>感觉换成r被问就会回答忘了，忘了，忘了，忘了，你自己看着办，欸（<br><br>r问症状全是病人自己讲的，这能信？老师说所以要做检查……………………所以回答忘了，忘了，忘了也没啥大问题吧反正要做检查（<br><br>第二个病人说下地铁之后骑车的时候头晕，老师确认了一下是户外低温晕的还是室内晕的，“天旋地转，你觉得是自己在转还是其他东西在转”真的迷惑吧这不是相对的吗而且这真的能记得吗，能吗？？，然后让病人走两步看看平衡<br><br>第三个病人是来复查的，但不理解为什么来神经内科因为看上去疑似血管问题<br>提问的同时医生一直在打字写病历，基本就是把对话内容转成书面一点的形式。<br><br>本期因为印象挺深的所以感觉不错，感觉原因之一是小组内继续分组参观，不至于出现人太多根本听不见在讲什么或者看不见这种问题，下次要反馈的话就去说一声<br><br>
+            <br>
+            <span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">选课小话</span><br>
+            在选下学期的课，上次吐槽过这课表撞车装得，然后被告知微积分不强制选…<br>你要是早说还会这样吗天哪<br>思来想去微积分还是不报了，一来对全英文的生化预期还是要放到最低，得花时间；另一方面经过仔细思考决定先自学日语然后直接修日语3（对应N3-N2）水平，日语1抢的人太多了，其他小语种r又不感兴趣，好处就是外语直接get4学分（能不能选上不知道，能力至少是有的，也可以发邮件骚扰一下老师扩容的机会更大……吧？而且日语234有外教，日语1没有，r想要外教）；<br>另一方面是还是想学程设，问了下教务说夏季学期有python，天哪，而且据说很水，那r还是不想…不觉得……不觉得能学到什么东西，有时间的话就去速通java或者C了这不很好<br>唉python<br>另一方面是略微研究了一下程设的数学要求，只看到线代没看到微积分啊x，而且如果程设要用<del>就直接避开</del>现场狂补感觉问题也不大，为什么要正儿八经上课<br><br>综上所述r觉得不去微积分可以干更多事情，时间利用效率更高，然后就把微积分退了。然后！发现空出来的3-1刚好可以塞一节2学分C/C++程设！速报。反正如果没空学就记pf了，不至于及格都没…不至于吧！<br>大物掉课了真气死了但好像也没啥问题因为一志愿用来抢史纲了，不喜欢的课挑个事少的比喜欢的课挑个顶尖老师感觉上还是划算的，感觉上，反正史纲顺利拿下<br><br>反正还没上课可以多说几句，人文课组的通识报了《法律与神话传说》，大致是什么两河流域的法律希腊法律罗马法律<del>完美踩进文盲知识亮区了感觉能成</del>，反正那个质量管理学也是听都听不懂但讲得也不能说不好，学<br>而且人文课组除了这个就没啥了还有一个什么科学仪器史，这个不是很无聊吗有一部分感觉重在史而不是重在仪器的话就会变得很无聊。综上<br><br>写作与沟通报的主题是黄金，打听了一下老师本业是教化学的吗狂喜了（。主要是医学院的那个老师时间冲了而且有一说一r不是很喜欢大脑作为一个“文学”方面的话题，你一定要对那么有趣的事情做一些过度解读和歪曲那反正r做不到，黄金的话首先r不了解，其次感觉化学老师会更无机一点（x），再次就，……有挑战性？？然后感觉大脑的话会被思考很有深度的大佬薄纱的所以还是找个看起来大家都不是很了解的好了…<br><br>英语阅读写作的那个老师早在这学期就写邮件求扩容呢，欸嘿，欸，然后被温柔地拒绝了真要气死了当时，。当时去旁听了一节课发现英语阅读写作它好像不是英语阅读写作，改名叫论文阅读写作得了，大一上这个…也是……迫不得已呢谁让r计划好了日语先自学，选无可选；而且刚好有空，有空可太难得了。那个医学统计同一天早上上一节下午上一节到底是为什么啊就不能合并吗，中间还要插个化学课，很难说是乐趣x乐趣还是过载x过载吧，为什么要这样设计？！<br>本来以为医学统计是什么数学课，看了一下原来是统计软件使用教学……水课
+        </div><br><br>
+        <p style='background-color: black;color:rgb(196, 255, 234);font-size: larger;' id="12.14"><b>2023.12.14</b> || <a href='#top' style="color:rgb(196, 255, 234)">回到頂端</a></p>
+        <div class='blogtext'>
+            <span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">《干细胞与生命》课程（讲座）记录</span><br>但r已经在忘记了<br><b>Week 12</b><br><i>“力学调控细胞发育”</i><br>具体的忘记了但是查到了<a href='https://future.pku.edu.cn/xwyjz/xw/075f5561d7af4c45b6f7b0e338ce64f4.htm' target="_blank">这篇文章</a>，大致与讲座内容相同<br><b>Week 13</b><br><del>众所周知</del>肝脏的再生能力非常强，被砍掉一半也可以再生；有一些<del>闲得发慌</del>很有意思的人针对普罗米修斯被鹰啄食肝脏的神话进行了考据，他们认为那是一种希腊?的某种类鹰，食肉速度比肝脏再生速度更快，因此神话故事是不可能实现的，没过两天普罗米修斯就被吃空了<br>肝脏疾病大致过程是正常-肝硬化-肝癌，肝癌的肝脏跟煮熟的差不多<br><br>
+            <span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">全球大师讲堂-黄天荫教授“how to write a first-class paper for a top international journal”摘录笔记</span><br>
+            <details><summary>点击展开</summary>
+                <b>how to write a first-class paper for a top international journal</b><br>- every paper is publishable<br>end up unpublished x<br>once you start a project, get it published<br><br>balance:longer research VS better paper "a stop decision"<br>only the first can be published<br><br>- choose the appropriate journal<br>"why they want to publish my paper?" the paper help journals themselves<br><br>- focus on your findings<br>no more time to think about other things<br><br>(*)<br>what papers are accepted or rejected?<br>ACCEPTED<br>important subject (*major* disease;*major* discovery)<br>emerging and topical subject or neglected area?<br>simple clear message(title=everything)<br>relevant to journals' readers<br>(*)<br><br>- know the literature as well as peers<br>*peer-reviewed*<br>read discussion of other papers<br>read editorials and reviews<br><br>- what are components of the paper?<br>core question-hypothesis-study aim-what we found-in favour of hypothesis?<br><br>Abstract: MOST IMPORTANT<br>(*)<br>onclusion should be supported by the results in abstract(not the main paper)<br>(*)<br>introduction:why am i doing<br>(**)<br>para1<br>clear,short and focused-get to the point<br>introduce how important and describe the uncertainty<br>para2<br>review literature to support statement of uncertainty<br>!!do not criticeze other studies<br>are there any conflicting results?are there any limitations?<br>(**)<br>methods:how<br>(&)<br>copy the study<br>(&)<br>results:what i find<br>（Δ）<br>tables and figures<br>1 paragraph matching 1 figure of table<br>（Δ）<br>discussion:so what?<br>(&&)<br>clarify<br>compare<br>consider<br>contribution to this field<br>cautions提醒<br>conclusion=abstract<br>tip:condlusion is identical in abstract,first paragraph and last paragraph of discussion<br>(&&)<br><br>首先，引用被引用次数最多的论文<br>其次，引用高影响力期刊的论文<br>再次，引用拟投稿期刊的论文<br>公平评价引用论文，考虑reviewers?<br><br>- how to revise a paper?<br>read the review<br>*category of revision*<br>首先处理最困难的意见。确定专家的真实想法eg”不够新颖“-为什么？（数据；方法；结论...)<br>间接反映你的科学性<br><br>final checklist<br>interest?<br>simple?<br>formattted nicely?<br>compare with other papers<br><br><br><br><br>studies on eye remains on eye<br>but we can combine it with other fields<br>主动问重要的问题“下一件大事是什么？”<br>“可以进行研究，但没法临床转化”→“临床转化后的产品存在XXX的问题”→改进原本假说，重新临床转化<br>going back to think<br>
+            </details><br>
+            <span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">有趣问题</span><br><a href="https://www.zhihu.com/question/20652178" target="_blank">人类体温为什么是 37℃，而不是 27℃ 或者 47℃？</a>&nbsp;省流：黄金分割<br><a href="https://www.zhihu.com/question/20180016" target="_blank">为什么有人喜欢德国的军服？</a>&nbsp;特殊领口、高帽檐…<br><a href="https://baike.baidu.com/item/%E5%8D%83%E7%A6%A7%E8%99%AB%E5%8D%B1%E6%9C%BA/10847502?noadapt=1" target="_blank">千年虫问题</a><br><br>
+            <span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">或许是件小事</span><br>之前为了排练English drama预约了活动室，在预约时间段的上一个时间段也有人在排练，到店的时候r去敲门提醒他们时间到了。<br>敲门之前看了一眼门口的显示屏，预约人是日本名字，感觉啊~~好神奇然后就过去敲门了，打开门的瞬间把这件事忘得一干二净开始用中文说我们接下来要在这排练<br>emmmmmmmmmmmmm听得懂中文是基本要求吧，当然事实大概应该也是这样的总之顺利交接了活动室…<br><br>时候想了一下或许应该说すみません、私たちは四時からここに練習しますので...<br>为了拯救听歌品味放弃了口水韩语歌回去听日语歌之后水平又回升了呢（理直气壮）<br><br>
+            <span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">VPS注册+应用实录1</span><br>之后要不写篇专题文章好了~<br>现在先大概概述一下。嗯之前也在博客写过虽然想买白色恋人但已经有想好的生日礼物了，就是VPS~~虽然三个月前就注册了域名，但当时感觉服务器还没什么用因为网页没太成型嘛，就索性放到生日了，圣诞折扣一年62rmb左右，感觉还是很便宜的!<br><b>1.VPS服务商选择</b><br>r其实有阿里云学生优惠，还有T大专属学生优惠（……………………），但优惠之后的价格还是跟抢劫一样<br>在测评网站查了一下，主要标准是便宜>快速>其他，其实阿里云这种本来就不在考虑范围内谁费劲巴拉地搞备案啊真是。最终从口碑很好的搬瓦工和同样有不少推荐的cloudcone中选择了<i>更便宜的cloudcone</i>，顺带一提那个文章作者的推荐原因之一是cloudcone的官网页面一看就是用心写的，说明产品应该也挺用心的，这个，r感觉也不能排除它在搞外貌诈骗吧。不过网页设计确实很好看<br>（而且便宜）<br>生日前后分别有黑五和圣诞节，优惠力度都不小，太好了以后都在这续费（x）<br><b>2.注册</b><br>有手就行<br><b>3.购买</b><br>cloudcone和其他先选择后付钱的网站不太一样，它是先往账户里充值再扣钱的，没法先挑产品再付，一次充值最少5usd，可以退钱<br>然后选择VPS配置付钱就行了，r一开始去买的时候生日还没到，圣诞优惠（其实那个是pre-圣诞优惠）也还没推出，一年21.6usd左右，然后选完付钱的时候它提示没有库存了<br>救命<br>然后退钱并生气地谴责这是在做什么，然后就搁置了一段时间搞得生日都过完了还没买上差点就不想买了气死了<br>然后这两天又去看发现圣诞优惠开始了，疯狂狂喜并明里暗里庆幸幸好之前没买这折扣也太太太大了，然后就重复充值-选套餐-付款的步骤，有手就行，等了七八个小时之后创建完成（同一时间购买的人有点多，队列前面有三百多个，创建花的时间有点长了）<br><b>4.配置</b><br>看教程。下载Xshell7，免费版至少现在没有任何缺陷。购买完成之后邮箱会收到账号密码和ip地址，连接即可<br><br>初步准备大概就是这样，之后会尽量尝试一些应用比如邮箱、网盘、图床、网页小游戏，当然还有把本博客放上去等等，不知道能不能顺利做好~<br><br>
+            <span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">吐槽选课</span><br>r来说就是能不能把非专业课给删了真是无语死了。<br>客观来说r就是不想上，怎么，还有人想上了，那你自己去。<br>主观上来说所有要求完成的课<b>时间严重撞车</b>，虽然每门课基本都可以选择时间，但综合起来<b>要把课表协调好的选课方式竟然是唯一的</b><br>r都不敢想象排课的有多绞尽脑汁<br>然后选完课又被告知实验课需要占用两个下午，“选课拼手速，最好留出三个下午保证容错”，真是疯了，紧急调整课表之后能空出两个就是极限了，多动一点都动不得，为此r不得不删了一门通识课，本来还想选两门以防万一选不上的，现在好了还有两报名用学分拿在手里却没有合适的课可以报真是浪费好亏好亏好亏<br><br>要说有什么收获，r发现申请特批学分（选课可以超出默认上限26）可以在选课系统开放之前就进行，审批下来还蛮快的
+        </div><br><br>
+        <p style='background-color: black;color:rgb(196, 255, 234);font-size: larger;' id="12.13"><b>2023.12.13</b> || <a href='#top' style="color:rgb(196, 255, 234)">回到頂端</a></p>
+        <div class='blogtext'>
+            <span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">情系母校番外篇</span><br>多一事不如少一事，情系母校是要参加的因为r给古茗面子，活是不怎么干的为什么要干活啊？总之捞个管理员当当其余一切听安排，有安排就做事没有就隐身！<br>总之现在负责管理qq/wx群（但真的很想吐槽群聊而已怎么需要这么多管理员（因为一堆人都报了运营组）支队长也太善良了都不强制我们去别的组x）<br>然后就在处理加群申请的时候看到了一位qq号是123405。好羡慕好嫉妒好想要好想要好美的号能不能送r感觉价值连城啊天哪天哪天哪<br><br>今年高校宣讲的学校怎么会这么多，这都什么，去年有这个学校吗？前年有吗？？啊？？怎么会有这么多？作为结果一所学校只有半小时，这能讲什么。不过高校宣讲本来就超级无聊，无非就是晒一下食堂然后欢迎报考XXX，好无语可能有的人比如r真的对食堂不感兴趣的能不能讲讲别的啊（（<br><br>
+            <span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">体育打卡</span><br>打不完了，这种东西【完全就是反人类的设计】<br>现实地来说【作业是能完成的】，因为助教善良无比大慈大悲放了一大堆的水<b>具体表现为其实r一次都没见过助教<span style="font-size: x-large;">因为根本没去</span> </b>
+        </div><br><br>
+        <p style='background-color: black;color:rgb(196, 255, 234);font-size: larger;' id="12.10"><b>2023.12.10</b> || <a href='#top' style="color:rgb(196, 255, 234)">回到頂端</a></p>
+        <div class='blogtext'>
+            <span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">图</span><br>
+        <img src="https://s2.loli.net/2023/12/10/Swm1aBvu5jfW4Mz.webp" width="80%"><br><br>--上次所说的鼠标，无线的，要配两节7号电池。声音很小而且手感很不错，就是感觉装了电池有点重啊。<br><br><img src="https://s2.loli.net/2023/12/10/WwxZBaGRSno7vbz.webp" width="80%"><br><br>--第一个四暗刻！记录！上一次也是第一次和到役满都一年半前了怎么回事啊r运气，运气..<br>所以和到国士那张一直挂在r的SNS首页，大概是“实力能盖过运气吗..”的配文这就是后话了，这张图也一起放上去好了<del>然后就会发现实力算什么还是运气比较让人快乐</del>但r真觉得运气有在变好啊比如某抽卡游戏，... ...可能是错觉<br><br>
+        <span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">天书阅读记</span><br>连续两次pre听到<b>道德滑坡</b>一词，这啥意思..<br>当然查过了但是是？<br><br>讨厌啦<br>大致流水账地记一下最近在做什么（然后心情极端无比超级特别差！<br>质量管理学一点没听，对着课件理解了半天最终凑了八百字，自我重复率高达50%；修改了一篇思政小班讨论的发言稿，但那是r拿gpt写的也是唯一一篇，gpt语言能力太垃圾，r简直无从下手，总之好不容易给它整了个能看的结构，内容幼稚一点不知所云就不管了反正r其实也是这个水平，这很真实嘛<br>写了一篇思政期中总结，对着期 中 总 结四个字想了很久很久想了几个星期没看懂到底总结期中还是总结到现在为止的所有时间，也没看懂总结的是仅限思政课的内容还是总结所有学习，还是甚至可以写一点课外的内容；最终决定采取一锅炖的迂回方法拿出没看过一次的课本对着目录一通胡编乱造，成功地编造了“将思政课所学内化于心，外化于行，在课内外践行思政课精神”的好文章，太妙了。<br>写的这些东西r之后全部要传上来不然浪费<br><br>也就是在这个时候r突然发现思政课的全称是《思想道德与法治》不是《思想道德与政治》，你是？你叫什么？太夸张了<br>编了一篇小论文“你如何看待安乐死”，要求500字写完发现写了800字，删掉的时间比写的时间多得多。但话又说回来r如何看待……用眼睛看啊，谁有事没事想那么多真幽默了，以及r把看不懂但反正很高级的<b>道德滑坡</b>一词用进了小论文，至此r写的东西彻底变得不知所云，那想它干什么<br>那个思政小论文竟然还要纸质存档，建议把存档文件夹改名成AI训练示例好了<br><br>以及认真地缝了一篇化学小论文，这个放在<a href="https://tennedar.github.io/html/article.html" target="_blank">ARTICLE</a>页面了还请大家去看~<br><br>
+        <span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">碎碎念</span><br>体育课考跳绳，讲真水平很高嘛比高中跳得好多了，但老师发了评分标准 两眼一黑啊竟然没有满分。直接摆烂<br>啦啦操要小组合作，中间某个换队形的地方一直很乱所以r提出了建议X，然后练了一会同学以太难了来不及为理由否决。然后在某节课上老师过来一看说你们这里太乱了，然后提出了和r几周前说过的几乎一模一样的建议X，然后同学说什么哎呀虽然很难但我们第一次练练不好很正常的，最后现在就改成建议X了。<br>你们搁这搞笑呢，摆烂了<br>提建议的后果就是两眼一黑，同样一句话同专业同学能理解，其他人就让r再说一遍两遍三遍，那考700和考500的同在一个小组这不就这样吗，r太能理解了。<br><br>r对此的评价是【不能让能者多劳的人就自己劳去吧】，虽然r不是体育课代表，但之前不知道为啥就莫名其妙被叫去画班牌了，最后80%是r做的吧？r自己也觉得超负责欸，虽然画得不太好但也努力修改了；之前的小组作业本来r直接摆烂中，但组长强制每个人发言，所以最后r提供了很眼前一亮的观点。简而言之这啦啦操小组真是烂得没救了，任务任务不派，有经验的人放在那里看不见，自己拿个错误的观点琢磨，小组作业怎么整得跟过家家似的真是开了眼了<br><br>在此之前的形策小组r是组长，发了润色的任务下去收上来的稿子真是令人眼前一黑眼前一黑眼前一黑，短短几千字内出现了奇怪的疑似复制粘贴出现的多余空格，病句，标点全角半角不分，的地得用错——哦这全都是r肉眼观察到的，所以r寻思着发回去他们也改不出来就自己改了，多少也非常负责了吧已经良心大放送了。<br>
+        </div><br><br>
+        <p style='background-color: black;color:rgb(196, 255, 234);font-size: larger;' id="12.7"><b>2023.12.7</b> || <a href='#top' style="color:rgb(196, 255, 234)">回到頂端</a></p>
+        <div class='blogtext'>
+            <span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">完全无用</span><br>食堂门口装了门帘，比较厚。大概或许是为了防止打到人，上面还贴了牌子写着出口/入口。<br>然而似乎没人管那个，想走哪边照样走哪边<br><br>
+            <span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">修电脑<del>实用技术</del></span><br>电脑开机白屏，有鼠标可以动，ctrl+alt+del可以启动菜单但任务管理器调不出来，换句话说类似于鼠标在一片白布上乱动，什么都做不了。哦对了锁屏界面还是正常的，也可以方便地关机重启。还有一个特点是启动特别特别慢，平时应该还是挺丝滑的吧…<br>反正就是经过了很多尝试然后没修好x<br>但查到了一个很玄乎的启动安全模式方法：强制关机两次，第三次开机就会进入蓝屏界面然后可以选择各种安全模式，但是！！无论是直接进能联网的安全模式，还是在安全模式内对网络设备进行设置，都连不了网<br>直接放弃，晚上拿去科技服务队修。之前看到他们招新来着r本来还想去的（（（反正会教嘛又不需要基础，但果然拆电脑也不会修电脑也不会装电脑也不会要是真去了压力好大啊（（， 学习！<br>然后就叫了个几个学长过来修。先查文件有无损坏结果是没有，然后感觉逐渐迷惑起来，没救了可能要重装系统。但是学长说还想再看看（这个白屏的神奇bug太神奇了他们都没见过x 逐渐神奇）然后就一边谷歌一边把搜来的教程挨个试了一遍，途中发现安全模式连不了网（但教程连上了）他们还拿了个虚拟网卡给我装还是连不了。<br>然后就没有什么可以记录的了，结论是还原到上一次版本更新，不需要重装系统；原因是学长拿了把椅子给r一坐下去什么都看不见了..<br>大致就是像吧台一样的地方然后软硬件都可以去修的感觉（所以白屏是什么很罕见的bug吗感觉好独特哦
+            <br><br>
+            <span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">课程评价</span>但很主观<br>快到下学期选课的时间了，正好想起来给课程做点评价<br>必修课没啥好说的，就是总感觉化学原理讲的和高中难度微妙地有点反而不是特别高深..?配合物相关的确实拓展了很多，然后结构那边虽然有大π键相关的内容但它真的讲了吗？最后还是r自己谷歌的<br>体育课讨厌 啊-不过-老师还挺好-反正结论就是太无聊<br>思政确实不错感谢学长倾情推荐这个老师看样子确实比其他老师事少得多但r还是一个字都没写期末作业 这是？；形策究极折磨，后面已经忘了，前面忘了，然后很无聊。但因为是网课好像它无不无聊也没有区别只能说纯纯浪费时间；环境保护后面忘…… …… 只能说纯纯浪费时间，但期末作业交上去之后助教提了意见让修改，他居然还看，真是辛苦了？都不用r自己找问题r感觉还蛮轻松的不就是做个ppt…；<br>质量管理学：在之前的某次写过说很好玩……对吧现在觉得……虽然很好玩但天书还是太多了有点听不下去……听不下……去…………作业量挺小的，也不怎么用动脑子大概吧就，就还是天书太多了…………<br>干细胞与生命：强推（但个人感觉非生物相关专业的同学如果又想摸鱼又要求成绩还是有点那个了，因为对上课活跃度有要求，技巧就是找一个用高中生物知识能解决的简单问题迅速完成指标（单论听课感觉或许还是讲得很易懂的x 还请了校外的老师来做讲座（<br>：“这里有人文社科的同学吗”<br>（沉默）<br>之前所说的小组作业不知道为什么一个组会有一半还多的电子系（反正就是非生物相关）专业同学怎么会这样不随机的分组真是（（（真是（（（，，，，但他们思考比r深入多了所以就是r的问题<br>生物学导论：就，导论？（专业课要写吗参考价值没有吧x； 不写了<br>英语听说交流A总体感觉还是挺有收获的 (吗)（真的？为了选课给老师发邮件得到回复说任务挺重的，但r真觉得至少数量上还好啊（（（而且都蛮友好的吧基本都能写<br>为什么说是基本呢因为其他作业都很能有发挥空间，唯独某次历史主题的给人动力整没了真是太，这，它就是很没意思，然后上课讨论也很没意思，前略后略；在此之前比方说看一个ted talk然后互相讨论那r觉得还是挺好的<br><br>
+            <span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">全角空格</span><br>记一个小问题，文件名包含全角空格然后拖进格式工厂转换会报错，解决方法<del>当然是直接</del>可以是删了那个空格（反正按此规律文件名不要有全角就行了）<br>不是全角空格，但消除文档中文字间距过大的方法为段落-允许西文中间断开<br><br>
+            <span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">无线鼠标</span><br>买了个无线鼠标因为很可爱（图下次发），拿到手也很好摸，声音也小（但r真的不理解为什么不静音的鼠标滚轮声音小，静音鼠标滚轮声音特大啊？）唯一的问题是兴奋地拆开惊讶地发现它不自带电池<br>于是网购电池又花了两天时间，昨天才彻底用上<br>通过USB实现无线，而非蓝牙，因此iPad肯定不能直接用的，至于USB发信器拿转换头插iPad上能不能用那先不知道了，开学r还想买ipad键盘的现在都没买而且感觉没必要了，都打字了还用ipad是嫌快捷键不需要用？
+        </div><br><br>
+        <p style='background-color: black;color:rgb(196, 255, 234);font-size: larger;' id="11.27"><b>2023.11.27</b> || <a href='#top' style="color:rgb(196, 255, 234)">回到頂端</a></p>
+        <div class='blogtext'>
+            <span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">柿子</span><br>
+            在水果群买了柿子，它说是柿子那r当然觉得是柿子，谁知道这柿子是硬的…<br>          
+            柿子怎么会是硬的？总之还是切了一个，感觉一点味道都没有。然后放了一天到今天能吃出甜味了，果然是r吃法不对！剩下几个再放放看万一软了就比盲目吃掉赚大了<br>
+            <br><span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">叶子</span><br>   
+            某天早上走出去看见楼下掉了一地叶子，真的是一地，没有一处没有叶子而且有很多层。过了几天叶子还没扫掉（所以扫叶子的意义是？），剩了一点被人踩来踩去走过去可以闻到味。<br>            
+            感觉以后可以办宴会，在地毯下面放点什么植物香薰什么的，无意中就会被参加者踩得越来越香什么的，好玩啊。<br>            
+            <br><span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">卖东西小记</span><br>          
+            把学校发的印着logo的紫色文创卡包和一个计划本卖了，讲真那个计划本被r翻开看了一下就要掉页了，这有什么关系呢无良商家会当没看见。虽然只卖了很少的钱但还是很想吐槽为什么会有人买这个这到底是……？以及低价就是吸引人的策略啦感觉超级超级低的。价格和忽悠瘸了的可能性不是正相关吗那不如搞低点，一身轻松。<br>            
+            之前卖笔记的时候z给r转了张图并提议r效仿，什么折扣，捆绑销售云云，看了两行开始头晕并且严重怀疑这种东西卖得出去？作为一个有良心的人r不会折磨顾客看大作文，价格就价格，优惠越多买的人越少这不显而易见的吗，说明你自己的动机不纯，和r这种纯分享经验顺带赚个小钱的良心善良人不能比吧。<br>            
+            <br><span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">时评</span><br>      
+            其实不想写这种东西的因为好 无 聊。<br>            
+            但还是说说清北人大鹅腿阿姨事件。<br>            
+            首先，本事件简单概括一下就是某个，或者某几个卖鹅腿的阿姨不在人大卖跑来清华了。那么问题来了，这鹅腿真有那么好，还不能雇点帮手同时在几个学校之间卖，还要跑来跑去“引发众怒”？跑来跑去的后果就是被学生刷出热搜了，这不是蹭热度博眼球赚流量？？<br>            
+            鉴于营销过于严重，<b><span style='font-size:large'>严重激怒了r根本就没有的耐心</span></b>。这鹅腿又不是皇家御用还蹭鼻子上脸了，鹅腿它也不是根葱吧。<br>            
+            其次，根据一些流传的群内截图，订购鹅腿的方式是“备注口味并转账”。…………这，到现场取鹅腿是怎么取的，根据你的名字在几百份中寻找？报上名来阿姨人手发一份？这，在现场，忙得过来？如果有人谎称自己是xxx或者谎称自己付过钱也照拿不误？<br>            
+            怎么想都很不靠谱。那么反过来想，就假设现场有人帮忙分发好了，都有人在一个学校分发了，就不能多搞几个人在多个学校分发？这样就回到上一段话。反正就是不靠谱，谁愿意被忽悠谁去，真的每个人都能拿到鹅腿，不被什么奇怪的盗拿？被拿了有冤难道有处诉吗..。。<br>            
+            然后，鹅腿都能来送了都没有人推出奶茶送货服务的吗？说明这块业务不讨好市场，都不讨好市场了，怎么，真有人乐在其中。你清校内没有的东西多了去了，奶茶店也没有瑞幸一到下午就售罄罗森也没有超市贵得要命，感觉好像也没啥问题吧。现在来个鹅腿就一拥而上了，这是什么给点阳光你就灿烂的心理？看不懂。<br>            
+            <br><span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">灌水</span><br>           
+            最近又水了几篇不知所云的东西，很好！感觉之后可以把这些整理一下放上来，反正删了浪费存着没用。<br>            
+            <br><span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">小组作业</span><br>          
+            在某干细胞通识课上参与了最快乐（这里应该说“唯一快乐”）的一次小组作业，之前好像反正忘记了作业就挺不知所云的没意思。<br>            
+            总之本次讨论的主题是是否支持干细胞实验的14-day rule放宽（有说法认为14天胚胎会开始具有意识，继续实验不符合人道主义）。这不是很显然的吗谁管你人不人道主不主义，管那么宽建议可怜一下每天被自己踩死的蚂蚁扣死的小虫吃进去的细菌。<br>            
+            然后小组就快乐地达成了共识：支持。<br>            
+            有共识真好！r其实还想了点理由来反驳的，既然没人有莫名其妙的道德执念那就一切顺利~~！<br>            
+            然后就开始准备pre，说实话没做什么贡献因为懒，随便查了点不知所云的资料交上去。直到小组讨论的前一秒才开始准备编一点不知所云的观点。然后因为是最后一个说的（为什么不早说因为在编啊！）前面都被他们说得差不多了，这个时候突然灵感乍现提出以下刁钻观点：<br>            
+            ①实验用胚胎因为道德问题不能继续试验，那么试管婴儿用胚胎因为基因问题被淘汰怎么解释？这不铁双标？<br>            
+            （扯远一点，有的人真的道貌岸然地很双标诶，之前打杀流浪狗r的社交媒体首页全是可怜狗的真是给r无语死了那一个月都没怎么上网，首先你可怜狗也别以貌取狗，长得丑的随便杀就可以？狗就不行？猫就不行？？其次你眼光是不是有问题这种东西算什么可爱，最后管那么宽建议可怜一下每天被自己踩死的蚂蚁扣死的小虫吃进去的细菌。）<br>            
+            ②r查了点资料说可以通过一些方法绕开14-day rule。既然有空子可钻，那么像我们这样很具（没）有（有）科（良）学（心）精（的）神的人日后真搞科研了铁定去钻空子（仅代表个人意见，与小组无关），既然如此不如直接把规则废除。全是空子等于没有空子。能正大光明走路谁钻小道。<br>            
+            （学长一脸费解地听r用支离破碎的语言比划了半天然后：“大禹治水堵不如疏是吧”<br>            
+            好吧太没有文化了r！）<br>            
+            总之这两个观点多少获得了一些“刁钻”“有趣”“新奇”的评价，本人非常非常满意，特此记录。<br>            
+            2k5字了，点击一键发送。<br><br>学到了点好玩的东西紧急追记一下：<b>从结构而言碱基A-T、C-G之间有42种配对方式（分子取向不同），但实际上DNA中它们的配对方式唯一。因为这样配对起来的A-T分子和C-G分子几乎一模一样可以重合（除了氢键数量不同等微小差别）称为等体性isosteric</b>
+        </div><br><br>
+        <p style='background-color: black;color:rgb(196, 255, 234);font-size: larger;' id="11.20"><b>2023.11.20</b> || <a href='#top' style="color:rgb(196, 255, 234)">回到頂端</a></p>
+        <div class='blogtext'>
+            <p>博客再开 咕嘟咕嘟咕嘟咕嘟咕嘟咕嘟（本来想在这里发一个泡泡emoji的但r又忘了微软输入法的特殊符号快捷键是什么了，算了算了</p>
+            <p>上一次写博客还是11月，至少也是同一个月呢说明没有拖太久。其实r是可以写的之前也说过尽量一周写一次，但真的没什么好写的嘛感觉一个劲地晒买的东西打广告感觉太重了r不是很喜欢（当然还是要有这个环节）。大概理论上这次有很多可以写的，就看r一边写会不会一边忘干净了草草收尾</p>
+            <p>O.o</p>
+            <p><span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">特殊符号</span><br>
+            虽然r是坚定的果粉，但这个输入法实在是太难受了！！模糊联想功能一塌糊涂不说（也可以解释成锻炼打字精准度吧）（其实现在在用的电脑输入法也超级糟糕，而且r打字技术是真的很好）
+            <br>（关于这个事，有一个解释好像是功能越烂越说明它不会收集用户数据更加安全，真实性不知道）
+            <br>抛开（比较）高的打字难度不说，打特殊符号实在是太困难了经常要找半天……或者干脆不找？总之这里就总结一下以防万一大家不知道x
+            <br><em><strong>数学符号：</strong></em>
+            今天r终于受不了这个功能全无的键盘了（ 就查了一下，然后发现还能这样（ 震惊
+            <br>用日文键盘输入suugaku（一个字母都不要错，不然好像就没了）然后就可以得到：（经测试，中文键盘“数学”和英文键盘“math”不能得到任何东西）
+            <br><img src='https://s2.loli.net/2023/11/20/Alj1rmzY6XTUkfq.webp' width='80%'><br>
+            这下再也不用中文数字夹杂了x
+            <br>题外话，r在学校的答疑坊和志愿者交流的时候很多志愿者都是直接用手机打公式的，导致所有上标下标全都排在同一行，给r带来了相当严重的理解负担（倒也没有） 😂
+            <br><em><strong>物理（?数学也可以用，都可以用，反正就是一些符号：</strong></em>
+            这个大家应该都知道，加一个希腊键盘就可以快乐打符号了
+            <br><em><strong>一些你可能不知道的符号其实在这里：</strong></em>
+            这个最大的问题不是找不到，超容易找的，把键盘好好看一遍就可以，最大的问题就是可能有人记不住…
+            <br>比如说很常用但是就是找不到啊啊的温度符号，可以用两种方式找到它~（°C和°F的C和F就直接手打了，有些安卓输入法本身自带“°C”这种符号，这个有什么区别r也不知道了可能占字节数略有区别..?）
+            <br><img src='https://s2.loli.net/2023/11/20/gL4hUj97wpMFGR2.webp' width='80%'><br>
+            上图中的“·”（用于人名标题等），其实它也可以这么打~
+            <br><img src='https://s2.loli.net/2023/11/20/qPeiQGatVvbz23h.webp' width='80%'><br></p>
+            <p>好像吐槽一句这都什么设计啊为什么要重复两遍…</p>
+            <p>还有一些：
+            <br><img src='https://s2.loli.net/2023/11/20/KvROjMoxJiwLA4g.webp' width='80%'><br>
+            <span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">好物?</span></p>
+            <p><a href='https://mathdf.com/' target='_blank'>https://mathdf.com/</a>
+            内含极限计算器（别的还没用过），可以把求极限的每一个步骤都列出来（题外话，r还没学洛必达的时候就在用这个算，结果它的思路就是洛，只能悲伤地试图常规解,,）</p>
+            <p><a href='https://12ft.io/' target='_blank'>https://12ft.io/-还给用户一个干净的网页</a>
+            网站自称“Remove popups, banners, and ads from any website.“是免费的，暂且不知道实用性有多大，但是……但是r用本个站测试了一下，然后发现它似乎移除了所有JavaScript脚本和部分css，笑死r了（（（（。。。。。。，，，，，只能说确实移除得很干净，不行太好笑了。。有点清理过头了吧，不过看样子大部分广告确实会被它屏蔽掉</p>
+            <hr />
+            <p>智慧的网友说想要买<em><strong>便宜</strong></em>的巧克力（反正吃的都同理）可以搜索”<em><strong>临期巧克力</strong></em>“，就是快到期的清仓低价卖的那种感觉。本来觉得临期多少有点临期了，查了一下才发现，就这，距离保质期不还有很长一段时间吗（24年初才过期！r三天就吃完了。所以觉得<em>非常适合</em>r就准备随便买几种测评一下</p>
+            <p>题外话，r至今都根本理解不了拼多多的原理是什么，就算你说什么厂家直销…哎一个字都看不懂……反正，文盲看不懂啊！总之略过原理直接看结论的话就是可能会相对便宜吧，所以反正如果一定要在pdd买的话r只会发起拼单不会主动拼别人，因为看不懂啊感觉会被忽悠得很惨。。
+            <br><img src='https://s2.loli.net/2023/11/20/FOdQHVL4wrJCyqE.webp' width='80%'><br>
+            左图好像是60g还是120g一袋来着忘了，，一袋6块，每块大小是图中那个1x2长方形的两倍。总体来说量还是有点少了（虽然对这个价格很合理但r觉得不行。 有点少。
+            <br>味道挺正常的但好像也就中规中矩吧
+            <br>右图就标准的牛奶巧克力味，没有德芙的牛奶巧克力那么甜但还是属于甜的（因为r喜欢苦的，但苦的好贵，好苦啊！！）然后就是挺便宜的一大板，之后可能还会买……还会……还会……今天截图的时候发现它怎么突然不包邮了，好痛苦，那下次不买了，，，真是。。</p>
+            <p>题外话，r突然想起了世界上还有白色恋人这种福至心灵的绝世好食物，然后查了一下价格也太福至心灵了，算了先，当生日礼物吧（但生日礼物不是已经想好了，但也没人规定只能选一样吧！
+            再题外话，最近看到了很多爱媛果冻橙的广告，（r没吃过以下都在乱编），r是反对的。。它不是橙子吗为什么会有人形容橙子像橘子啊为什么不直接吃橘子……！哪有橙子直接剥皮的呢这也太邪道了！！！！！！！或者下次谁搞个”像橙子的橘子“竞争一下…………？
+            <br>再再题外话，r有个专门给学生送水果上门的群，以前群内只会表示”我们水果比外面便宜新鲜“，然后逐渐变成”我们家水果❤比外面便宜新鲜😄好甜⭐“，然后现在变成了”同学们都表示很好吃“，然后甚至还配了个聊天截图，，，，天哪，，天哪。。，，r不禁怀疑它这样手段用尽是不是卖不出去了啊反正r油盐不进的一点广告都不想看然后就不问他们买水果了（。 随你吹
+            <br>再再再题外话，四舍五入生日也快到了（舍太多了），r提前看了一下学校周边的蛋糕店，虽然知道蛋糕很贵但蛋糕为什么会这么贵啊？！比较无语的是有些只能自提，但外卖送过来不比r自行车运得稳吗？！（）总之下次去校内的那个看看（但不还是要用自行车运吗？！）</p>
+            <p><span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">灌水中</span></p>
+            <p>先庆祝一下r又水了篇不知所云的东西，具体来说就是花了半小时开了十几个网页然后提取有效内容缝合在一起然后拿自己的话顺了一遍，查重率百分之五百。然后还要再水2000字然后还要改个ppt。然后随便搜出来的ai扩写扩得r想笑，，，，还不如自己写
+            <br>不对突然想起来是3000字…
+            <br>咕嘟咕嘟咕嘟咕嘟，咕嘟咕嘟咕嘟！
+            <br>清楚记得语文老师讲作文的开头几节课跟r说ta的毕业生回去看ta的时候说老师你教的方法到大学也很有用。
+            <br>什么方法啊天哪…………反正r一点都不记得…记得……记得几个关键词但是没有素材啊谁家好大学生能记住人民日报那个读都读不顺的东西的，其实r就从来没记住过（。。。而且素材用多了真成查重率百分之五百了
+            <br>咕嘟咕嘟吧咕嘟咕嘟咕嘟！
+            <br>说起来r找到了个好玩的东西叫生活在树上生成器
+            <br><a href='https://beautyyu.one/full-mark-composition-generator/' target='_blank'>https://beautyyu.one/full-mark-composition-generator</a>
+            <br><code>（示例）现代计算机科学以艾伦·J·佩利的“有两种方法可以编写无错误的程序；只有第三种方法有效。”为嚆矢。滥觞于哲学与数学的期望正失去它们的借鉴意义。但面对看似无垠的未来天空，我想循大卫·韦勒“任何计算机科学领域的问题都能通过增加一个间接层来解决。然而这通常会带来其他问题。”好过过早地振翮。</p>
+            <p>我们怀揣热忱的灵魂天然被赋予对超越性的追求，不屑于古旧坐标的约束，钟情于在别处的芬芳……</code></p>
+            <p>说到ppt，首先做ppt太痛苦了，其次有次帮z水ppt真的太太太太痛苦了，有多痛苦呢因为z给的那个模板简直了根本没眼看。。正常模板理论上应该是需要的素材全都嵌背景里了，z给的那个模板跟散货一样随随便便一点就是一个单独的图片你这模板它保熟吗…
+            <br>扯远了，之前上网看了点评论然后意识到，可能r做的ppt含字量过高。
+            <br>首先r确实喜欢放很多字，但还真不是故意的（。。。），有三个原因，一是r懒，能复制粘贴的材料谁给你缩句啊；二是r看不懂，既没法概括更没法做关系图了只能放一段字你们自己看（。。。。）；三是r对自己和对别人都很善良，知道你们不想背稿的（ 那直接放屏幕上照着读吧！
+            <br>总之如果要做什么正式的ppt还是注意一下比较好，反正，至少，会新建文件就已经打败很多人了…</p>
+            <br><p><span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">推歌</span></p>
+            <p><a href='https://www.bilibili.com/video/BV1u3411v7Lx/' target='_blank'>中岛美嘉 - 雪之华 / THE FIRST TAKE</a></p>
+            <br><p><span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">杂七杂八</span></p>
+            <p>Z提出一很深邃的问题：桃酥竟然和桃子没关系
+            <br>（震惊） 总之查了一下：相传在唐元时期，江西景德镇周边县乐平、贵溪、鹰潭等地农民纷纷前往做陶工，由于当时工作繁忙，当时有一位乐平农民将自家带来的面粉搅拌后直接放在窑炉表面烘焙，由于其常年咳嗽，平日常有食桃仁止咳习惯，故在烘焙时候会加入桃仁碎末。其他瓷工见此法做的干粮便于日常保存和长途运送瓷器时候食用，便纷纷仿效，因并取名“陶酥&quot;。后谐音为桃酥。
+            <br>怎么是谐音，服了，那我们文盲不知道也是很正常的</p>
+            <p>吐槽一下宿舍的咖啡机，太那个了实在是。本来宿舍门口的网就极差，现在为了挡冷风又加了个帘子，那个咖啡机彻底没用了，连付款二维码都加载不出来，更别提全自动制作了（）最近校园网也好差r血压好高… 快把这个建筑构造改了救一下！！！</p>
+            <p>周末去剪了头发，原来公主切已经长得看不出一点这次就又剪短了，回去的路上在便利蜂吃了关东煮，关东煮是好的！而且那个虾仁福袋又有虾又有福袋（。）特别好！唯一的问题就是它的关东煮竟然不是竹签串的，就一堆丸子豆腐放在一个装了汤的碗里，一时半会不知道是不是”不符合关东煮传统“，下次研究一下。</p>
+            <p>上周去医院参观手术。一个是看到了达芬奇机器人感觉特别好玩儿但其实在门口什么都没看清（ 记得老师说那个机器人多动会坏所以要放在一个房间里不动它，记一下防止r忘了。r多动也会坏，所以r是机器人，需要放在一个房间里不动。然后还看了给手术器械消毒的房间里面有高压蒸汽灭菌锅，本来想发朋友圈的但之前参观科学博物馆就发了一次了，发的目的是试图得到生物老师的点赞，还真被赞了啊啊有点好笑（。。目的达成那就不发了
+            <br>然后本来要去看神内手术来着结果已经结束了，失望！然后就去看一个（忘了），走进去看医生搞了半天什么也没切掉啊好急好急好急好急好急好急，然后发现不是在切是在缝合，好失望好失望…也没有很失望还是很好玩的！
+            <br>已经特意穿了比较薄的衣服还是差点被热晕，太热了真的下次要再换种穿搭。</p>
+            <br><p>集体锻炼要求12次，长跑16次（2次1分），r给记错了以为是8次/24次，气死。。。集体锻炼不喜欢非常不喜欢一点都不喜欢，后面略去
+            <br>跑步还不错，跑上头了（。
+            <br>z：你怎么那么快
+            <br>r：跑步不是浪费时间吗，跑慢做啥。
+            <br>体育课测了两次，一千五七分半，两千米八分钟，有点匀速得太匀了这意味着r根本没法加速，r本来因为太文盲不会算配速还以为能满分呢（。。。）现在发现满分不了（但及格了啊！及格轻轻松松哎！！）那谁管它匀速太爽了r一丁点练习的想法都没有
+            <br>顺带一提匀速的根据是呼吸，自然生物规律钟是最强的！！所以说加速不了一点啊总不能凭空加速呼吸吧！r对此将不做任何努力。</p>
+            <br><p>用了一下学生清华血压高得不得了，小小一个学生清华竟然有微信公众号、微信小程序、微信客服，行吧r一点都不会用</p>
+            <br><p><span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">赞美苹果！</span></p>
+            <p>赞美苹果！阿门！
+            <br>最近都在用无边记+书籍，无边记是用于直接写笔记的，如其名可以随便增大画布，（大概吧大概太大了还是会卡），可以直接导出pdf；书籍是用于看现成pdf的，可以在上面做标记。配合使用比那个贵得不得了的goodnote6好多了！（啊啊大概还是goodnote好！！）
+            <br>说起来r之前就想找goodnote平替的，自带的就很好~
+            <br>注：繁体系统叫”书籍“，简体的r也不知道叫啥了，反正就是那个可以看文档的东西</p>
+            <p>其实还有一个是可以配合airdrop使用，但最近不知道为什么一点都传不了，只能退而求其次在qq/wx发来发去了</p>
+            <hr />
+            <p>就写这么多！这也太多了！咕咕嘟咕嘟咕嘟咕嘟咕嘟！</p>
+        </div><br><br>
+        <p style='background-color: black;color:rgb(196, 255, 234);font-size: larger;' id="11.3"><b>2023.11.3</b> || <a href='#top' style="color:rgb(196, 255, 234)">回到頂端</a></p>
+        <div class='blogtext'>
+            11月的第一条，小记一点<br>
+            <span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">Happy Halloween</span><br>
+            <del>图后补，懒得做了</del>啊 结果就拖到11.7了~<br>
+            <img src="https://s2.loli.net/2023/11/07/rE6VmhjHNYUQZTJ.webp" width="80%"><br>
+            <ul><li>P1-2 给z的明信片<br>开始画的时候发现这个半年前买来备用的明信片居然泛黄还不是全空白的还擦了会变白，这质量真服了</li><li>P3 贺图by r</li><li>P4-7 Z给的美妙绝伦品味极佳完美兼具实用与可爱的好东西</li><li>P9-10 r送出去的幽灵杯杯</li></ul><br>
+            <span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">抨击</span><br><span style='font-size:xx-small'>淘宝真是想钱想疯了，自己想钱之前先考虑一下你顾客有没有这个好脾气掏钱给你，反正r是没有，r暴躁得全平台骂人呢。那晃一晃跳转功能真是神了，发明这个的人配享太庙，这人要是跳槽来发明生命体征检测器怕不是要死人复活一秒，那个灵敏度真是让人叹为观止，哪天帕金森抖一抖都能给跳转嘞</span><br><br>扯远了，反正r把手机整顿了一遍，能改成什么老年人模式青少年模式的全改了，哦青少年模式用不得，用了狠狠防沉迷爽死了。<br>以微信为例<br><img src="https://s2.loli.net/2023/11/07/AnQbOzNGt2dBKVI.webp" width="80%"><br>这功能看起来非常好，对吧……？不仅避免了关怀模式字体过大的问题，可以自选，还有这个美妙的全局静音功能不用担心骚扰了…但问题就来了，r视频通话的时候压根没声音。后来才意识到该 不 会 是 打 开 了 全 局 静 音 搞 得 通 话 声 音 都 被 禁 了 吧<br>是不是这个原因r就不知道了，如果真的是，那这关怀模式可真是关怀呢，笑死人了<br><br>
+            <span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">一些细节</span><br><img src="https://s2.loli.net/2023/11/07/IygirTc87XqBGed.webp" width="80%"><br>降温啦，某天开始寝室门上就套着这个了，太感动了它真的<br><br>
+            <span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">好物推荐</span><br>很喜欢的一张图：<br><img src="https://s2.loli.net/2023/11/07/LxeZpQDwOMYsomC.webp" width="80%"><br><br><hr><ul><li>回形针比订书针好用；</li><li>添了个电脑增高小桌子，主要就是电脑增高以及增加放东西的空间？刚好电脑放增高桌上，ipad可以搭在桌边缘，高度非常的好。</li><li>因为chrome被r自定义了一点东西，平时搜索不太方便就用edge搜，然后发现edge开多个标签页的情况下Win+Tab会将所有标签页作为【单独的页面】供跳转用，而chrome会将所有标签页作为【浏览器的一部分】，只显示浏览器一个页面供跳转。大概是这个意思。<br>r……r服了，真令人……真服了，至少r一直是把Win+Tab用作【应用间跳转】，然后进入浏览器再用Ctrl+Tab切换标签页的，多亏了edge的弱智设计搞得跳转都变麻烦了，效率极低。建议不要用edge</li></ul><br><br>
+            <span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">浅谈xxxholic & 地狱少女 & 奇诺之旅</span><br>前情提要，r指的都是动画（xxxholic TV第一季+第二季、地狱少女TV第一季、奇诺之旅TV 2003）<br><br>没什么重要剧透可以放心阅读。<br><br>三部番并不是连着看的，中间隔的时间还挺长，顺序是xxxholic、奇诺之旅，然后在看地狱少女时r突然发现三者还挺像——或者说，前二者的共同点还没有那么明显，但加上地狱少女之后共性就很明显了。<br>这个共性，简单来说就是【都有一条主线，但主线最核心的设计会在中后期揭露，前期每集内容都以主角遇到的小事件之一来展现人性或者什么别的内容】<br>具体来说，xxxholic讲述主角解决妖怪aka怪异引发的事件、奇诺之旅主角旁观了一系列事件、地狱少女主角解决一系列事件。再具体来说，为了展现【贪婪】这一人性，三部番分别会出现以下情节：（没有这种情节，是r编的）<br>xxxholic：委托人求助主角，说有人变成猪了，主角调查一番之后发现这人吃太多，或者说太贪婪了，然后这个人改过自新——变回人；或者这个人不肯悔改——作为猪爆了<br>奇诺之旅：奇诺旅行途中见到一个人人都很贪婪的国度，作为旅行者的奇诺巧妙拒绝人们试图占有他东西的行为，然后离开了<br>地狱少女：有人向主角举报说某人很贪婪，地狱少女把ta送进地狱<br><br>
+            可以看到三者是非常相似的，所以一集不落看完的r就很自然地思考了这个问题：为什么不会觉得无聊？<br><br>无聊的理由有两方面，一是【小事件形式对于主线推进作用不大】，二是【小事件本身就很无聊，看这个不如看伊索寓言（x）】<br>对于后者，确实也不是不能说它不无聊，因为r经常二倍速…可能小事件本身还是不错的，但太眼熟了感觉哪都见过（比如伊索寓言（x）所以无聊是客观存在的；在这方面做得比较好的是奇诺之旅和xxxholic，奇诺之旅以比较夸张的形式表现，比方说为了表现【有人很贪婪】，它的剧情就是【一整个国度都很贪婪】；内容也很新颖，烂大街的什么贪婪、嫉妒不怎么出现，反而有很多【盲目迷信预言之书的国度】【科技极端发达的国度】【作家与读者的国度】这种；而xxxholic则是用怪异的形式表现，有种隐喻的感觉……？妖怪都长很可爱嘛侑子小姐也很可爱，有这个看还要什么剧情（不是<br>
+            对于前者地狱少女是个人感觉做得比较好的。有事件需要解决的时候，每集的表现形式都不太一样。有（地狱少女在玩球——被喊去工作——“马上去”）（地狱少女在玩笛子——被喊去工作——“好 现在就去”），那个消极怠工…的感觉……反正就是……很人性化啊这个情节x 而且也有对于主线的揭露<br><br>以上！本来还有点歌环节，这三个的OP/ED都很好就不单独提了。
+        </div><br><br>
+        <p style='background-color: black;color:rgb(196, 255, 234);font-size: larger;' id="10.30"><b>2023.10.30</b> || <a href='#top' style="color:rgb(196, 255, 234)">回到頂端</a></p>
+        <div class='blogtext'>
+            没啥可说的，小记一点<br>
+            <span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">裤子</span><br>新买的挺好的，挺好的，各方面都挺好。唯一的毁灭性问题是它没有口袋。下次买衣服切记看一眼有没有口袋……r已经默认所有裤子都有口袋了然后就忘了，裤子没有口袋有没有天理了……<br>
+            <span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">❀</span><br>路过拍<br><br><img src="https://s2.loli.net/2023/10/30/ixMVZDJCwSWcBdm.webp" width="80%"><br><img src="https://s2.loli.net/2023/10/30/MFWfbNr19LPHlws.webp" width="80%"><br><br>↑<del>这张真的很像泰拉瑞亚的血肉块/墙</del>怎么做到红色还有深浅的<br><hr><br><img src="https://s2.loli.net/2023/10/30/d8xDGIzsfcFRYtO.webp" width="80%"><br>草坪上原因不明出现的国际象棋(???)石头，如果真的放一个r倒也很喜欢<br><br>
+            <span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">个站修复记录</span><br>之前发现页面宽度过于诡异，具体来说就是border外面竟然还有区域。经过一通胡乱修改删了点东西，电脑浏览器全屏和ipad全屏都能看了，但ipad分屏和手机还是惨不忍睹。寻找原因之后发现是位于页面最底部有几张图片尺寸过大（之前r没看到）导致整个页面都变大了。所以现在把图片尺寸统一为80%，用百分比而不是px来计。<br>另外也有看到长链接也会导致页面撑大的，这个暂时还没发现，解决思路大概就是css加个自动换行……？（虽然不知道那个有没有用）<br>现在不太知道还能新增什么了，之后大概是试图，试图细化一下画面稍微再精致点，也想学习设计然后优化一下行距字号之类的？功能性的好像也没什么了，本来想加评论区<del>但失败了</del>但现在又觉得不需要那么多东西，r也不喜欢，反正邮件地址都放这了欢迎留言呀。然后别的……其实也可以放个归档功能但本来类似周记的东西就够简略了还要在归档页写摘要的话，根本没什么可摘要的，所以也没必要。所以还是不管这些了多写点有用的<br><br>
+            <span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">其它</span><br>上周去医院参观了超声影像，抽一点血然后混一点空气然后混一点生理盐水然后在一个三通的装置里打回去然后如果一打回去心脏超声图像就会显示气泡就说明哪漏了，正常的需要五个心动周期左右才能显示！真好玩儿！就是医院实在是太热了热得r眼冒金星1秒，下次要换件衣服再去<br>
+        </div><br><br>
+        <p style='background-color: black;color:rgb(196, 255, 234);font-size: larger;' id="10.23"><b>2023.10.23</b> || <a href='#top' style="color:rgb(196, 255, 234)">回到頂端</a></p>
+        <div class="blogtext">
+            <p><span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">或许是耳夹测评2</span></p>
+            <p><img src='https://s2.loli.net/2023/10/23/3cp8ifHsYB4dv6m.webp' width='80%'><br></p>
+            <p>①质量感觉还行，应该也许不怎么掉毛，橡胶垫太容易掉了已经掉了两个了还剩两个… 夹久了耳朵疼 最多一上午</p>
+            <p>②p3看不懂怎么戴的，p1好，p2好但夹得紧不紧有点难说（p1 4是金属环，p2是塑料），p4好，也不会和头发打结</p>
+            <p>③最左好，中间有点大？右边也有点大</p>
+            <p><span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">或许是推歌</span></p>
+            <p>昨天才完整地听了<a href='https://www.youtube.com/watch?v=0Uhh62MUEic' target='_blank'>One last kiss</a>，唱功和旋律都非常好 歌词没看x 似乎有剧透</p>
+            <p><span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">或许是点小技术</span></p>
+            <p><strong><em>装了个Linux虚拟机</em></strong>，过程很简单：</p>
+            <p>①安装VMware最新版本，网上随便搜了个注册码即可永久使用</p>
+            <p>②安装Linux，r下的是CentOS7</p>
+            <p>③新增虚拟机，安装系统，然后就可以了~~</p>
+            <p>经过测试应该是可以顺利使用的</p>
+            <p><img src='https://s2.loli.net/2023/10/23/xRLNIvb7jEyMgPp.webp' width='80%'><br></p>
+            <hr>
+            <p><strong><em>Localsend</em></strong></p>
+            <p>之前写过的快速传送文件的软件，正式使用了一下感觉很方便！</p>
+            <p>使用方法是在需要传文件的两个设备上都下载<a href='https://localsend.org/' target='_blank'>localsend</a>，然后选择文件，然后有三种方法可以传送：</p>
+            <p><img src='https://s2.loli.net/2023/10/23/N59CI4E6mxpcbh2.webp' width='80%'><br></p>
+            <p><span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">或许是杂七杂八的</span></p>
+            <p>点了个外卖，好，在此云推荐</p>
+            <p><img src='https://s2.loli.net/2023/10/23/L7XrfzB9sKDiY5U.webp' width='80%'><br></p>
+            <p>但是！虽然选了要一份餐具，打开的时候发现只有一副手套。所以餐具=筷子完全就是刻板印象嘛</p>
+            <p>顺带一提西餐厅的外卖服务会送筷子还是叉子……？会给塑料小刀吗eg月饼的那种，感觉一次性筷子和筷子没什么区别，但一次性刀叉和刀叉的用餐体验差多了吧</p>
+            <p><span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">或许是截图</span></p>
+            <p><img src='https://s2.loli.net/2023/10/23/AFNGrmUIaKdZY1L.webp' width='80%'><br></p>
+        </div><br><br>
+        <p style='background-color: black;color:rgb(196, 255, 234);font-size: larger;' id="10.15"><b>2023.10.15</b> || <a href='#top' style="color:rgb(196, 255, 234)">回到頂端</a></p>
+        <div class="blogtext">
+            <p><span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">报</span></p>
+            <p>r已经做了无数水课ppt了 <img src='https://s2.loli.net/2023/10/02/lipKWYsuroPdOxt.webp' width='50px'></p>
+            <p><span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">1014</span>
+            <br>负责了运动会班牌的绘制。z瑞平“完成度一下子上升了”</p>
+            <p>所以说不会画画嘛</p>
+            <hr>
+            <p>本来z说要来，然后因为进校预约已经满了就去了安妮意大利餐厅。放照片</p>
+            <p>酱，查了一下右边的叫意大利绿酱什么什么的</p>
+            <p><img src='https://s2.loli.net/2023/10/15/UwlXMPZLfkTNFDO.webp' width='80%'><br></p>
+            <p>餐前面包  饼干很好吃不过没拍</p>
+            <p><img src='https://s2.loli.net/2023/10/15/e6cUZ1nhlToRwxV.webp' width='80%'><br></p>
+            <p>奶油蘑菇汤和奶油南瓜汤，很浓。在南瓜汤里搅拌发现了不明黑色固体x 显然是奥利奥</p>
+            <p><img src='https://s2.loli.net/2023/10/15/6pMNzxnBDdfShLV.webp' width='80%'><br></p>
+            <p>松子紫苏芝士面，有种奇特…不能说难吃……就是……奇特的味道。芝士片是放在上面的，面是热的，然而拌在一起到最后芝士都没化掉，不是很懂芝士的吃法</p>
+            <p><img src='https://s2.loli.net/2023/10/15/srqNJBa3OHhMGnL.webp' width='80%'><br></p>
+            <p>奶酪卷</p>
+            <p><img src='https://s2.loli.net/2023/10/15/g36dBXIr8kqmGiQ.webp' width='80%'><br></p>
+            <p>苹果派，里面有香料是热的 好吃</p>
+            <p><img src='https://s2.loli.net/2023/10/15/ZBcIxidwP5nh3zU.webp' width='80%'><br></p>
+            <p><span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">再报</span></p>
+            <p>把《非自然死亡》看完了🎉总之非常推荐，感想已经在上次写了~ 要补充的一点是因为中间都是倍速看的，所以没有好好听过作为ed的<a href='https://www.youtube.com/watch?v=SX_ViT4Ra7k' target='_blank'>lemon</a>，现在重新拿起来听也很喜欢</p>
+            <p><img src='https://s2.loli.net/2023/10/15/v76tcPhWxpqIJU8.webp' width='80%'><br></p>
+            <p>没有什么截图，最近r喜欢的好像都没什么截图了，看的过程中<del>懒得</del>不想停下来</p>
+            <p>接下来如果看日剧的话大概是doctor-x，因为据说有美丽的役满…（如图所示）（看桌子）</p>
+            <p><img src='https://s2.loli.net/2023/10/15/e1lRUJdqcfvPNsG.png' width='80%'><br></p>
+            <hr>
+            <p>申请了GitHub student，这个本来是因为r要学C想去下Clion，但clion收费所以要用GitHub student申请免费的…然后就申请不过了，一开始是各种问题，什么r的ip地址和学校地址不是一起的，什么……但GitHub根本十有八九没法直连，总之最后申请过了。</p>
+            <p>申请过了，但GitHub发到学校邮箱的验证邮件又死活接收不到，因为学校邮箱收外网东西有验证…（外网和校内网相对，之前注册medical anatomy也是这样 急死r了）</p>
+            <hr>
+            <p>参观了科学博物馆（校内）。然后忘了，站得好累，走出去的时候差点不会走路了</p>
+        </div><br><br>
+        <p style='background-color: black;color:rgb(196, 255, 234);font-size: larger;' id="10.13"><b>2023.10.13</b> || <a href='#top' style="color:rgb(196, 255, 234)">回到頂端</a></p>
+        <div class="blogtext">
+            <p><span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">耳机</span></p>
+            <p>原本买的耳机虽然是type-c接口，也能插到ipad上，但连接不上没法用，所以ipad一直是非常…就没有觉得能用。某天看到有人用ipad看视频猛然醒悟ipad还能这样用x 但没有耳机，所以立刻买了耳机。新买的耳机可以用了所以决定多多看视频，下文也会写一点点相关的内容。</p>
+            <p><span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">近况报告</span></p>
+            <p>在快递站人工取件实在是太折磨了太折磨了每次都被工作人员问叫什么然后尴尬地报我叫贝阿朵莉切…………难道你们都实名网购吗难以理解</p>
+            <p>总之现在知道了快递只会显示名字第一个字（但并不完全啊真的有五个字都显示的情况，r跟工作人员说“我叫贝……”然后拿过快递一看名字是贝阿朵莉切而不是贝*。为什么就不能通过报手机号的方式确认是不是本人呢真服了。</p>
+            <hr />
+            <p>本周做了一个ppt然后pre然后另一门课读了一篇发言稿，任务完成…大概是完成……发言稿是关于人生价值什么的写完自己都看不懂了。<img src='https://s2.loli.net/2023/10/02/wNUIHDFu1MakP87.webp' width='50px'>但为什么会有这么多无聊的课啊。下周还要再交一个ppt但r一点头绪都没有，因为当时报名的时候随便胡诌了一个社会问题，但r其实觉得没有这种问题，这不挺好。反正胡诌就对了<img src='https://s2.loli.net/2023/10/02/gSmpzYD4Vs5Ilx6.webp' width='50px'></p>
+            <hr />
+            <p>又去了长庚医院，感觉很有趣~</p>
+            <hr />
+            <p>其实很想拍某花坛的铃兰花，或者长得像铃兰的别的什么东西，但是那边感觉都在骑车停下来不太好就没拍，下次走过去！</p>
+            <hr />
+            <p>图书馆水龙头竟然出热水，太幸福了吧</p>
+            <hr />
+            <p>耳骨夹又丢了一个，明明是永久的被r用出了日抛的感觉</p>
+            <p><span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">在</span>
+            <br><strong>在学C语言</strong></p>
+            <p>起因就是z一直问r……也不是问r……跟r分享有趣的内容……好嫉妒啊受不了一点r怎么没有程设课呢，换句话说r怎么会有那么多无聊的课，都没能上点好的，再这样上课岂不是要废了，r也要学……所以就去学了，反正就把网课挂在后台听然后有不会的就截个图，不过现在好像出现了一些内容在学java的时候也遇见过所以没啥好听的的情况。</p>
+            <p>既然在学C的话java就先搁置了~不过也有下半年开始学php的想法，反正先这样。现在感觉C很有意思，换句话说比糟糕透顶的高中Python课让人重新找回程设的有趣了的感觉。但高中Python课属实是糟糕透顶无法接受非常难受一点反馈都没有而且很无聊而且非常不好反正就是相当的差。</p>
+            <p><strong>在试图复古</strong></p>
+            <p>如题，试图把电脑界面改成win7或者xp，win11实在不在r的审美上怎么看怎么难受，就比如说吧windows键放在左下角天经地义啊，他放在中间就有一种模仿mac的劣质感。不喜欢。</p>
+            <p>不过找到了一个能这么干的软件只支持win10及以下…</p>
+            <p>所以想看看怎么装虚拟机，不过如果可以装的话也想装个Linux玩玩</p>
+            <p><strong>在看《非自然死亡》</strong></p>
+            <p>因为买了ipad耳机所以ipad就可以用来看剧了，想起非自然死亡是因为印象中百度网盘里存的电视剧只有这个，另一个原因是本来要去看动漫的，但是动漫网站崩了就退而求其次。</p>
+            <p>之前也看过，应该是2020年2月左右？看了第一集，因为b站只有第一集免费，虽然当时就很想往下看但是被收费扫兴了。第一集给r的想法，和网上很多影评、推荐写的都差不多——这部2018年的剧以传染性疾病为第一集的主要内容，直接预言了COVID-19、查不出源头的病毒和因为成为传染源而被歧视的人 ~~~~~ 感觉很有意思 ~~~ 而且本身也拍得很好（虽然r没看过别的电视剧没法对比）主要人物形象都很有意思</p>
+            <p>所以现在重新再看，当然不是看b站那个收费版本…把网盘里的翻出来看到第7集了，真的很有意思r也想学解剖所以为什么会有那么多无聊的课啊真上不下去了<img src='https://s2.loli.net/2023/10/02/qKJDM6ezjbEtyFG.webp' width='50px'></p>
+            <p><strong>在看《16bit的感动》</strong></p>
+            <p>只看了第一集但是感觉值得继续看。大概内容是女主作为游戏公司的小画师对美少女游戏没落非常失望，然后穿越到了1998（？忘了）年，也就是美少女游戏的鼎盛时期，然后第一集就讲了这么多。第一集结尾出现了为美少女游戏公司做程序的几个角色，r猜之后可能是他们一起做游戏什么的…</p>
+            <p>上面所说的当然不足以让r往下看因为很无聊而且很不合理啊，女主作为画师对游戏公司指指点点意见一大堆，但画对于游戏而言在r看来只能占30%，游戏可以没有精美的画面（当然也可以没有音乐），但能正常运行的程序、至少有点意思的剧本或者游戏流程才是支撑游戏的主干，不然画漫画得了。（多说一句为什么叫【能正常运行的程序】呢，程序当然不需要特别复杂，非常简单的ppt形式就可以了，但考虑到各种设备的不同很显然一个有一定兼容性然后能跑的程序是不可缺少的，这不比画面重要多了？）</p>
+            <p>所以在r看来，这部番的加分点就在于男主，或者，仅次于女主角的第二重要的人物，反正就是那个程序员。</p>
+            <p>嗯，所以想说的就是，评价一个游戏的好坏请不要用【画得不好看】一棒子打死它…… 这不是漫画也不是插画</p>
+            <p>顺带一提，弹丸同人a2和其他同人相比最大厉害之处就在于linuj用rpgmaker这样功能比较有限的引擎，结合各种插件，<strong>一个人</strong>几乎模拟出了原版游戏的所有玩法。</p>
+        </div><br><br>
+        <p style='background-color: black;color:rgb(196, 255, 234);font-size: larger;' id="10.7"><b>2023.10.7</b> || <a href='#top' style="color:rgb(196, 255, 234)">回到頂端</a></p>
+        <div class="blogtext">
+            <p><span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">個站緊急修改</span></p>
+            <p>因為各種各樣這樣那樣（簡單來說就是r沒好好學css定位）的原因個站出現了嚴重的排版問題，移動端看尤其嚴重，所以大概憑感覺改了一下（不會改就刪），希望這次更新是正常的</p>
+            <p>個站居然才建立260天~距離一週年遙遙無期呢 一週年做什麼好 要不繼續上次的作曲計劃因為上次太爛了這次想好好學一下</p>
+            <p><span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">個站計劃暫定</span></p>
+            <p>本站有個文章頁嘛，一直閒置也不好，雖然想寫安利or科普但是這個真的 也不需要r來寫，直接就能搜到很多優秀的文章。</p>
+            <p>所以決定用那個頁面寫月度總結和年度總結。在月初做這個決定真好啊r先摸一個月也不遲…</p>
+            <p><span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">博客服務簡單試用</span></p>
+            <p>簡潔可以是優點也可以是缺點。<strong>R之前將個站進行了一次修改的目的就是去掉所有花里胡哨的內容，留下最簡潔的部分，哪怕會讓一部分訪客覺得不方便也可以</strong>。下面介紹的兩個服務的最主要特點就是免費、頁面簡潔、操作方便。</p>
+            <p>①<a href="https://bearblog.dev/"><em><strong>bearblog.dev</strong></em></a></p>
+            <p><img src='https://s2.loli.net/2023/10/07/syVw4jt5kJlUMiY.webp' width='80%'><br>
+            儀錶盤（主頁）</p>
+            <p><img src='https://s2.loli.net/2023/10/07/8O51LrIAy3zBwQW.webp' width='80%'><br>
+            實際效果（主頁）</p>
+            <p><img src='https://s2.loli.net/2023/10/07/csM3L5goIU1K9TF.webp' width='80%'><br>
+            實際效果（博客）</p>
+            <p>優點：<strong>支持Markdown</strong>，操作簡單，域名支持自定義，較為好看和可愛？（notion的免費域名就很一言難盡）；頁面簡潔</p>
+            <p>缺點：相比于WordPress等可視化編輯器可以進行隨意魔改，bearblog.dev要魔改就會受到一定限制（r沒試過）。</p>
+            <p>②<a href="https://montaigne.io/"><em><strong>Montaigne</strong></em></a></p>
+            <p>這個服務的原理是通過<em><strong>IOS的備忘錄</strong></em>分享功能，通過iCloud進行同步。使用者在IOS設備如iPhone、iPad上建立共享文件夾，並在該文件夾內寫備忘錄，這些備忘錄就會被自動同步到網頁上顯示。</p>
+            <p>手機操作（可以看到右上角，本備忘錄已經和 share@montaigne.io 共享了）：</p>
+            <p><img src='https://s2.loli.net/2023/10/07/fmbZIOlwpjyEGCY.webp' width='80%'><br></p>
+            <p>網頁效果（自動產生，不需要任何編輯，所以自然沒有顏色等）：</p>
+            <p><img src='https://s2.loli.net/2023/10/07/hDno5FfCmqy4uBj.webp' width='80%'><br></p>
+            <p>網站主頁：</p>
+            <p><img src='https://s2.loli.net/2023/10/07/srRomKZS9DA3gvQ.webp' width='80%'><br></p>
+            <p>其中三篇post對應手機中的三則備忘錄</p>
+            <p>優點：操作極其方便，從頭到尾都可以不用電腦；僅限IOS設備</p>
+            <p>缺點：大概是僅限IOS設備</p>
+            <p><em><strong>總之都是非常推薦使用的，對於技術力不高的人來說是很好的選擇當然對技術力高的人來說一樣是動動手指解放腦子的優質博客服務</strong></em></p>
+            <p><span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">雜七雜八1</span></p>
+            <p>減速帶顧名思義就是減速帶，是凸起來的，之前一直覺得越快騎過去越不容易顛，因為離心力大支撐力小…</p>
+            <p>但實際感受是越慢越不容易顛。所以可以得出，減速帶並不是用摩擦力等迫使人被動減速，而是讓人【主動】減速，真是巧妙的設計！</p>
+            <p><span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">雜七雜八2之飾品</span></p>
+            <p>一共買了六個</p>
+            <p><img src='https://s2.loli.net/2023/10/07/7wauHeqzVBGbgxT.webp' width='80%'><br>
+            過程很慘烈
+            <img src='https://s2.loli.net/2023/10/07/T9IYmFkshbrcV1v.webp' width='80%'><br>
+            所以其實本來買了7個。為什麼突然買了呢，思路是這樣的：美甲=影響r寫字，直接否決；但戴在手上的東西好像可以，戴左手又不用寫字，那麼就買點戒指玩；耳釘=很容易直接把耳朵裂了，完全否決；耳骨夾=好像也沒啥影響，碰不到r耳機就行，只要不晃不纏頭髮就好說，那麼也買一點玩。至於很容易掉的問題，那就挑便宜的買，丟了就當做慈善……總不可能買的全掉吧也看看哪家店尺寸正常。</p>
+            <p>嗯 認真地評價一下…</p>
+            <p>耳骨夾三件套：好，但中間那個環太難戴了，一通亂掰</p>
+            <p>蝴蝶結耳骨夾：太難戴了，還會和耳機撞到，挺好看的<em><strong>但 實 用 性 為 0</strong></em>，r <em><strong>一 點 都 不 推 薦</strong></em></p>
+            <p>波浪戒指：尺寸太大 不喜歡 一甩就掉</p>
+            <p>月牙戒指：好是好……但</p>
+            <p><img src='https://s2.loli.net/2023/10/07/ER4YlzyTFJ8w7k3.webp' width='80%'><Br>
+            <span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">雜七雜八3</span></p>
+            <p>感覺最近兩天做了好多東西，就是，做了好多水東西，什麼思政演講稿……什麼的…反正有鍵盤有手就能動了，也沒有到動員ChatGPT的程度<em><strong>主要是ChatGPT寫的太專業r一點都看不懂</strong></em></p>
+            <p>拖拉了好久總算開始看CS自學指南了，雖然不確定現在學的數學夠不夠用，反正先學~</p>
+            <p>永遠記不住出門帶數據線，充電寶都放包裡了結果沒有線，感覺解決方法還是買兩條線吧只有一條四處放真的很容易忘哎</p>
+            <p>wb抄的一段話，適合宅宅：西红柿，土豆，菠菜，玉米这种其实是可以冷冻的，只有绿叶菜这种是必须冷藏保存的。西红柿和土豆冷冻过其实做炖菜之类的更好用。</p>
+            <p>忘了是哪裡抄來的一段話：我有一个“提问须知”，与君共勉：1、提具体的问题，而不是“你对鲁迅怎么看”，否则答案可能会是“默默地对着遗像看”。2、用疑问句提问而不是陈述句。3、不要用反意疑问句。4、句子尽量完整地包含主语、谓语、宾语，尽量不用代词。5、一次问一个问题。6、发出前，再检查一遍有无可能引起歧义的地方。</p>
+            <p>當然要讓別人看不懂的話只要反其道而行之就可以了，r的博客也經常這麼干</p>
+            <p>下次想做的：js、css压缩是很常见的技术，我们经常看到各种框架的文件名是xxx.min.js，xxx.min.css</p>
+            <p>正在看的：https://csdiy.wiki/</p>
+            <p>趁放假把新標日帶到寢室了，不過不一定會學，之前因為太久沒看二次元什麼都忘了，最近想起來好多x</p>
+        </div>
+        <br><br>
+        <p style='background-color: black;color:rgb(196, 255, 234);font-size: larger;' id="9.29"><b>2023.9.29</b> || <a href='#top' style="color:rgb(196, 255, 234)">回到頂端</a></p>
+        <div class="blogtext">
+            <p><span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">出游相关 feat Z</span></p>
+            <p>按时间顺序写流水账~</p>
+            <p><em><strong>①宿舍→校门→公交车站</strong></em></p>
+            <p>试图找一辆共享单车但走了十分钟一辆都没看到，这就是假期吗…总之最后走了十分钟</p>
+            <p><em><strong>②公交车站→地铁站</strong></em></p>
+            <p>带着痛包出门，痛包真的特别美丽在此展示一下：</p>
+            <p><img src='https://s2.loli.net/2023/09/29/y1BW2jRTnilUGuD.webp' width='80%'><br></p>
+            <p>但没想到刚挎着美丽的痛包就要过安检，把包拿下来的时候极为狼狈头发乱得一塌糊涂 讨厌安检</p>
+            <p>以及这个时候还没想到不幸的事情发生了</p>
+            <p><em><strong>③地铁站→顺德MALL（西直门店?）</strong></em></p>
+            <p>绕来绕去地走了好久终于发现入口在地铁站里面，神奇的设计…</p>
+            <p><em><strong>④顺德MALL</strong></em></p>
+            <p><strong>西西弗书店</strong></p>
+            <p>进门前杠精大作，跟Z说这是书店？这不是书店风格的潮玩店吗……？……这不是书店？不应该是潮玩店风格的书店吗…？</p>
+            <p>能产生的设想也太多了，店名起得真是</p>
+            <p>里面有漫画书eg鬼灭再见绘梨 理所当然的，r被价格和实用性噎回去了。不过随手拍了几本看起来很好玩的书搜来看看。</p>
+            <p><img src='https://s2.loli.net/2023/09/29/3FxgomI6tjhNyWb.webp' width='80%'><br>
+            <img src='https://s2.loli.net/2023/09/29/4NvQFzkVmoeJOYi.webp' width='80%'><br>
+            <img src='https://s2.loli.net/2023/09/29/RAZ6pHIjQtunNd3.webp' width='80%'><br></p>
+            <p><strong>野人牧场</strong></p>
+            <p>冰淇淋</p>
+            <p>这个圆盘设计不错，再也不用怕化了滴到手上……（但其实化得够多也没用啊，r建议改成最外围朝上翻的感觉）</p>
+            <p><img src='https://s2.loli.net/2023/09/29/oWUZxEjl3u168kH.webp' width='80%'><br></p>
+            <p><strong>海底捞</strong></p>
+            <p>所以为什么海底捞不叫火锅店or转转小火锅、xx锅、xxx ry…</p>
+            <p>服务员很热情但婉拒r自己倒饮料坚持礼貌地帮r倒以及收走了r刚拿的餐巾纸让r作为顾客想说嗯嘛啊大可不必，但真的很热情，没说不好</p>
+            <p><img src='https://s2.loli.net/2023/09/29/1yZd6P2eCxqRGSz.webp' width='80%'><br></p>
+            <p><strong>扭蛋机</strong></p>
+            <p>抽了一个饭团（一共有7款），美中不足的是它居然没给绳子……这不是挂件吗？？？</p>
+            <p><img src='https://s2.loli.net/2023/09/29/9H25tR6oSOwVDTx.webp' width='80%'><br></p>
+            <p><img src='https://s2.loli.net/2023/09/29/YnAZaeQqxLIlt6G.webp' width='80%'><br></p>
+            <p><strong>忘了什么潮玩店</strong></p>
+            <p>最近感觉用抓夹的人越来越多了（比起用发绳），某宝搜“蝴蝶结”更多的是带蝴蝶结的抓夹而不是带蝴蝶结的发绳，真是耐人寻味的现象？总之r<del>也屈服于潮流买了个抓夹</del>选了个黄金蝴蝶抓夹，大概，希望能用得高频一点不要放着吃灰但r还是喜欢发绳，发绳可以当手链啊</p>
+            <p><img src='https://s2.loli.net/2023/09/29/2ItkoypxT6eid4H.webp' width='80%'><br></p>
+            <p><strong>霸王茶姬</strong></p>
+            <p>确实很茶</p>
+            <p><img src='https://s2.loli.net/2023/09/29/MouBtExzWX4TNKv.webp' width='80%'><br></p>
+            <p><em><strong>⑤半宅主义</strong></em></p>
+            <p>主机游戏厅，内含ps4/ps5？忘了/ns ry</p>
+            <p>玩了一个小时胡闹厨房2 手柄确实好用但即使用手柄感觉还是打不过双人成行</p>
+            <p>里面还有猫猫可以摸，但猫过于沉默根本不走动也没摸到几次，但很好摸</p>
+            <p><img src='https://s2.loli.net/2023/09/29/42wjJLosrTtcHxl.webp' width='80%'><br>
+            <img src='https://s2.loli.net/2023/09/29/dwrT5NpizEDakqO.webp' width='80%'><br>
+            <img src='https://s2.loli.net/2023/09/29/dAfDZCYcleaRvXt.webp' width='80%'><br></p>
+            <p><em><strong>⑥打车回学校</strong></em></p>
+            <p>上文也说了【不幸的事情发生了】，嗯…这就是过地铁安检的时候突然过不了。这不对吧，明明来的时候能过啊怎么回去就不行了，staff说有个“像梳子一样的东西”给r整宕机了，思考了半天 也没在包里放东西啊，思来想去问staff是不是刚买的抓夹不行但不是，于是迷茫地让staff帮r翻包然后翻出来z送的美妙绝伦的蝴蝶刀</p>
+            <p>……………………这一个月前放的谁记得，“梳子一样的”谁能想到是蝴蝶刀啊啊啊啊啊啊。。。而且一个月前也是带着这个包来北京的，怎么就不能带了，总之学会了…十一期间不要带刀……</p>
+            <p>出门不带刀比少了一只手还难受  你们不割东西吗 各种绳子 包乃至指甲  没刀是怎么正常生活的</p>
+            <p>总之地铁是坐不了了然后就打车回了，叹气</p>
+            <p><em><strong>总结</strong></em></p>
+            <p>z真是好品味</p>
+            <p><span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">学校?相关</span></p>
+            <p>本来标题想写学习相关的，但加社团跟学习一点关系？都没有，总之就是加了点社团……然后没了 后面忘…</p>
+            <p>还是发一点图片吧</p>
+            <p>教室桌上的纪念碑谷??小人涂鸦</p>
+            <p><img src='https://s2.loli.net/2023/09/29/rmFjBUSAnY9XLqs.webp' width='80%'><br></p>
+            <p>图书馆下面的蓝花，试图拍出密集恐惧症的效果但还是考虑到大家的san值尽量拍好看了点</p>
+            <p><img src='https://s2.loli.net/2023/09/29/CSFYjbOxef2tAZo.webp' width='80%'><br></p>
+            <p>临床早接触与医学人文课在长庚医院上，坐大巴实在太堵了…</p>
+            <p>沿途看到北方明珠 没用的知识增加了</p>
+            <p><img src='https://s2.loli.net/2023/09/29/w2b9nlskEj54TJm.webp' width='80%'><br></p>
+            <p>参观医院</p>
+            <p><img src='https://s2.loli.net/2023/09/29/TLzn9Qe5uZfpil1.jpg' width='80%'><br></p>
+            <hr>
+            <p>下下周应该有pre要做……？（当然是自主报名的但感觉再不报要惨大了总之就是读ppt吧！）第一节课的pre基本没怎么参加因为后来看小组整合的ppt是一个字都看不懂……除了r自己负责的那部分，总之能看懂的会尽量参与的就，嗯，摸了摸了</p>
+            <p>因为体育课要求装了乐动力app，心情很不好跟z大发牢骚说手机上的流氓软件越来越多，感觉一众软件中就没有这么看起来不安全的实名上网的糟糕透顶的实用性超低又不得不装的东西，上面都是偏见一个都不要当真但是r真的好  讨  厌</p>
+        </div>
+        <br><br>
+        <p style='background-color: black;color:rgb(196, 255, 234);font-size: larger;' id="9.27"><b>2023.9.27</b> || <a href='#top' style="color:rgb(196, 255, 234)">回到頂端</a></p>
+        <div class="blogtext">
+            <p><span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">钝评…的前言</span></p>
+            <p>就是r有英语课上了</p>
+            <p>说起来有点长但一开始发邮件申请手选非常，没带脑子，想着万一两个老师同时给过了岂不是很麻烦所以只发给了一个老师。</p>
+            <p>然后突然想明白了于是一口气发了四五个，把原来的邮件改了改末尾加上ps由于个人安排需要得到您的肯定答复之后再在系统申请（真实情况是学分上限不够了没法一次申请太多）</p>
+            <p><img src="https://s2.loli.net/2023/08/08/zdMBo7mqlTGEw2U.png" width="50px">完全掌握写邮件诀窍x</p>
+            <p><span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">钝评</span></p>
+            <p>好像也没什么上次都说过了再补充……也没有再补充了，<del>小记一笔化学老师看着晶胞图说反了Cl和Na并在r的巨大疑惑中宣布下课</del></p>
+            <p><span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">或许是阅读</span></p>
+            <p>看了一些个站的设计和文章，印象深刻的一点是作者说个站对ta来说是文字和图片的结合，并不是用来放视频的，所以也不会插入视频，只会把自己做的视频的链接放在博客上——换言之blog和vlog各居其所就可以了没必要混在一起</p>
+            <p>感觉很有道理所以本站也不放视频了……<del>想放其实也不会 而且没有服务器</del></p>
+            <p>然后抄了统计个站点击量的代码放在沙盒页测试，感觉看不出哪个更好用，先挂着！</p>
+            <p>具体看了</p>
+            <p><a href='https://moe-counter.glitch.me/' target='_blank'>Moe Counter！</a><br>
+            <a href='https://busuanzi.ibruce.info/' target='_blank'>不蒜子</a><br>
+            <a href='https://blog.zengjunyin.com/p/2023030901' target='_blank'>《
+            博客理念杂谈》——胤的博客</a><br>
+            （还没看）<a href='https://program-think.blogspot.com/2019/09/Netcat-Tricks.html' target='_blank'>扫盲 netcat（网猫）的 N 种用法——从“网络诊断”到“系统入侵”</a><br></p>
+            <p><span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">图</span></p>
+            <p>升段纪念<br></p>
+            <p><img src='https://s2.loli.net/2023/09/27/FJNrxDvosTIdMGZ.webp' width='80%'><br></p>
+            <p>按预想中这个本来应该是军训期间摸鱼就能摸到的但谁知道为什么军训那么忙得没时间导致现在才到</p>
+            <p>自我感觉现在的问题是打点实在太低了，优点??是防守和牌效都还……行?说起来魔女blog也是本来准备军训期间继续读的军训啊啊啊军训气死人了打乱了所有计划<br><br>
+            北大兔子月饼<br>
+            <img src='https://s2.loli.net/2023/09/27/3NqXMra6EVspnWh.webp' width='80%'><br><br>
+            立志拍遍校园里所有，分不清玫瑰和月季，索性长得像的都拍了<br>
+            <img src='https://s2.loli.net/2023/09/27/rlJMEPkNZ5Sd2IW.webp' width='80%'><br><br>
+            这个是郑裕彤讲堂外的</p>
+        </div><br><br>
+        <p style='background-color: black;color:rgb(196, 255, 234);font-size: larger;' id="9.20"><b>2023.9.20</b> || <a href='#top' style="color:rgb(196, 255, 234)">回到頂端</a></p>
+        <div class="blogtext">
+            <p><span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">钝评</span></p>
+            <p>上了一点课，今天是第三天上课，<em><strong>非常简略</strong></em>地说感想。仅代表初印象，完全不知道给分好不好，因为写博客里了就不写老师名字了。</p>
+            <p>微积分B（1）：中规中矩</p>
+            <p>线性代数：挺有趣的但才上了一节课，不知道</p>
+            <p>化学原理：第一节课内容太无聊，不知道</p>
+            <p>思政：没……听，不会有人听吧……</p>
+            <p>干细胞与生命：内容很好玩（但高中生物教过五成（名词）），还有非生物相关专业的同学感觉他们应该有不同想法。给每个人都发了名牌，<del>方便上课前发名牌=点名和叫人回答问题</del></p>
+            <p>质量管理学：上之前跟z发了一大堆牢骚说社科科组的一个都不想上像看天书，实际上课感觉倒没有那么天书反正感觉就是挺好玩的……听讲挺好玩的，自己分析=听天书</p>
+            <p>上课讲的例子有某医院不跟其他医院学管理，而是跟各领域各位专业的酒店（病房管理）、野生动物园（患者可以随便走…staff要在岗位上圈着？）、kfc麦当劳（食堂管理）ry学习</p>
+            <p>文学研究中的当代英语：只能听懂八成：）大概 吧…感觉 因为 实际上 考虑了 这学期没英语课上了 就 当英语课上 顺带把通识课学分水…不是 没法水… 这样的感觉</p>
+            <p>顺带一提人文课组r也一个都不想上，看天书2.0</p>
+            <p>体育：第一节课挺轻松的比如说70%的时间都在室内玩类似于跳格子的游戏…然后出去跑了三圈，那个水准跟r一个水准就是慢得离谱，摸了</p>
+            <p>说完了</p>
+            <p>教室旁边的自动贩卖机的统*阿萨姆奶茶真好喝 摸了</p>
+            <p>顺带：因为goodnotes出奇得贵，r注册了个微软教育版免费用onenote感想还不错；但跟z安利的时候z发现z学校邮箱注册不了（幸灾乐祸）</p>
+            <p><span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">软件/网页分享</span></p>
+            <p>在看<a href='https://www.appinn.com/' target='_blank'>小众软件</a>，选了一些感兴趣的尝试一下。</p>
+            <ul>
+            <li>
+            <p><a href='https://www.appinn.com/xbrowsersync/' target='_blank'>xBrowserSync – 即开即用的跨浏览器书签同步工具</a></p>
+            <p>因为暂时没有换浏览器的打算所以不试</p>
+            </li>
+            <li>
+            <p><a href='https://powerkeys.github.io/download' target='_blank'>借助秩序井然、毫不冲突的快捷键 解放 Windows 和 macOS 使用效率</a></p>
+            <p>特别方便☆☆☆☆☆</p>
+            </li>
+            <li>
+            <p><a href='https://winworldpc.com/home' target='_blank'>WinWorld 是一个致力于保存和分享历史软件的网站，它收录了非常多曾经的操作系统、软件和游戏的网站，堪称老破旧操作系统博物馆，从 DOS 到 Windows 2000，还有 OS X、OS/2、UNIX 等一大堆见过没见过的操作系统。@Appinn</a></p>
+            <p>挺好玩</p>
+            </li>
+            <li>
+            <p><a href='http://wxbackup.imxfd.com' target='_blank'>微信聊天记录导出</a></p>
+            <p>没试过</p>
+            </li>
+            <li>
+            <p><a href='https://www.cnblogs.com/Charltsing/p/PictureCleaner.html' target='_blank'>PictureCleaner – 专业去除「扫描文档图片」黑底麻点杂色阴影，还你一个清晰的文本[Windows]</a></p>
+            <p>没试过</p>
+            </li>
+            <li>
+            <p><a href='http://shadow-input-for-windows/' target='_blank'>影子输入法</a></p>
+            <p>没试过</p>
+            </li>
+            <li>
+            <p><a href='https://mathewsachin.github.io/Captura/' target='_blank'>Captura – 带键盘按键录制的录屏工具，支持直播[Windows]</a></p>
+            <p>特别好用☆☆☆☆☆（格式工厂有的时候会卡顿）（快捷键很方便）（各种设置都挺好的？）（安装语言没有中文但界面语言有，怪）</p>
+            </li>
+            <li>
+            <p><a href='https://www.cnblogs.com/pdfpatcher/' target='_blank'>PDF 补丁丁 – 11年历史，永久免费，绝不过期，却已完结，免费的 PDF 文档处理工具[Windows]</a></p>
+            <p>没试过</p>
+            </li>
+            <li>
+            <p><a href='https://github.com/Mikachu2333/rimage_gui' target='_blank'>Rimage_GUI – 批量图片压缩工具：Squoosh 替代品，有效缩小图片体积[Windows]</a></p>
+            <p>下次整理博客图片的时候具体介绍一下</p>
+            </li>
+            <li>
+            <p><a href='https://learn.microsoft.com/zh-cn/windows/powertoys/' target='_blank'>微软官方超实用 15+ 小工具集 PowerToys v0.62.0 发布，新增文本提取器 OCR 功能</a></p>
+            <p>没试过</p>
+            </li>
+            <li>
+            <p><a href='http://www.tudouluping.com/' target='_blank'>土豆录屏 – 支持多显示器的免费录屏工具</a></p>
+            <p>没试过</p>
+            </li>
+            <li>
+            <p><a href='https://github.com/svenstaro/genact' target='_blank'>genact – 假装电脑很忙🌀毫无用处的程序员忙碌状态生成器</a></p>
+            </li>
+            </ul>
+            <p>好玩</p>
+            <p><span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">说明</span></p>
+            <p>关于为什么本网站打开那么慢……特别是【博客】页加载得那么慢…</p>
+            <p>原因当然是图片数据太大了，这个r心知肚明啊！但是为什么最近突然那么慢呢，因为r之前介绍过picgo这款能快速生成图链的工具，然后就用引用url的方式代替了原本的直接上传图片，然后，本来是老老实实地把图片压缩成webp的（这个方法之前也更新过），结果现在有了url就忘记了！！！！</p>
+            <p>总之最新方法是先压缩成webp再传到图床，试验了一下速度应该是好多了…</p>
+            <p>那么以前的会慢慢替换掉。</p>
+        </div>
+        <br><br>
+        <p style='background-color: black;color:rgb(196, 255, 234);font-size: larger;' id="9.16"><b>2023.9.16</b> || <a href='#top' style="color:rgb(196, 255, 234)">回到頂端</a></p>
+        <div class="blogtext">
+            <p><span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">軍訓結束</span></p>
+            <p>&#128031;🫧&#128031;🫧&#128031;🫧&#128031;🫧&#128031;</p>
+            <p>咕嘟咕嘟咕嘟咕嘟咕嘟</p>
+            <p>以上.</p>
+            <p><span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">瞻仰PKU記</span></p>
+            <p>其實這個標題源於，幫r預約進校的那個頁面的預約理由寫了“瞻仰PKU”，於是就沿用了</p>
+            <p>放照片~</p>
+            <p>騎車二十分鐘…三十分鐘？進校<br>
+            <img src='https://s2.loli.net/2023/09/16/R4YkN7pPheXxinF.jpg' width='80%'><br></p>
+            <p>家園食堂
+            <br><img src='https://s2.loli.net/2023/09/16/9KdqFsZ53GPAy4m.jpg' width='80%'><br>
+            其他照片因為把人拍進去了就不放了，總之非常高級！看起來<br>
+            火鍋奶茶<br><img src='https://s2.loli.net/2023/09/16/HAOWxhVTEjSafXZ.jpg' width='80%'><br>
+            <br><img src='https://s2.loli.net/2023/09/16/78qQXLJaMju9mRf.jpg' width='80%'><br>
+            未名湖、華表、校門
+            <br><img src='https://s2.loli.net/2023/09/16/PXHmvyE8KfaJdhl.jpg' width='80%'><br>
+            <img src='https://s2.loli.net/2023/09/16/QeCE9WL6ga7dulT.jpg' width='80%'><br>
+            <img src='https://s2.loli.net/2023/09/16/PhZAFMUNb21rqlj.jpg' width='80%'><br></p>
+            <p><span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">逛學校</span></p>
+            <p>主要就是去了天貓超市和水木書屋，探索一下之前不知道的功能</p>
+            <p>收穫</p>
+            <ul>
+            <li>天貓超市有關東煮<img src='https://tennedar.github.io/pic/emoji/love.webp' width='45px'>!!!!!!!!!!</li>
+            <li>但沒找到飯糰，壞</li>
+            <li>水木書屋的課本……不是，課本本身真貴…但二手書是半價出售的而且感覺挺新的感覺還可以吧</li>
+            <li>總之先買了一本四級詞彙和一本高等微積分教程上看看</li>
+            </ul>
+            <p><span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">其它</span></p>
+            <p>看了<a href="https://jason-memo.dev/posts/dark-mode-tips/">網頁黑暗模式 Dark Mode 設計技巧</a>，簡單來說就是為了保護眼睛，深色（比如深藍色）底淺色（比如米色）字比黑底白字更好；後者太刺眼了</p>
+            <p>在看<a href="http://lawsofsimplicity.com/">The Laws of Simplicity（網頁小冊子，不是原書）</a>……在看……還沒看完，稍微摘抄了幾句</p>
+            <ul>
+            <li>When in doubt, just remove. But be careful of what you remove.</li>
+            <li>There are three consistent strategies for achieving simplicity in the living realm: 1） buy a bigger house, 2） put everything you don&#39;t really need into storage, or 3） organize your existing assets in a systematic fashion.</li>
+            <li>Organization makes a system of many appear fewer.</li>
+            </ul>
+            <p><span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">うみステ</span></p>
+            <p>看了……！</p>
+            <p>感觉很艰辛要记录一下（</p>
+            <p>大概8月中得知ep2也要舞台剧化了，非常兴奋并决定亲自买配信看。但和ep1的线下票几乎和线上同时宣布不同，ep2迟迟不公布配信券什么时候开售，急死r了。</p>
+            <p>终于等到消息，研究了一下confetti然后很容易注册了账号，只要找一个日元代付就可以了…</p>
+            <p>代付找了半天，真难找，好在最后找到了</p>
+            <p>然后开始纠结，票价5000円折合约260rmb，这也太贵了。再加上配信前一周唐突得知去年的ep1期间限定无料配信，也就是说一分钱不花都可以看到那有什么好买的啊啊啊啊啊啊啊。纠结再三还是决定尝试找人拼，就是几个人共用一个账号观看，然后钱平分。</p>
+            <p>然后就开始了漫长的拉人过程，几乎在各种社交平台都发了宣传……其中微博因为r的号太烂了，发出去的东西别人看不见…然后总算拉到四个人。因为r个人感觉四个人平摊还是有点贵，很担心ta们（包括r本人）会不会因为太贵临时跑路（），好在大家都很坚定地要拼，非常感谢。最后又加入了3个人真的令人惊喜，40r看一场舞台剧太快乐了55555</p>
+            <hr>
+            <p>以下是舞台剧感想-无剧透？简略版本</p>
+            <p>剧本：几乎没有游戏文本-舞台剧的改编感觉，就像在看会动的原作……令人感动……</p>
+            <p>演员：演技超级棒而且非常还原。特别值得一提的是朱志香演员还原了原作中唱跳一首歌的过程而且唱得很好（虽然但是不知道那首歌是啥啊，不是醋溜便当）；战人演员也是一直在跑来跑去大喊大叫，体力和演技都非常厉害。真理亚演员和去年的不同，感觉相比之下更可爱？一点，台词有几处卡壳但是无伤大雅。贝阿朵超级有气势~再值得一提的是朱志香演员的两个场景服装不同，换衣服只用了40s，太强啦</p>
+            <p>特效：因为<del>魔法大战</del>内容较多，特效也比去年用得多。实话说桩子那个地方一眼假（不然呢），实际上还原桩子弹性碰撞的效果也是做不到的所以现在这样已经很好了！！幕布和投影的运用也非常好，完全不出戏。记得去年有repo说舞台有点小，透过布景可以看到后台www，今年东西更多感觉看不到了吧（）有一个台阶的装置可以从左边走上去右边走下来，再冗长的对话的表演也不会无聊~</p>
+            <p>总之是非常棒的作品</p>
+        </div>
+        <br><br>
+        <p style='background-color: black;color:rgb(196, 255, 234);font-size: larger;' id="9.14"><b>2023.9.14</b> || <a href='#top' style="color:rgb(196, 255, 234)">回到頂端</a></p>
+        <div class="blogtext">
+            <p>校园路边种了很多玫瑰，喜欢</p>
+            <p><span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">选课理由</span></p>
+            <p>其实也没什么特别的，简单解释一下（省的忘了）：</p>
+            <p>必修+通识+英语+体育+思政限选</p>
+            <p>————必修课，按时间选，没什么可说的</p>
+            <p>值得一提的是有个极其火爆的老师选中率是1/3，r对自己的运气一点自信都没有于是最后换成了另一个老师。结果问了一圈凡是选了的人都中了</p>
+            <p>运气真好</p>
+            <p>————英语…英语…………就选…避雷几个上课不好作业多的老师就行了，现在的问题是课掉了得补</p>
+            <p>————体育，什么时候有空就选，幽默的是只有2天有空而且其中一天人数爆满…最终决定换成另一天</p>
+            <p>————思政限选，什么水选什么，一堆无聊的课名里看到环境保护与可持续发展，看起来至少能听懂对不对…有很大赌的成分，选中率是1/2左右，好在选上了，水就行了</p>
+            <p>————通识</p>
+            <p>四个课组：人文、艺术、科技（？、忘了… 忘了</p>
+            <p>因为留给新生的课余量不多了，加上r对通识兴趣一丁点都没有，以水和尽量贴近专业课主题为目标，那么直接排除其他三个科组选择科技（为什么不在之后的学期选呢因为如果发现课不如标题那么有趣会很折磨），最终选上的是干细胞与生命，不过报的人好像只有10个左右？不知道好不好但看描述很有意思呀……！
+            <br><br><br>
+            写作与沟通太难选了真是受不了一点…时间全部和必修课撞车</p>
+            <p>还能选的主题要么很无聊要么好难啊啊啊啊啊啊啊看不懂的那种</p>
+            <hr>
+            <p>总而言之课表还是让人很满意的看起来也挺有意思… …有意思是很难得的事情希望能学到东西</p>
+            <p>题外话z在学c，r在……r根本没有报（好像也没空报了）相关课，准备自学摸鱼搓java，一种互通有……最后肯定也得重新学一遍的，但不管怎么样那个python不想学……</p>
+            <p>题外话2，思政课是学长推荐的“不想学到东西又比较轻松”的课，能选上真是幸运</p>
+            <p><span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">军训</span></p>
+            <p>其实完全没有可以说的因为忘干净了</p>
+            <p>最悲伤的是学院老师来慰问的时候带的是水果捞而不是奶茶…………令人心碎……然后就没什么想法了，可期待的都没了</p>
+            <p>所以，虽然本来说了想尽量一周写至少一次个站的但是一直没写是因为太无聊了呀一点可以写的都没有……！！！</p>
+            <p><span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">笑话一则</span></p>
+            <p><em>这明明很好笑为什么发出来没人笑，太难过了</em></p>
+            <p>z：某大学校园里有猫（一种动物）</p>
+            <p>z：我校只有爬虫（一种生物）</p>
+            <hr>
+            <p>r：一眼看成光猫（一种设备）和爬虫（一种技术）</p>
+        </div>
+        <br><br>
+        <p style='background-color: black;color:rgb(196, 255, 234);font-size: larger;' id="9.4"><b>2023.9.4</b> || <a href='#top' style="color:rgb(196, 255, 234)">回到頂端</a></p>
+        <div class="blogtext">
+            <h1>军训杂谈</h1>
+            <p><b><span style='font-size:x-large'>教官</b></span></p>
+            <p>r的教官用着粉红色手机壳的iPhone…</p>
+            <p>感觉就是比较随意且好玩。本评价不表示褒义也不表示贬义因为从大前提【要军训】来说已经糟糕透顶了~具体表现为</p>
+            <ul>
+            <li><p>其他排集合之后直接开始训练，r教官坚持个人习惯（？一定要我们先热身</p>
+            <p>  （整个连集合，准备听连长讲话）</p>
+            <p>  教官：热身</p>
+            <p>  连长：停</p>
+            <p>  （讲完）</p>
+            <p>  教官：热身</p>
+            </li>
+            <li><p>喜欢教我们一些……杂七杂八各种各样或许有的人会觉得有意思<b><u><i>但不考！！！！！！！！</b></u></i>的内容</p>
+            <p>比如跳伞，拿枪（自愿参加，结果只有三个人没试，当然包括r），打拳</p>
+            <p>这样的后果就是要考的内容，r的排的练习时间是其他排的……少于1/2<img src="https://s2.loli.net/2023/08/08/zdMBo7mqlTGEw2U.png" width="50px"><br></p>
+            </li>
+            </ul>
+            <p>题外话，今天练正步，排头步幅大得要命 累死了。这种就叫做没淋过雨不知道给别人撑伞。</p>
+            <p>题外话2教官说男生走得还没女生齐……看看女生有几个啊！不齐才奇怪吧！！！</p>
+            <p>题外话3教官说要腹部用力</p>
+            <p>教官：还有人不知道什么是腹部用力吗</p>
+            <p>同学：不知道</p>
+            <p>教官：你平板支撑一下</p>
+            <p>同学：（平板支撑）</p>
+            <p>同学：报告我知道了（能起来了吗）</p>
+            <p>教官：（笑）多撑一会感受一下</p>
+            <p>其实r也不知道，但r精准预测了以上内容知道教官喜欢搞点事，所以一句话都不会说的。果不其然</p>
+            <p><b><span style='font-size:x-large'>拉练</b></span></p>
+            <p>就是0点出发走20公里然后4点回来的意思</p>
+            <p>风景根本没啥好看的就是一堆…一部分破烂施工地一部分旁边种了树别的没了的路。然后休息点（10公里）是一个类似公园（的边缘）。然后开着灯。就是很普通很普通很普通的城市…城市边缘…夜景。</p>
+            <p>凌晨三点左右的 不知道哪里<br><br>
+            <img src='https://s2.loli.net/2023/09/04/DPaLMuWiT1gpcEv.jpg' width=80%></p>
+            <p>然后还下雨了。</p>
+            <p>传说中的休息其实是站20分钟<img src="https://s2.loli.net/2023/07/31/vhwPTi9ynZzxIDa.jpg" width="50px"><br>有学长学姐给每人发了一袋面包+牛奶+矿泉水+士力架（小）+餐巾纸。r觉得发餐巾纸是特别特别贴心的，但那个牛奶是袋装的呀……！完全不方便喝……！</p>
+            <p>感觉几百份物资能这样发完好厉害，换言之，是怎么带到场地的呢（如果是装在车上当我没好奇…如果是学长学姐用自行车电瓶车带过去那很神奇！）</p>
+            <hr>
+            <p>出发前教官说不能戴耳机，嗯嘛啊……最后一堆人都带了</p>
+            <p>在操场上集合，听了10分钟极其折磨的讲话，因为站着比走路累而且那个大屏幕实在太亮了亮得瞎眼，还临时改口号，本来是“勇往直前蓄势待发”变成“砥砺风雨努力？？忘了）拼搏”，这下一语成谶就下雨了嘛！所以说不要改口号不是挺好</p>
+            <p>然后本来不想把ipod拿出来的因为教官在r旁边，但是后来下雨了就啥都不管了，开始听歌……后面忘了，三个小时都在听歌，可快乐了</p>
+            <p>最后回程的时候地上都是水坑特别折磨，有段时间大发善心一直在努力找路走，最后懒得思考了直接往前走，r的鞋子很厚实什么水都没近，至于后面的人走哪r不管了……（教官说要穿运动鞋，因为轻便，r没听）（运动鞋早进水了谁爱穿谁穿）</p>
+            <p>最最最最不爽的是都回学校可以解散了的时候说要拍合照，然后还折腾了好一会因为我们前面一直有人走过去走过来挡住。</p>
+            <p>本来想看日出的但是回寝室事太多了没来得及。</p>
+            <p>中午都在睡觉，大好机会趁人少跑去吃食堂的酸菜鱼，好</p>
+            <p>1两不知道啥鱼随便选的+豆芽</p>
+            <img src='https://s2.loli.net/2023/09/04/QUZhyBWDaG58Sim.jpg' width='80%'>
+            
+            <p>食堂芝士葡萄……还是多肉葡萄……忘记了 测评</p>
+            <img src='https://s2.loli.net/2023/09/04/R9cirBmUuekOJpH.jpg' width='80%'>
+            
+            <p>有奶油18r，没有14r，图为没有</p>
+            <p>但r没懂奶油指的是奶油还是奶盖……</p>
+            <p>起因是想点奶茶，打开美团外卖：首先看到一家起送费0的，觉得天地良心！然后发现该店没有一样是不下20块的…………</p>
+            <p>真的会有人买吗你们这样……</p>
+            <img src='https://s2.loli.net/2023/09/04/AsUwMrmF1L2yWuJ.png' width='80%'>
+            
+            <img src='https://s2.loli.net/2023/09/04/GRvJ13XuVa6b4Tn.png' width='80%'>
+            
+            <p><b><span style='font-size:x-large'>观影</b></span></p>
+            <p>拉练当晚看《跨过鸭绿江》</p>
+            <p>集合之后才发现40%的人都请假没去，真是失算…</p>
+            <p>场地上也不断有人离开，教官也说随便看看就走好了，啊！总之在场地上坐了一个半小时打了五六局三麻，坐得腰酸背痛并丧失集中力不能好好打麻将了，收好东西开润</p>
+            <p>别的都不记得了，反正r也没看，唯一记得的是彭德怀骂人，前面忘了，中间忘了，后面忘了，声音真的太大了为了保护耳朵我也想润了</p>
+            <p><b><span style='font-size:x-large'>杂七杂八</b></span></p>
+            <p>某食堂早饭供应长得像方便面一样的一碗面，刚好够r吃（意思是对大部分人来说不够），快乐购入面然后加了个煎蛋</p>
+            <p>然后才发现那个不是方便面就是面……味道和材质都不像方便面…<img src='https://tennedar.github.io/pic/emoji/cry.webp' width='45px'></p>
+            <hr>
+            <p>说到煎蛋，某窗口的煎蛋加了土豆丝（土豆丝）（而且土豆丝还挺多…）一起煎的……某窗口的煎蛋放了片香肠，想找个纯纯的煎蛋真难……</p>
+            <hr>
+            <p>百度贴吧把r的吧主等级降了…当吧主真是好气&gt;&gt;&gt;&gt;&gt;好笑，有人发贴问“下载了rar文件为什么运行不了游戏啊”，你倒是解压……哎，哎！还有人一定不解压，一定要直接打开然后产生新存档的时候把存档文件压缩回包里，然而用了个鬼知道靠不靠谱的解压软件，出了bug在吧里问……我让她换个正规有名的压缩软件……倒是解压啊……！</p>
+        </div><br><br>
+        <p style='background-color: black;color:rgb(196, 255, 234);font-size: larger;' id="9.1"><b>2023.9.1</b> || <a href='#top' style="color:rgb(196, 255, 234)">回到頂端</a></p>
+        <div class="blogtext">
+            <p>感覺好久沒寫……！</p>
+            <b><span style="font-size:x-large;" id="寫在前面之為什麼一直沒寫">寫在前面&nbsp;&middot;&nbsp;之為什麼一直沒寫</span></b>
+            <p>因為軍訓訓得根本沒時間……</p>
+            <p>總而言之blog再開，然後這次就以簡潔一點的方式來記了那種花裡胡哨的效果沒空做了啦</p>
+            <b><span style="font-size:x-large;">第一次講座</span></b>
+            <p>参加了手（？外科专家（？Kevin C. Chung的讲座，很有意思。虽然介绍文档写着“讲座语言为中文”但实际的效果是中英混杂…（听得懂）</p>
+            <p><img src="https://s2.loli.net/2023/09/01/eYlcdLBj2yOEnPN.jpg" width="80%">
+            <img src="https://s2.loli.net/2023/09/01/9DjFZw81vxCPqWi.jpg" width="80%"></p>
+            <p>内容大致分为三部分，第一部分是关于Prof. Kevin C. Chung做过的一些有趣（？的手术（及照片）。有个人造房子的时候把手指切了，Prof. Kevin C. Chung展示了从缝合一部分到完全缝合到手术之后3个月的照片————用来说明他做手术的标准是“像没做过手术一样”美观；有个人肩膀附近的神经被切掉可以从大腿忘了某个地方取同类型肌肉+神经装上去；有个农民五根手指被切掉了，对Prof. Kevin C. Chung说希望能给他装一根手指，因为他要做农活和开车ry，最终取了第二大的脚趾移到手上作为大拇指，然后就可以做很多事了。</p>
+            <p>还有个小孩出生只有四根正常手指，大拇指里面没有骨头是废的，最终切掉了大拇指然后把食指上两指节移到大拇指的位置，让人一眼看过去不会觉得ta只有四根手指</p>
+            <p>Prof. Kevin C. Chung：“你们为什么会觉得人一定要有五根手指”</p>
+            <p>O.o</p>
+            <p><img src="https://s2.loli.net/2023/09/01/u29BZEQgb3zmed7.jpg" width="80%"></p>
+            <p>第二部分是关于画家雷诺阿，他患有类风湿性关节炎，所以他后期的画作尺寸变得更小，因为关节没法大幅度移动；有些画作中有猫毛，因为风湿病人比较瘦然后猫趴在腿上会比较温暖。感觉是很有意思的角度。</p>
+            <p>在后期画作中也有一幅约1.8x0.9m的很大的画，是雷诺阿向“因为雷诺阿重病所以没法画大的画”的反驳。</p>
+            <p>第三部分是鸡汤……后面忘了……后面忘了，放图</p>
+            <p><img src="https://s2.loli.net/2023/09/01/T47lNznQd1JCVf9.jpg" width="80%"></p>
+            <p>总而言之是很有意思的讲座。</p>
+            <b><span style="font-size:x-large;">风景照</span></b>
+            <p>随手拍</p>
+            <p><img src="https://s2.loli.net/2023/09/01/GwPfLgtIRo8E3Zy.jpg" width="80%"></p>
+            <b><span style="font-size:x-large;">版杀XXXIII</span></b>
+            <p>总结已经更新<a href="https://tennedar.github.io/html/umnk.html">在这里</a>了！</p>
+            <p>非常快乐<img src='https://tennedar.github.io/pic/emoji/love.webp' width='45px'></p>
+            <b><span style="font-size:x-large;">r也不知道好不好用的实用网址（收藏）</span></b>
+            <p><a href="https://quip.com/">文档编辑协作</a></p>
+            <p><a href="https://www.airtable.com/">数据表格协作</a></p>
+            <b><span style="font-size:x-large;">杂七杂八</span></b>
+            <p>晚上回寝室的时候走在前面的同学帮r开门（即用挡着不让门关）（ps理论上……一般来说……那个门是一个人刷卡进去……不能尾随……理论上）并说了谢谢</p>
+            <p>r：？为什么谢谢是你说</p>
+            <p>同学：因为你中午帮r开了门</p>
+            <p>噢</p>
+            <hr>
+            <p>不是这几天……之前……在饭店吃饭看到服务员把盖子掀开之后用手去接盖子上流下来的水或者汤什么的（防止掉到餐桌上），这也太怪了服务员规章（？，用毛巾接也可以的吧</p>
+            <hr>
+            <p>别的都忘了……说明它们没有意思！</p>
+            <p>会尽快在一周之内（？？更新新内容的</p>
+            <p>时间允许的话想去图书馆看看，但是借完书也不一定有空在一周……还是几天期限……忘了……看完，所以还是之后再说……！讲真thu给的京东读书专业版还不如zlib……京东读书简直了啥都没有。总之下载了《金色夜叉》或许也许之后可能有空再看。</p>
+        </div><br><br>
+        <p style='background-color: black;color:rgb(196, 255, 234);font-size: larger;' id="8.8"><b>2023.8.8</b> || <a href='#top' style="color:rgb(196, 255, 234)">回到頂端</a></p>
+        <div class="blogtext">
+            <img src="https://s2.loli.net/2023/08/08/zdMBo7mqlTGEw2U.png" width="50px"><span class='eng'>r</span>學會了一個新東西<br>來展示一下<img src="https://s2.loli.net/2023/08/08/zdMBo7mqlTGEw2U.png" width="50px"><br><br><span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">《素晴らしき日々～不連続存在》感想<span class='eng'>feat z</span></span><br><br>
+            <input type="password" id="password230808" placeholder="劇情重要日期（四位）" class="i230808">
+            <button onclick="checkPassword230808()" class="b230808">提交</button>
+            <div class="d230808" style="display:none">
+                ①<br><img src="https://s2.loli.net/2023/08/08/L15d9XqAFhS74DI.png" width="80%"><br>
+                ②<br><img src="https://s2.loli.net/2023/08/08/spmyiSovYThnDxU.png" width="80%"><br>
+                ③<br><img src="https://s2.loli.net/2023/08/08/gzWkw7EFOnpeZLs.png" width="80%"><br>
+                ④<br><img src="https://s2.loli.net/2023/08/08/4JWk2sDQN63MbaH.png" width="80%"><br>
+                ⑤<br><img src="https://s2.loli.net/2023/08/08/NAi1uBFbr8spz7a.png" width="80%"><br>
+                ⑥<br><img src="https://s2.loli.net/2023/08/08/RuUs1MxYjEdkiHq.png" width="80%"><br>
+            </div>
+            <script>
+                function checkPassword230808() {
+                    var password = document.getElementById("password230808").value;
+                    if (password === "0720") { 
+                        document.querySelector(".d230808").style.display = "block";
+                        document.querySelector(".i230808").style.display='none';
+                        document.querySelector(".b230808").style.display='none';
+                    } else {
+                        alert("密码错误，请重新输入！");
+                    }
+                    document.getElementById("passwordb").value = ""; 
+                }
+            </script>
+        </div><br><br>
+        <p style='background-color: black;color:rgb(196, 255, 234);font-size: larger;' id="8.6"><b>2023.8.6</b> || <a href='#top' style="color:rgb(196, 255, 234)">回到頂端</a></p>
+        <div class='blogtext'>
+            <span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">近況報告</span><br>電子身份之類<span style="color:rgb(137, 23, 243)">陸續激活</span>中，在<span style="color:rgb(137, 23, 243)">僅</span>校內<span class='eng'>SNS</span>上四處晃盪也有不少收穫。<br><br><span style="color:rgb(137, 23, 243)">基本大概扎完痛包了！</span>之後會上傳圖片，個人感覺很滿意~<span class='eng'>Z</span>也說很好（？）在收更多谷之後大概會有第二版方案出現吧。總而言之<span style="color:rgb(137, 23, 243)">扎痛包一點都不難</span>，大概的步驟是<br><i>選定扎板軟/硬→確定要放的谷→購買吧唧掛件色紙等保護套→根據作品風格和谷子風格購買谷美→粘貼背景紙→咕谷子→粘貼谷子→粘貼谷美</i><br><br><hr>以<span class='eng'>r</span>這次為例詳細記錄一下心路歷程：<br><b>選定扎板軟/硬</b>——賣痛包送的是軟扎板，<span style="color:rgb(137, 23, 243)">軟扎板可以通過用亞克力膠黏在包上的方式，克服軟扎板容易塌的缺點</span>。————<b>使用軟扎板</b><br><b>確定要放的谷</b>————<span style="color:rgb(137, 23, 243)">うみねこ色紙+細胞神曲吧唧、方卡+芙芙吧唧</span>————<b>風格：優雅復古</b><br><b>購買吧唧掛件色紙等保護套</b>————下單了吧唧保護套，方卡自帶自封袋，為了保護色紙<span style="color:rgb(137, 23, 243)">本該賣卡磚但是上次也說過卡磚貴得要命，最後賣了<b>亞克力板</b>自己裁了一下（不然太大）</span><br><b>根據作品風格和谷子風格購買谷美</b>————下單<span style="color:rgb(137, 23, 243)"><br>蝴蝶、玫瑰（<u>原作元素</u>）鐳射（<u>符合優雅要求</u>）貼紙<br>書信文字（<u>符合復古要求+原作有書信要素</u>）燙金（<u>符合優雅要求</u>）貼紙<br>塑料金邊黑底玫瑰（<u>原作要素</u>）<br>白色蕾絲珍珠花邊（痛包常用配件，且復古優雅）<br>書信舊紙樣式素材紙（痛包常用配件，且復古）<br>金屬金色蝴蝶（<u>原作要素</u>且優雅）<br>金屬四角邊框（因為有方形的色紙可以裝飾用）</span><br><b>粘貼背景紙</b>————購買到手的背景紙都是<span style="color:rgb(137, 23, 243)">基本為長方形、邊緣不平</span>，所以思路是留1~2張完整的貼在中間，然後剩餘的把紙撕開去填充即可<br><b>咕谷子</b>————先貼貼紙，塑料配件後放，原則是不可以擋臉，儘量簡潔<br><b>粘貼谷子→粘貼谷美</b>————有手就行<br><br>
+            <span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">軟件試用 2則</span><br>之前吐槽過小紅書信息過於無聊，不過還是有用的<img src="https://tennedar.github.io/pic/emoji/shy.webp" width="45px"><br>根據推薦來試用這兩款軟件：<br><br><hr><span style="color:rgb(137, 23, 243)"><b><u><span class='eng'>ditto</span></span></u></b></span><br><a href="https://ditto-cp.sourceforge.io/" target="_blank"><span class='eng'>https://ditto-cp.sourceforge.io/</span></a><br><br><span class='eng'>ditto</span>是一款剪貼板軟件，可以查看剪貼板的歷史內容（有條數限定），可以方便地實現≥2條內容交替粘貼。<br><img src="https://s2.loli.net/2023/08/06/smqSWp1Du6gnINo.png" width="80%"><br>*軟件截圖，可以看到它1.記錄了剪貼板的歷史內容，而且可以點選一條然後再次複製2.支持複製圖片3.支持搜索（4.支持快捷鍵打開軟件，不用時縮小至托盤）<br><br><span class='eng'>r</span>評分：5/5<br>
+            <br><hr><span style="color:rgb(137, 23, 243)"><b><u><span class='eng'>quicker</span></span></u></b></span><br><a href="https://getquicker.net/" target="_blank">https://getquicker.net/<span class='eng'></span></a><br><span class='eng'>quicker</span>是一款工具箱軟件，集成了各種常用操作。<br>可以用郵箱註冊也可以微信掃碼登錄，進入後是這樣的頁面<br><img src="https://s2.loli.net/2023/08/06/4y97gdhEr8FH6si.png" width="80%"><br><br>*有詳細的教程<br>右鍵-設置，基本都是快捷鍵的設定<br><img src="https://s2.loli.net/2023/08/06/wsOLWJ86h7rSAzM.png" width="80%"><br><br>軟件主要的功能，比如截圖、翻譯，通過<b>集成</b>在這個單一軟件內，避免了平時工作打開各種不同軟件的繁瑣。<br>至於組合動作，感覺和<span class="eng">IOS</span>的“捷徑”有點像<br><img src="https://s2.loli.net/2023/08/06/xkJBASnb5mtLGfg.png" width="80%"><br><br>
+            <span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">泰拉瑞亞</span><span class='eng'>r</span>終於會建房子了<br><img src="" width="80%"><br><img src="https://s2.loli.net/2023/08/06/dtPFj7mB3WZsDuU.png" width="80%"><br><br><span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">動畫生涯表</span>填啦！<br><img src="https://s2.loli.net/2023/08/06/uHCLqSQJsAFgNrB.png" width="80%">
+        </div><br>
+        <p style='background-color: black;color:rgb(196, 255, 234);font-size: larger;' id="8.5"><b>2023.8.5</b> || <a href='#top' style="color:rgb(196, 255, 234)">回到頂端</a></p>
+        <div class='blogtext'>
+        修了一下博客在移動端頁面右側出現空白的問題，初步判斷是內容太長了，所以先刪掉了一些。
+        </div><br>
+        <p style='background-color: black;color:rgb(196, 255, 234);font-size: larger;' id="8.2"><b>2023.8.2</b> || <a href='#top' style="color:rgb(196, 255, 234)">回到頂端</a></p>
+        <div class='blogtext'>
+            前面忘了，準備<del>放棄</del><span class="eng">java</span>投身<span class="eng">C</span>，後面忘了<br>悲報：還沒開始，等幾天…
+        </div><br>
+        <p style='background-color: black;color:rgb(196, 255, 234);font-size: larger;' id="7.31"><b>2023.7.31</b> || <a href='#top' style="color:rgb(196, 255, 234)">回到頂端</a></p>
+        <div class='blogtext'><span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">大蘑菇</span><br>在雨中出行的時候看到路邊長的大蘑菇<br><img src="https://s2.loli.net/2023/07/31/QqUMfamkbZiKTYc.jpg" width="80%"><br><br><span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">芭比</span><br>看了芭比電影，本來是不想看的因為對電影沒有特別愛好，但是<span class='eng'>z</span>看完之後給<span class='eng'>r</span>發消息說<span style="color:rgb(137, 23, 243)">芭比是瑪格特羅比演的</span>……！<br><span class='eng'>r</span>之前也有看過自殺小隊<del>儘管忘了 而且總感覺少點背景知識，又對全系列沒興趣</del>，但是不管怎樣是眼熟的演員嘛首頁的評價也都很好，看了不虧。<br><span style="color:rgb(137, 23, 243)">感想的話</span>，也沒有什麼特別的。怪人芭比你人怪好的嘞（誰沒給芭比剪過頭髮（<span class="eng">r</span>還真沒剪那麼短因為不喜歡短髮！<br>在去看的那天穿了一身粉~不過不是芭比粉那種很鮮豔的，<span style="color:rgb(137, 23, 243)">扣扣搜搜居然湊出一套粉色上衣+粉色裙子+粉色頭飾（還有粉白色鞋子但是因為臨出門找不到所以放棄）</span><img src="https://s2.loli.net/2023/07/31/pUF6y8lofGuvLks.jpg" width="80%"><br><img src="https://s2.loli.net/2023/07/31/S6jyVAhYNJaHWCz.jpg" width="80%"><br><br><span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">遊戲</span><br>感覺雀力小有提升<del>感覺這句話說過了</del>是時候學習計算點數了刻不容緩<br><span style="color:rgb(137, 23, 243)">購入泰拉瑞亞並<b>開著無敵模式</b>挖礦很久</span><img src="https://s2.loli.net/2023/07/31/vhwPTi9ynZzxIDa.jpg" width="50px"><br>但是很好玩！做得特別深得人心雖然<span class='eng'>r</span>菜，托熱心同學的福基本是能秒殺各怪了……（所以又跑去挖礦了）（非常感謝）（非常感謝）<br>首頁看到有人推薦某英語恐解<span class='eng'>rpg</span>，暫時沒有想法但是它促銷……等下一次促銷吧。<br><br>捏人的艾莉卡和頭頂的帽子（假裝是船長帽子）配這個大海地圖超級符合原作很可愛<br><img src="https://s2.loli.net/2023/07/31/Yn48TAyK61sIxwR.jpg" width="80%"><br><span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">瑞平小紅書</span><br><span style="color:rgb(137, 23, 243)">下載它是因為</span>某天<span class='eng'>z</span>發了張截圖是用<span class='eng'>xhs</span>搜索大學住宿環境，<span class='eng'>r</span>深感其必要性和實用性就下載了。下完之後，使用感想是<span style="color:rgb(137, 23, 243)">信息密度實在太低了</span>。舉個例子，<span class='eng'>r</span>關注了一個<span class='eng'>ios</span>限免推薦博主之後首頁就連續出現了三四個，而且<span style="color:rgb(137, 23, 243)">內容一模一樣</span>，比瘋狂星期四文案還無聊好嗎。不過看甄嬛傳十級解讀還挺有意思的，主要問題就是重樣很討厭。<br><br><span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">谷美心路歷程初級</span><br><span style="color:rgb(137, 23, 243)">在此之前的谷</span>基本、或者說全部都是<span class="eng">z</span>送的，也不多。<b>但<span class='eng'>r</span>還是想吐槽方卡的意義到底何在，它甚至不如長方形的小卡可以塞卡包裡。</b><br>總之最近幾天<span style="color:rgb(137, 23, 243)">陸陸續續收了一些谷</span>，數量也不是特別多，但或許也許足夠扎一個小食量痛包了。<b><span clas='eng'>r</span>也無法理解為什麼一個痛包70%是配件30%是谷，你們不覺得喧賓奪主嗎……</b><br>不論如何<span style="color:rgb(137, 23, 243)">基本的谷和痛包</span>已經購入到手了，谷美是肯定要買一些的。基本的背景素材紙和亞克力膠等等隨便（隨便）買一點，然後貼紙還沒買因為不一定好用，主要的問題是卡磚。<span class="eng">r</span>收了這個美貌的紙片<br><img src="https://s2.loli.net/2023/07/31/mXUwtuKILWPRJFC.jpg" width="80%"><br>這個想著一定要放進包裡，但是怕彎掉，於是憑常識覺得保護+展示用的應該是卡磚…<span style="color:rgb(137, 23, 243)">就搜索卡磚</span>，就結論而言沒有一家滿意的，都好貴好貴，難以理解。<br><span style="color:rgb(137, 23, 243)">最终下单价廉物美亚克力板准备手动粘起来或者钻孔挂绳子<br>本来觉得挂绳的地方要装饰掩盖一下的，不过<span class='eng'>z</span>说可以故意露出来走淳朴路线……反正总而言之<span class='eng'>r</span>不买卡砖</span>
+        </div><br><br>
+        <p style='background-color: black;color:rgb(196, 255, 234);font-size: larger;' id="7.28"><b>2023.7.28</b> || <a href='#top' style="color:rgb(196, 255, 234)">回到頂端</a></p>
+        <div class="blogtext"><span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">續&nbsp;&middot;&nbsp;雜談</span><br>雀魂狂吃四鉴定为手气实在太烂没见过那么四不像的起手  游戏关闭<br>感觉雀力小有提升 至少避铳能力完全点满了！（与此同时已经很久没立直了<span class='eng'>r</span>是大怂逼）<br><br>悸动烧仙草（店）的悸动烧仙草（烧仙草）还不错<br><span style="background-color: #fffb00;">💐⚰️💐 12:57:33<br>刚才在奶茶店有两个小孩，然后和他們爷爷奶奶<br>💐⚰️💐 12:57:47<br>那个菜单的字太小了，他们没有一个人能读，然后就一直在那用手点<br>💐⚰️💐 12:58:21<br>但是那个店员他在菜单的背面嘛菜單就是一块板。搞了半天还不知道他们要点什么。<br>💐⚰️💐 12:58:38<br>店员：麻了<br>Z 12:58:46<br>。。。<br>Z 12:58:49<br>字太小还行<br>💐⚰️💐 12:58:51<br>最后是站在旁边等待的我帮他们读了菜单<br>Z 12:59:03<br>行善积德<br>💐⚰️💐 12:59:03<br>也有可能是不认识字，然后再加上普通话不标准的原因，反正</span><br><br>书接上文  本人在卖笔记 目前收入为（你猜）<span class="eng">RMB</span>，非常震惊于金钱的质变<br>上文的福什麼忘了閱讀器就是用來做筆記電子稿<span class='eng'>pdf</span>的。<br><span style="background-color: #00ff15;"><span class='eng'>To</span>高中牆<br>💐⚰️💐 2023/07/22 13:38:02<br>墙墙 投稿 匿了<br>💐⚰️💐 2023/07/22 13:39:27<br>出高三总复习时的语文笔记，适用于高二高三同学。约150P，20r，可视情况打折<br>💐⚰️💐 2023/07/22 13:39:38<br>本人高考语文130+，保证笔记好用没有保留<br>💐⚰️💐 2023/07/22 13:39:51<br>有意者联系qq（馬賽克）<br>💐⚰️💐 2023/07/22 13:41:38<br>也出高三总复习的数学错题本，内涵多种压轴题总结和详细心路历程，约45P，12r，视情况打折。两个笔记都是电子稿<br>💐⚰️💐 2023/07/22 13:41:44<br>本人高考数学140+<br><br><span class="eng">To Z</span><br>Z 啥笔记<br>R 语文给你看过的  还有数学给你看过的<br>R 有十多个哎？<br>Z 芥末便宜<br>Z 送我两页观赏用（不是<br>R 哦语文20数学12<br>R 怎么了！我有良心啊<br>R 现在挨个问是不是猫丝带姐月厨<br>R 有的话良心打折<br>R 没有拉倒  关我啥事<br>Z 这样 你扫描一下 一份买多人<br>Z 丝带姐可能性比较大<br>R 你好残酷<br>R 对啊不然呢<br>R 我怎么可能一本实体卖20 草<br>Z ？草<br>Z 好吧<br>Z 那定价还可以（<br>Z 丝带姐可能性比较大<br>Z 筑你别碰上（馬賽克）担（？<br>R 怎么会  有钱能使鬼推磨<br>R 我心胸宽广<br>Z 我看猫 给我也来一份<br>R 你是高中生吗<br>Z 我是小学生<br>Z 为什么只有月厨这个问题这么朴素<br>Z 是夜神月厨可以吗<br>R 想不出隐蔽的方法<br>R 回来了  处理完毕<br>R 月东西太多了，一个问题没法说清的<br>R 又不能要求人人都记得<br>R 那就看在你的面子上打折x<br>R 奉天承运 R帝诏曰 您抽幸运字符有功 赐笔记两份 钦此<br>R 对了，为什么让大家先加wx再看样图呢<br>R 当然是因为朋友圈发了（馬賽克）录取通知书啊<br>R 我那个处理消息的小号可没发过<br>R 这样一来样图字再丑大家也不会拒绝了<br>R 主打一个【花了钱也不肉疼就当沾沾学姐运气】的骗钱法<br>R 校刊不都是这种套路吗  又不贵  买来看看<br>R （对我来说校刊25太贵了所以我不买！）<br>R 我本来以为关联qq号会有消息提醒的<br>R 结果好友申请不会提醒  消息才有<br>R 我还以为凉凉了  抱着悲伤的心态登了一下小号<br>R 吓晕 <br>R 多有震慑力<br><br><span class='eng'>To 熱心朋友2人份</span><br>💐⚰️💐 2023/07/26 9:12:16<br>帮我宣传一下怎么样<br>X1 2023/07/26 9:12:23<br>？啥<br>X1 2023/07/26 9:15:58<br>我觉得我发了没用（<br>💐⚰️💐 2023/07/26 9:16:06<br>我也觉得！<br>X1 2023/07/26 9:16:10<br>但是为了钱我也发！<br>X1 2023/07/26 9:20:48<br>我先帮你问问我们班那个休学的（<br>💐⚰️💐 2023/07/26 9:23:48<br>你好热心<br><br>X2 2023/07/26 10:15:58<br>我请几个人缘广的朋友帮忙转发啦<br>X2 2023/07/26 10:16:12<br>这个可能比我认识的小朋友多<br>R<br>好 谢谢！<br>X2 那这波发家致富一下<br>X2 还拖了几个其他原社团的社长级和几个新高三的给我转发<br>X2 效果自然好<br>X2 （然后我还私聊了几个卷王，都有想法的！）<br><br></span>新聞&nbsp;&middot;&nbsp;騰訊收購<span class="eng">key</span>社<br>（看了一眼還沒玩過的<span class="eng">cl</span>）據貼吧網友說劇情有點為虐而虐的刻意，總之隨緣…<br>所以<span class='eng'>tx</span>收购<span class='eng'>key</span>和<span class='eng'>r</span>网盘里的硬盤版或者<span class='eng'>psp</span>忘了遊戲能正常运行是……不冲突的吧（没试过但是用脚想也觉得是这样的）<br>所以收了个錘子阿<br><br>才知道閒魚出二手書會用<span style="color:rgb(137, 23, 243)">卡片</span>表示……<span class='eng'>r</span>還以為是書內附贈的卡片這麼貴……之前私信一位賣家才知道寫“書”容易被封。原來如此原來如此。差點又被忽悠瘸了。<br><br>學習：让输入 <span class='eng'>Apple ID</span> 密码的弹窗都会用 <span class='eng'>Home</span>手势/键 尝试关一下，如果关不了说明是 <span class='eng'>iOS</span> 系统弹的，可以输入密码。如果能关掉，那肯定是 <span class='eng'>App</span> 伪装的弹窗要骗你密码。<br><br>看了一眼去年的教学计划 一门课是馬賽克思想后面忘了，一门课是馬賽克思想后面忘了，这有区别吗<br><br>甄嬛传的片尾名单，没有人名字超过三个字，好神奇好神奇 是巧合还是强制要求还是当时不流行四字</span>
+        </div><br><br>
+        <p style='background-color: black;color:rgb(196, 255, 234);font-size: larger;' id="7.25"><b>2023.7.25</b> || <a href='#top' style="color:rgb(196, 255, 234)">回到頂端</a></p>
+        <div class="blogtext">雜談<br><hr><br><del>雀魂太难了</del>手气太差了，总之继续看魔女<span class='eng'>blog</span><br>很應景的一張圖<img src="https://s2.loli.net/2023/07/25/nC7KVhBIMRf5xqi.png" width="80%"><br>總之就是這樣，巧妙的隱喻。<br>版殺應該有望參加吧。<br><span style="color:white">啊對對對</span><br>8月快到了，期待著<span class="eng">《fly high》</span>度過每天。<br>帮注册了<span class='eng' style="color:rgb(137, 23, 243)">protonmail</span>，发现非常非常的好……只需要绑一个找回密码用的邮箱就可以了（甚至不需要那个邮箱收验证码），别的一概不用，当即注册就可以用（记得某个邮箱要等审核）。<br>试用了<span style="color:rgb(137, 23, 243)">福昕PDF编辑器</span>，把多张图片合并成一个<span class='eng'>pdf</span>，功能很好用，几百张图片也没有卡死的情况。免費功能有水印但是<b>水印只加在<span class='eng'>pdf</span>的<span class='eng'>p</span>1</b>，所以在<span class='eng'>pdf</span>最前加個空白頁即可。
+        </div><br><br>
+        <p style='background-color: black;color:rgb(196, 255, 234);font-size: larger;' id="7.24"><b>2023.7.24</b> || <a href='#top' style="color:rgb(196, 255, 234)">回到頂端</a></p><span style="color:red">暫缺</span>
+        <p style='background-color: black;color:rgb(196, 255, 234);font-size: larger;' id="7.22"><b>2023.7.22</b> || <a href='#top' style="color:rgb(196, 255, 234)">回到頂端</a></p><span style="color:red">暫缺</span>
+        <p style='background-color: black;color:rgb(196, 255, 234);font-size: larger;' id="7.21"><b>2023.7.21</b> || <a href='#top' style="color:rgb(196, 255, 234)">回到頂端</a></p>
+        <div class="blogtext">
+            <span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;"><span class='eng'>java</span>学习笔记2</span><br><br>
+            <br><hr>#<span class="eng">Employee.java</span><br><code>public class Employee {<br>&nbsp;&nbsp;&nbsp;&nbsp;String name;<br>&nbsp;&nbsp;&nbsp;&nbsp;int age;<br>&nbsp;&nbsp;&nbsp;&nbsp;String designation;<br>&nbsp;&nbsp;&nbsp;&nbsp;double salary;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;public Employee(String name){<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.name = name;<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;public void empAge(int empAge){<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;age = empAge;<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;public void empDesignation(String empDesig){<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;designation = empDesig;<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;public void empSalary(double empSalary){<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;salary = empSalary;<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br><br>&nbsp;&nbsp;&nbsp;&nbsp;public void printEmployee(){<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("名字："+name);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("年齡："+age);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("職位："+designation);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("薪水"+salary);<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>}<br></code>
+            <br><hr>#<span class="eng">EmployeeTest.java</span><br><code>import java.io.*;<br><br>public class EmployeeTest {<br>&nbsp;&nbsp;&nbsp;&nbsp;public static void main(String[] args){<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Employee empOne=new Employee("tennedar1");<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Employee empTwo=new Employee("tennedar2");<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;empOne.empAge(26);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;empOne.empDesignation("無業遊民");<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;empOne.empSalary(-1000);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;empOne.printEmployee();<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;empTwo.empAge(21);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;empTwo.empDesignation("程序員");<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;empTwo.empSalary(3000);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;empTwo.printEmployee();<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>}<br></code>
+        </div><br><br>
+        <p style='background-color: black;color:rgb(196, 255, 234);font-size: larger;' id="7.20"><b>2023.7.20</b> || <a href='#top' style="color:rgb(196, 255, 234)">回到頂端</a></p><span style="color:red">暫缺</span>
+        <p style='background-color: black;color:rgb(196, 255, 234);font-size: larger;' id="7.17"><b>2023.7.17</b> || <a href='#top' style="color:rgb(196, 255, 234)">回到頂端</a></p>
+        <div class="blogtext">
+        <span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">悲报</span><br>在本站順利設置<span class='eng'>github contribution calendar</span>後的不知道幾天該代碼宕機了，原因未知，反正宕機了，所以撤下！<br><span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">百度細胞神曲吧建設</span><br>作為較早<span style="color:rgb(137, 23, 243)">（相對於遊戲推出時間2015年不是很早，但是相對於大部分人入坑是早的）</span>入坑胞曲且現在還略在坑的人…<span class='eng'>r</span>決定建設一下百度貼吧，原因如下：<br>1.搜索引擎直搜胞曲，搜出貼吧的可能性很大。因為胞曲難以安裝，所以很多人會去搜索它。<br>2.胞曲難安裝又難打，貼吧內有可用的教程和<span class='eng'>SS</span>存檔分享。<br>3.貼吧建都建了，內容也不是沒有，頂著個默認頭像多難看。<br><br>綜上所述<span class='eng'>r</span>終於在昨天申請吧主（初步）成功了，希望能順利上位…<br><br><span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">23.7.18追记</span><br>在試圖做一個<del>電子木魚</del>電子昆明湖……加油。<br><b>230720追記：已在<span class='eng'>FANDOM</span>頁上線~</b>
+        </div><br><br>
+        <p style='background-color: black;color:rgb(196, 255, 234);font-size: larger;' id="7.16"><b>2023.7.16</b> || <a href='#top' style="color:rgb(196, 255, 234)">回到頂端</a></p>
+        <div class="blogtext">
+        <span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">【持續更新】和<span class='eng'>Z</span>的雙人成行記錄</span><br>
+            <ul><li>23.7.15</li><span style="background-color: #fbff004e;">Z 哦離線模式就是你一個手柄一個鍵盤<br>Z 兩個人在一塊的話不用通過平臺<br>R ……<br>R 拼一拼還能玩<br><br>R 裏面的走出來會不會滾走了<br>R （想象力太豐富）<br>Z 不會吧<br>Z 真實的物理引擎<br>R 不然怎麽叫雙人遊戲<br>R 我草<br>Z 因為兩個人都得上來<br>R 當我沒說！<br>Z 我猜它設計成要在裏面推就是為了讓你跳動時候不回跑<br><br>R 啊啊啊啊<br>R 跳過頭了<br>R 就是說這東西助跑有沒有用啊<br>R （有我反應時間緩沖作用）<br>Z 有沒有計數死了幾次<br>R 我不懂了！<br>R 感覺我不會跳了<br>Z 對不起好好笑<br>Z 我剛怎麽跳過去的<br>R 我要笑死了<br>Z 作為一個成熟的解謎遊戲<br>Z 它怎麽能只有一種解法<br>Z 我的意思是<br>Z 你覺得這兩邊的東西是裝飾還是可以站的<br>R 裝飾的！<br>R 這個比第一個好跳<br><br>Z 我猜你得接个电线<br>R 我咋一个人接三个点<br>Z 让我看看让我看看<br>R 哦<br>R 或许按按钮，然后跑过去分别接三个点<br>R 虽然但是你不是黏土做的吗？<br>R 你导电？<br><br></span>
+                <li>23.7.17</li><span style="background-color: #008cff4e;">r 坏了<br>r 卡住了我<br>z ？<br>z 啊<br>r 刚才跳到管子上了，然后卡住了，差点求死不得<br><br>z 对不起 我在笑<br>z 手抖<br>z 有小人预告跳的动作吗<br>r 没有<br>r 刚才能过全靠脸<br>r 等下 我在想<br>r 比如我跳过去间隔都是十秒<br>z 我在看一个腿的动作<br>r 真的有吗<br>r 嘛再试试<br>r 你按太慢了<br>r 它有延迟的<br>r 我觉得按理来说，应该是我听到摇杆声音，然后跳<br>r 然后延迟的时间刚好够<br>r 我猜的<br>z 试试看qq和网络的延迟？<br>z 你再用什么发消息<br>r qq啊<br>z 哦那也可以先是这个<br>z 因为我是电脑切屏<br>r 不是我是说按那个按钮和变颜色<br>r 是有延迟的<br>r 试试看<br>r 试了<br>r 怪<br>z 我的意思是你是用手机还是什么发<br>z 能发完立马跳吗<br>r 笑晕了<br>r 电脑<br>z 哦 我试试看你这边屏幕<br>r 我试试看<br>r 那你还不如看你自己的<br>r 侧面清楚<br>r 我要数一下掉下去是几秒<br>r 2秒<br>r 草（）<br>r 我可以先跳再冲刺看看<br>r 动作会变<br>r 哦感觉可以<br>r 这样就能拉开时间间隔了<br>z 我就是看动作变按的啊<br>r 所以说按太慢了<br>r 要提前一点？或者同时<br>r 我跳了你马上按<br>z 明明就变绿了啊<br>r 我先掉下去才变绿的<br>r 笑得头疼<br>z 妈啊 连三秒语音行吗<br>r 行<br>z 看看qq通话延迟多少<br>z 你没开麦克风<br>z 那我说跳？<br>r 但是我没听见你声音啊<br>z 	阿这<br>z 鉴定为只需最质朴的跳跃<br>r 我笑死<br>r 怎么还有这个<br>z 	卧槽 又是这个<br>r 就一个诶 看脸吧<br>r 要不还是连麦……<br>r 好不用了<br><br>z 我卡住了啊啊啊啊啊啊<br>r 冲刺冲刺<br>z 	它不让我冲刺<br>r 那蹲下<br>z 	好崩溃 你E一下试试<br>r E是什么<br>r 我改过键<br>z 好吧<br>z 那个变红一下<br>r 哦哦<br>r 求死不能<br><br>z 我猜之后我们可以早一点开始<br>z 到底是一节太长还是我们太菜<br>r 我们太菜<br></span></ul>
+        </div><br><br>
+        <p style='background-color: black;color:rgb(196, 255, 234);font-size: larger;' id="7.13"><b>2023.7.13</b> || <a href='#top' style="color:rgb(196, 255, 234)">回到頂端</a></p>
+        <div class='blogtext'><span style='color:rgb(241, 241, 241);font-size: small;'>牆倒眾人推，氣不打一處來，也無所謂啦…</span><br><span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">韓語學習</span><br>今天終於把<span style="color:rgb(137, 23, 243)">多鄰國</span>的第一部分做完了~開啟第二部分<br><img src="https://s2.loli.net/2023/07/13/v4OGMZTbBxK8Yjt.png" width="550px"><br><img src="https://s2.loli.net/2023/07/13/ZYkNlRmjnpTzi1S.png" width="550px"><br><br>總結了一下現在遇到的幾個問題：<ol><li>發音不標準，或者念不順<ul><li>多讀</li></ul></li><li>單詞記不住，特別是收音記不住<ul><li>多讀…然後可以把收音念得誇張一點</li></ul></li><li>近義詞不知道怎麼區分使用情況<ul><li>查！離開多鄰國打開瀏覽器</li></ul></li></ol><br><details><summary><span class='eng'>Eng</span></summary></summary><span class='eng'><span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">Korean learning</span><br>Today r finally finished the first part of Duolingo ~ and started the second part<br>Here are a few problems r have encountered:<ol><li>The pronunciation is not standard, or the pronunciation is not smooth<ul><li>read more</li></ul></li><li>r can't remember words<ul><li>Read more... And then r can say it a little more exaggerate</li></ul></li><li>Don't know how to distinguish synonyms<ul><li>Check! Leave Duolingo and open the browser</li></ul></li></ol></span></details>
+        </div><br><br>
+        <p style='background-color: black;color:rgb(196, 255, 234);font-size: larger;' id="7.11"><b>2023.7.11</b> || <a href='#top' style="color:rgb(196, 255, 234)">回到頂端</a></p>
+        <div class='blogtext'>
+        <span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;"><span class='eng'>PicGo</span>圖床使用</span><br>
+        <span style="color:rgb(137, 23, 243)">前情提要</span><br>在使用個站的過程中發現一個問題：託管在<span style="background-color: #aaa;">無法直連的圖床</span>上的圖片，直連狀態下無法加載；反之，託管在<span style="background-color: #aaa;">可以直連的圖床</span>上的圖片，在非直連狀態下有的時候不能加載、有的時候加載極其慢。<br>總而言之，原來的那些圖床不好用。<br>為什麼不直接傳到<span class='eng'>github page</span>所在的倉庫呢？因為<del>眾所周知</del><span class='eng'>github</span>免費版每個倉庫只有1<span class='eng'>G</span>，和原先<span class='eng'>r</span>使用的博客平臺<span class='eng'>wordpress</span>相比反而更小，因為<span class='eng'>wordpress</span>是圖片空間1<span class='eng'>G</span>，而<span class='eng'>github page</span>是圖片+代碼總共1<span class='eng'>G</span>。<br><br><span style="color:rgb(137, 23, 243)"><span class='eng'>PicGo</span></span><br>作為一款<del>小有名氣？？</del>的圖床，總之就是，查了一下沒有看到差評，所以來試試。<br><span style="color:rgb(137, 23, 243)">下載安裝</span><br>官網：<a href="https://picgo.github.io/PicGo-Doc/zh/guide/" target="_blank"><span class='eng'>PicGo</span>手冊</a>，選擇適合自己電腦的版本下載（<span class='eng'>r</span>選擇2.3.1版本-<span class='eng'>x</span>64）；同時，由於手冊中說<span style="background-color: #aaa;">请确保你安装了 Node.js， 并且版本 >= 16。</span>，就來安裝一下~<a href='https://nodejs.org/' target="_blank"><span class='eng'>node.js</span></a>。<br><b>不過</b>，從<span class='eng'>r</span>安裝完到現在使用為止根本就沒有用到它，或許也可以不裝。<br><span style="color:rgb(137, 23, 243)">配置圖床、獲取<span class='eng'>token</span></span><br>手冊都有講，這邊不再贅述。<br><span style="color:rgb(137, 23, 243)">安裝完成、嘗試使用</span><br><br>如圖所示，已經配置好了<span class='eng'>github repository token</span><br><img src="https://s2.loli.net/2023/07/12/BpDjhTY3rv7uqoX.png" width="80%"><br><br>這張圖就是託管在圖床上的，效果很成功！<br><span class='eng'>r</span>同樣也配置了<span class='eng'>sm.ms</span>圖床作為備用。<br><br><span style="color:rgb(137, 23, 243)">總結</span><br><span class='eng'>PicGo</span>，好，非常好。<br><br>
+        <span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">一些筆記</span><br><img src="https://s2.loli.net/2023/07/11/sVzJxXgYfw3P8ae.png" width="550px"><br><img src="https://s2.loli.net/2023/07/11/cBFeuSmb8PTJE1Y.png" width="650px"><br>
+        </div><br><br>
+        <p style='background-color: black;color:rgb(196, 255, 234);font-size: larger;' id="7.8"><b>2023.7.8</b> || <a href='#top' style="color:rgb(196, 255, 234)">回到頂端</a></p>
+        <div class='blogtext'>
+            <span style="color:rgb(137, 23, 243)">博客再開！</span><br>
+            簡單說一下最近在做什麼~
+            <ul><li><span style="color:rgb(137, 23, 243)">6.25-6.30</span>招生營，出去玩<br></li>
+                <li><span style="color:rgb(137, 23, 243)">6.30-7.5</span>版殺</li>註：版殺，以<span class='eng'>BBS</span>為載體的殺人遊戲（狼人杀等）的一種形式。</ul>
+            總之2023年已經過去了一半，按照計劃<span class='eng'>r</span>已經把上半年的html文件和下半年的區分開了~之後會逐漸把博客寫完的。<br>版杀XXXII记录已补全！<a href="https://tennedar.github.io/html/umnk.html" target="_blank">传送门</a><br><br><span style="color:rgb(137, 23, 243)">招生营日记</span><br>
+            <ul><li><b>6.25</b>上午</li>按照约定在火车站和志愿者（一对一的）碰面，时间到了<span class='eng'>ta</span>还没跟我碰头，<span class='eng'>r</span>接微信电话说的第一句话是“喂，学姐，你在哪呀”<br>说完心想…………<span class='eng'>r</span>也不知道是学姐还是学长哎……<span class='eng'>omg</span>……按常理来说这种一对一的形式应该是学姐吧……<br>从结论上来说是学姐啦。<br><br>在火车上和学姐聊天，具体内容<span class='eng'>r</span>忘了因为<span class='eng'>r</span>不懂啊！<br>学姐：你去过北京吗<br><span class='eng'>r</span>：去过（旅游相关 还能聊）<br>学姐：北京的气候和南方很不一样<br><span class='eng'>r</span>：嗯嗯嗯嗯（常识相关 也许有一点）<br>学姐：所以北京的建筑、城市景观和南方很不一样<br><span class='eng'>r</span>：（宕机）<br><span class='eng'>r</span>：（不理解不震撼 听不懂 而且丧失兴趣，决定实话实说）……为什么？<br><br>
+                <li><b>6.25</b>下午</li>到“大本营”也就是某个有房间有食堂有体育馆的青少年实践基地，拿完房卡之后立刻吃午饭。<br>食堂一楼是那种小学生圆椅子，吓死人了差点以为要屈尊在这种地方吃饭，好在人流一转上了二楼，二楼是皮椅子靠背椅方桌，也就是那个实践基地的教师食堂，还可以接受！<br><br>菜一般般不是很喜欢，虽然要问<span class='eng'>r</span>有什么喜欢的菜那也是没有的。<br><br>吃完饭之后过了一会去体育馆集合，有个教官（应该是实践基地的教官，不是大学老师）……………………带我们做破冰游戏。<br>破冰可以理解……做游戏也可以理解…………这游戏实在是太弱智了没有一个人不吐槽的那种好弱智好弱智。包括但不限于每人拿根管子然后让球顺着滑下去、围成一个圈然后按节奏左拍拍右拍拍、六个人骑充气毛毛虫步调一致往前跑。<br>顺带一提我们分了四组，要求画队旗取队名，我们队充满格局地叫做<u>北大都队</u>、隔壁队一点格局都没有地叫做<u>北大不队</u>。<br><br>（一个队里有考生有志愿者，考生就是指刚毕业的学生，不是说要考试的意思，我们是去玩的）<span class='eng'>r</span>因为是本组考生语文最高分<del>幸运地</del>被选中画队旗。<br><br>做完游戏到晚上了就解散，吃晚饭，然后晚上有桌游。<br><br>
+                <li><b>6.25</b>晚</li>本来要玩狼人杀，但是狼人杀玩太多了容易玩腻，而且刚好有只听说过规则、没实践过的阿瓦隆，果断加入。<br>然后就没什么可说的了，杀人游戏的思路都差不多，互通一下。<br><br>期间微信群内出现了“希望各位知道招生营≠清华，清华的活动不会这么弱智”的言论 哈 哈 哈 哈<br><br>
+                <li><b>6.26</b></li><span class='eng'>r</span>忘了是做什么了，好像还是去体育馆体验很无聊的电子枪打靶…按教官教的方法压根不可能眼睛准心靶子三点一线，看不懂。<br><br>下午好像…哎忘了忘了没意思就是忘了。<br>晚上节目表演，每个小组出1-2个节目。最后因为某些学姐上台点歌代沟过大没人陪她蹦迪场面一度很冷漠。<br>结束后玩桌游。<br><br>
+                <li><b>6.27</b></li>
+                忘记了好像是去玩大本营自带的飞机模拟器（一点都不会玩，教程都没有，不好玩）和<span class='eng'>vr</span>（分辨率太低看得头晕，剧情很无聊，不好玩）<br><br>中午野炊，或者说自己做饭，食材大概就是蔬菜肉鸡虾，会做的主动负责，不会做的在旁边看，最后因为做得有点不忍直视了旁边的阿姨过来帮我们炒了两个菜。<br><br>看着某学长把全鸡劈开觉得是怎么从不会处理到会的（虽然期间所有人都在查小视频教程），感觉很厉害。<br><br>晚上桌游。<br><br>
+                <li><b>6.28</b></li>
+                参加企业……太无……内部有空调也不好意思骂它无聊！<br>晚上照样桌游。<br><br>
+                <li><b>6.29</b></li>
+                <img src="https://s2.loli.net/2023/07/12/NQWPH1GrVwFamy9.png" width="200px"><br><br>
+                上午忘了干啥了。下午去乌镇，太无聊了太痛苦了，走得很累而且导游很无聊而且导游声音太小了站她旁边都听不到而且实在是无聊啊怎么会有这么无聊的景点以后什么人文古迹民居传统文化景点一律不要去了无聊死了无聊死了知道了怎么样能当饭吃吗而且听了又记不住。<br>晚上去乌镇西栅散步，看着我们仨的35块400<span class='eng'>ml</span>果汁再看看学姐的25块700<span class='eng'>ml</span>花茶……坑钱的东西……<br>护栏实在太短了没心情玩，怕过个桥过一半掉下去。<br><br>
+                <img src="https://s2.loli.net/2023/07/12/NQWPH1GrVwFamy9.png" width="200px"><br><br>
+                <li><b>6.30</b></li>
+                <img src="https://s2.loli.net/2023/07/12/NQWPH1GrVwFamy9.png" width="200px"><br><br>
+                某天，忘了是29还是30，上午来了个老师挨个教我们填志愿，下午玩桌游。玩了一把阿瓦隆一把<span class='eng'>uno</span>然后去隔壁狼人杀，这是可以说的吗太久没玩狼人杀了对角色不清楚……而且不同狼人杀版本不同实在难绷……紧急一边玩一边查了一下，最后也没什么感想……就是建议版本统一！！
+            </ul><br>还有一些感想：<br>最喜欢的部分是，尽管早上的活动很若至，大家都默默熬到晚上聚在一起快乐打桌游。<br>那么抛开玩的部分不谈，印象第二深刻的是r的文……文盲程度。<br>一方面是年龄，按惯例2023年入学的就叫三字班，2013年入学的也叫三字班，一堆人自我介绍算来算去七八九字班的时候r尝试心算然后宕机了，能不能直接说！算起来好累还容易把人家多算十岁<br>另一方面是地域，出发前r跟z讲要去嘉兴，z：嘉兴在哪<br>r：不知道啊<br>然后z解释嘉兴和乌镇的关系：我也不知道这俩啥关系<br>差不多。r也不知道<br>有个学姐说话有口音，这个都听得出来我们就问她是哪里人，然后说来自天津。于是r想……如果是因为个人习惯or怪癖造成的口音 ，会不会被错误地安上【地域所致】的原因？<br>
+            <br><details><summary>照片合集</summary>
+                启程，行李箱上挂的小熊。<br><br><img src="https://s2.loli.net/2023/07/12/Rg5d7YhOabnVlHA.webp" width="650px"><br><br>
+                队旗<br><br><img src="https://s2.loli.net/2023/07/12/QiMxILYprKDVyda.webp" width="650px"><br><br>
+                桌游1<br><br><img src="https://s2.loli.net/2023/07/12/sTYqPKNu4vyfpLX.webp" width="650px"><br><br>
+                桌游2<br><br><img src="https://s2.loli.net/2023/07/12/gPAtKzTBwE8UJbk.webp" width="650px"><br><br>
+                无聊的企业1<br><br><img src="https://s2.loli.net/2023/07/12/Hefd5BTon6OklyG.webp" width="650px"><br><br>
+                无聊的企业2<br><br><img src="https://s2.loli.net/2023/07/12/BahVxMioTkzWU6c.webp" width="650px"><br><br>
+                乌镇1<br><br><img src="https://s2.loli.net/2023/07/12/BA9WxHcP265VOge.webp" width="650px"><br><br>
+                乌镇2<br><br><img src="https://s2.loli.net/2023/07/12/q2EG8FihW6mbgNz.webp" width="650px"><br><br>
+                乌镇3<br><br><img src="https://s2.loli.net/2023/07/12/ryB1qTipDuc8N93.webp" width="650px"><br><br>
+                乌镇4<br><br><img src="https://s2.loli.net/2023/07/12/REGTQpcP4nmAYfq.webp" width="650px"><br><br>
+                乌镇5<br><br><img src="https://s2.loli.net/2023/07/12/HqFT9hdwNBke8lG.webp" width="650px"><br><br>
+                返程，美丽的…这是什么东西，火车站外部？<br><br><img src="https://s2.loli.net/2023/07/12/1qVZGH9WUzOwyQD.webp" width="650px"><br><br>
+            </details>
+        </div>
+        <br><br>
+        <hr>
+    </div>
+</div>
+<!--<script src="https://tennedar.github.io/js/clickemoji.js"></script>-->
+<script>
+	 function siteTime()
+	 {
+		 window.setTimeout("siteTime()", 1000);
+		 var seconds = 1000;
+		 var minutes = seconds * 60;
+		 var hours = minutes * 60;
+		 var days = hours * 24;
+		 var years = days * 365;
+		 var today = new Date();
+		 var todayYear = today.getFullYear();
+		 var todayMonth = today.getMonth()+1;
+		 var todayDate = today.getDate();
+		 var todayHour = today.getHours();
+		 var todayMinute = today.getMinutes();
+		 var todaySecond = today.getSeconds();
+		 /* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+		 year - 作为date对象的年份，为4位年份值
+		 month - 0-11之间的整数，做为date对象的月份
+		 day - 1-31之间的整数，做为date对象的天数
+		 hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+		 minutes - 0-59之间的整数，做为date对象的分钟数
+		 seconds - 0-59之间的整数，做为date对象的秒数
+		 microseconds - 0-999之间的整数，做为date对象的毫秒数 */
+		 var t1 = Date.UTC(2023,1,20,0,0,0); //北京时间2016-12-1 00:00:00
+		 var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
+		 var diff = t2-t1;
+		 var diffYears = Math.floor(diff/years);
+		 var diffDays = Math.floor((diff/days)-diffYears*365);
+		 var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
+		 var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
+		 var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
+		 document.getElementById("sitetime").innerHTML=" 记录已持续： "+diffYears+" 年 "+diffDays+" 天 "+diffHours+" 小时 "+diffMinutes+" 分钟 "+diffSeconds+" 秒";
+	 }
+	 siteTime();
+ </script>
+    <script>
+        function changeMode() {
+          console.log("123");
+          const darkMode =
+            window.document.documentElement.getAttribute("data-theme") || "light";
+          console.log(darkMode);
+          if (darkMode == "light") {
+            window.document.documentElement.setAttribute("data-theme", "dark");
+          } else {
+            window.document.documentElement.setAttribute("data-theme", "light");
+          }
+        }
+    </script>
+    <br>
+    <br>
+	<p style="text-align:center;" class="copy"> copyRight &copy; 2023 Tennedar All rights reserved.</p>
+    <br>
+    <br>
+</body>
+</html>
