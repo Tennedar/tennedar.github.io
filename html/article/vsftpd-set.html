@@ -1,0 +1,83 @@
+<title>centos7.9安装并配置vsftpd小记</title><br>
+<style>
+    code{
+        background-color: black;
+    }
+</style>
+<span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">Centos7.9安装并配置vsftpd小记</span><br>
+<span style="color:red">Written by Tennedar；禁止无断转载；共500字</span><br>
+<br><hr><h2>环境</h2><br>
+VPS：CentOS7.9<br>
+运营商：<a href="cloudcone.com" target="_blank">cloudcone.com</a><br>
+于Win11使用Xshell7进行操作
+<br><hr><h2>安装</h2><br>*以下基于<i>亲测有效</i>的教程写成，不保证实际操作效果相同，不保证有记漏的<br>
+参考教程：<br><a href="https://cloud.tencent.com/developer/article/1720645" target="_blank">CentOS 7 安装vsftpd 服务器的具体操作步骤</a><br><a href="https://zhuanlan.zhihu.com/p/373323336" target="_blank">centos7.9安装vsftpd并配置虚拟用户权限</a><br>
+<h3>1.删除vsftpd（若此前安装过）</h3>
+<code>[root@localhost /]# rpm -aq vsftpd</code><br>若有结果返回，则vsftpd已安装，通过以下指令删除<br><code>[root@localhost /]# /sbin/service vsftpd stop<br>[root@localhost /]# rpm -e {查找时的返回值}</code><br>
+验证vsftpd是否已删除<br><code>[root@localhost /]# /sbin/service vsftpd stop<br>Redirecting to /bin/systemctl stop vsftpd.service<br>Failed to stop vsftpd.service: Unit vsftpd.service not loaded. #找不到vsftpd<br>[root@localhost /]# /sbin/service vsftpd start<br>Redirecting to /bin/systemctl start vsftpd.service<br>Failed to start vsftpd.service: Unit not found. #找不到vsftpd</code><br>
+<h3>2.安装vsftpd</h3>
+<code>[root@localhost /]# yum -y install vsftpd</code><br>启动<br><code>[root@localhost home]# systemctl start vsftpd.service</code><br>开放端口（*笔者把20-22都开放了）<br><code>[root@localhost /]# firewall-cmd --zone=public --add-port=20-22/tcp --permanent<br>[root@localhost /]# firewall-cmd --reload</code><br>
+<br><h2>配置</h2><br>
+<i><u>常用指令（多次可用）</u></i><br>
+<code>[root@localhost vsftpd]# vim /etc/vsftpd/vsftpd.conf<br><br>[root@localhost vsftpd]# systemctl restart vsftpd.service<br>[root@localhost vsftpd]# systemctl status vsftpd.service</code><br>
+↑如返回绿色则正常运行，返回红色则错误，笔者没找到解决方法选择直接炸了重开<br>
+<br><i><u>具体配置文件vsftpd.conf及解释</u></i><br>
+<code>anonymous_enable=YES #允许匿名用户<br>
+    local_enable=YES<br>
+    write_enable=YES<br>
+    local_umask=022<br>
+    dirmessage_enable=YES<br>
+    xferlog_enable=YES<br>
+    connect_from_port_20=YES<br>
+    xferlog_std_format=YES<br>
+    ascii_upload_enable=YES<br>
+    ascii_download_enable=YES<br>
+    chroot_local_user=YES #任何ftpuser都具有权限<br>
+    chroot_list_enable=YES<br>
+    chroot_list_file=/etc/vsftpd/chroot_list<br>
+    listen=NO<br>
+    listen_ipv6=YES<br>
+    <br>
+    pam_service_name=vsftpd<br>
+    userlist_enable=YES<br>
+    tcp_wrappers=YES<br>
+    <br>
+    guest_enable=YES<br>
+    guest_username=ftpuser<br>
+    user_config_dir=/etc/vsftpd/vuser_conf<br>
+    allow_writeable_chroot=YES<br>
+    <br>
+    pasv_address={VPS ip地址}<br>
+    pasv_enable=Yes<br>
+    pasv_min_port=20000<br>
+    pasv_max_port=20100<br>
+    port_enable=YES</code><br>
+<br><h2>创建ftp目录及用户</h2><br>
+<h3>1.创建目录</h3>
+<code>[root@centos7 ~]# cd /home<br>[root@centos7 home]# mkdir vsftpd<br>[root@centos7 home]# useradd -g root -M -d /home/vsftpd -s /sbin/nologin ftpuser<br>[root@centos7 home]# passwd ftpuser</code><br>
+设置密码并确认密码<br>
+授权<br><code>[root@centos7 home]# chown -R ftpuser.root /home/vsftpd</code><br>
+<h3>2.创建虚拟用户</h3>
+<code>[root@centos7 home]# cd /etc/vsftpd<br>[root@centos7 vsftpd]# vim vuser_passwd</code><br>
+<i><u>vuser_passwd内容：</u></i><br><code>{username1}<br>{passwd} #上文中设置的密码<br>{username2}<br>{passwd} #如果有复数用户</code>
+<br><code>[root@centos7 vsftpd]# db_load -T -t hash -f /etc/vsftpd/vuser_passwd /etc/vsftpd/vuser_passwd.db<br>[root@centos7 vsftpd]# chmod 600 /etc/vsftpd/vuser_passwd.db</code><br>
+<b>编辑pam认证文件（64位）</b><br><code>[root@centos7 vsftpd]# vim /etc/pam.d/vsftpd</code><br>
+注释所有内容然后加入：<br><code>auth required /lib64/security/pam_userdb.so db=/etc/vsftpd/vuser_passwd<br>account required /lib64/security/pam_userdb.so db=/etc/vsftpd/vuser_passwd</code><br>
+<b>创建虚拟用户可访问的目录</b><br><code>[root@centos7 vsftpd]# cd /home/vsftpd<br>[root@centos7 vsftpd]# mkdir {username1}<br>[root@centos7 vsftpd]# mkdir {username2}<br>[root@centos7 vsftpd]# chmod 777 {username1}<br>[root@centos7 vsftpd]# chmod 777 {username2}</code><br>
+<br><code>[root@centos7 vsftpd]# cd /etc/vsftpd<br>[root@centos7 vsftpd]# mkdir vuser_conf<br>[root@centos7 vsftpd]# cd vuser_conf</code><br>
+<br><code>[root@centos7 vuser_conf]# vim {username1}</code><br>
+<u><i>配置文件内容如下：</i></u><br><code>local_root=/home/vsftpd/{username1}<br>write_enable=YES<br>anon_umask=022<br>anon_world_readable_only=NO<br>anon_upload_enable=YES<br>anon_mkdir_write_enable=YES<br>anon_other_write_enable=YES</code><br>
+其他用户同理<br><br><b>创建chroot_list</b><br><code>[root@centos7 vuser_conf]# vi /etc/vsftpd/chroot_list</code><br>
+<i><u>文件内容如下：</u></i><br><code>{username1}<br>{username2}</code><br>
+<br><h2>配置完成，重启服务</h2><br>
+<h2>访问ftp://{vps的ip地址}并右键登录即可</h2><br><hr><h2>踩坑记录</h2><br>
+<span style="color:rgb(137, 23, 243)">systemctl status vsftpd.service发现vsftpd未运行，报错<b>code=exitd,status=2</b></span><br>可运行<code>vsftpd ./vsftpd/vsftpd.service</code>查看具体报错内容<br>
+eg：<br><img src="https://s2.loli.net/2024/02/21/tx7Au1OGW9bBkos.png" width="80%"><br>查看vsftpd.conf后发现文件开头多了一堆a75<br><img src="https://s2.loli.net/2024/02/21/1FuEtqUvBTmWJDo.png" width="80%"><br>
+可尝试删除后重新查看status，如果还未解决建议直接炸了或者继续重复上述步骤<br><br><span style="color:rgb(137, 23, 243)"><b>500 OOPS: could not bind listening IPv4/IPv6 socket</b></span><br>可能是vsftpd.conf中<code>LISTEN=NO、LISTEN_IPv6=YES</code>两个同时打开（为YES），如果还未解决建议直接炸了
+<br><br><span style="color:rgb(137, 23, 243)"><b>getsebool selinux is disabled</b><br><b>Setenforce SELinux is Disabled</b></span><br>可查看此教程：<a href="https://elearning.wsldp.com/pcmagazine/setenforce-selinux-is-disabled/" target="_blank">Setenforce SELinux is Disabled</a><br><br>
+<span style="color:rgb(137, 23, 243)">访问ftp报错<b>200 Switching to ASCII mode，227 Entering Passive Mode</b></span><br>IE浏览器设置→Internet选项→高级→取消“使用被动FTP（用于防火墙和DSL调制解调器的兼容）”勾选<br><br>
+<span style="color:rgb(137, 23, 243)">在ftp服务器上新建文件夹时发生错误 <b>550permission denied</b></span><br>没有写权限，重新配置<br>也可能是以匿名用户形式登录，ftp右键→登录，用户登录后可进行读写操作<br><br>顺带一提笔者通过Windows资源管理器可成功登录ftp，通过filezilla链接服务器始终报错，原因不明<br><hr><h2>部分截图</h2><br>
+<img src="https://s2.loli.net/2024/02/21/M9FCl1iTW4uOgjY.jpg" width="80%"><br>
+<img src="https://s2.loli.net/2024/02/21/KmnGWxF1dLMc7TU.jpg" width="80%"><br>
+<img src="https://s2.loli.net/2024/02/21/IogBrCADvthF1m6.jpg" width="80%"><br>
+<img src="https://s2.loli.net/2024/02/21/ntOkbSN2sRF1U4g.jpg" width="80%"><br>
