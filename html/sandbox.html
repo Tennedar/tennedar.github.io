@@ -10,6 +10,13 @@
 <link rel="stylesheet" href="https://cdn.staticfile.org/lxgw-wenkai-screen-webfont/1.6.0/style.css" />
 <link href="https://fonts.font.im/css?family=Merienda" rel="stylesheet">
 <style>
+    .card {
+        display: inline-block;
+        padding: 10px;
+        margin: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
     .copy{
             text-decoration: underline rgb(212, 209, 255);
             text-shadow: 2px 2px 0px rgb(212, 209, 255);
@@ -192,49 +199,54 @@
 <p style="text-align:center"><a href="http://tennedar.github.io/home.html" style="color: blue">返回主頁</a><br><br></p>
 <p style="text-align:center"><a href="http://tennedar.github.io/html/sandbox2.html" style="color: blue">沙盒2</a><br><br></p>
 <p style="text-align:center"><a href="http://tennedar.github.io/html/sandbox3.html" style="color: blue">沙盒3</a><br><br></p>
-<span id="busuanzi_container_site_pv">
-    本站总访问量<span id="busuanzi_value_site_pv"></span>次
-</span><br><br><br>
-<img src="https://count.getloli.com/get/@tennedar?theme=asoul"><br><br><br>
 
-<br><br><br><br><br><br><br><hr>
-<p style="font-size: small;">
-    昆明湖位於北京西郊頤和園內，北倚萬壽山，面積3300餘畝，約占頤和園的四分之三。昆明湖曾有七里濼、大泊湖等名稱。<br>《邊城》描繪了湖南與四川交界處小城茶峒船家女孩兒翠翠的故事。並在當時混亂的中國營造了一個民風淳樸，安居樂業的世外桃源。
-</p>
-<div class="muyu-layout">
-    <div id="jishu-box">
-        <p id="jishu" style="color:yellow">漲潮：0</p>
-    </div>
-    <div id="muyu-box">
-        <p id="gongde" style="color:yellow">祈翠+100</p>
-        <img id="muyu" class="no-lightbox entered loaded"
-            src="https://s2.loli.net/2023/07/19/9Zh5EQYklnoOUpG.webp">
-    </div>
+<h2>24点游戏</h2>made by copilot<br>
+<div class="card">
+    <p>随机生成四个数字：</p>
+    <p id="numbers"></p>
 </div>
+<div class="card">
+    <p>计算结果：</p>
+    <p id="result"></p>
+</div>
+<button onclick="generateNumbers()">发牌</button>
+<button onclick="calculateResult()">计算</button>
 <script>
-    var gongde = document.getElementById("gongde");
-    var muyu = document.getElementById("muyu");
-    var jishu = document.getElementById("jishu-box");
-    var mp3Url = "/music/muyu.mp3";
-    var player = new Audio(mp3Url);
-    var num = 0;
-    muyu.addEventListener("click", function () {
-        num+=100;
-        player.load();
-        player.play();
-        muyu.animate([{ transform: 'scale(0.85)' }, { transform: 'scale(1.03)' }, { transform: 'scale(1)' }], 500);
-        gongde.animate([{ opacity: 0, transform: 'translateY(35px)' },{ opacity: 0.3, transform: 'translateY(25)' },{ opacity: 0.8, transform: 'translateY(15px)' }, { opacity: 1, transform: 'translateY(5px)' }, { opacity: 0.8, transform: 'translateY(-5px)' }, { opacity: 0, transform: 'translateY(-15px)' }], 600);
-        jishu.innerHTML = "<p id='jishu' style='color:yellow'>漲潮："+num+"</p>";
-    });
+    function generateNumbers() {
+        const numbers = [];
+        for (let i = 0; i < 4; i++) {
+            numbers.push(Math.floor(Math.random() * 9) + 1);
+        }
+        document.getElementById("numbers").textContent = numbers.join(" ");
+    }
+    function calculateResult() {
+        const numbers = document.getElementById("numbers").textContent.split(" ").map(Number);
+        const operators = ["+", "-", "*", "/"];
+        const results = [];
+
+        for (let op1 of operators) {
+            for (let op2 of operators) {
+                for (let op3 of operators) {
+                    const expr = `(${numbers[0]} ${op1} ${numbers[1]}) ${op2} ${numbers[2]} ${op3} ${numbers[3]}`;
+                    try {
+                        const value = eval(expr);
+                        if (Math.abs(value - 24) < 1e-6) {
+                            results.push(expr);
+                        }
+                    } catch (error) {
+                        // Ignore invalid expressions
+                    }
+                }
+            }
+        }
+
+        document.getElementById("result").textContent = results.length > 0 ? results[0] : "无解";
+    }
+    generateNumbers();
 </script>
-<p style="background-color: rgb(17, 39, 163);color:yellow;padding: 8px;font-size: small;">
-作者: 『轻笑Chuckle』<br>
-链接: <a href='https://www.qcqx.cn/article/904a2780.html' target="_blank" style="color:yellow">https://www.qcqx.cn/article/904a2780.html</a><br>
-来源: 轻笑Chuckle<br>
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。<br>
-<b><u>由Tennedar在此基礎上改編。</u></b>
-</p>
+
 <br><br>
+<details><summary>表情包+代码（自用）</summary>
 <code>&lt;img src="https://s2.loli.net/2023/07/31/vhwPTi9ynZzxIDa.jpg" width="50px"&gt;&lt;br&gt;<br></code>
 <img src="https://s2.loli.net/2023/07/31/vhwPTi9ynZzxIDa.jpg" width="50px"><br>
 <code>&lt;img src="https://s2.loli.net/2023/08/08/zdMBo7mqlTGEw2U.png" width="50px"&gt;&lt;br&gt;<br></code>
@@ -277,7 +289,7 @@
 <code>&lt;img src='https://s2.loli.net/2023/10/02/EHDN59KCTwZLjkA.webp' width='50px'&gt;</code><br>
 <img src="https://s2.loli.net/2023/10/02/q7ndQN63PpwFk5j.webp" width="50px"><br>
 <code>&lt;img src='https://s2.loli.net/2023/10/02/q7ndQN63PpwFk5j.webp' width='50px'&gt;</code><br>
-
+</details>
 
 <br><hr><br>
 
