@@ -200,49 +200,54 @@
 <p style="text-align:center"><a href="http://tennedar.github.io/html/sandbox2.html" style="color: blue">沙盒2</a><br><br></p>
 <p style="text-align:center"><a href="http://tennedar.github.io/html/sandbox3.html" style="color: blue">沙盒3</a><br><br></p>
 
-<h2>24点游戏</h2>made by copilot<br>
+<h1>24点游戏</h1>
 <div class="card">
-    <p>随机生成四个数字：</p>
-    <p id="numbers"></p>
+    <p>手动输入四个数字：</p>
+    <input type="number" id="number1" placeholder="数字1">
+    <input type="number" id="number2" placeholder="数字2">
+    <input type="number" id="number3" placeholder="数字3">
+    <input type="number" id="number4" placeholder="数字4">
 </div>
 <div class="card">
     <p>计算结果：</p>
     <p id="result"></p>
 </div>
-<button onclick="generateNumbers()">发牌</button>
 <button onclick="calculateResult()">计算</button>
 <script>
-    function generateNumbers() {
-        const numbers = [];
-        for (let i = 0; i < 4; i++) {
-            numbers.push(Math.floor(Math.random() * 9) + 1);
-        }
-        document.getElementById("numbers").textContent = numbers.join(" ");
-    }
     function calculateResult() {
-        const numbers = document.getElementById("numbers").textContent.split(" ").map(Number);
+        const number1 = parseFloat(document.getElementById("number1").value);
+        const number2 = parseFloat(document.getElementById("number2").value);
+        const number3 = parseFloat(document.getElementById("number3").value);
+        const number4 = parseFloat(document.getElementById("number4").value);
+        
         const operators = ["+", "-", "*", "/"];
-        const results = [];
+        const results = new Set();
 
-        for (let op1 of operators) {
-            for (let op2 of operators) {
-                for (let op3 of operators) {
-                    const expr = `(${numbers[0]} ${op1} ${numbers[1]}) ${op2} ${numbers[2]} ${op3} ${numbers[3]}`;
-                    try {
-                        const value = eval(expr);
-                        if (Math.abs(value - 24) < 1e-6) {
-                            results.push(expr);
-                        }
-                    } catch (error) {
-                        // Ignore invalid expressions
-                    }
-                }
+        function evaluate(expr) {
+            try {
+                return eval(expr);
+            } catch (error) {
+                return null;
             }
         }
 
-        document.getElementById("result").textContent = results.length > 0 ? results[0] : "无解";
+        function dfs(expr, index) {
+            if (index === 4) {
+                const value = evaluate(expr);
+                if (value !== null && Math.abs(value - 24) < 1e-6) {
+                    results.add(expr);
+                }
+                return;
+            }
+
+            for (let op of operators) {
+                dfs(`${expr} ${op} ${[number1, number2, number3, number4][index]}`, index + 1);
+            }
+        }
+
+        dfs(number1.toString(), 1);
+        document.getElementById("result").textContent = results.size > 0 ? [...results].join(", ") : "无解";
     }
-    generateNumbers();
 </script>
 
 <br><br>
