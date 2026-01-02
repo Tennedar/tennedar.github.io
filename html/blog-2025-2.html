@@ -1,0 +1,451 @@
+<html>
+<head>
+   <link rel="icon" type="image/png" sizes="144x144" href="https://tennedar.github.io/pic/icon144x.png"/>
+   <link rel="stylesheet" type="text/css" href="https://tennedar.github.io/css/tennedar-style.css">
+   <link rel="stylesheet" type="text/css" href="https://tennedar.github.io/css/pic.css">
+   <link rel="stylesheet" href="https://cdn.staticfile.org/lxgw-wenkai-webfont/1.6.0/style.css" />
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-lite-webfont@1.1.0/style.css" />
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-tc-webfont@1.0.0/style.css" />
+   <link rel="stylesheet" href="https://cdn.staticfile.org/lxgw-wenkai-screen-webfont/1.6.0/style.css" />
+    <link href="https://fonts.googlefonts.cn/css?family=Arima+Madurai" rel="stylesheet">
+    <link href="https://fonts.font.im/css?family=Merienda" rel="stylesheet">
+    <link href="https://fonts.googlefonts.cn/css?family=Shippori+Mincho+B1" rel="stylesheet">
+   <title>博客</title>
+   <style>
+        .cont_circle{
+            margin:0 !important;
+            padding:0 !important;
+            left:71% !important;
+            top: 65% !important;
+        }
+        *{
+            margin: 0;
+            padding: 0;        
+        }
+        html,body    {
+            height: 100%;
+        }
+        .p    {
+            width: 100%;
+            height: 100%;
+            /*background: white;*/
+        }
+        .normal{
+            font-size: 16px !important;
+        }
+        .test1{   
+            font-size: 16px !important;
+            position: absolute;   
+            top: 50%;   
+            left: 50%;   
+            -webkit-transform: translate(-50%, -50%);   
+            -moz-transform: translate(-50%, -50%);   
+            -ms-transform: translate(-50%, -50%);   
+            -o-transform: translate(-50%, -50%);   
+            transform: translate(-50%, -50%);   
+        }   
+        body {
+            height: 100vh;
+            /*background-color: white;*/
+        }
+        .text {
+            position: absolute;
+            z-index: 9999999;
+            font-weight: bold;
+            user-select: none;
+        }
+        @keyframes remove {
+            100% {
+                opacity: 0;
+            }
+        }
+        .content{
+            border-left: 20px dashed;
+            border-right: 20px dashed;
+            font-size: 16px !important;
+        }
+        .test1.audio{
+            width:80%;
+        }
+        .gototop{
+            position:fixed;
+            left:80%;
+            top:90%;
+            background-color: rgb(196, 255, 234);
+            color:rgb(137, 23, 243);
+            font-weight: bolder;
+            border-radius: 10px;
+            border: 1px dashed;
+            box-shadow: 2px 2px 2px blue;
+        }
+        .copy{
+            text-decoration: underline rgb(212, 209, 255);
+            text-shadow: 2px 2px 0px rgb(212, 209, 255);
+            position: absolute;
+            -webkit-transform: translate(-50%, -50%);   
+            -moz-transform: translate(-50%, -50%);   
+            -ms-transform: translate(-50%, -50%);   
+            -o-transform: translate(-50%, -50%);   
+            left: 50%;   
+            transform: translate(-50%, -50%);   
+            border-radius: 3px;
+            padding: 10px;
+            font-family: 'Merienda', cursive;
+        }
+        .guide2{
+            position:fixed;
+            width: 20%;
+            left :79%;
+            height: 100%;
+            top:0%;
+            padding-left: 1%;
+            padding-right: 1%;
+            border-left :solid 2px rgb(0, 224, 146);
+            /*padding-top: 2%;*/
+            /*border-radius: 12px;*/
+            background-color: white;
+        }
+        textarea{
+            font-family: 'Merienda', cursive;
+            border:solid 1px rgb(137, 23, 243);
+            border-radius: 5px ;
+            background-color: white;
+            color:rgb(0, 224, 146);
+            width:100%;
+            height: auto;
+            
+        }
+        textarea:hover{
+            border: solid 1px rgb(0, 224, 146);
+            border-radius: 5px ;
+            color:rgb(137, 23, 243);
+        }
+        input{
+            font-family:'Courier New', Courier, monospace;
+            border: solid 1px rgb(0, 224, 146);
+            border-radius: 5px ;
+            background-color: white;
+            color:rgb(137, 23, 243);
+            float:left;
+            clear: both;
+            
+        }
+        input:hover{
+            border:solid 1px rgb(137, 23, 243);
+            color:rgb(0, 224, 146);
+            border-radius: 5px ;
+        }
+        .eng{
+                font-family: 'Merienda', cursive;
+            }
+        .titlefont{
+            font-family: 'chogokubosogothic';
+        }
+        .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+            border-right: 3px solid rgb(0, 224, 146);
+            background-color: white;
+        }
+        .sidebar .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+            transition: 0.3s;
+            text-decoration: none;
+            color: rgb(137, 23, 243);
+        }
+        .openbtn {
+            z-index: 200;
+            border: 1px dashed rgb(137, 23, 243);
+            font-size: 20px;
+            padding: 10px 15px;
+            position: fixed;
+            border-radius: 8px;
+            background-color:rgb(196, 255, 234);
+            box-shadow: 2px 2px 2px blue;
+            color:rgb(137, 23, 243);
+            font-family: "LXGW WenKai", sans-serif;
+            font-family: "LXGW WenKai Lite", sans-serif;
+            font-family: "LXGW WenKai TC", sans-serif;
+            font-family: "LXGW WenKai Screen", sans-serif;
+        }
+        .openbtn:hover {
+            background-color: rgb(137, 23, 243);
+            color:rgb(196, 255, 234);
+            border: 1px dashed rgb(196, 255, 234);
+        }
+        #main {
+            transition: margin-left .5s;
+            padding: 16px;
+        }
+        @media screen and (max-height: 450px) {
+            .sidebar {padding-top: 15px;}
+            .sidebar a {font-size: 18px;}
+        }
+        details {
+            border: 1px solid #aaa;
+            border-radius: 4px;
+            padding: 0.5em 0.5em 0;
+        }
+        summary {
+            font-weight: bold;
+            margin: -0.5em -0.5em 0;
+            padding: 0.5em;
+        }
+        details[open] {
+            padding: 0.5em;
+        }
+        details[open] summary {
+            border-bottom: 1px solid #aaa;
+            margin-bottom: 0.5em;
+        }
+        .bubble111{
+            position: fixed;
+            -webkit-transform: translate(-50%, -50%);   
+            -moz-transform: translate(-50%, -50%);   
+            -ms-transform: translate(-50%, -50%);   
+            -o-transform: translate(-50%, -50%);   
+            left: 50%;
+            top:80%;
+            transform: translate(-50%, -50%); 
+            width:200%;
+        }
+        body .footer {
+          --footer-background:linear-gradient(0deg, rgb(212, 209, 255) 0%,rgb(196, 255, 234) 100%);;
+        }
+        body .footer .bubbles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1rem;
+            background: var(--footer-background);
+            filter: url("#blob");
+        }
+        body .footer .bubbles .bubble {
+            position: absolute;
+            left: var(--position, 50%);
+            background: var(--footer-background);
+            border-radius: 100%;
+            animation: bubble-size var(--time, 4s) ease-in infinite var(--delay, 0s), bubble-move var(--time, 4s) ease-in infinite var(--delay, 0s);
+            transform: translate(-50%, 100%);
+        }
+        @keyframes bubble-size {
+            0%, 75% {
+                width: var(--size, 4rem);
+                height: var(--size, 4rem);
+            }
+            100% {
+                width: 0rem;
+                height: 0rem;
+            }
+        }
+        @keyframes bubble-move {
+            0% {
+                bottom: -4rem;
+            }
+            100% {
+                bottom: var(--distance, 10rem);
+            }
+        }
+        .blogtext{
+            padding-left: 15px;
+            padding-right: 15px;
+            padding-top: 5px;
+        }
+        code{
+            color:rgb(182, 169, 135);
+            background-color: black;
+        }
+    </style>
+</head>
+<script>
+  
+  let c = 0;
+  function toggle() {
+    c % 2 == 0 ? day() : night();
+    c++;
+  }
+  
+  function night() {
+    document.querySelector(".cont_circle").className =
+      "cont_circle cont_circle_noche";
+  }
+  
+  function day() {
+    document.querySelector(".cont_circle").className =
+      "cont_circle cont_circle_dia";
+  }
+  
+  </script>
+<body  id="top">
+  	<br>
+	<div class='p'>
+		<div class='test1'>
+        <h1 style="text-align:center"><span>博客</span><span style="font-family: 'Arima Madurai', cursive">-BL<span style="color:rgb(182, 169, 135);">O</span>G</span></h1>
+        <br>
+        <p style="text-align:center"><a href="http://tennedar.github.io/home.html" style="color: blue">返回上一頁</a></p><br>
+        
+        <!--<p style="text-align:center"><a href="http://tennedar.github.io/acgn.html" style="color: blue">二次元專區</a></p><br><br>-->
+        <p style="text-align:center"><a href="https://tennedar.github.io/html/blog-2025-1.html" style="color: blue">2025 1~6月博客</a><!-- || <a href="https://tennedar.github.io/html/blog-2024-1.html" style="color: blue">2024 1~6月博客</a>--></p><br>
+        <p style="text-align:center" ><span style="color: blue" class="inst">↓ 2025年 博客 ↓</span></p>
+        <p style="text-align:center"><a href="#12.27">12.27</a>&nbsp;||&nbsp;<a href="#12.20">12.20</a>&nbsp;||&nbsp;<a href="#12.17">12.17</a>&nbsp;||&nbsp;<a href="#12.13">12.13</a>&nbsp;||&nbsp;<a href="#12.11">12.11</a>&nbsp;||&nbsp;<a href="#12.9">12.9</a>&nbsp;||&nbsp;<a href="#12.6">12.6</a>&nbsp;||&nbsp;<a href="#12.4">12.4</a><br><a href="#11.26">11.26</a>&nbsp;||&nbsp;<a href="#11.17">11.17</a>&nbsp;||&nbsp;<a href="#11.9">11.9</a>&nbsp;||&nbsp;<a href="#11.2">11.2</a>&nbsp;||&nbsp;<a href="#11.1">11.1</a><br><a href="#10.26">10.26</a>&nbsp;||&nbsp;<a href="#10.15">10.15</a>&nbsp;||&nbsp;<a href="#10.13">10.13</a>&nbsp;||&nbsp;<a href="#10.10">10.10</a>&nbsp;||&nbsp;<a href="#10.6">10.6</a>&nbsp;||&nbsp;<a href="#10.4">10.4</a><br><a href="#9.27">9.27</a>&nbsp;||&nbsp;<a href="#9.22">9.22</a>&nbsp;||&nbsp;<a href="#9.18">9.18</a>&nbsp;||&nbsp;<a href="#9.14">9.14</a>&nbsp;||&nbsp;<a href="#9.13">9.13</a>&nbsp;||&nbsp;<a href="#9.10">9.10</a>&nbsp;||&nbsp;<a href="#9.2">9.2</a><br><a href="#8.27">8.27</a><br><a href="#7.16">7.16</a>&nbsp;||&nbsp;<a href="#7.11">7.11</a>&nbsp;||&nbsp;<a href="#7.3">7.3</a><!--&nbsp;||&nbsp;<a href="#7.4">7.4</a>--></p><br><br>
+        <br>
+		</div>
+		</div>
+   	</div>
+   <!--<span class='eng'><div class="gototop" ><a href='#top'>&#x21ea;T O P&#x21ea;</a></div></span>-->
+  	<br>
+	<div class="no-guide">
+	<div class="content">
+        <hr>
+        <p style='background-color: black;color:rgb(196, 255, 234);font-size: larger;' id="12.27"><b>2025.12.27</b> || <a href='#top' style="color:rgb(196, 255, 234)">回到頂端</a>&nbsp;</span></p>
+        <div class="blogtext">
+            圣诞节快乐( •̀ ω •́ )！！！<br>期末复习中<br><br>上周二补了家兔实验感觉小有进步但如果没有老师帮忙还是要玩完了<br><br>上周末看完了the Pitt 怎么一集比一集无聊（
+        </div><br><br>
+        <p style='background-color: black;color:rgb(196, 255, 234);font-size: larger;' id="12.20"><b>2025.12.20</b> || <a href='#top' style="color:rgb(196, 255, 234)">回到頂端</a>&nbsp;</span></p>
+        <div class="blogtext">
+            <img src="https://s2.loli.net/2025/12/20/OQU6M1uc2tJSqyG.jpg" width="80%"><br><br>看了两集The Pitt，还不错
+        </div><br><br>
+        <p style='background-color: black;color:rgb(196, 255, 234);font-size: larger;' id="12.17"><b>2025.12.17</b> || <a href='#top' style="color:rgb(196, 255, 234)">回到頂端</a>&nbsp;</span></p>
+        <div class="blogtext">
+            网球考完了 很煎蛋的
+        </div><br><br>
+        <p style='background-color: black;color:rgb(196, 255, 234);font-size: larger;' id="12.13"><b>2025.12.13</b> || <a href='#top' style="color:rgb(196, 255, 234)">回到頂端</a>&nbsp;</span></p>
+        <div class="blogtext">
+            下学期选课，因为还是基本满课表体育课也没啥可选的选来选去全是屎随便选一个算了，真不是故意选那个的是它自己排在选课列表第一个<br>忘了有没有说过，上学期空手道那个老师在类似于期末考？的时候批评r没认真，唉真的是印象很差很糟糕很恶心啊这种这很不好 希望以后都不要遇到这个了<br>不仔细想一想不愉快的事情太多了比如原理课一个小组围成圈圈讨论，r穿了荧光绿死宅卫衣在一群脑残里讨论一句话都不想说还被点名发言，就很不好，感觉这个大学上得太失败了太恶心了；然后还有习概课当时说考勤很严格，结果r根本没管把一学期的课全翘了，也不知道最后怎么混过去的…………<br><br><br>↓为了写这个东西特意去看了成绩单，发现小学期的实验课有4.0……因为当时结果都是瞎编的严重学术不端啊 还以为要完蛋了结果怎么这样（。）成绩当然是开学就出了结果都快期末了r都没敢看，早知道没有不是4.0也不会那么不喜欢负责实验课的那个老师，虽然ta讲课烂是毫无争议的事情<br><br>但python真的只有3.6，真的恶心，真的拖后腿 真的影响平均分真的恶心以后都不想看见这玩意<br><br>真的不想背英语真的一点都背不出 药丸<br><br>
+            <p>
+                Hello everyone, my name is R. I am a ?-year undergraduate student in the ?Program. My main research interest is ?. I am particularly fascinated by how basic biological mechanisms can be translated into clinical therapies.<br>I have maintained strong academic performance, with a GPA of 3.9<b>为什么这里不打码</b>, and I have a diligent and motivated attitude. Through my coursework, I have built a solid foundation. I often act as the team leader in group work and am able to work with my teammates to complete tasks effectively.<br>In addition, I have been working on a research project involving ？ in Professor ？’s laboratory. During this experience, I became familiar with basic experimental techniques and laboratory workflows, and I also learned the importance of teamwork in a research environment. <br>I am also interested in reading and painting and I enjoy creative activities<br>Looking ahead, I hope to continue working hard and steadily build my abilities in both scientific research and clinical training, with the goal of becoming an excellent researcher and physician in the future.<br>Thank you very much<br><br>嗯至少都是实话<br><br>
+            </p>
+            <span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">生日啦！</span><br>是昨天<br><br><img src="https://s2.loli.net/2025/12/13/yXDLIhn2KFQ3fMs.jpg" width="80%"><br>z送的<br><br><img src="https://s2.loli.net/2025/12/13/Fjq5PoGOywE9AVY.jpg" width="80%"><br>z送的<br><br><img src="https://s2.loli.net/2025/12/13/N9lQk4qfYswn3hD.jpg" width="80%"><br>蛋糕 这个超好吃特别是乳酪的部分<br><br><img src="https://s2.loli.net/2025/12/13/HvQkmRB9wdFLZiC.jpg" width="80%"><br>鲜芋仙的地区？新品栗子，嘛反正这种东西都是小料混在一起味道也没啥区别但挺好看的<br><br><img src="https://s2.loli.net/2025/12/13/ZTKQE9We4ukN2jS.jpg" width="80%"><br>下雪了！<br>大家要小心骑车不要滑倒，虽然根本不懂怎么会有人滑倒 这就是眼高手低外加不仔细外加活该，r唯一一次骑车摔了是新生开完某个思想教育魂飞魄散精神涣散骑车不仔细直接撞到路边了，思想教育罪大恶极，好在现在这种东西直接逃了从根本上保护人身安全<br><br>实验课抽血，搭档的同学是不太好看请但还是能看清的，感觉大部分人血管都是一个点能看到其他都是脂肪？但r是一整根都能看见，这就是不运动的好处，反正还是r好<br>然后总之就很顺利地做完了
+        </div><br><br>
+        <p style='background-color: black;color:rgb(196, 255, 234);font-size: larger;' id="12.11"><b>2025.12.11</b> || <a href='#top' style="color:rgb(196, 255, 234)">回到頂端</a>&nbsp;</span></p>
+        <div class="blogtext">
+            <img src="https://s2.loli.net/2025/12/11/Po5fDGeC1HAL2Ma.jpg" width="80%"><BR><BR><img src="https://s2.loli.net/2025/12/11/VDF62JP8zIwbegt.jpg" width="80%">
+        </div><br><br>
+        <p style='background-color: black;color:rgb(196, 255, 234);font-size: larger;' id="12.9"><b>2025.12.9</b> || <a href='#top' style="color:rgb(196, 255, 234)">回到頂端</a>&nbsp;</span></p>
+        <div class="blogtext">
+            真是忍不了一点了同学没被铊毒死都是因为r还保留了一毫米良心外加懒<br>
+        </div><br><br>
+        <p style='background-color: black;color:rgb(196, 255, 234);font-size: larger;' id="12.6"><b>2025.12.6</b> || <a href='#top' style="color:rgb(196, 255, 234)">回到頂端</a>&nbsp;</span></p>
+        <div class="blogtext">
+            神解卷面分不错！心血管反而比较没底但那边反正也不公开分数（。）最后也是看等级的大概小问题吧；心血管感觉主要还是药理没复习到点上……但为什么要背这种长得和锟斤拷烫烫烫一样的东西呢，开发药物的人命名的时候根本就不想管别人的死活吗<br><br>r发现把西兰花想象成人皮肤乳头瘤来吃就非常好吃<br>完整的经过是讲肿瘤那个时候因为期中考也非常心不在焉，上一节课听完下一节课根本回忆不起来，其中一项就是乳头瘤啊……想想花菜 菜花 花菜又记住了 连带花菜也变好吃了 谢谢花菜 自此之后吃花菜的频率达到了惊人的80%<br><br>另外！好像是上周（）做实验的时候要抽血然后分离白细胞，有个护士老师来协助们，然后r就被夸了手肘的血管相当明显而且还很直，而且肘正中静脉似乎是有三条，每条都比别人好抽500%🤭🤭怎么想都是有人运动太多了手臂质量都下降了<br>还有个男同学完全是青筋暴起jpg的状态但好像血管弹性太大了容易滑动和戳不进去，言而总之r拥有非常完美、宜人、利己，的好血管啊<br><br>唯一的问题是这周实验课轮到r抽搭档了，目测……看不到一点<br><br>周五上午讲了过敏性哮喘和过敏性鼻炎，不知道为什么印象深刻到写在这里了可能上了大半学期的课终于清醒了（<br><br>下周五开始选下学期的课，其他都没啥大的了但有一门黄○荫亲自教学的什么医学人工智能看得人又两眼一黑感觉又是那种既不授人以渔也不授人以鱼只有无尽的不专业和梦到哪说到哪，说到底就业岗位也挺紧张的这种东西就不能让正儿八经学ai的人来打杂吗（。）最近是不是就业挺紧张的啊商场楼外面发传单的人和蟑螂一样过境<br><br>然后周末，今天，继续吃滨寿司，感觉其它实在难评但鳗鱼确实很好吃，鲈鱼一点味道都没有都不知道生的熟的（。）鲽鱼鳍边同样也没味道但至少有点嚼劲，芝士牛肉？也很好吃但在寿司店吃非海鲜的事真不想干啊……它给的实物和图片根本就不一样，牛肉多得离谱但堆在一起卖相极差，但多（）还会回购的，<br><br>哦，本来觉得药理是药学院该学的（呆滞）r学纯纯被逼的，现在才知道药学院是研发的并不需要知道锟斤拷烫烫烫有什么用（，这种事早说啊，r半个学期之前根本一点兴趣都没有现在知道回头了那不很亏吗<br>总之不想学做别人也能做的 别人能做还做更好的可以直接滚了更是（
+        </div><br><br>
+        <p style='background-color: black;color:rgb(196, 255, 234);font-size: larger;' id="12.4"><b>2025.12.4</b> || <a href='#top' style="color:rgb(196, 255, 234)">回到頂端</a>&nbsp;</span></p>
+        <div class="blogtext">
+            活下来了
+        </div><br><br>
+        <p style='background-color: black;color:rgb(196, 255, 234);font-size: larger;' id="11.26"><b>2025.11.26</b> || <a href='#top' style="color:rgb(196, 255, 234)">回到頂端</a>&nbsp;</span></p>
+        <div class="blogtext">
+            神解复习中……<br>食堂有个挺好吃的千叶豆腐还是不知道什么豆腐的豆腐主要是挺辣的（）<br>然后这周约等于没有周末 神烦<br>呼吸系统实验肺活量测出来3000（努力了一点），比体测整整多了200（没努力过），体育课辣鸡力证+1
+        </div><br><br>
+        <p style='background-color: black;color:rgb(196, 255, 234);font-size: larger;' id="11.17"><b>2025.11.17</b> || <a href='#top' style="color:rgb(196, 255, 234)">回到頂端</a>&nbsp;</span></p>
+        <div class="blogtext">
+            体测完了<br>能有及格吗 不知道阿<br><br>生信结课，（。。说讨厌这门课其实也算不上毕竟它事没那么多，python才是真的傻逼，……所以就不多说了要求不高能过就行<br>然后其它，因为上课涉及很多临床检查的部分，比如心电图，这个在医疗仪器原理那门课就学过了r也很讨厌那门课所以对这些技术都有点敬而远之，但临床相关的感觉讲得很好非常能懂？？唉 偏见 教学水平 可以理解是给想做医工交叉的人整得入门吧，但想做医工交叉为啥不去报强基书院（。。。）<br><br>
+            <span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">免疫学实验</span><br>总之做成功了<br>因为队友的脑抽操作真的浪费了两位数的小时很难绷，但队友情商奇高给r买了一堆吃的所以无事发生了，顺带鲍师傅确实挺好吃的以前只在听说过的程度<br><br>
+            <span style="background-color:rgb(196, 255, 234);color:rgb(137, 23, 243);font-size: x-large;">看了GALNERYUS!</span><br>不愧是<del>国际一流</del>城市 <span style="color:#aaa">其实也有杭州场</span><br>知道g团要来还是在微博上乱搜小野正利（主唱，只认识这位）的时候发现的，<del>说实话</del>对乐队（指其他四位吉他、贝斯、键盘、鼓）真的没有半点兴趣，所以就有种一样的钱（顺带一提票价280比名气差的小乐队还便宜 真有气量）只能看1/5的感觉？？然后思来想去来都来了（<br><br>当然实际上乐器都很强（大概）演出效果非常好 但要说感兴趣当然还是没有（（但是很好）<br><br>一些livehouse事前调查：①如果是音量很大很刺耳的表演需要自备耳塞不然容易耳鸣乃至（。<br>然后众所周知r前一天还在大晚上的做实验，懒得去取快递（的耳塞）所以直接就裸着耳朵过去了（）只要r不带耳塞 就不会遇见需要耳塞的情况，实际上真的不用 赞美调音师<br>②livehouse的地板是平的有什么都看不见的风险（虽然舞台是高的），总之这次感觉排在前1/5，前面大概还有4~5排人 运气比较好随便乱站在一边刚好能看见最想看的两个成员，只不过另一边的从头到尾都没看见过几次就是了……<br>散场的时候走到后面才发现确实站后面就能看见全貌了（ 但近和全貌肯定选近吧（<br><br>流程大概是5+talk+6+3首歌的感觉，基本上中间是不停的，两首歌之间会用劲爆的不知道什么玩意可能是吉他或者bass连起来，虽然不看演唱会但真的到唱的比重很大的时候又开始感觉talk太少了，这个应该叫得陇望蜀来着……（不过很好）<br>中间talk小野先说很抱歉今年也只能说日语（台下大喊大丈夫です！），但是今年学了新的词 第一个是牛逼 <br>……好古典啊2025年了还会用这个词吗（好像会（那感觉很持久了 可以正式加入字典<br>第二个是在飞机和大巴上都有听见过的 请系(xì)好安全带<br>查了一下确实是读(jì)！不知道从哪学的这么奇怪的说法，肯定是前几次演出的南方城市有问题（指指点点）<br><br>然后就没了<br>然后是照片<br><br>对了还有，虽然官方最后发了所有人一起拍的合照但果不其然r陷在坑里了找不到<br><img src="https://s2.loli.net/2025/11/17/a8PhoQv5TVKBckg.jpg" width="80%"><br><img src="https://s2.loli.net/2025/11/17/JSgWwTcx7Rnrhl3.jpg" width="80%"><br><img src="https://s2.loli.net/2025/11/17/JPcN7pH4CZfRiqy.png" width="80%">
+        </div><br><br>
+        <p style='background-color: black;color:rgb(196, 255, 234);font-size: larger;' id="11.9"><b>2025.11.9</b> || <a href='#top' style="color:rgb(196, 255, 234)">回到頂端</a>&nbsp;</span></p>
+        <div class="blogtext">
+            这周最好把两门期中都全部再过一遍……<br>免疫听课听得很，唉，头大（）有个老师很厉害但她上课不说？！后来别的老师讲了才知道她发现了某个关键分子？！如果这位老师自己说了可能r一生都不会忘记这个知识点了当然现在也不会忘了但自己为什么不说？？？！！？！？？总之在和过山车一样的教学水平（众所周知教学水平不等于本人水平）里非常难受啊但之前根本没听懂的一堂课被还是后者的那位老师两句话点通了，所以能别给科研系教授发上课kpi了吗……
+        </div><br><br>
+        <p style='background-color: black;color:rgb(196, 255, 234);font-size: larger;' id="11.2"><b>2025.11.2</b> || <a href='#top' style="color:rgb(196, 255, 234)">回到頂端</a>&nbsp;</span></p>
+        <div class="blogtext">
+            明天再不去体测r就要完蛋了。
+        </div><br><br>
+        <p style='background-color: black;color:rgb(196, 255, 234);font-size: larger;' id="11.1"><b>2025.11.1</b> || <a href='#top' style="color:rgb(196, 255, 234)">回到頂端</a>&nbsp;</span></p>
+        <div class="blogtext">
+            <del>心血管系统第一遍过课件进度70% 神经系统下周开始一定</del><br><del>其实神经系统全讲完之后还挺好懂的（当然背书要花时间），第一遍上课的时候一直在用天书文字解释天书文字，所以怎么想都觉得缺少一个类似总论的环节</del><br><b>托福考过了！</b><br>95分很煎蛋的啦（<br><del>感想的话就是有手就行</del>，真正算认真练习的只有9.20-10.1一边摸鱼一边刷了点tpo，外加国庆每天练两小时口语而已，当然最后口语和写作都还是回天无力但r本来就写不好啊！报托福班的时候也是作业批改意见搞得人很没信心啊不喜欢这个东西文科生写作滚（。<br>总之就是感觉报这个班除了提供了一些解题模板之外半点用都没有，（但r因为根本没听课所以也没浪费时间所以……（所以这学期没继续报非常正确，严重怀疑学校和相关机构有可怕的交易在诈骗大家贩卖焦虑（。<br><br>而且托福（口语）第一节课真的特爱秀标准英语口音对此只想说这是上海人该学的吧。<br><br>不管了感觉12月的JLPT不行啊（ 可以看看明年5月如果有的话报一个玩<br><br><b>关于小鼠</b><br>尾静脉注射：扎进了推针非常丝滑，以至于让r发现此前练习了六十多次一次都没打进去过（（因为从来没成功过不清楚这个手感<br>反正正式实验成了x 看看🐀能不能活<br>剪耳标记：要用一只手大拇指和食指捏着头，剩下三指捏下肢和尾巴，让小鼠不要乱动，然后剪掉耳朵<span style="color:#aaa">和玩手机姿势差不多</span><br>似乎有三四个人没按照这个方法抓就直接硬摁把小鼠摁窒息了，那很有力气了 为什么不按说明操作呢（。<br>r抓不住（因为这个姿势也很抽象 又和助教学了一遍，关键是食指要用中间那个关节去捏不要用指尖去捏这样更稳<br><br>都做两百次小鼠了还在大惊小怪的人到底为什么选这个专业啊就是<br><br><b>吃了滨寿司</b><br>结论是不咋地（。<br>起因是r非常喜欢寿司郎（过去式），本来计划今天去吃寿司郎的结果一看寿司郎请了个代言人。这种花钱给代言人（的kpi）冲业绩的感觉糟糕透顶所以准备代言人不解雇r就不去寿司郎了。<br>所以改吃滨寿司<br>感觉……反正就是不咋地，至少没有办法对标寿司郎。点了两次鳗鱼第二次的品相简直相当萧条，不过倒也没有那么差还是可以再去吃的<br>下周想试试滨寿司旁边的一家名古屋拌面<br><br><b>其它</b><br>体育课请了个助教在那转来转去转来转去走来走去监工 好心教学 受不了了 想要摸鱼time，而且所有人的什么，上了大学之后爱上了某种运动甚至打到了职业运动员的水准、的励志小故事啊………………<del>橘生淮南则为橘生于淮北则为枳这里是华清大学不是隔壁某体育大学吧</del>
+        </div><br><br>
+        <p style='background-color: black;color:rgb(196, 255, 234);font-size: larger;' id="10.26"><b>2025.10.26</b> || <a href='#top' style="color:rgb(196, 255, 234)">回到頂端</a>&nbsp;</span></p>
+        <div class="blogtext">
+            总之这周开始各种复习，（反正也就两门 放一点作业图<br><img src="https://s2.loli.net/2025/10/26/nTyWIXGNiS7rZ8x.png" width="80%">
+        </div><br><br>
+        <p style='background-color: black;color:rgb(196, 255, 234);font-size: larger;' id="10.15"><b>2025.10.15</b> || <a href='#top' style="color:rgb(196, 255, 234)">回到頂端</a>&nbsp;</span></p>
+        <div class="blogtext">
+            生信有多无聊神解就有多……其实算不上好玩但r喜欢上强度的那就是好玩吧（<br>但是该开始复习了！！<br><br>PS关于兔子，。大失败<img src='https://s2.loli.net/2023/10/02/p2sFMvDONn1jqlE.webp' width='50px'>这不是什么大问题 问题是大失败的组略微有点多 把备用的兔子用完了所以r的组没有兔子能重做了（<br>总之下半学期还要用兔子所以那个时候再补<br>但还是好玩的首先老师很好<del>导致r没什么心理负担</del>其次这个兔子被很菜的操作搞得颈内静脉大出血了<b>（←这个不能怪r是另有其人）</b>以至于体验了一下止血（ 很好玩（ 所有人拿出手机观看doctor-x <a href="https://pan.baidu.com/s/1SXWehaSaJfc9sQZ2pFbFoA?pwd=1234" target="_blank">https://pan.baidu.com/s/1SXWehaSaJfc9sQZ2pFbFoA?pwd=1234</a>
+        </div><br><br>
+        <p style='background-color: black;color:rgb(196, 255, 234);font-size: larger;' id="10.13"><b>2025.10.13</b> || <a href='#top' style="color:rgb(196, 255, 234)">回到頂端</a>&nbsp;</span></p>
+        <div class="blogtext">
+            免疫第一节Intro不知道在讲什么东西  希望后面上点强度<br>周末大概准备开始复习心血管系统<br>大概从第10周再考虑体育打卡的事<br>然后明天为什么又有体育课？<br>明天下午做兔子 希望顺利 蛙的不太顺利……
+        </div><br><br>
+        <p style='background-color: black;color:rgb(196, 255, 234);font-size: larger;' id="10.10"><b>2025.10.10</b> || <a href='#top' style="color:rgb(196, 255, 234)">回到頂端</a></span></p>
+        <div class="blogtext">
+            好麻烦！
+        </div><br><br>
+        <p style='background-color: black;color:rgb(196, 255, 234);font-size: larger;' id="10.6"><b>2025.10.6</b> || <a href='#top' style="color:rgb(196, 255, 234)">回到頂端</a></span></p>
+        <div class="blogtext">
+            制御性T细胞！<br>卧槽这周六怎么还要上课<br><br>托福模考了一下感觉还行（虽然可能有ai改卷太松了的问题，但是打分比平时练单个题目要高，也不知道哪个准x）那么总之再练一下真题
+        </div><br><br>
+        <p style='background-color: black;color:rgb(196, 255, 234);font-size: larger;' id="10.4"><b>2025.10.4</b> || <a href='#top' style="color:rgb(196, 255, 234)">回到頂端</a></span></p>
+        <div class="blogtext">
+            <img src='https://s2.loli.net/2025/10/04/qDrA8RYPbGyXVwx.jpg' width='80%'><br>↑↑很能装<br>而且背着也不累<br><br><img src='https://s2.loli.net/2025/10/04/HSzyBNq4kWLbuwG.jpg' width='80%'><br>牛肉是新品还不错<br><br><img src="https://s2.loli.net/2025/10/04/Ne6sawhlYIr97mP.jpg" width="80%"><br><img src='https://s2.loli.net/2025/10/04/t1Jm9FIxzluckvp.jpg' width='80%'><br><img src="https://s2.loli.net/2025/10/04/yRIVjhovSe8qOTc.jpg" width="80%"><br>
+        </div><br><br>
+        <p style='background-color: black;color:rgb(196, 255, 234);font-size: larger;' id="9.27"><b>2025.9.27</b> || <a href='#top' style="color:rgb(196, 255, 234)">回到頂端</a></span></p>
+        <div class="blogtext">
+            神经系统不知道在讲什么东西（。因为似乎是老师主要专业所以她自己兴趣使然加了一堆晦涩的内容（。当然，还是，总体来说，挺好玩的<br>昨天听了会组会，回寝室的时候在超市找到了巧乐兹<br>晚上吃了个奇怪的东西，首先卖15块简直和抢劫一样，然后大概就是把两种外形不太一样味道已经吃不出任何区别的腊肉泡在并不是很辣的辣椒油里，然后里面甚至还有一颗栗子，<del>而且栗子还是甜的</del>
+        </div><br><br>
+        <p style='background-color: black;color:rgb(196, 255, 234);font-size: larger;' id="9.22"><b>2025.9.22</b> || <a href='#top' style="color:rgb(196, 255, 234)">回到頂端</a></span></p>
+        <div class="blogtext">
+            一想到明天又要上体育课就 #头晕#抽搐#无力#恶心#苍白#晕厥<br>而且买的球拍还疑似快递丢件了 那真是太刺激了 <del>运动鞋也没有 鞋带系紧点凑合一下差不多得了</del><br><br>周六做青蛙实验<br>托福找到一个可以ai改卷的网站，用点手段就可以白嫖了（不然好贵），准备国庆集中练一下口语<br><img src="https://s2.loli.net/2025/09/22/uiwS1FHekWpOTry.jpg" width="80%"><br>左下↙是新衣服
+        </div><br><br>
+        <p style='background-color: black;color:rgb(196, 255, 234);font-size: larger;' id="9.18"><b>2025.9.18</b> || <a href='#top' style="color:rgb(196, 255, 234)">回到頂端</a></span></p>
+        <div class="blogtext">
+            唉 报了第十三周的游泳测试 唉 <del>网球拍也没买</del>←买了 泳衣也没有 唉<br>腿痛了三天<br><br>神经系统上课说国外迟发性耳聋的小孩可以不上体育课防止哪磕碰了外力加速聋了 月亮真圆<br><br>病理挺有趣的
+        </div><br><br>
+        <p style='background-color: black;color:rgb(196, 255, 234);font-size: larger;' id="9.14"><b>2025.9.14</b> || <a href='#top' style="color:rgb(196, 255, 234)">回到頂端</a></span></p>
+        <div class="blogtext">
+            差点就忘记注册堂堂退学了（ 好在ddl前3个小时教务在班级群提醒所以去注册了（<br>做了点托福阅读<del>有点道心破碎</del>&nbsp;<del>←正常现象</del>明天再做四篇左右然后再加上听力，口语和写作再摆几天（<br>检查了一下培养方案确定没有漏上的课……顺带就看到今年的体育课竟然是0学分！<br>于是去问了体育课都0学分了能不能不选，结论是还是得选 唉不想上学了唉不想上学了唉这学期是不是还有体质测试唉<br><del>想点好的托福总比游泳测试好过</del><br><del>再想点好的把托福水了就能快乐地学JLPT了（？）</del>
+        </div><br><br>
+        <p style='background-color: black;color:rgb(196, 255, 234);font-size: larger;' id="9.13"><b>2025.9.13</b> || <a href='#top' style="color:rgb(196, 255, 234)">回到頂端</a>&nbsp;</p>
+        <div class="blogtext">
+            报告交完了，收获是不可能有的这也太走马观花了 但因为挺轻松的还吃了好几次吉野家（？）所以结果是好的<br>吉野家的牛丼、卤肉饭和金枪鱼土豆泥都挺好的 新品栏里的那什么面巨难吃<br><br>看了眼周一就两门课 周二也就两门课（？）反正第一周也问题不大，问题比较大的是 运动鞋还是 没买（。（。反正上课也不跑步吧鞋带系紧点凑合一下（。吧（？然后为什么网球拍和网球也要自己买 。。
+        </div><br><br>
+        <p style='background-color: black;color:rgb(196, 255, 234);font-size: larger;' id="9.10"><b>2025.9.10</b> || <a href='#top' style="color:rgb(196, 255, 234)">回到頂端</a>&nbsp;</span></p>
+        <div class="blogtext">
+            为了方便重复操作写的ffmpeg相关小工具，纯ai无原创<del>比如这段html和github发布页全是ai写的</del>，但人力debug，大概是可以正常用的（。有更新预定，更新什么取决于个人需求（<br><br>现有的功能①合并同一文件夹内（不包括子目录）所有.wav文件②做一图流视频（图片+音频合并）<br><a href="https://github.com/Tennedar/TRtool-media/releases/latest" target="_blank"><img src="https://img.shields.io/github/v/release/Tennedar/TRtool-media?color=purple&label=Download from Github" alt="Download TRtool"><br><a href="https://tennedar.github.io/file/TRtool 1.1.exe" download="TRtool 1.1.exe">Or直接下载</a>
+            </a>            
+        </div><br><br>
+        <p style='background-color: black;color:rgb(196, 255, 234);font-size: larger;' id="9.2"><b>2025.9.2</b> || <a href='#top' style="color:rgb(196, 255, 234)">回到頂端</a>&nbsp;</p>
+        <div class="blogtext">
+            吃吉野家<br><img src="https://s2.loli.net/2025/09/02/HE4RLbWghB6IkPy.jpg" width="80%">
+        </div><br><br>
+        <p style='background-color: black;color:rgb(196, 255, 234);font-size: larger;' id="8.27"><b>2025.8.27</b> || <a href='#top' style="color:rgb(196, 255, 234)">回到頂端</a></span></p>
+        <div class="blogtext">
+            病理第一周要预习的内容预习完了，慕课讲的什么玩意（。如果实际上课也这样一句十行那真是得自己加油……了……？其他课什么都没发反正第一节最多看看课件差不多<br>体育课是最大的问题 r现在连双像样的运动鞋都没有 现在的鞋子都像拖鞋一样很好穿 运动能力为0 之后再说<br>又续了一年的域名<br>然后其实们小导（高一级的学姐）发了点大三经验分享，首先开学（9月）会讲怎么分流，9-11月好像会有什么科研汇报训练来着（），11月提交某个志愿和托福成绩<br>所以总之先报了10.25的托福，希望能一遍过（ ，。大概可以吧……？如果不可以那也没有如果……？按学姐说最晚是2月寒假前要考完所以感觉反正问题不大，就算问题大也会变得不大的所以问题不大。（说人话：不想学）<br>另一点是如果先去临床的话要通过什么基础医学能力测试来着（）其它好像暂时没有特别需要注意的<br>总之先等开学说明会<del>，如果说明会都讲不清楚那只能说们专业药丸惹 领导的面子也过不去是吧真会有这种事？</del><br><br>至于托福怎么准备先随便背点东西找套题做一下看看然后再说，然后这个托福报名费2100真是不如抢劫导致r心情雪上加霜所以考完托福就去考JLPT吧那个只要500呢。
+        </div><br><br>
+        <p style='background-color: black;color:rgb(196, 255, 234);font-size: larger;' id="7.16"><b>2025.7.16</b> || <a href='#top' style="color:rgb(196, 255, 234)">回到頂端</a>
+        <div class="blogtext">
+            论文写完了，（）成品长得非常幽默，反正也不是r负责的……也不是r写的，谢谢GPT（<br>汇报是两组一起所以拿到了她们的论文，感觉好多了吧（挠头）有一些数据处理方法确实是r懒得查但确实也没查，所以又学到了一点新东西，但问题来了为什么上课不讲……<br><br>你们这门课真的很Fly Bitch耶 上完了半毛钱进步都没有真有点神祕了<br><br><img src="https://picx.zhimg.com/80/v2-35642c4bdf7628e2ee4dc9e26a912cef_720w.webp" width="80%"><br><img src="https://picx.zhimg.com/80/v2-b9ca50c90390371e7993e012cb2100da_720w.webp" width="80%"><br><br>摸了摸了，这玩意几学分啊（） 反正下学期也有体育课拖后腿的不差这个（）（）<br>不管怎么说还是见到了挺多……新奇的仪器，还是挺有收获的，挺好玩的，虽然结果蛮抽象的，论文更是90%成分造假，那怎么办啦（）记得大一某老师说 你们不需要自己会做实验，反正大不了外包给生物公司……<br>说得对，所以论文怎么写（ 该教学视频启动了 这破学校学不了一点！<br><br>感觉明天铁定会被老师刁难为什么数据分析浮于表面<br>问题是r根本不觉得这数据能用来分析啊（挠头）要是它好看点也不至于一句话不能说，当然实际被问了r只会唯唯诺诺地补上分析 没问题的（<br><br>那么明天下午结束后预定去猫咖给娃娃拍照，然后打游戏打到22号
+        </div><br><br>
+        <p style='background-color: black;color:rgb(196, 255, 234);font-size: larger;' id="7.11"><b>2025.7.11</b> || <a href='#top' style="color:rgb(196, 255, 234)">回到頂端</a>&nbsp;</span></p>
+        <div class="blogtext">
+            摆了 谁爱上谁上
+        </div><br><br>
+        <p style='background-color: black;color:rgb(196, 255, 234);font-size: larger;' id="7.3"><b>2025.7.3</b> || <a href='#top' style="color:rgb(196, 255, 234)">回到頂端</a>&nbsp;</span></p>
+        <div class="blogtext">
+            <span style='color:#aaa'>好久没写了希望博客页更新别出bug<br></span>
+            内源性结果一塌糊涂，好在结果一塌糊涂反而能水的字数多（呃，数据处理分给组员了这都做不对那至少也不会出现神秘小问题；r做了几乎99%的分子克隆，今天摇菌明天提质粒再战qPCR验证，没问题就可以转了！后面的都做过一遍了请不要干事过三的事就没有什么大新闻了（<br><br>一个没什么用的插曲是这课还有三个华清附中的少爷也来做卧槽尼玛什么待遇啊然后老师手把手教他们还聊天（被r听到）说高中生做的比同学好……你们要不回忆一下自己代劳了多少 保姆式教学做不好真有鬼了。唯一做不好的是少爷似乎没有独立跑胶能力，连续两次都蹭r的胶有多的孔和他们一起跑，然后被老师认识了（<br>老师：你主要负责分子克隆（跑胶）这块吗<br>r：算是吧！<br>没说事实上负责了100%<br><br>合合 然后昨天娃送到了<br><img src="https://s2.loli.net/2025/07/03/vLOtRMVkq7sGcyF.jpg" width="80%">
+        </div><br><br>
+        <br><br>
+        <hr>
+    </div>
+</div>
+<!--<script src="https://tennedar.github.io/js/clickemoji.js"></script>-->
+    <br>
+    <br>
+	<p style="text-align:center;" class="copy"> copyRight &copy; 2023-2025 Tennedar All rights reserved.</p>
+    <br>
+    <br>
+</body>
+</html>
