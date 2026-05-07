@@ -1,0 +1,167 @@
+.landing {
+
+min-height: 70vh;
+
+display: flex;
+flex-direction: column;
+
+align-items: center;
+justify-content: center;
+
+text-align: center;
+
+padding: 2rem;
+}
+
+.site-title {
+
+font-size: 4rem;
+
+line-height: 1.2;
+
+font-family: 'Arima Madurai', cursive;
+
+color: var(--main-purple);
+
+text-shadow: 4px 4px 0px var(--soft-blue);
+}
+
+.divider {
+color: rgb(182, 169, 135);
+}
+
+.site-subtitle {
+
+margin-top: 1rem;
+
+font-size: 1.2rem;
+
+text-decoration: underline var(--soft-blue);
+}
+
+.purple {
+color: var(--main-purple);
+}
+
+.green {
+color: var(--main-green);
+}
+
+.enter-link {
+
+margin-top: 2rem;
+
+display: inline-block;
+
+padding: 0.7rem 1.5rem;
+
+border: 1px solid var(--main-green);
+
+border-radius: 6px;
+
+transition: 0.3s;
+}
+
+.enter-link:hover {
+
+background: var(--main-purple);
+color: white;
+}
+
+.clock {
+
+margin-top: 2rem;
+
+font-size: 0.95rem;
+}
+
+.banner-section {
+
+margin-top: 3rem;
+}
+
+.banner-img {
+
+width: 100%;
+
+display: block;
+}
+
+.site-footer {
+
+margin-top: 5rem;
+
+background:
+linear-gradient(
+60deg,
+rgba(132,0,255,0.63) 0%,
+rgba(0,255,166,0.75) 100%
+);
+
+text-align: center;
+
+color: white;
+}
+
+.footer-inner {
+
+padding-top: 4rem;
+}
+
+.copyright {
+
+margin-top: 1rem;
+}
+
+.waves {
+
+position: relative;
+
+width: 100%;
+height: 15vh;
+
+min-height: 100px;
+max-height: 150px;
+}
+
+.parallax > use {
+
+animation:
+move-forever 25s cubic-bezier(.55,.5,.45,.5)
+infinite;
+}
+
+.parallax > use:nth-child(1) {
+
+animation-delay: -2s;
+animation-duration: 7s;
+}
+
+.parallax > use:nth-child(2) {
+
+animation-delay: -3s;
+animation-duration: 10s;
+}
+
+.parallax > use:nth-child(3) {
+
+animation-delay: -4s;
+animation-duration: 13s;
+}
+
+.parallax > use:nth-child(4) {
+
+animation-delay: -5s;
+animation-duration: 20s;
+}
+
+@keyframes move-forever {
+
+0% {
+transform: translate3d(-90px,0,0);
+}
+
+100% {
+transform: translate3d(85px,0,0);
+}
+}

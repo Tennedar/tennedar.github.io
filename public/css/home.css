@@ -1,0 +1,77 @@
+.home-container {
+
+max-width: 1100px;
+
+margin: 0 auto;
+
+padding: 4rem 2rem;
+
+display: grid;
+
+grid-template-columns:
+repeat(auto-fit, minmax(300px, 1fr));
+
+gap: 2rem;
+}
+
+.card {
+
+background: white;
+
+padding: 2rem;
+
+border-radius: 10px;
+
+box-shadow:
+0 4px 20px rgba(0,0,0,0.05);
+
+transition: 0.3s;
+}
+
+.card:hover {
+
+transform: translateY(-3px);
+}
+
+h1 {
+
+font-family: 'Arima Madurai', cursive;
+
+text-align: center;
+
+margin-bottom: 2rem;
+
+font-size: 1.8rem;
+
+color: var(--main-purple);
+}
+
+p {
+
+line-height: 2;
+
+text-align: center;
+}
+
+.email {
+
+color: var(--main-purple);
+}
+
+.footer {
+
+margin-top: 5rem;
+
+text-align: center;
+
+padding: 3rem 1rem;
+
+font-size: 0.95rem;
+
+opacity: 0.8;
+}
+
+.footer hr {
+
+margin-bottom: 3rem;
+}

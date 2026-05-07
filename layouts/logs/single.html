@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="zh">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head>
 
 <meta charset="UTF-8">
 
 <meta name="viewport"
 content="width=device-width, initial-scale=1.0">
 
-<title>2025 W18</title>
+<title>{{ .Title }}</title>
 
 <link rel="stylesheet" href="/css/theme.css">
 
@@ -100,20 +100,15 @@ var(--main-purple);
 </div>
 
 <h1 class="title">
-2025 W18
+{{ .Title }}
 </h1>
 
 <div class="meta">
-2026-05-07
+{{ .Date.Format "2006-01-02" }}
 </div>
 
 <div class="content">
-<h2 id="260507">26/05/07</h2>
-<p>测试</p>
-<p><em>测试</em></p>
-<p><strong>测试</strong></p>
-<p>😊</p>
-
+{{ .Content }}
 </div>
 
 </div>

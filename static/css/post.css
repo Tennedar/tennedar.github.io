@@ -1,0 +1,33 @@
+.content-container {
+    max-width: 760px;
+}
+
+/* 正文 */
+
+.content-container p {
+    margin: 1.5rem 0;
+}
+
+/* 标题 */
+
+.content-container h1,
+.content-container h2,
+.content-container h3 {
+    margin-top: 3rem;
+}
+
+/* 图片 */
+
+.content-container img {
+    max-width: 100%;
+    border-radius: 6px;
+}
+
+/* 引用 */
+
+blockquote {
+    padding-left: 1rem;
+    border-left: 3px solid var(--soft-blue);
+
+    color: #666;
+}
