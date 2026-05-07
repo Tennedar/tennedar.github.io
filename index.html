@@ -3,19 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <title>DIVINA TENNEDA</title>
-    <link rel="stylesheet" href="tennedar-style.css">
+    <!-- 严格还原你的原始 CSS 路径 -->
+    <link rel="stylesheet" href="css/tennedar-style.css">
 </head>
 <body class="index-page">
     <main align="center">
+        <!-- 严格还原你的原始图片路径 -->
+        <div class="main-visual">
+            <img src="img/index_visual.png" alt="Visual"> 
+        </div>
+
         <h1 class="main-title">DIVINA TENNEDA</h1>
         <p class="subtitle">碎片之海的一隅</p>
-        <br><br>
-        <a href="home.html">
-            <button class="enter-btn">ENTER PHASE</button>
-        </a>
+        
+        <div id="countdown" class="countdown-container"></div>
+
+        <br>
+        <!-- 严格还原你的原始超链接文字 -->
+        <a href="home.html" class="enter-link">Visit the site</a>
     </main>
+
     <footer class="simple-footer">
         © 2023-2026 TENNEDA. ALL RIGHTS RESERVED.
     </footer>
+
+    <script>
+        function updateCountdown() {
+            // 请手动填入你原本代码中的 targetDate
+            const targetDate = new Date("2026-08-01T00:00:00").getTime();
+            const now = new Date().getTime();
+            const diff = targetDate - now;
+
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            
+            if (diff > 0) {
+                document.getElementById("countdown").innerHTML = days + " Days " + hours + " Hours Remaining";
+            } else {
+                document.getElementById("countdown").innerHTML = "Mission Started.";
+            }
+        }
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+    </script>
 </body>
 </html>
