@@ -1,0 +1,93 @@
+.guide {
+    position: fixed;
+
+    top: 0;
+    left: 79%;
+
+    width: 20%;
+    height: 100%;
+
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-top: 10%;
+
+    border-left: solid 2px var(--main-green);
+
+    background-color: white;
+}
+
+.zhuye {
+    display: flex;
+}
+
+/* 首页拼贴布局 */
+
+.zysx,
+.dhl,
+.ss,
+.gyw,
+.lxfs,
+.tbmx,
+.yqlj {
+    position: absolute;
+    z-index: 50;
+
+    background-color: white;
+}
+
+.zysx {
+    width: 49.5%;
+    top: 10%;
+
+    border-right: 0.5px dashed black;
+}
+
+.dhl {
+    width: 49.5%;
+    top: 58%;
+
+    border-right: 0.5px dashed black;
+}
+
+.ss {
+    width: 50%;
+    top: 58%;
+
+    display: none;
+}
+
+.gyw {
+    left: 50%;
+
+    width: 50%;
+    top: 10%;
+}
+
+.lxfs {
+    left: 50%;
+
+    width: 50%;
+    top: 125.4%;
+}
+
+.tbmx {
+    width: 49.5%;
+    top: 178.5%;
+
+    border-right: 0.5px dashed black;
+}
+
+.yqlj {
+    left: 50%;
+
+    width: 50%;
+    top: 168%;
+}
+
+.copy {
+    position: absolute;
+
+    top: 220%;
+
+    background-color: white;
+}

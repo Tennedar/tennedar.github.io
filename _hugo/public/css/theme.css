@@ -1,0 +1,54 @@
+:root {
+    --main-purple: rgb(137, 23, 243);
+    --main-green: rgb(0, 224, 146);
+
+    --bg-soft: #f7f6f2;
+    --text-main: #222222;
+
+    --soft-blue: rgb(212, 209, 255);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+
+    background-color: var(--bg-soft);
+    color: var(--text-main);
+
+    font-family:
+        "LXGW WenKai Screen",
+        "Shippori Mincho B1",
+        "Microsoft YaHei",
+        serif;
+
+    line-height: 1.9;
+    font-size: 17px;
+
+    -webkit-font-smoothing: antialiased;
+}
+
+/* 链接 */
+
+a {
+    color: var(--main-purple);
+    text-decoration: none;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+/* 标题 */
+
+h1, h2, h3 {
+    color: var(--main-purple);
+}
+
+/* 只给重要标题保留阴影 */
+
+.hero-title {
+    text-shadow: 4px 4px 0px var(--soft-blue);
+}

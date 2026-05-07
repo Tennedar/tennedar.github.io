@@ -1,0 +1,128 @@
+.blog-page {
+
+max-width: 1000px;
+
+margin: 0 auto;
+
+padding: 4rem 2rem;
+}
+
+.blog-header {
+
+text-align: center;
+
+margin-bottom: 4rem;
+}
+
+.blog-header h1 {
+
+font-size: 3rem;
+
+color: #111;
+}
+
+.card {
+
+background: white;
+
+padding: 2rem;
+
+margin-bottom: 2rem;
+
+border-radius: 12px;
+
+box-shadow:
+0 4px 20px rgba(0,0,0,0.05);
+
+color: #111;
+}
+
+.card a {
+
+color: #111;
+
+text-decoration: none;
+}
+
+.card a:hover {
+
+text-decoration: underline;
+}
+
+.latest-post a {
+
+font-size: 1.5rem;
+
+font-weight: bold;
+}
+
+.timeline {
+
+display: flex;
+
+gap: 1rem;
+
+flex-wrap: wrap;
+}
+
+.timeline-item {
+
+padding:
+0.5rem 1rem;
+
+border-radius: 999px;
+
+background:
+rgb(240,240,240);
+
+color: #111;
+}
+
+.timeline-item.current {
+
+background:
+var(--main-green);
+
+color: #111;
+}
+
+.archive-grid {
+
+display: grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(220px,1fr));
+
+gap: 1.5rem;
+}
+
+.year-block {
+
+padding: 1rem;
+
+border:
+1px solid rgb(230,230,230);
+
+border-radius: 10px;
+
+color: #111;
+}
+
+.year-block h3 {
+
+margin-top: 0;
+
+color: #111;
+}
+
+.year-block a {
+
+color: #111;
+
+text-decoration: none;
+}
+
+.year-block a:hover {
+
+text-decoration: underline;
+}
