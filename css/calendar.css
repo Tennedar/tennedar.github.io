@@ -1,196 +1,395 @@
-  :root {
-    --color-calendar-graph-day-bg: rgb(235,237,240)!important;
-    --color-calendar-graph-day-L1-bg: rgb(155,233,168) !important;
-    --color-calendar-graph-day-L2-bg: rgb(64,196,99) !important;
-    --color-calendar-graph-day-L3-bg: rgb(48,161,78) !important;
-    --color-calendar-graph-day-L4-bg: rgb(33,110,57) !important;
-  }
-  rect.ContributionCalendar-day[data-level='0'] {
-    fill: var(--color-calendar-graph-day-bg);
-  }
+*{
+  margin: 0;
+  padding: 0;
 
-  rect.ContributionCalendar-day[data-level='1'] {
-    fill: var(--color-calendar-graph-day-L1-bg);
-  }
+}
 
-  rect.ContributionCalendar-day[data-level='2'] {
-    fill: var(--color-calendar-graph-day-L2-bg);
-  }
+html,body    {
+  height: 100%;
+}
 
-  rect.ContributionCalendar-day[data-level='3'] {
-    fill: var(--color-calendar-graph-day-L3-bg);
-  }
+.p    {
+  width: 100%;
+  height: 100%;
+  background: white;
+}
+.normal{
+      font-size: 16px !important;
+}
 
-  rect.ContributionCalendar-day[data-level='4'] {
-    fill: var(--color-calendar-graph-day-L4-bg);
-  }
+.test1{   
+      position: absolute;   
+      top: 50%;   
+      left: 50%;   
+      -webkit-transform: translate(-50%, -50%);   
+      -moz-transform: translate(-50%, -50%);   
+      -ms-transform: translate(-50%, -50%);   
+      -o-transform: translate(-50%, -50%);   
+      transform: translate(-50%, -50%);   
+}   
+body {
+      height: 100vh;
+      background-color: white;
+}
 
-  .calendar .width-full > .float-left {
-    display: none;
-  }
+.text {
+      position: absolute;
+      z-index: 9999999;
+      font-weight: bold;
+      user-select: none;
+}
 
-  .calendar {
-    font-family: "LXGW WenKai", sans-serif;
-    font-family: "LXGW WenKai Lite", sans-serif;
-    font-family: "LXGW WenKai TC", sans-serif;
-    font-family: "LXGW WenKai Screen", sans-serif;
-    /*border: 1px solid #DDDDDD;*/
-    border-radius: 3px;
-    min-height: 243px;
-    text-align: center;
-    margin: 0 auto;
-  }
+@keyframes remove {
+      100% {
+          opacity: 0;
+      }
+}
 
-  .calendar-graph text.wday,
-  .calendar-graph text.month {
-    font-size: 10px;
-    fill: #aaa;
-  }
 
-  .contrib-legend {
-    text-align: right;
-    padding: 0 14px 10px 0;
-    display: inline-block;
-    float: right;
-  }
-
-  .contrib-legend .legend {
-    display: inline-block;
-    list-style: none;
-    margin: 0 5px;
-    position: relative;
-    bottom: -1px;
-    padding: 0;
-  }
-
-  .contrib-legend .legend li {
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-  }
-
-  .text-small {
-    font-size: 12px;
-    color: #000000;
-  }
-
-  .calendar-graph {
-    padding: 5px 0 0;
-    text-align: center;
-  }
-
-  .contrib-column {
-    padding: 15px 0;
-    text-align: center;
-    border-left: 1px solid #ddd;
-    border-top: 1px solid #ddd;
-    font-size: 11px;
-  }
-
-  .contrib-column-first {
-    border-left: 0;
-  }
-
-  .table-column {
-    display: table-cell;
-    width: 1%;
-    padding-right: 10px;
-    padding-left: 10px;
-    vertical-align: top;
-  }
-
-  .contrib-number {
-    font-weight: 300;
-    line-height: 1.3em;
-    font-size: 24px;
-    display: block;
-    color: #000000;
-  }
-
-  .calendar img.spinner {
-      width: 70px;
-      margin-top: 50px;
-      min-height: 70px;
-  }
-
-  .monospace {
-      text-align: center;
-      color: #000;
-      font-family: monospace;
-  }
-
-  .monospace a {
-      color: #1D75AB;
-      text-decoration: none;
-  }
-
-  .contrib-footer {
-      font-size: 11px;
-      padding: 0 10px 12px;
-      text-align: left;
-      width: 100%;
-      box-sizing: border-box;
-      height: 26px;
-  }
-
-  .left.text-muted {
-      float: left;
-      margin-left: 9px;
-      color: #000000;
-  }
-  .left.text-muted a {
-      color: #4078c0;
-      text-decoration: none;
-  }
-  .left.text-muted a:hover,
-  .monospace a:hover {
+a:link{
+      color:blue;
       text-decoration: underline;
-  }
+}
+a:visited{
+      color:rgb(137, 23, 243);
+      text-decoration:   rgb(182, 169, 135) underline;
+      text-decoration: overline;
+}
+a:hover{
+      color: rgb(0, 224, 146) !important;
+     
+      
+      text-decoration: underline !important;
+}
+a:active{
+      color:blue;
+      background-color:  rgb(196, 255, 234) ;
+      text-decoration: underline;
+}
+.span1:hover{
+  color:rgb(0,224,146) !important;
+}
 
-  h2.f4.text-normal.mb-3 {
-      display: none;
-  }
+@font-face {
+      font-family: 'TanukiMagic';
+      src: url('https://tennedar.github.io/font/TanukiMagic_1_22/TanukiMagic.ttf'),url('font\TanukiMagic_1_22\TanukiMagic.ttf');
+}
+@font-face {
+      font-family: 'chogokubosogothic';
+      src: url('https://tennedar.github.io/font/chogokubosogothic/chogokubosogothic_5.subset.ttf'),url('font\chogokubosogothic\chogokubosogothic_5.subset.ttf');
+}
+@font-face {
+      font-family: 'Chalk-S-JP';
+      src: url('https://tennedar.github.io/font/Chalk-S_3_JP/Chalk-S-JP.otf'),url('font\Chalk-S_3_JP\Chalk-S-JP.otf');
+}
 
-  .float-left.text-gray {
-      float: left;
-  }
-  #user-activity-overview{
-      display:none;
-  }
+.inst{
+      font-family: 'TanukiMagic',default !important;
+}
+html{
+      font-family: "LXGW WenKai", sans-serif;
+      font-family: "LXGW WenKai Lite", sans-serif;
+      font-family: "LXGW WenKai TC", sans-serif;
+      font-family: "LXGW WenKai Screen", sans-serif;
+}
+.eng{
+      font-family: 'Merienda', cursive,"LXGW WenKai", sans-serif,"LXGW WenKai Lite", sans-serif;
+}
 
-  .day-tooltip {
-      white-space: nowrap;
+
+details {
+      border: 1px solid #aaa;
+      border-radius: 4px;
+      padding: 0.5em 0.5em 0;
+}
+summary {
+      font-weight: bold;
+      margin: -0.5em -0.5em 0;
+      padding: 0.5em;
+}
+details[open] {
+      padding: 0.5em;
+}
+details[open] summary {
+      border-bottom: 1px solid #aaa;
+      margin-bottom: 0.5em;
+}
+.sidebar {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+      border-right: 3px solid rgb(0, 224, 146);
+      background-color: white;
+}
+.sidebar .closebtn {
       position: absolute;
-      z-index: 99999;
-      padding: 10px;
-      font-size: 12px;
-      color: #000000;
-      text-align: center;
-      background: rgba(0,0,0,.85);
-      border-radius: 3px;
-      display: none;
-      pointer-events: none;
-  }
-  .day-tooltip strong {
-      color: #dfe2e5;
-  }
-  .day-tooltip.is-visible {
-      display: block;
-  }
-  .day-tooltip:after {
-      position: absolute;
-      bottom: -10px;
-      left: 50%;
-      width: 5px;
-      height: 5px;
-      box-sizing: border-box;
-      margin: 0 0 0 -5px;
-      content: " ";
-      border: 5px solid transparent;
-      border-top-color: rgba(0,0,0,.85)
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+      transition: 0.3s;
+      text-decoration: none;
+      color: rgb(137, 23, 243);
+}
+.openbtn {
+      border: 1px dashed rgb(137, 23, 243);
+      font-size: 20px;
+      padding: 10px 15px;
+      position: fixed;
+      border-radius: 8px;
+      background-color:rgb(196, 255, 234);
+      box-shadow: 2px 2px 2px blue;
+      color:rgb(137, 23, 243);
+      font-family: "LXGW WenKai", sans-serif;
+      font-family: "LXGW WenKai Lite", sans-serif;
+      font-family: "LXGW WenKai TC", sans-serif;
+      font-family: "LXGW WenKai Screen", sans-serif;
+}
+.openbtn:hover {
+      background-color: rgb(137, 23, 243);
+      color:rgb(196, 255, 234);
+      border: 1px dashed rgb(196, 255, 234);
+}
+#main {
+      transition: margin-left .5s;
+      padding: 16px;
+}
+@media screen and (max-height: 450px) {
+      .sidebar {padding-top: 15px;}
+      .sidebar a {font-size: 18px;}
+}
+button{
+      color:rgb(137, 23, 243);
+      background-color: rgb(196, 255, 234);
+      border: none;
+      border-radius: 2px;
+      padding: 3px;
+      -webkit-transition-duration: 0.4s; /* Safari */
+      transition-duration: 0.4s;
+      border: 1px black solid;
+}
+button:hover{
+      background-color: rgb(182, 169, 135);
+      color:white;
+      box-shadow: 0 2px 2px 0 rgba(0,0,0,0.24), 0 2px 2px 0 rgba(0,0,0,0.19);
+}
+.blur{
+      color: transparent;
+      text-transform: uppercase;
+      text-shadow: 0px 0px 8px black;
+      letter-spacing: 1px;
+}
+.blur:hover{
+      color:black;
+      text-shadow: none;
+      -webkit-transition: all 0.3s ease-in-out;
+      -moz-transition: all 0.3s ease-in-out;
+      -o-transition: all 0.3s ease-in-out;
+      -ms-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+              --bg: rgb(38, 35, 41);
+              --textColor: rgb(234, 255, 248);
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+              --bg: rgb(240, 236, 227);
+              --textColor: rgb(41, 40, 36);
+              transition-delay: 0.7s;
+    }
+}
+
+:root[data-theme="light"] {
+      --bg: rgb(240, 236, 227);
+      --textColor: rgb(41, 40, 36);
+      transition-delay: 0.7s;
+}
+
+:root[data-theme="dark"] {
+      --bg: rgb(38, 35, 41);
+      --textColor: rgb(234, 255, 248);
+      transition-delay: 0.7s;
+}
+body,.p{
+      background-color: var(--bg);
+      color: var(--textColor);
+      transition-delay: 0.7s;
+}
+
+.cont_principal {
+      /**/
   }
 
-  text.ContributionCalendar-label {
-      fill: #000000;
-      font-size: 11px;
+  .cont_circle {
+    z-index: 300;
+      transform:scale(0.25);
+      width: 212px;
+      height: 212px;
+    position: fixed;
+    top:73%;
+    left:78%;
+      border-radius:50%;
+      border:3px solid rgb(236, 251, 246);
+      box-shadow: 0px 5px 30px 5px rgba(0, 224, 146,0.5);
+      overflow: hidden;
+      transition: all 0.5s;
+      background-color: rgb(0, 224, 146); 
+  }
+  .cont_circle_noche {
+    box-shadow: 0px 5px 30px 5px rgba(0, 224, 146,0.5);
+    transition-delay: 0.7s;
+  }
+  .cont_circle_noche > .sun {
+    animation-name: salida_sun;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+  }
+  
+  .cont_circle_noche >  .moon {
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    animation-name: ocultar_sun;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-duration-delay: 1s;
+  }
+  .cont_olas_bottom {
+    position: absolute;
+    bottom:0px;
+    width: 100%;
+    height:212px;
+    z-index: 0;
+    overflow: hidden;
+    border-radius:50% ;
+  }
+  .cont_olas_bottom > svg {
+    margin-top: 100px;
+    transition: all 1.5s;
+    position: relative;
+    left: -212px;
+  }
+  .cont_circle_dia > .cont_olas_bottom > svg {
+    position: relative;
+    left: 0px;
+  }
+  .moon {
+    position: absolute;
+    top:50px;
+    right: 50px;
+    border-radius:50%;
+    transform: translate(-190px,20px);
+    /*overflow: hidden;*/
+  }
+  .cont_circle_dia {
+    background-color: rgb(137, 23, 243);  
+    box-shadow:0px 5px 30px 5px rgba(137, 23, 243,0.4);
+    transition-delay: 0.7s;
+  }
+  .cont_circle_dia > .sun{
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    animation-name: ocultar_sun;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-duration-delay: 1s;
+  }
+  .cont_circle_dia > .moon {
+    animation-name: salida_sun;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+  }
+  .sun {
+    position: absolute;
+    top:50px;
+    right: 50px;
+    width: 23px;
+    height: 23px;
+    background-color: #fff;
+    border-radius:50%;
+    box-shadow: 1px 1px  10px  6px  rgba(255,255,255,0.5);
+    overflow:hidden;
+  }
+  @-webkit-keyframes salida_sun {
+    from {   transform: translate(100px,50px); }
+    to { 
+      transform: translate(0px,0px);
+    }
+  }
+  @-o-keyframes salida_sun {
+    from {   transform: translate(100px,50px); }
+    to { 
+      transform: translate(0px,0px);
+    }
+  
+  }
+  @-moz-keyframes salida_sun {
+    from {   transform: translate(100px,50px); }
+    to { 
+      transform: translate(0px,0px);
+    }
+  }
+  @keyframes salida_sun {
+    from {   transform: translate(100px,50px); }
+    to { 
+      transform: translate(0px,0px);
+    }
+  }
+  @-webkit-keyframes ocultar_sun {
+    0% {   transform: translate(0px,0px); }
+    50% {   transform: translate(-50px,-20px); }
+    60% {   transform: translate(-70px,-15px); }
+    70% {   transform: translate(-90px,-10px); }
+    85% {   transform: translate(-130px,5px); }
+    100% { 
+      transform: translate(-190px,20px);
+    }
+  }
+  @-o-keyframes ocultar_sun {
+    0% {   transform: translate(0px,0px); }
+    50% {   transform: translate(-50px,-20px); }
+    60% {   transform: translate(-70px,-15px); }
+    70% {   transform: translate(-90px,-10px); }
+    85% {   transform: translate(-130px,5px); }
+    100% { 
+      transform: translate(-190px,20px);
+    }
+  }
+  @-moz-keyframes ocultar_sun {
+    0% {   transform: translate(0px,0px); }
+    50% {   transform: translate(-50px,-20px); }
+    60% {   transform: translate(-70px,-15px); }
+    70% {   transform: translate(-90px,-10px); }
+    85% {   transform: translate(-130px,5px); }
+    100% { 
+      transform: translate(-190px,20px);
+    }
+  }
+  @keyframes ocultar_sun {
+    0% {   transform: translate(0px,0px); }
+    50% {   transform: translate(-50px,-20px); }
+    60% {   transform: translate(-70px,-15px); }
+    70% {   transform: translate(-90px,-10px); }
+    85% {   transform: translate(-130px,5px); }
+    100% { 
+      transform: translate(-190px,20px);
+    }
   }

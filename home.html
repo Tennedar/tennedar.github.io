@@ -1,49 +1,286 @@
-<!DOCTYPE html>
-<html lang="zh">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HOME | DIVINA TENNEDA</title>
-    <link rel="stylesheet" href="tennedar-style.css">
-</head>
-<body>
-    <nav class="top-nav">
-        <a href="index.html" class="nav-logo">TENNEDA</a>
-        <div class="nav-links">
-            <!-- 点击触发侧边栏 -->
-            <a href="javascript:void(0)" onclick="toggleHistory()">HISTORY</a>
-            <a href="#about">ABOUT</a>
-            <a href="#works">WORKS</a>
-        </div>
-    </nav>
-
-    <main class="content-container">
-        <section id="hero">
-            <h2 class="section-title">Fragmentary Sea</h2>
-            <p>这里是 Yiling 的个人空间，记录医学研究、艺术习作与碎碎念。</p>
-        </section>
-        <hr class="divider">
-        <section id="about">
-            <h3>ABOUT</h3>
-            <p>2023级清华医学本科生。专注于血液学与再生医学研究。</p>
-        </section>
-    </main>
-
-    <!-- 侧边履历容器 -->
-    <div id="history-overlay" class="overlay" onclick="toggleHistory()"></div>
-    <div id="history-sidebar" class="sidebar">
-        <div class="sidebar-header">
-            <h3>Update History</h3>
-            <button onclick="toggleHistory()" class="close-btn">×</button>
-        </div>
-        <iframe src="html/history.html" frameborder="0" class="history-iframe"></iframe>
-    </div>
-
-    <script>
-        function toggleHistory() {
-            document.getElementById('history-sidebar').classList.toggle('active');
-            document.getElementById('history-overlay').classList.toggle('active');
+    <link rel="icon" type="image/png" sizes="144x144" href="https://tennedar.github.io/pic/icon144x.png"/>
+    <link rel="stylesheet" type="text/css" href="https://tennedar.github.io/css/tennedar-style.css">
+    <link rel="stylesheet" type="text/css" href="https://tennedar.github.io/css/cursor.css">
+    <link rel="stylesheet" type="text/css" href="https://tennedar.github.io/css/calendar.css">
+    <title>茧房</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/lxgw-wenkai-webfont/1.6.0/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-lite-webfont@1.1.0/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-tc-webfont@1.0.0/style.css" />
+    <link rel="stylesheet" href="https://cdn.staticfile.org/lxgw-wenkai-screen-webfont/1.6.0/style.css" />
+    <link href="https://fonts.font.im/css?family=Merienda" rel="stylesheet">
+	<link href="https://fonts.googlefonts.cn/css?family=Arima+Madurai" rel="stylesheet">
+<style>
+	h1{
+		font-family: 'Arima Madurai', cursive !important;
+		font-size: x-large;
+	}
+	.cont_circle{
+		margin:0 !important;
+		padding:0 !important;
+		left:81% !important;
+		top: 60% !important;
+	}
+    .audio{
+        width:70%;
+    }
+     .gototop{
+        position:fixed;
+        left:90%;
+        top:85%;
+        background-color: rgb(196, 255, 234);
+        color:rgb(137, 23, 243);
+        font-weight: bolder;
+        border-radius: 10px;
+        border: 1px dashed;
+        box-shadow: 2px 2px 2px blue;
+    }
+    .copy{
+        text-decoration: underline rgb(212, 209, 255);
+        text-shadow: 2px 2px 0px rgb(212, 209, 255);
+        position: relative;
+    }
+    
+    .icon1{
+        border:dotted 2px rgb(182, 169, 135);
+        border-radius: 70px;
+        background-color: rgba(182, 169, 135, 0.11);
+    }
+	.eng{
+            font-family: 'Merienda', cursive;
         }
-    </script>
+    .gui0{
+        position: fixed;
+        left:90%;
+        top:10%;
+        color:rgb(137, 23, 243);
+        border: 1px dashed;
+        box-shadow: 2px 2px 2px blue;
+        border-radius: 8px;
+        background-color:rgb(196, 255, 234);
+        padding: 5px;
+    }
+    .gui1{
+        display: none;
+    }
+    .gui-4{
+        display: none;
+    }
+    .gui0:hover .gui1{
+        display: block;
+    }
+    .gui0:hover .gui-3{
+        display: none;
+    }
+    .gui0:hover .gui-4{
+        display: inline-block;
+    }
+    .sidebar {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 190;
+        top: 0;
+        left: 0;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+        border-right: 3px solid rgb(0, 224, 146);
+        background-color: white;
+    }
+    .sidebar .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+        transition: 0.3s;
+        text-decoration: none;
+        color: rgb(137, 23, 243);
+    }
+    .openbtn {
+        border: 1px dashed rgb(137, 23, 243);
+        font-size: 20px;
+        padding: 10px 15px;
+        position: fixed;
+        border-radius: 8px;
+        background-color:rgb(196, 255, 234);
+        box-shadow: 2px 2px 2px blue;
+        color:rgb(137, 23, 243);
+        font-family: "LXGW WenKai", sans-serif;
+        font-family: "LXGW WenKai Lite", sans-serif;
+        font-family: "LXGW WenKai TC", sans-serif;
+        font-family: "LXGW WenKai Screen", sans-serif;
+        top:5%;
+    }
+    .openbtn:hover {
+        background-color: rgb(137, 23, 243);
+        color:rgb(196, 255, 234);
+        border: 1px dashed rgb(196, 255, 234);
+    }
+    #main {
+        transition: margin-left .5s;
+        padding: 16px;
+    }
+    @media screen and (max-height: 450px) {
+        .sidebar {padding-top: 15px;}
+        .sidebar a {font-size: 18px;}
+    }
+    h1:hover{
+        text-decoration: overline 3px rgb(196, 255, 234);
+    }
+	.gototop{
+	    z-index: 100;
+	}
+	.openbtn{
+	    z-index: 200;
+	}
+	.sidebar{
+		z-index: 150;
+	}
+	.gui0{
+		z-index: 100;
+	}
+	.normal{
+		z-index: 100;
+	}
+	.grid {
+		-webkit-column-count: 2;
+		-webkit-column-gap: 10px;
+		-webkit-column-fill: auto;
+		-moz-column-count: 2;
+		-moz-column-gap: 10px;
+		-moz-column-fill: auto;
+		column-count: 2;
+		column-gap: 15px;
+		column-fill: auto;
+	}
+	.block {
+		background-color: #ffffff;
+		display: block;
+		word-wrap: break-word;
+		margin-bottom: 20px;
+		-webkit-column-break-inside: avoid;
+		-moz-column-break-inside: avoid;
+		column-break-inside: avoid;
+	}
+	.one {
+		height: auto;
+	}
+	.two {
+		height: auto;
+	}
+	.three {
+		height: auto;
+	}
+    .mail{
+    padding-left: 6vh;
+    padding-right: 8vh;
+  }
+  .form-mail{
+    border:1px solid rgb(0, 224, 146);
+    text-align:center;
+    background-color: rgb(196, 255, 234);
+    box-shadow: 16px 16px rgb(0, 224, 146);
+  }
+  .button{
+        color:rgb(137, 23, 243);
+        background-color: rgb(196, 255, 234);
+        border: none;
+        border-radius: 3px;
+        padding: 3px;
+        -webkit-transition-duration: 0.4s; /* Safari */
+        transition-duration: 0.4s;
+        border: 1px rgb(137, 23, 243) solid;
+    }
+    .button:hover{
+        background-color: rgb(182, 169, 135);
+        color:white;
+        box-shadow: 0 2px 2px 0 rgba(0,0,0,0.24), 0 2px 2px 0 rgba(0,0,0,0.19);
+    }
+</style>
+<script>
+  
+	let c = 0;
+	function toggle() {
+	  c % 2 == 0 ? day() : night();
+	  c++;
+	}
+	
+	function night() {
+	  document.querySelector(".cont_circle").className =
+		"cont_circle cont_circle_noche";
+	}
+	
+	function day() {
+	  document.querySelector(".cont_circle").className =
+		"cont_circle cont_circle_dia";
+	}
+	
+	</script>
+<script>
+    function openNav() {
+      document.getElementById("mySidebar").style.width = "80%";
+      document.getElementById("main").style.marginRight = "250px";
+    }
+    
+    function closeNav() {
+      document.getElementById("mySidebar").style.width = "0";
+      document.getElementById("main").style.marginLeft= "0";
+    }
+</script>
+<body>
+
+<br><br>
+<div class="mainpage">
+		<div class="zysx">
+			<!--<hr>-->
+			<br>
+			</div>
+			<br></div>
+		<div class='dhl'><hr> 
+			<br><br>
+			<h1 style="text-align:center;" class="titlefont" id="home-2"><span >M</span><span style="color:rgb(182, 169, 135);">E</span><span>NU</span>&#9749</h1><br>
+			<p style="text-align:center;padding-left: 3%;padding-right: 3%;">
+				首頁<span style="color:rgb(137, 23, 243);">|&#10015;</span><a href="https://tennedar.github.io/" style="color: blue"> <span style="color:rgb(137, 23, 243);background-color: rgb(196, 255, 234);" class="eng">INDEX</span></a><!--<img src="https://img.shields.io/badge/GO-BACK-00E092">--><br><br>
+				博客<span style="color:rgb(137, 23, 243);">|&#10015;</span><span class="eng"><a href="https://tennedar.github.io/blog.html" style="color: blue"> BL<span style="color:rgb(137, 23, 243);background-color: rgb(196, 255, 234);">O</span>G</a></span><br><br>
+				<del>文章</del>未开放<span style="color:rgb(137, 23, 243);">|&#10015;</span><span class="eng"><a href="" style="color: blue"> A<span style="color:rgb(137, 23, 243);background-color: rgb(196, 255, 234);">R</span>TICLE</a></span><br><br>
+				沙盒<span style="color:rgb(137, 23, 243);">|&#10015;</span><span class="eng"><a href="https://tennedar.github.io/html/sandbox.html" style="color: blue"> SANDB<span style="color:rgb(137, 23, 243);background-color: rgb(196, 255, 234);">O</span>X</a></span></span><br><br>
+			</p>  
+			<br><br></div>
+   		<div class='lxfs'><hr>
+			<br><br>
+			<h1 style="text-align:center;" class="titlefont" id="home-5"><span >C</span><span style="color:rgb(182, 169, 135);">O</span><span>NTACT</span>&#9749</h1><br>
+			<p style="text-align:center">
+				<p style="text-align:center;padding-left: 3%;padding-right: 3%;">
+				<!--請<b>通過這些途徑</b>向我發送消息&#9993;；<br>-->留言√提問√報告<span class='eng'>bug</span>√<span style="color:rgb(0, 224, 146);">。</span><br><br>
+				<!--&#10014;<span class="eng"><a href="https://twitter.com/divina_tennedar" target='_blank' style="color: blue">TWITTER</a>&nbsp;<span style='color:rgb(137, 23, 243)'>@divina_tennedar</span><br><br></span>-->
+				&#10014;<span class="eng"><span style='color:blue'>EMAIL</span>&nbsp;<span style='color:rgb(137, 23, 243)'>tr0.abkto@8alias.com</span><br><br></span>
+				<!--&#10014;<a href="https://t.co/bq34DZ82sS" target="_blank" style="color: blue"><span class="eng">MARSHMALLOW</span>提問箱</a>-->
+			</p>
+			</p>
+			<br>
+		</div>
+		<div class='tbmx'><hr> 
+			<br><br>
+			<h1 style="text-align:center;" class="titlefont" id="home-6"><span >SPEC</span><span style="color:rgb(182, 169, 135);">IAL THA</span><span>NKS</span>&#9749</h1><br>
+			<p style="text-align:center;padding-left: 3%;padding-right: 3%;">
+				&#9733;<span style="color:rgb(137, 23, 243);background-color: rgb(196, 255, 234);" class="eng"><b>Z</b></span>
+			</p>
+			</p>    
+			<br><br></div>
+</div>
+<footer>
+	<hr><br><br><br>
+    <span><p style="text-align:center" class="copy">
+		Made by Tennedar,<br>who tries to undefine the defined,<br>with ❤️<br><br>
+		copyRight &copy; 2023-2025 Tennedar All rights reserved.</p>
+		<p xmlns:cc="http://creativecommons.org/ns#" style="text-align:center" class="copy">This site is licensed under <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-SA 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1"></a></p>
+	</span>
+    <br><br><br>
+</footer>
+</div>
+
 </body>
 </html>
