@@ -2,94 +2,101 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>My New Hugo Project</title>
-    <link>http://localhost:1313/</link>
+    <link>https://example.org/</link>
     <description>Recent content on My New Hugo Project</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 07 May 2026 17:19:48 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://example.org/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>2025 W18</title>
-      <link>http://localhost:1313/logs/2025-w18/</link>
+      <link>https://example.org/logs/2025-w18/</link>
       <pubDate>Thu, 07 May 2026 17:19:48 +0800</pubDate>
-      <guid>http://localhost:1313/logs/2025-w18/</guid>
+      <guid>https://example.org/logs/2025-w18/</guid>
       <description>&lt;h2 id=&#34;260507&#34;&gt;26/05/07&lt;/h2&gt;&#xA;&lt;p&gt;测试&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;测试&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;测试&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;😊&lt;/p&gt;</description>
     </item>
     <item>
-      <title>2026.05 上半</title>
-      <link>http://localhost:1313/logs/2026-05-07/</link>
+      <title>2026.05 5月</title>
+      <link>https://example.org/logs/2026-05-07/</link>
       <pubDate>Fri, 01 May 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/logs/2026-05-07/</guid>
-      <description>&lt;h1 id=&#34;0507&#34;&gt;05/07&lt;/h1&gt;&#xA;&lt;p&gt;改成了hugo托管的……感觉，刚建站的时候看教程做得疯狂报错就放弃了（ ai发展一力证&lt;/p&gt;&#xA;&lt;p&gt;感觉UI上中英文混得还是有点诡异，我的想法是都不要用了统一用繁体中文就能解决这个问题（&lt;/p&gt;&#xA;&lt;p&gt;旧博客大概明后天就迁过来！暂时先下了！&lt;/p&gt;</description>
+      <guid>https://example.org/logs/2026-05-07/</guid>
+      <description>&lt;h1 id=&#34;0508&#34;&gt;05/08&lt;/h1&gt;&#xA;&lt;p&gt;活着没意思 周六，上体育课，真的假的。。。&lt;/p&gt;&#xA;&lt;h1 id=&#34;0507&#34;&gt;05/07&lt;/h1&gt;&#xA;&lt;p&gt;改成了hugo托管的……感觉，刚建站的时候看教程做得疯狂报错就放弃了（ ai发展一力证&lt;/p&gt;&#xA;&lt;p&gt;感觉UI上中英文混得还是有点诡异，我的想法是都不要用了统一用繁体中文就能解决这个问题（&lt;/p&gt;&#xA;&lt;p&gt;旧博客大概明后天就迁过来！暂时先下了！&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>2026 1~5月</title>
+      <link>https://example.org/logs/2026-01-05/</link>
+      <pubDate>Mon, 05 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://example.org/logs/2026-01-05/</guid>
+      <description>&lt;p&gt;测试&lt;/p&gt;</description>
     </item>
     <item>
       <title>2025 7~12月</title>
-      <link>http://localhost:1313/logs/2025-07-12/</link>
-      <pubDate>Wed, 31 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/logs/2025-07-12/</guid>
-      <description>&lt;h1 id=&#34;2025-712月&#34;&gt;2025 7~12月&lt;/h1&gt;&#xA;&lt;p&gt;（这里填 2025 下半年所有内容）&lt;/p&gt;</description>
+      <link>https://example.org/logs/2025-07-12/</link>
+      <pubDate>Sat, 12 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>https://example.org/logs/2025-07-12/</guid>
+      <description>&lt;h1 id=&#34;2025-712月&#34;&gt;2025 7~12月&lt;/h1&gt;&#xA;&lt;p&gt;测试&lt;/p&gt;</description>
     </item>
     <item>
       <title>2025 1~6月</title>
-      <link>http://localhost:1313/logs/2025-01-06/</link>
-      <pubDate>Mon, 30 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/logs/2025-01-06/</guid>
+      <link>https://example.org/logs/2025-01-06/</link>
+      <pubDate>Mon, 06 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://example.org/logs/2025-01-06/</guid>
       <description>&lt;h1 id=&#34;2025-16月&#34;&gt;2025 1~6月&lt;/h1&gt;&#xA;&lt;p&gt;（这里填 2025 上半年所有内容）&lt;/p&gt;</description>
     </item>
     <item>
       <title>2024 7~12月</title>
-      <link>http://localhost:1313/logs/2024-07-12/</link>
-      <pubDate>Tue, 31 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/logs/2024-07-12/</guid>
+      <link>https://example.org/logs/2024-07-12/</link>
+      <pubDate>Fri, 12 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>https://example.org/logs/2024-07-12/</guid>
       <description>&lt;h1 id=&#34;2024-712月&#34;&gt;2024 7~12月&lt;/h1&gt;&#xA;&lt;p&gt;（内容）&lt;/p&gt;</description>
     </item>
     <item>
       <title>2024 1~6月</title>
-      <link>http://localhost:1313/logs/2024-01-06/</link>
-      <pubDate>Sun, 30 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/logs/2024-01-06/</guid>
+      <link>https://example.org/logs/2024-01-06/</link>
+      <pubDate>Sat, 06 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://example.org/logs/2024-01-06/</guid>
       <description>&lt;h1 id=&#34;2024-16月&#34;&gt;2024 1~6月&lt;/h1&gt;&#xA;&lt;p&gt;（内容）&lt;/p&gt;</description>
     </item>
     <item>
       <title>2023 7~12月</title>
-      <link>http://localhost:1313/logs/2023-07-12/</link>
-      <pubDate>Sun, 31 Dec 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/logs/2023-07-12/</guid>
+      <link>https://example.org/logs/2023-07-12/</link>
+      <pubDate>Wed, 12 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>https://example.org/logs/2023-07-12/</guid>
       <description>&lt;h1 id=&#34;2023-712月&#34;&gt;2023 7~12月&lt;/h1&gt;&#xA;&lt;p&gt;（内容）&lt;/p&gt;</description>
     </item>
     <item>
       <title>2023 1~6月</title>
-      <link>http://localhost:1313/logs/2023-01-06/</link>
-      <pubDate>Fri, 30 Jun 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/logs/2023-01-06/</guid>
+      <link>https://example.org/logs/2023-01-06/</link>
+      <pubDate>Fri, 06 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>https://example.org/logs/2023-01-06/</guid>
       <description>&lt;h1 id=&#34;2023-16月&#34;&gt;2023 1~6月&lt;/h1&gt;&#xA;&lt;p&gt;（内容）&lt;/p&gt;</description>
     </item>
     <item>
       <title>2022 7~12月</title>
-      <link>http://localhost:1313/logs/2022-07-12/</link>
-      <pubDate>Sat, 31 Dec 2022 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/logs/2022-07-12/</guid>
+      <link>https://example.org/logs/2022-07-12/</link>
+      <pubDate>Tue, 12 Jul 2022 00:00:00 +0000</pubDate>
+      <guid>https://example.org/logs/2022-07-12/</guid>
       <description>&lt;h1 id=&#34;2022-712月&#34;&gt;2022 7~12月&lt;/h1&gt;&#xA;&lt;p&gt;（内容）&lt;/p&gt;</description>
     </item>
     <item>
       <title>2022 1~6月</title>
-      <link>http://localhost:1313/logs/2022-01-06/</link>
-      <pubDate>Thu, 30 Jun 2022 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/logs/2022-01-06/</guid>
+      <link>https://example.org/logs/2022-01-06/</link>
+      <pubDate>Thu, 06 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>https://example.org/logs/2022-01-06/</guid>
       <description>&lt;h1 id=&#34;2022-16月&#34;&gt;2022 1~6月&lt;/h1&gt;&#xA;&lt;p&gt;（内容）&lt;/p&gt;</description>
     </item>
     <item>
       <title>Blog</title>
-      <link>http://localhost:1313/blog/</link>
+      <link>https://example.org/blog/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/</guid>
+      <guid>https://example.org/blog/</guid>
       <description></description>
     </item>
     <item>
       <title>Home</title>
-      <link>http://localhost:1313/home/</link>
+      <link>https://example.org/home/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/home/</guid>
+      <guid>https://example.org/home/</guid>
       <description></description>
     </item>
   </channel>
