@@ -2,101 +2,101 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>My New Hugo Project</title>
-    <link>http://localhost:1313/</link>
+    <link>https://example.org/</link>
     <description>Recent content on My New Hugo Project</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 07 May 2026 17:19:48 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://example.org/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>2025 W18</title>
-      <link>http://localhost:1313/logs/2025-w18/</link>
+      <link>https://example.org/logs/2025-w18/</link>
       <pubDate>Thu, 07 May 2026 17:19:48 +0800</pubDate>
-      <guid>http://localhost:1313/logs/2025-w18/</guid>
+      <guid>https://example.org/logs/2025-w18/</guid>
       <description>&lt;h2 id=&#34;260507&#34;&gt;26/05/07&lt;/h2&gt;&#xA;&lt;p&gt;测试&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;测试&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;测试&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;😊&lt;/p&gt;</description>
     </item>
     <item>
       <title>2026.05 5月</title>
-      <link>http://localhost:1313/logs/2026-05-07/</link>
+      <link>https://example.org/logs/2026-05-07/</link>
       <pubDate>Thu, 07 May 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/logs/2026-05-07/</guid>
-      <description>&lt;h1 id=&#34;0523&#34;&gt;05/23&lt;/h1&gt;&#xA;&lt;p&gt;食堂的蟹黄拌面无敌难吃&lt;/p&gt;&#xA;&lt;p&gt;中关村那边好像从大一开始每次去都有疑似传销组织的可疑人物搭讪冲kpi什么只花几分钟，之前都没管而且之前出去玩都带了娃娃我怕被破坏贵重财物。  今天正好什么都没带还带了个砖头一样的充电宝在对方从后面走过来搭讪的时候狠狠甩过去了，当然没打到人但对方显然吓到了  啊  我绝妙的手法和持续的构思  实践了一下&lt;/p&gt;&#xA;&lt;p&gt;米娜桑，虽然现在是文明社会但还是有暴力存在的，要注意别进去了&lt;/p&gt;&#xA;&lt;h1 id=&#34;0520&#34;&gt;05/20&lt;/h1&gt;&#xA;&lt;p&gt;今天是z生日捏&lt;/p&gt;&#xA;&lt;p&gt;唉（。（。（。唉（。唉好消息是消化系统莫名其妙的讨论课本来开摆开到感觉绝对要被批了但还有人摆得更是装都不装一下吸引了所有注意力（ 无事完成了…… 我们同学真是太好了……&lt;/p&gt;&#xA;&lt;p&gt;坏消息是还有一节真的要疯了正常人谁靠这种走马观花一样的东西学啊要拓展就上点强度吧去年免疫那个模式不挺好，就是有点费老师，说到底上课怎么能老师不讲&lt;/p&gt;&#xA;&lt;p&gt;上周吃的歌志轩店里环境还不错，就是桌面上有个硕大的红色活动贴纸搞得拍照很不方便，背景红红的不好看；然后份量还是有点多了…虽然有不要钱加面还是要钱加面来着，但如果能减面就合适了不过那个鸡米花真的好吃&lt;/p&gt;&#xA;&lt;p&gt;看了眼提交文件是5/9 今天还没人回，何意味。然后今天突然收到导师邮件问：你愿意加入我们组吗&lt;/p&gt;&#xA;&lt;p&gt;？？不是早加入了吗 发生了什么（ 我加入了吗（&lt;/p&gt;&#xA;&lt;p&gt;总之回复我要加我当然要加然后顺带提了一下正在办签证呢 导师回复好A让我们先把签证这个难关过了!&lt;/p&gt;&#xA;&lt;p&gt;……所以是没有任务分配的意思吗 ，狠狠开摆&lt;/p&gt;&#xA;&lt;p&gt;6/19和6/22期末考，7/4阶段考（三年全部内容，据说学了就能过不学铁不能过）（……）没关系来得及先开摆根据预想主要是全失忆了，再复习一遍就能想起来的（ 然后，还有，7/5给自己报了个JLPT报名费550，。。，。。，。。，。。……现在还没开始学。&lt;/p&gt;&#xA;&lt;h1 id=&#34;0515&#34;&gt;05/15&lt;/h1&gt;&#xA;&lt;p&gt;下周好像要做实验&lt;/p&gt;&#xA;&lt;p&gt;这课上得感觉一点都没学会（。虽然也不急但也不是不能开始复习…&lt;/p&gt;&#xA;&lt;p&gt;乐事蒜香黄油味有点鸡肋&lt;/p&gt;&#xA;&lt;p&gt;填了cs给的表，理论上如果没问题对方会发过来ds160还是什么东西来着然后就可以审美签了但周一发的今天还没回（……）没关系反正有人都没定导有人都没填完（&lt;/p&gt;&#xA;&lt;p&gt;周一0AM相当于在组会开始之前介绍了一下r，然后一个学姐汇报了1小时构建notch knock-in相关的工作进度然后就散了。有几个小问题…问r对什么方向感兴趣（当然是什么都可以啊.）的时候脑子卡壳了胡言乱语了一堆，反正最后会给安排好的肯定不是什么大问题（ 还有就是感觉米国人的笔记本卡卡的音质极其烂无比 自动字幕都识别不出来r再高明都听不懂，不过也不是什么大问题（ 反正现在还是没收到要做什么先摆一会&lt;/p&gt;&#xA;&lt;h1 id=&#34;0510&#34;&gt;05/10&lt;/h1&gt;&#xA;&lt;p&gt;证实了一个新（并不新）知识之舞蹈基本功并不锻炼韧带&lt;/p&gt;&#xA;&lt;p&gt;某天突然开始想我作为解剖学大师竟然不知道劈叉涉及的地方竟然有韧带。然后姑且查了一下也是只会练到肌腱和肌肉并不会拉韧带。经常拉韧带的朋友都知道韧带本来就是拉不动的，要是拉得动人都要散架了（。。。）&lt;/p&gt;&#xA;&lt;p&gt;但问题是r以前还在学舞蹈的时候就对此产生了疑问我觉得拉韧带不是要直接残疾了吗每次都是带着残疾的觉悟搞什么所谓的拉韧带的喂，为什么教舞蹈的成年人不能讲点科学道理，这样真的很吓人&lt;/p&gt;&#xA;&lt;p&gt;这博客换了个架构之后更新有点麻烦但确实简洁凑合用吧（&lt;/p&gt;&#xA;&lt;h1 id=&#34;0509&#34;&gt;05/09&lt;/h1&gt;&#xA;&lt;p&gt;我不想上体育课。&lt;/p&gt;&#xA;&lt;p&gt;没意思 调休 狗都受不了了 。。后天又是周一这个精神障碍一触即发wcnm。。。&lt;/p&gt;&#xA;&lt;p&gt;先后收到了pi、实验室助理、国际生负责人的邮件 都叫我名字 可以直接这样的吗我姑且也是有姓的还是上级对下级就是可以呼び捨て啊（呼び捨て）（。&lt;/p&gt;&#xA;&lt;p&gt;还增加了很有用的知识之🇺🇸日期格式是M/D/Y&lt;/p&gt;&#xA;&lt;p&gt;找出来一双很好穿的鞋从开学穿到现在，但想不起来为什么不穿了，今天才发现是上面的不知名橡胶零件掉了 那还是可以穿的（鞋底开胶真的不能穿） 真的好穿&lt;/p&gt;&#xA;&lt;h1 id=&#34;0508&#34;&gt;05/08&lt;/h1&gt;&#xA;&lt;p&gt;活着没意思 周六，上体育课，真的假的。。。&lt;/p&gt;&#xA;&lt;h1 id=&#34;0507&#34;&gt;05/07&lt;/h1&gt;&#xA;&lt;p&gt;改成了hugo托管的……感觉，刚建站的时候看教程做得疯狂报错就放弃了（ ai发展一力证&lt;/p&gt;&#xA;&lt;p&gt;感觉UI上中英文混得还是有点诡异，我的想法是都不要用了统一用繁体中文就能解决这个问题（&lt;/p&gt;&#xA;&lt;p&gt;旧博客大概明后天就迁过来！暂时先下了！&lt;/p&gt;</description>
+      <guid>https://example.org/logs/2026-05-07/</guid>
+      <description>&lt;h1 id=&#34;0529&#34;&gt;05/29&lt;/h1&gt;&#xA;&lt;p&gt;剩下两门上了半天也不知道上了个啥（意思是排了一下复习感觉内容不多）总之要快点看完…然后看看综合测试的内容……和刷题… ……&lt;/p&gt;&#xA;&lt;p&gt;上次吃了一次纳豆难吃得要死感觉难以言喻地难吃反正就是难吃口感也差但努力一下也不是不能吃，据说可以加芥末就加了点结果变成了难吃中的难吃 不信邪决定多吃点试图驯服&lt;/p&gt;&#xA;&lt;p&gt;笑死&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://i.ibb.co/tMxS5GyW/0d8d9e729ac948b3.webp&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;收到一条您可能遭遇其他类型诈骗的短信 ……总之把12381拉黑了 最近日元猛跌趋势喜人买了一万日元&lt;/p&gt;&#xA;&lt;h1 id=&#34;0528&#34;&gt;05/28&lt;/h1&gt;&#xA;&lt;p&gt;复习复习&lt;/p&gt;&#xA;&lt;p&gt;确认了一下CS入职那个信息表格说要至少预留90天处理 效率也是神了&lt;/p&gt;&#xA;&lt;p&gt;总之再看看有什么问题再问…&lt;/p&gt;&#xA;&lt;p&gt;受不了各种乱七八糟的讨论课了我怀疑这些课都是ai公司为了促进销量派来的间谍 其实0个人认真讨论了&lt;/p&gt;&#xA;&lt;h1 id=&#34;0523&#34;&gt;05/23&lt;/h1&gt;&#xA;&lt;p&gt;食堂的蟹黄拌面无敌难吃&lt;/p&gt;&#xA;&lt;p&gt;中关村那边好像从大一开始每次去都有疑似传销组织的可疑人物搭讪冲kpi什么只花几分钟，之前都没管而且之前出去玩都带了娃娃我怕被破坏贵重财物。  今天正好什么都没带还带了个砖头一样的充电宝在对方从后面走过来搭讪的时候狠狠甩过去了，当然没打到人但对方显然吓到了  啊  我绝妙的手法和持续的构思  实践了一下&lt;/p&gt;&#xA;&lt;p&gt;米娜桑，虽然现在是文明社会但还是有暴力存在的，要注意别进去了&lt;/p&gt;&#xA;&lt;h1 id=&#34;0520&#34;&gt;05/20&lt;/h1&gt;&#xA;&lt;p&gt;今天是z生日捏&lt;/p&gt;&#xA;&lt;p&gt;唉（。（。（。唉（。唉好消息是消化系统莫名其妙的讨论课本来开摆开到感觉绝对要被批了但还有人摆得更是装都不装一下吸引了所有注意力（ 无事完成了…… 我们同学真是太好了……&lt;/p&gt;&#xA;&lt;p&gt;坏消息是还有一节真的要疯了正常人谁靠这种走马观花一样的东西学啊要拓展就上点强度吧去年免疫那个模式不挺好，就是有点费老师，说到底上课怎么能老师不讲&lt;/p&gt;&#xA;&lt;p&gt;上周吃的歌志轩店里环境还不错，就是桌面上有个硕大的红色活动贴纸搞得拍照很不方便，背景红红的不好看；然后份量还是有点多了…虽然有不要钱加面还是要钱加面来着，但如果能减面就合适了不过那个鸡米花真的好吃&lt;/p&gt;&#xA;&lt;p&gt;看了眼提交文件是5/9 今天还没人回，何意味。然后今天突然收到导师邮件问：你愿意加入我们组吗&lt;/p&gt;&#xA;&lt;p&gt;？？不是早加入了吗 发生了什么（ 我加入了吗（&lt;/p&gt;&#xA;&lt;p&gt;总之回复我要加我当然要加然后顺带提了一下正在办签证呢 导师回复好A让我们先把签证这个难关过了!&lt;/p&gt;&#xA;&lt;p&gt;……所以是没有任务分配的意思吗 ，狠狠开摆&lt;/p&gt;&#xA;&lt;p&gt;6/19和6/22期末考，7/4阶段考（三年全部内容，据说学了就能过不学铁不能过）（……）没关系来得及先开摆根据预想主要是全失忆了，再复习一遍就能想起来的（ 然后，还有，7/5给自己报了个JLPT报名费550，。。，。。，。。，。。……现在还没开始学。&lt;/p&gt;&#xA;&lt;h1 id=&#34;0515&#34;&gt;05/15&lt;/h1&gt;&#xA;&lt;p&gt;下周好像要做实验&lt;/p&gt;&#xA;&lt;p&gt;这课上得感觉一点都没学会（。虽然也不急但也不是不能开始复习…&lt;/p&gt;&#xA;&lt;p&gt;乐事蒜香黄油味有点鸡肋&lt;/p&gt;&#xA;&lt;p&gt;填了cs给的表，理论上如果没问题对方会发过来ds160还是什么东西来着然后就可以审美签了但周一发的今天还没回（……）没关系反正有人都没定导有人都没填完（&lt;/p&gt;&#xA;&lt;p&gt;周一0AM相当于在组会开始之前介绍了一下r，然后一个学姐汇报了1小时构建notch knock-in相关的工作进度然后就散了。有几个小问题…问r对什么方向感兴趣（当然是什么都可以啊.）的时候脑子卡壳了胡言乱语了一堆，反正最后会给安排好的肯定不是什么大问题（ 还有就是感觉米国人的笔记本卡卡的音质极其烂无比 自动字幕都识别不出来r再高明都听不懂，不过也不是什么大问题（ 反正现在还是没收到要做什么先摆一会&lt;/p&gt;&#xA;&lt;h1 id=&#34;0510&#34;&gt;05/10&lt;/h1&gt;&#xA;&lt;p&gt;证实了一个新（并不新）知识之舞蹈基本功并不锻炼韧带&lt;/p&gt;&#xA;&lt;p&gt;某天突然开始想我作为解剖学大师竟然不知道劈叉涉及的地方竟然有韧带。然后姑且查了一下也是只会练到肌腱和肌肉并不会拉韧带。经常拉韧带的朋友都知道韧带本来就是拉不动的，要是拉得动人都要散架了（。。。）&lt;/p&gt;&#xA;&lt;p&gt;但问题是r以前还在学舞蹈的时候就对此产生了疑问我觉得拉韧带不是要直接残疾了吗每次都是带着残疾的觉悟搞什么所谓的拉韧带的喂，为什么教舞蹈的成年人不能讲点科学道理，这样真的很吓人&lt;/p&gt;&#xA;&lt;p&gt;这博客换了个架构之后更新有点麻烦但确实简洁凑合用吧（&lt;/p&gt;&#xA;&lt;h1 id=&#34;0509&#34;&gt;05/09&lt;/h1&gt;&#xA;&lt;p&gt;我不想上体育课。&lt;/p&gt;&#xA;&lt;p&gt;没意思 调休 狗都受不了了 。。后天又是周一这个精神障碍一触即发wcnm。。。&lt;/p&gt;&#xA;&lt;p&gt;先后收到了pi、实验室助理、国际生负责人的邮件 都叫我名字 可以直接这样的吗我姑且也是有姓的还是上级对下级就是可以呼び捨て啊（呼び捨て）（。&lt;/p&gt;&#xA;&lt;p&gt;还增加了很有用的知识之🇺🇸日期格式是M/D/Y&lt;/p&gt;&#xA;&lt;p&gt;找出来一双很好穿的鞋从开学穿到现在，但想不起来为什么不穿了，今天才发现是上面的不知名橡胶零件掉了 那还是可以穿的（鞋底开胶真的不能穿） 真的好穿&lt;/p&gt;</description>
     </item>
     <item>
       <title>2026 1~5月</title>
-      <link>http://localhost:1313/logs/2026-01-05/</link>
+      <link>https://example.org/logs/2026-01-05/</link>
       <pubDate>Mon, 05 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/logs/2026-01-05/</guid>
+      <guid>https://example.org/logs/2026-01-05/</guid>
       <description>&lt;p&gt;测试&lt;/p&gt;</description>
     </item>
     <item>
       <title>2025 7~12月</title>
-      <link>http://localhost:1313/logs/2025-07-12/</link>
+      <link>https://example.org/logs/2025-07-12/</link>
       <pubDate>Sat, 12 Jul 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/logs/2025-07-12/</guid>
+      <guid>https://example.org/logs/2025-07-12/</guid>
       <description>&lt;h1 id=&#34;2025-712月&#34;&gt;2025 7~12月&lt;/h1&gt;&#xA;&lt;p&gt;测试&lt;/p&gt;</description>
     </item>
     <item>
       <title>2025 1~6月</title>
-      <link>http://localhost:1313/logs/2025-01-06/</link>
+      <link>https://example.org/logs/2025-01-06/</link>
       <pubDate>Mon, 06 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/logs/2025-01-06/</guid>
+      <guid>https://example.org/logs/2025-01-06/</guid>
       <description>&lt;h1 id=&#34;2025-16月&#34;&gt;2025 1~6月&lt;/h1&gt;&#xA;&lt;p&gt;（这里填 2025 上半年所有内容）&lt;/p&gt;</description>
     </item>
     <item>
       <title>2024 7~12月</title>
-      <link>http://localhost:1313/logs/2024-07-12/</link>
+      <link>https://example.org/logs/2024-07-12/</link>
       <pubDate>Fri, 12 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/logs/2024-07-12/</guid>
+      <guid>https://example.org/logs/2024-07-12/</guid>
       <description>&lt;h1 id=&#34;2024-712月&#34;&gt;2024 7~12月&lt;/h1&gt;&#xA;&lt;p&gt;（内容）&lt;/p&gt;</description>
     </item>
     <item>
       <title>2024 1~6月</title>
-      <link>http://localhost:1313/logs/2024-01-06/</link>
+      <link>https://example.org/logs/2024-01-06/</link>
       <pubDate>Sat, 06 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/logs/2024-01-06/</guid>
+      <guid>https://example.org/logs/2024-01-06/</guid>
       <description>&lt;h1 id=&#34;2024-16月&#34;&gt;2024 1~6月&lt;/h1&gt;&#xA;&lt;p&gt;（内容）&lt;/p&gt;</description>
     </item>
     <item>
       <title>2023 7~12月</title>
-      <link>http://localhost:1313/logs/2023-07-12/</link>
+      <link>https://example.org/logs/2023-07-12/</link>
       <pubDate>Wed, 12 Jul 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/logs/2023-07-12/</guid>
+      <guid>https://example.org/logs/2023-07-12/</guid>
       <description>&lt;h1 id=&#34;2023-712月&#34;&gt;2023 7~12月&lt;/h1&gt;&#xA;&lt;p&gt;（内容）&lt;/p&gt;</description>
     </item>
     <item>
       <title>2023 1~6月</title>
-      <link>http://localhost:1313/logs/2023-01-06/</link>
+      <link>https://example.org/logs/2023-01-06/</link>
       <pubDate>Fri, 06 Jan 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/logs/2023-01-06/</guid>
+      <guid>https://example.org/logs/2023-01-06/</guid>
       <description>&lt;h1 id=&#34;2023-16月&#34;&gt;2023 1~6月&lt;/h1&gt;&#xA;&lt;p&gt;（内容）&lt;/p&gt;</description>
     </item>
     <item>
       <title>2022 7~12月</title>
-      <link>http://localhost:1313/logs/2022-07-12/</link>
+      <link>https://example.org/logs/2022-07-12/</link>
       <pubDate>Tue, 12 Jul 2022 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/logs/2022-07-12/</guid>
+      <guid>https://example.org/logs/2022-07-12/</guid>
       <description>&lt;h1 id=&#34;2022-712月&#34;&gt;2022 7~12月&lt;/h1&gt;&#xA;&lt;p&gt;（内容）&lt;/p&gt;</description>
     </item>
     <item>
       <title>2022 1~6月</title>
-      <link>http://localhost:1313/logs/2022-01-06/</link>
+      <link>https://example.org/logs/2022-01-06/</link>
       <pubDate>Thu, 06 Jan 2022 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/logs/2022-01-06/</guid>
+      <guid>https://example.org/logs/2022-01-06/</guid>
       <description>&lt;h1 id=&#34;2022-16月&#34;&gt;2022 1~6月&lt;/h1&gt;&#xA;&lt;p&gt;（内容）&lt;/p&gt;</description>
     </item>
     <item>
       <title>Blog</title>
-      <link>http://localhost:1313/blog/</link>
+      <link>https://example.org/blog/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/</guid>
+      <guid>https://example.org/blog/</guid>
       <description></description>
     </item>
     <item>
       <title>Home</title>
-      <link>http://localhost:1313/home/</link>
+      <link>https://example.org/home/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/home/</guid>
+      <guid>https://example.org/home/</guid>
       <description></description>
     </item>
   </channel>
