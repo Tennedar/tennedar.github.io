@@ -6,8 +6,15 @@
     <description>Recent content in Logs on My New Hugo Project</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 07 May 2026 17:19:48 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 01 Jun 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://example.org/logs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2026.06</title>
+      <link>https://example.org/logs/2026-06-01/</link>
+      <pubDate>Mon, 01 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>https://example.org/logs/2026-06-01/</guid>
+      <description>&lt;h1 id=&#34;0601&#34;&gt;06/01&lt;/h1&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://i.ibb.co/jPB3Ls4q/6b8fe50a05d17236.jpg%22&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;这个不错&lt;/p&gt;&#xA;&lt;p&gt;消化系统第一遍差不多复习完了，内分泌再两天？左右应该也没问题&lt;/p&gt;&#xA;&lt;p&gt;不想上讨论课🪦&lt;/p&gt;&#xA;&lt;p&gt;这人工智能大作业是什么啊&lt;/p&gt;</description>
+    </item>
     <item>
       <title>2025 W18</title>
       <link>https://example.org/logs/2025-w18/</link>
