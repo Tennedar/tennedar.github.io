@@ -6,8 +6,15 @@
     <description>Recent content on My New Hugo Project</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 01 Jul 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 01 Sep 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://example.org/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2026.09</title>
+      <link>https://example.org/logs/2026-09-01/</link>
+      <pubDate>Tue, 01 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>https://example.org/logs/2026-09-01/</guid>
+      <description>&lt;h1 id=&#34;0901&#34;&gt;09/01&lt;/h1&gt;&#xA;&lt;p&gt;打了一通电话终于把体检搞定了（大概）&lt;/p&gt;&#xA;&lt;p&gt;711的早餐苹果派特好吃&lt;/p&gt;&#xA;&lt;p&gt;然后这两天在看论文&lt;/p&gt;</description>
+    </item>
     <item>
       <title>2026.07</title>
       <link>https://example.org/logs/2026-07-01/</link>
